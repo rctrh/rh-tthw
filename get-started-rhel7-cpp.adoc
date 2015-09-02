@@ -37,7 +37,7 @@ First, start a Terminal session from the Application Menu.  Then after using `su
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list-enabled
 ```
 
@@ -45,7 +45,7 @@ If you don’t see any enabled repositories, your system may not be registered w
 
 Now download and install any available updates by running `yum update`.  If updates are available, yum will list them and ask if it is OK to proceed.
 
-`yum update`
+`# yum update`
 
 
 

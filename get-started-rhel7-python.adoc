@@ -39,7 +39,7 @@ First, start a Terminal session from the Application Menu.  Then after using `su
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list-enabled
 ```
 
@@ -54,9 +54,11 @@ Now download and install any available updates by running `yum update`.  If upda
 
 Python 2.7 and a number of popular Python modules are installed by default on Red Hat Enterprise Linux. To see what Python packages are already installed, run the following `yum` command after becoming root with `su`. If you don't already have a Terminal window open, start one from the _Applications_ Menu.
 
-
-`$ su` +
-`# yum list installed python\*`
+[.code-block]
+```
+$ su -
+# yum list installed python\*
+```
 
 If Python wasn't installed or needed an update, you would only need to run one yum command.
 

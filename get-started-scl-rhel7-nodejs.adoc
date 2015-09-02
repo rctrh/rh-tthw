@@ -52,7 +52,7 @@ You can add or remove software repositories from the command line using the `sub
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
@@ -73,7 +73,7 @@ In this next step you will Install Node.js 0.10 from RHSCL.
 
 [.code-block]
 ```
-$ su
+$ su -
 # yum install nodejs010
 ```
 
@@ -211,7 +211,7 @@ You can use `subscription --list` to view the available software repositories an
 +
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 

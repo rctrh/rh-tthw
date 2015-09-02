@@ -37,7 +37,7 @@ First, start a Terminal session from the Application Menu.  Then after using `su
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list-enabled
 ```
 
@@ -52,9 +52,11 @@ Now download and install any available updates by running `yum update`.  If upda
 
 In this step you will download and install PHP with a single command. If you don't already have a Terminal window open, start one from the _Applications_ Menu. You will need to use `su` to run with root priviledges.
 
-
-`$ su` +
-`# yum install php`
+[.code-block]
+```
+$ su - +
+# yum install php
+```
 
 To see what other PHP modules are included with Red Hat Enterprise Linux, run this command:
 

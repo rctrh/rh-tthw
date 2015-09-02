@@ -55,7 +55,7 @@ You can add or remove software repositories from the command line using the `sub
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
@@ -75,7 +75,7 @@ In this next step you will use a single command to download and install Eclipse 
 
 [.code-block]
 ```
-$ su
+$ su -
 # yum install devtoolset-3
 ```
 
@@ -86,7 +86,7 @@ If you prefer, you can skip installing the Eclipse IDE, and select only the GCC 
 
 [.code-block]
 ```
-$ su
+$ su -
 # yum install devtoolset-3-toolchain
 ```
 

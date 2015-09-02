@@ -52,7 +52,7 @@ You can add or remove software repositories from the command line using the `sub
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
@@ -70,8 +70,11 @@ If you are using a desktop edition of Red Hat Enterprise Linux, change `-server-
 
 In this next step you will Install Perl 5.20 from RHSCL.
 
-`$ su` +
-`# yum install rh-perl520`
+[.code-block]
+```
+$ su -
+# yum install rh-perl520
+```
 
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 

@@ -39,7 +39,7 @@ First, start a Terminal session from the Application Menu.  Then after using `su
 
 [.code-block]
 ```
-$ su
+$ su -
 # subscription-manager repos --list-enabled
 ```
 
