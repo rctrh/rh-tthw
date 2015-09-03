@@ -9,7 +9,7 @@ In this tutorial, you will set your system up to install software from Red Hat S
 
 You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)]
 
-If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
 Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
@@ -120,7 +120,7 @@ If you get an error that Python3 is not found, you need to run `scl enable rh-py
 
 ### Working with RHSCL packages
 
-The software packages in RHSCL are designed to allow multiple versions of software to be installed concurrently. To accomplish this, the desired package is added to your runtime environment as needed with the `scl enable` command. When `scl enable` runs, it modifies environment variables and then runs the specified command. The environmental changes only affect the command that is run by `scl` and any processes that are run from that command. The steps in this tutorial run the command `bash` to start a new interactive shell to work in with the updated environment. The changes aren’t permanent, typing `exit`, will return to the original shell with the original environment. Each time you login, or start a new terminal sesssion, scl enable needs to be run again.
+The software packages in RHSCL are designed to allow multiple versions of software to be installed concurrently. To accomplish this, the desired package is added to your runtime environment as needed with the `scl enable` command. When `scl enable` runs, it modifies environment variables and then runs the specified command. The environmental changes only affect the command that is run by `scl` and any processes that are run from that command. The steps in this tutorial run the command `bash` to start a new interactive shell to work in with the updated environment. The changes aren’t permanent, typing `exit`, will return to the original shell with the original environment. Each time you login, or start a new terminal sesssion, `scl enable` needs to be run again.
 
 While it is possible to change the system profile to make RHSCL packages part of the system’s global environment this is not recommended. Doing this can cause conflicts and unexpected problems with other applications because the system version of the package would obscured by having the RHSCL version in the path first.
 
@@ -189,7 +189,7 @@ rh-ruby22
 +
 How do I find out what version of Python is available in the RHSCL?
 +
-I have the RHSCL repository enabled, but I can’t find the Python version listed in this tutorial?
+I have the RHSCL repository enabled, but I can’t find the Python version listed in this tutorial.
 +
 Use the following command to find packages with matching names:
 `# yum list available rh-python\*`
@@ -206,7 +206,7 @@ RHSCL does not alter the system path.  You need to use `scl enable` to change th
 For more information see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/index.html[Red Hat Software Collection 2.0 Documentation].
 6. When I try to run Python 3, I get an error about a missing shared library, libpython3.
 +
-This is due to not having run `scl enable` first. When `scl enable` runs, in addition to setting up the command search PATH, it also sets up the search path for shared libraries, LD_LIBRARY_PATH:  
+This is due to not having run `scl enable` first. When `scl enable` runs, in addition to setting up the command search PATH, it also sets up the search path for shared libraries, LD_LIBRARY_PATH.
 7. Some Python examples/code I’ve tried doesn’t work with Python 3 from RHSCL.
 +
 Python 3.x is a new version of the Python language that is incompatible with the previous 2.x series. The version of Python included with Red Hat Enterprise Linux in /usr/bin/python is from the Python 2.x series. There is a large amount of code written for Python 2.x that will not run without modification on Python 3.x.

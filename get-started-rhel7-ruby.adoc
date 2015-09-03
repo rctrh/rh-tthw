@@ -7,7 +7,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will see how to get started with Ruby development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial will take five to ten minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -21,13 +21,13 @@ Prepare Your System
 2 minutes
 
 ## Step2 Title
-Setup Your Development Environment
+Setup your development environment
 
 ## Step3 Duration
 2 minutes
 
 ## Step3 Title
-Hello World and Your First Application
+Hello World and your first application
 
 ## Step1 Content
 
@@ -86,12 +86,12 @@ irb(main):001:0> puts "Hello, Red Hat Developers World from Ruby " + RUBY_VERSIO
 irb(main):002:0> quit
 ```
 
-Now we will create a Ruby application that can be run from the command line. Using your preferred text editor, create hello.rb: 
+The next step is to create a Ruby application that can be run from the command line. Using your preferred text editor, create a file named `hello.rb`:
 
 `$ nano hello.rb`
 
 
-Add the following text:
+Add the following text to the file:
 
 [.code-block]
 ```
@@ -121,9 +121,9 @@ link:https://www.ruby-lang.org/en/documentation/quickstart/[]
 
 ## More Resources
 
-### Become a Red Hat Developer: Developers.redhat.com
+### Become a Red Hat developer: developers.redhat.com
 
-Red Hat delivers the resources and ecosystem of experts to help developers be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
+Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
 
 *Follow the Red Hat Developer Blog* +
 link:http://developerblog.redhat.com/[]
@@ -149,7 +149,7 @@ Red Hat Developer Toolset provides the latest, stable open source C and C++ comp
 +
 I don't have a current Red Hat subscription, can I get an evaluation?
 +
-If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 +
 2. How can I get a newer version of Ruby on Red Hat Enterprise Linux?
 +

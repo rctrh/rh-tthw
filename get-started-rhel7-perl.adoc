@@ -9,7 +9,7 @@ In this tutorial, you will see how to get started with Perl development on Red H
 
 On Red Hat Enterprise Linux, Perl is installed by default. You can skip directly to the "Your First Application" step, or continue reading to learn more about installing and maintaining software packages. 
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -23,13 +23,13 @@ Prepare Your System
 2 minutes
 
 ## Step2 Title
-Setup Your Development Environment
+Setup your development environment
 
 ## Step3 Duration
 2 minutes
 
 ## Step3 Title
-Hello World and Your First Application
+Hello World and your first application
 
 ## Step1 Content
 
@@ -115,9 +115,9 @@ link:http://learn.perl.org/tutorials/[]
 
 ## More Resources
 
-### Become a Red Hat Developer: Developers.redhat.com
+### Become a Red Hat developer: developers.redhat.com
 
-Red Hat delivers the resources and ecosystem of experts to help developers be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
+Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
 
 *Follow the Red Hat Developer Blog* +
 link:http://developerblog.redhat.com/[]
@@ -143,7 +143,7 @@ Red Hat Developer Toolset provides the latest, stable open source C and C++ comp
 +
 I don't have a current Red Hat subscription, can I get an evaluation?
 +
-If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 +
 2. How can I get a newer version of Perl on Red Hat Enterprise Linux?
 +

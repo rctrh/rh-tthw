@@ -7,7 +7,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will install the GNU Compiler Collection (GCC) and build a simple, C++ Hello World application.  This tutorial should take less than 15 minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -21,13 +21,13 @@ Prepare Your System
 5 minutes
 
 ## Step2 Title
-Setup Your Development Environment
+Setup your development environment
 
 ## Step3 Duration
 5 minutes
 
 ## Step3 Title
-Hello World and Your First Application
+Hello World and your first application
 
 ## Step1 Content
 
@@ -106,9 +106,9 @@ Hello, Red Hat Developers World!
 ## More Resources
 
 
-### Become a Red Hat Developer: Developers.redhat.com
+### Become a Red Hat developer: developers.redhat.com
 
-Red Hat delivers the resources and ecosystem of experts to help developers be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
+Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com]
 
 *Learn About Red Hat Software Collections*
 
@@ -127,11 +127,11 @@ Red Hat Developer Toolset provides the latest, stable open source C and C++ comp
 [[troubleshooting]]Troubleshooting and FAQ
 
 ## Faq section
-1. My system is unable to download updates from Red Hat?
+1. My system is unable to download updates from Red Hat.
 +
 I don't have a current Red Hat subscription, can I get an evaluation?
 +
-If you don’t have a Red Hat Enterprise Linux Subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 +
 2. Which version of GCC am I using?
 +
