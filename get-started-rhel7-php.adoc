@@ -54,7 +54,7 @@ In this step you will download and install PHP with a single command. If you don
 
 [.code-block]
 ```
-$ su - +
+$ su -
 # yum install php
 ```
 

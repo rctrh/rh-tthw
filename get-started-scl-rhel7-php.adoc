@@ -42,7 +42,7 @@ Red Hat Subscription Manager can be started from the _System Tools_ group of the
 
 Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-7-rpms_ and _rhel-7-desktop-optional-rpms_. +
  
-If you don’t see any RHSCL repositories in the list your subscription might not include it.
+If you don’t see any RHSCL repositories in the list, your subscription might not include it.
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollections_install_1.png')}[Manage Repositories]
 
@@ -59,7 +59,7 @@ $ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
-If you don’t see any RHSCL repositories in the list your subscription might not include it. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
+If you don’t see any RHSCL repositories in the list, your subscription might not include it. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
 If you are using a desktop edition of Red Hat Enterprise Linux, change `-server-` to `-desktop-` in the following commands:
 
