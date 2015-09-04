@@ -1,0 +1,381 @@
+
+Python
+------
+
+Pre-installed.
+
+# yum install python
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Package python-2.6.6-64.el6.x86_64 already installed and latest version
+Nothing to do
+
+# yum list installed python\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Installed Packages
+python.x86_64                                2.6.6-64.el6       @anaconda-RedHatEnterpriseLinux-201507020259.x86_64/6.7
+python-argparse.noarch                       1.2.1-2.1.el6      @anaconda-RedHatEnterpriseLinux-201507020259.x86_64/6.7
+
+# yum list available python\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Available Packages
+python.i686                                      2.6.5-3.el6_0.2                     rhel-6-server-aus-rpms      
+
+
+
+$ python
+Python 2.6.6 (r266:84292, May 22 2015, 08:34:51) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-15)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print "Hello, Red Hat Developers World!"
+Hello, Red Hat Developers World!
+>>> quit()
+
+
+$ cat hello-py26.py
+#!/usr/bin/env python
+
+import sys
+
+version = "Python %d.%d" % (sys.version_info[0], sys.version_info[1])
+print "Hello, Red Hat Developers World from" + version
+
+$ ./hello-py26.py
+Hello, Red Hat Developers World fromPython 2.6
+
+
+PERL
+
+# yum install perl
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Package 4:perl-5.10.1-141.el6.x86_64 already installed and latest version
+
+
+# yum list installed perl\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Installed Packages
+perl.x86_64                             4:5.10.1-141.el6        @anaconda-RedHatEnterpriseLinux-201507020259.x86_64/6.7
+
+
+
+$ ./hello.pl 
+Hello, Red Hat Developers World from Perl v5.10.1
+
+
+$ perl -v
+
+This is perl, v5.10.1 (*) built for x86_64-linux-thread-multi
+
+$ ./hello.pl 
+Hello, Red Hat Developers World from Perl v5.10.1
+
+
+
+-------------------------------------------------------------------------
+PHP
+-------------------------------------------------------------------------
+
+# yum install php
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package php.x86_64 0:5.3.3-46.el6_6 will be installed
+
+# yum list install php\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Installed Packages
+php.x86_64                                           5.3.3-46.el6_6                             @rhel-6-server-aus-rpms
+
+# yum list available php\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Available Packages
+php-gd.x86_64                                        5.3.3-46.el6_6                              rhel-6-server-aus-rpms
+
+
+$ php -v
+PHP 5.3.3 (cli) (built: Jul  3 2015 03:10:33) 
+Copyright (c) 1997-2010 The PHP Group
+Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies
+
+$ php -a
+Interactive shell
+
+php > printf("Hello, Red Hat Developers World from PHP %s\n", PHP_VERSION);
+Hello, Red Hat Developers World from PHP 5.3.3
+php > quit
+
+$ ./hello.php
+Hello, Red Hat Developers World from PHP 5.3.3
+
+
+--------------------------------------------------------
+Ruby
+--------------------------------------------------------
+
+# yum install ruby ruby-irb   # ****** Need to install ruby-irb explicitly
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package ruby.x86_64 0:1.8.7.374-4.el6_6 will be installed
+
+
+# yum list installed ruby\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Installed Packages
+ruby.x86_64                                    1.8.7.374-4.el6_6                                @rhel-6-server-aus-rpms
+ruby-libs.x86_64                               1.8.7.374-4.el6_6                                @rhel-6-server-aus-rpms
+[root@localhost ~]# yum list available ruby\*
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Available Packages
+ruby-devel.i686                                   1.8.7.374-4.el6_6                              rhel-6-server-aus-rpms
+ruby-devel.x86_64                                 1.8.7.374-4.el6_6                              rhel-6-server-aus-rpms
+
+
+********* NOTE: Ruby-irb not installed by default ***********
+
+$ irb
+irb(main):001:0> puts "Hello, Red Hat Developers World from Ruby " + RUBY_VERSION
+Hello, Red Hat Developers World from Ruby 1.8.7
+=> nil
+
+$ ./hello.rb
+Hello, Red Hat Developers World from Ruby 1.8.7
+
+
+-------------------------------------------------------------
+GCC C++ Native
+-------------------------------------------------------------
+
+# yum groupinstall 'Development Tools'
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Group Process
+
+---> Package gcc.x86_64 0:4.4.7-16.el6 will be installed
+
+
+$ g++ -v
+gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) 
+
+$ which g++
+/usr/bin/g++
+
+
+$ g++ -o hello hello.cpp
+[rt@localhost hello]$ ./hello
+Hello, Red Hat Developers World!
+
+
+
+
+
+=======================================================================================================================
+RHSCL for RHEL 6 
+=======================================================================================================================
+
+# subscription-manager repos --enable rhel-server-rhscl-6-rpms
+Repository 'rhel-server-rhscl-6-rpms' is enabled for this system.
+
+
+# subscription-manager repos --enable rhel-6-server-optional-rpms
+Repository 'rhel-6-server-optional-rpms' is enabled for this system.
+
+# yum install rh-python34
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+--> Running transaction check
+---> Package rh-python34.x86_64 0:2.0-5.el6 will be installed
+
+
+$ scl enable rh-python34 bash
+[rt@localhost tthw-rhel6]$ 
+[rt@localhost tthw-rhel6]$ 
+[rt@localhost tthw-rhel6]$ python3
+Python 3.4.2 (default, Mar 25 2015, 02:43:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+
+$ ./hello.py
+Hello, Red Hat Developers World from Python 3.4
+
+
+
+
+--------------------------
+
+PERL SCL
+
+---------------------------
+
+
+
+# yum install rh-perl520
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-perl520.x86_64 0:2.0-7.el6 will be installed
+
+
+$ scl enable rh-perl520 bash
+[rt@localhost tthw-rhel6]$ perl -v
+
+This is perl 5, version 20, subversion 1 (v5.20.1) built for x86_64-linux-thread-multi
+(with 16 registered patches, see perl -V for more detail)
+
+$ ./hello.pl
+Hello, Red Hat Developers World from Perl v5.20.1
+
+**** Tested .bashrc, scl_source works the same.
+
+source scl_source enable rh-perl520
+
+
+-----------------------------------------------
+PHP
+------------------------------------------------
+
+# yum install rh-php56
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-php56.x86_64 0:2.0-6.el6 will be installed
+
+$ scl enable rh-php56 bash
+[rt@localhost tthw-rhel6]$ php -a
+Interactive shell
+
+php > printf("Hello, Red Hat Developers World from PHP %s", PHP_VERSION);
+Hello, Red Hat Developers World from PHP 5.6.5
+php > quit
+[rt@localhost tthw-rhel6]$ ./hello/hello.php
+Hello, Red Hat Developers World from PHP 5.6.5
+$ which php
+/opt/rh/rh-php56/root/usr/bin/php
+
+
+
+--------------------
+Ruby
+--------------------
+
+# yum install rh-ruby22
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-ruby22.x86_64 0:2.0-6.el6 will be installed
+
+
+$ scl enable rh-ruby22 bash
+[rt@localhost tthw-rhel6]$ irb
+irb(main):001:0> puts "Hello, Red Hat Developers World from Ruby " + PHP_VERSION
+NameError: uninitialized constant PHP_VERSION
+	   from (irb):1
+	   from /opt/rh/rh-ruby22/root/usr/bin/irb:11:in `<main>'
+irb(main):002:0> 
+irb(main):003:0* quit
+[rt@localhost tthw-rhel6]$ irb
+irb(main):001:0> puts "Hello, Red Hat Developers World from Ruby " + RUBY_VERSION
+Hello, Red Hat Developers World from Ruby 2.2.2
+=> nil
+irb(main):002:0> quit
+
+
+$ ./hello/hello.rb 
+Hello, Red Hat Developers World from Ruby 2.2.2
+
+
+-------------------------------------
+Node.js
+-------------------------------------
+
+# yum install nodejs010
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Package nodejs010-2.0-3.el6.x86_64 already installed and latest version
+
+** Missed the install, it scrolled off. ***
+
+$ scl enable nodejs010 bash
+[rt@localhost tthw-rhel6]$ node --version
+v0.10.35
+[rt@localhost tthw-rhel6]$ node ./hello/hello.
+hello.cpp   hello.js    hello.js~   hello.php   hello.php~  hello.pl    hello.py    hello.py~   hello.rb    
+[rt@localhost tthw-rhel6]$ node ./hello/hello.js
+Hello, Red Hat Developers World!
+
+
+$ node ./hello/hello-http.js 
+Server running at http://127.0.0.1:8000/
+
+[rt@localhost tthw-rhel6]$ scl --list
+nodejs010
+rh-perl520
+rh-php56
+rh-python34
+rh-ruby22
+v8314
+
+
+===========================================
+DTS/RHSCL Eclipse / G++ / C++
+===========================================
+
+# yum install devtoolset-3-toolchain
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Resolving Dependencies
+--> Running transaction check
+---> Package devtoolset-3-toolchain.x86_64 0:3.1-12.el6 will be installed
+
+
+$ scl enable devtoolset-3 bash
+[rt@localhost tthw-rhel6]$ which gcc
+/usr/bin/gcc
+[rt@localhost tthw-rhel6]$ which g++
+/usr/bin/g++
+[rt@localhost tthw-rhel6]$ scl enable rh-php56 bash
+[rt@localhost tthw-rhel6]$ exit
+exit
+[rt@localhost tthw-rhel6]$ exit
+exit
+[rt@localhost tthw-rhel6]$ scl enable devtoolset-3 bash
+[rt@localhost tthw-rhel6]$ 
+[rt@localhost tthw-rhel6]$ which gcc
+/opt/rh/devtoolset-3/root/usr/bin/gcc
+[rt@localhost tthw-rhel6]$ which g++
+/opt/rh/devtoolset-3/root/usr/bin/g++
+[rt@localhost tthw-rhel6]$ g++ -v
+Using built-in specs.
+COLLECT_GCC=g++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/opt/rh/devtoolset-3/root/usr --mandir=/opt/rh/devtoolset-3/root/usr/share/man --infodir=/opt/rh/devtoolset-3/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) 
+[rt@localhost tthw-rhel6]$ cd hello/
+[rt@localhost hello]$ g++ -o hello hello.cpp
+[rt@localhost hello]$ ./hello
+Hello, Red Hat Developers World!
+
+
+# yum install devtoolset-3
+Loaded plugins: product-id, refresh-packagekit, security, subscription-manager
+Setting up Install Process
+Package devtoolset-3-3.1-12.el6.x86_64 already installed and latest version
+Nothing to do
+
+
+DTS is on menu under Programming
+
+Ran into a problem that run wouldn't work for some reason had to change to "production" from "debug" then it worked ?!?.
+
+"Unable to launch, no recent ...?"  saved screenshot
+
+Had to touch run configurations
+
