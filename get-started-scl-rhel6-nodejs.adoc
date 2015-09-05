@@ -7,7 +7,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will set your system up to install software from Red Hat Software Collections (RHSCL), which provides the latest development technologies for Red Hat Enterprise Linux. Then, you will install Node.js and run a simple “Hello, World” application. The whole tutorial should take less than 10 minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS]
+You will need a Red Hat Enterprise Linux 6 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS]
 
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
 Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
@@ -36,11 +36,13 @@ Hello World and your first application
 
 In this step you will configure your system to obtain software, including the latest dynamic languages, from the RHSCL software repository. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
+Note: If your system uses Red Hat Network (RHN) Classic instead of Red Hat Subscription Management (RHSM) for managing subscriptions and entitlements, please skip this step and follow the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/html/2.0_Release_Notes/chap-Installation.html[Installation chapter] of the link:https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/2/html/2.0_Release_Notes/index.html[Red Hat Software Collections 2.0 Release Notes]. The instructions in this section are only for systems using RHSM. The remainder of this tutorial applies to systems running either RHSM or RHN classic.
+
 ### Using the Red Hat Subscription Manager GUI
 
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
-Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-7-rpms_ and _rhel-7-desktop-optional-rpms_. +
+Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-6-rpms_ and _rhel-6-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-6-rpms_ and _rhel-6-desktop-optional-rpms_. +
  
 If you don’t see any RHSCL repositories in the list, your subscription might not include it.
 [.content-img]
@@ -65,8 +67,8 @@ If you are using a desktop edition of Red Hat Enterprise Linux, change `-server-
 
 [.code-block]
 ```
-# subscription-manager repos --enable rhel-server-rhscl-7-rpms
-# subscription-manager repos --enable rhel-7-server-optional-rpms
+# subscription-manager repos --enable rhel-server-rhscl-6-rpms
+# subscription-manager repos --enable rhel-6-server-optional-rpms
 ```
 
 
@@ -190,7 +192,7 @@ link:http://nodejs.org/documentation/[]
 `$ yum list available nodejs\*`
 
 *View the list of software available in RHSCL* +
-`$ yum --disablerepo="*" --enablerepo="rhel-server-rhscl-7-rpms" list available`
+`$ yum --disablerepo="*" --enablerepo="rhel-server-rhscl-6-rpms" list available`
 
 ## More Resources
 
