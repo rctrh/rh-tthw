@@ -1,0 +1,2643 @@
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-lb-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-rhs-client-1-source-rpms
+Repo Name: Red Hat Storage Native Client for RHEL 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-client/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhs-big-data-3-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 3 Server Big Data (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server-bigdata/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-3-source-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 3 (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-node-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Application Node Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-infra-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Infrastructure (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.0/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-ce-1-source-rpms
+Repo Name: Red Hat CloudForms Cloud Engine (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-ce/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6-beta-debug-rpms
+Repo Name: Red Hat Satellite Tools 6 Beta (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/sat-tools/6/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-osd-source-rpms
+Repo Name: Red Hat Ceph Storage OSD 1.2 for Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-osd/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.3-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.3 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-rpms
+Repo Name: Red Hat Developer Toolset 2 RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/2/os
+Enabled:   1
+
+Repo ID:   rhel-hpn-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hpn/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-optional-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-eus-debug-rpms
+Repo Name: Red Hat Software Collections Debug RPMs for Red Hat Enterprise Linux 6 RHEL 6 Server EUS
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhscl/1/debug
+Enabled:   0
+
+Repo ID:   cf-me-5.2-for-rhel-6-debug-rpms
+Repo Name: Red Hat CloudForms Management Engine (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.2/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-aus-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-rhb-debug-rpms
+Repo Name: Red Hat Developer Toolset RHB Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/rhb/rhel/server/6/6Server/$basearch/devtoolset/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/os
+Enabled:   0
+
+Repo ID:   cf-me-5.3-for-rhel-6-debug-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.3 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.3/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhsc-2.0-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 2.0 Management Console (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.0/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-installer-source-rpms
+Repo Name: Red Hat Ceph Storage Installer 1.2 for Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-installer/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-5.0-source-rpms
+Repo Name: Red Hat OpenStack 5.0 for RHEL 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/5.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-beta-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/subscription-asset-manager/os
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-debug-rpms
+Repo Name: Red Hat Software Collections Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhscl/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-supplementary-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Supplementary (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/supplementary/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-infra-6-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1/os
+Enabled:   0
+
+Repo ID:   rhs-3-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 3 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server/3/debug
+Enabled:   0
+
+Repo ID:   rhs-2.1-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 2.1 Server for On-premise (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-rhc-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Client Tools (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rh-common-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - RH Common (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rh-common/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6-beta-rpms
+Repo Name: Red Hat Satellite Tools 6 Beta (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/sat-tools/6/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-mon-source-rpms
+Repo Name: Red Hat Ceph Storage MON 1.2 for Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-mon/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   jws-3-for-rhel-6-server-rpms
+Repo Name: JBoss Web Server 3 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jws/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-node-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Application Node (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.0/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-2-source-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 2 (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-satellite-tools-6.1-source-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - AUS) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-aus-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-satellite-tools-6.1-debug-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - EUS) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/debug
+Enabled:   0
+
+Repo ID:   jb-eap-5-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Application Platform 5 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/5/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rhn-tools-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rhn-tools/source/SRPMS
+Enabled:   0
+
+Repo ID:   jb-ews-1-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Web Server 1 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbews/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-sjis-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sjis/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3/debug
+Enabled:   0
+
+Repo ID:   rhs-big-data-3-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 3 Server Big Data (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server-bigdata/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.6-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/rhevm/3.6/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhn-tools/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6.1-source-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/sat-tools/6.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-rhc-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Client Tools (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-hpn-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hpn/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-supplementary-beta-debuginfo
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/supplementary/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-supplementary-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Supplementary (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/supplementary/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rh-common-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - RH Common (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rh-common/os
+Enabled:   0
+
+Repo ID:   jb-ewp-5-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Web Platform 5 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbewp/5/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sap/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-optional-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Optional (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/atomic/7/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rhn-tools-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhn-tools/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-rpms
+Repo Name: MRG Grid (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g/2/os
+Enabled:   0
+
+Repo ID:   rhel-sap-hana-for-rhel-6-server-source-rpms
+Repo Name: RHEL for SAP HANA (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap-hana/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6.4-scalefs-server-for-rhs-2.1-source-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Scalable File System for RHS 2.1 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-agent/3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-execute-debug-rpms
+Repo Name: MRG Grid Execute (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g-execute/2/debug
+Enabled:   0
+
+Repo ID:   rhsc-2.1-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 2.1 Management Console (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.1/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-infra-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-beta-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhn-tools/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-hts-rpms
+Repo Name: Red Hat Hardware Certification Test Suite (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hts/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-htb-debug-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/subscription-asset-manager/debug
+Enabled:   0
+
+Repo ID:   rhel-6.2-scalefs-server-for-rhs-2.0-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Scalable File System for RHS 2.0 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-server-6-rhds-9-beta-rpms
+Repo Name: Red Hat Directory Server 9 Beta RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/directoryserver/9/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhsc-2.0-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 2.0 Management Console (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.0/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhs-2.0-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 2.0 Server for On-premise (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-jbosseap-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 JBoss EAP add-on Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossfuse-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss FUSE add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-mon-rpms
+Repo Name: Red Hat Ceph Storage MON 1.2 for Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-mon/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-tools-1-debug-rpms
+Repo Name: Red Hat CloudForms Tools for RHEL 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-tools/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-rhc-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Client Tools (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-beta-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/1/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-se-1-source-rpms
+Repo Name: Red Hat CloudForms System Engine (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-se/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-infra-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Infrastructure (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-debug-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/subscription-asset-manager/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-satellite-tools-6.1-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - AUS) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/os
+Enabled:   0
+
+Repo ID:   rhs-3-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 3 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-hts-beta-source-rpms
+Repo Name: Red Hat Hardware Certification Test Suite (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/hts/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-node-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Application Node Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-aus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6.2-server-for-rhs-2.0-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Server for RHS 2.0 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/debug
+Enabled:   0
+
+Repo ID:   jb-eap-6.3-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Application Platform 6.3 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6.3/os
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-debug-rpms
+Repo Name: Red Hat Developer Toolset Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/debug
+Enabled:   0
+
+Repo ID:   a-mq-clients-1-for-rhel-6-server-debug-rpms
+Repo Name: JBoss A-MQ Clients 1 (RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/a-mq/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3-beta-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3 Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevm/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-infra-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Infrastructure Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/2/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-node-6-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Application Node (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.6-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/rhevm/3.6/debug
+Enabled:   0
+
+Repo ID:   rhel-6.4-scalefs-server-for-rhs-2.1-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Scalable File System for RHS 2.1 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/scalablefilesystem/os
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-eus-debug-rpms
+Repo Name: Red Hat Developer Toolset 2 for RHEL 6 Server EUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-mon-debug-rpms
+Repo Name: Red Hat Ceph Storage MON 1.2 for Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-mon/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-tools-1-rpms
+Repo Name: Red Hat CloudForms Tools for RHEL 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-tools/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.5-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.5 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.5/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-common/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-node-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Application Node (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.0/debug
+Enabled:   0
+
+Repo ID:   rh-gluster-3-samba-for-rhel-6-server-rpms
+Repo Name: Red Hat Gluster 3 Samba (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-gluster-samba/3/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-beta-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/1/debug
+Enabled:   0
+
+Repo ID:   rhs-2.1-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 2.1 Server for On-premise (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-preview-source-rpms
+Repo Name: Red Hat OpenStack Essex Preview (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/essex/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-supplementary-debuginfo
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Supplementary (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/supplementary/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbosseap-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss EAP add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-hpn-for-rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/hpn/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-management-source-rpms
+Repo Name: MRG Management (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-mgmt/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   jws-3-for-rhel-6-server-source-rpms
+Repo Name: JBoss Web Server 3 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jws/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-preview-rpms
+Repo Name: Red Hat OpenStack Essex Preview (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/essex/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-common/debug
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-eus-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-v2vwin-1-rpms
+Repo Name: Red Hat Virt V2V Tool for RHEL 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/v2vwin/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-node-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Application Node (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6.4-server-for-rhs-2.1-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Server for RHS 2.1 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.4-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.4 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.4/os
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-thirdparty-oracle-java-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Oracle Java (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/oracle-java/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-management-rpms
+Repo Name: MRG Management (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-mgmt/2/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-infra-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Infrastructure (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-atomic-preview-source-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host Preview (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/preview/rhel/atomic/7/x86_64/source/SRPMS
+Enabled:   0
+
+Repo ID:   a-mq-clients-1-for-rhel-6-server-rpms
+Repo Name: JBoss A-MQ Clients 1 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/a-mq/1/os
+Enabled:   0
+
+Repo ID:   rhel-sjis-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sjis/debug
+Enabled:   0
+
+Repo ID:   jb-ews-2-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Web Server 2 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbews/2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-optional-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-jbosseap-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 JBoss EAP add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1.2/debug
+Enabled:   0
+
+Repo ID:   cf-me-5.2-for-rhel-6-source-rpms
+Repo Name: Red Hat CloudForms Management Engine (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.2/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-beta-source-rpms
+Repo Name: Red Hat Developer Toolset Beta Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossfuse-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss FUSE add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-agent/3/os
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-eus-source-rpms
+Repo Name: Red Hat Software Collections Source RPMs for Red Hat Enterprise Linux 6 RHEL 6 Server EUS
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhscl/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.2-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.2 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   cf-me-5.3-for-rhel-6-source-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.3 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.3/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-beta-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   jb-ewp-5-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Web Platform 5 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbewp/5/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbosseap-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss EAP add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-rhc-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Client Tools Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-aus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   cf-me-5.3-for-rhel-6-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.3 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.3/$basearch/os
+Enabled:   0
+
+Repo ID:   cf-me-5.2-for-rhel-6-rpms
+Repo Name: Red Hat CloudForms Management Engine (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.2/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-atomic-preview-debug-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host Preview (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/preview/rhel/atomic/7/x86_64/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-folsom-debug-rpms
+Repo Name: Red Hat OpenStack Folsom Preview (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/folsom/debug
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sap/debug
+Enabled:   0
+
+Repo ID:   rhel-hpn-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/hpn/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/subscription-asset-manager/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-4.0-debug-rpms
+Repo Name: Red Hat OpenStack 4.0 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/4.0/debug
+Enabled:   0
+
+Repo ID:   rhsc-2.0-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 2.0 Management Console (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.0/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-eus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rh-common-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - RH Common (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rh-common/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   rhsc-3-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 3 Console (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-console/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sjis-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sjis/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-beta-source-rpms
+Repo Name: Red Hat Developer Toolset 2 Beta Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-cts-source-rpms
+Repo Name: Red Hat OpenStack Beta Certification Test Suite for Server 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack-cts/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-debug-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/atomic/7/7Server/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-6-server-aus-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/os
+Enabled:   0
+
+Repo ID:   rhel-server-6-rhds-9-source-rpms
+Repo Name: Red Hat Directory Server 9 Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/directoryserver/9/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-supplementary-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/supplementary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossamq-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss A-MQ add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-server-dts2-6-beta-rpms
+Repo Name: Red Hat Developer Toolset 2 Beta RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/2/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhs-2.0-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 2.0 Server for On-premise (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-server-6-rhds-9-rpms
+Repo Name: Red Hat Directory Server 9 RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/directoryserver/9/os
+Enabled:   1
+
+Repo ID:   rhel-sap-hana-for-rhel-6-server-debug-rpms
+Repo Name: RHEL for SAP HANA (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap-hana/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-source-rpms
+Repo Name: Red Hat Software Collections Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhscl/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-jbosseap-6-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 JBoss EAP add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-sjis-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sjis/os
+Enabled:   1
+
+Repo ID:   rhel-hpn-for-rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/hpn/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-infra-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Infrastructure (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-foreman-rpms
+Repo Name: RHEL OpenStack Platform Installer for Server 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/foreman/os
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/scalablefilesystem/os
+Enabled:   0
+
+Repo ID:   rhel-hpn-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/hpn/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-infra-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Infrastructure (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-source-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/atomic/7/7Server/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   jb-eap-6.4-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Application Platform 6.4 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6.4/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossamq-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss A-MQ add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-realtime-rpms
+Repo Name: MRG Realtime (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-r/2/os
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-beta-rpms
+Repo Name: Red Hat Developer Toolset Beta RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-3-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 3 (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/3/os
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-3-debug-rpms
+Repo Name: Red Hat OpenStack 3.0 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/grizzly/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-rhc-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Client Tools (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-htb-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/subscription-asset-manager/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-agent/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-2-debug-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 2 (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-infra-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Infrastructure (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rhel-6.4-server-for-rhs-2.1-source-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Server for RHS 2.1 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-supplementary-debuginfo
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/supplementary/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-5.0-debug-rpms
+Repo Name: Red Hat OpenStack 5.0 for RHEL 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/5.0/debug
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-eus-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/eucjp/os
+Enabled:   0
+
+Repo ID:   rh-gluster-3-nfs-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Gluster Storage 3.1 NFS (Debug RPMs)(for RHEL 6 Server)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhgs-server-nfs/3.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-satellite-tools-6.1-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - EUS) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/os
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhs-client-1-rpms
+Repo Name: Red Hat Storage Native Client for RHEL 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-client/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-realtime-source-rpms
+Repo Name: MRG Realtime (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-r/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-infra-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Infrastructure (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-3-debug-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 3 (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-extras-debuginfo
+Repo Name: Red Hat Enterprise Linux 6 Server - Extras (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/extras/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-jbosseap-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 JBoss EAP add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.5-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.5 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.5/os
+Enabled:   0
+
+Repo ID:   rh-gluster-3-nfs-for-rhel-6-server-rpms
+Repo Name: Red Hat Gluster Storage 3.1 NFS (RPMs)(for RHEL 6 Server)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhgs-server-nfs/3.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhs-client-1-debug-rpms
+Repo Name: Red Hat Storage Native Client for RHEL 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-client/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossamq-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss A-MQ add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-3-rpms
+Repo Name: Red Hat OpenStack 3.0 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/grizzly/os
+Enabled:   0
+
+Repo ID:   rhel-sap-hana-for-rhel-6-server-rpms
+Repo Name: RHEL for SAP HANA (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap-hana/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-openstack-foreman-source-rpms
+Repo Name: RHEL OpenStack Platform Installer for Server 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/foreman/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-ce-1-debug-rpms
+Repo Name: Red Hat CloudForms Cloud Engine (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-ce/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbosseap-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss EAP add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.2/debug
+Enabled:   0
+
+Repo ID:   cf-me-5.4-for-rhel-6-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.4 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.4/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-sfs-for-rhel-6-server-eus-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-rhc-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Client Tools (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.2/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-beta-debug-rpms
+Repo Name: Red Hat Software Collections Beta Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhscl/1/debug
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/eucjp/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-infra-6-beta-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-cts-debug-rpms
+Repo Name: Red Hat OpenStack Beta Certification Test Suite for Server 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack-cts/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-jbosseap-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 JBoss EAP add-on Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-supplementary-beta-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/supplementary/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossfuse-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss FUSE add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-htb-source-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/subscription-asset-manager/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-source-rpms
+Repo Name: MRG Grid (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6.1-debug-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/sat-tools/6.1/debug
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-foreman-debug-rpms
+Repo Name: RHEL OpenStack Platform Installer for Server 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/foreman/debug
+Enabled:   0
+
+Repo ID:   jb-ews-1-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Web Server 1 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbews/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-beta-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-agent/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.1-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.1 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-optional-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Optional (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   rhs-3-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 3 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-jbosseap-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 JBoss EAP add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.0/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-optional-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Optional (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-folsom-rpms
+Repo Name: Red Hat OpenStack Folsom Preview (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/folsom/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-satellite-tools-6.1-debug-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - AUS) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-beta-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhn-tools/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-v2vwin-1-debug-rpms
+Repo Name: Red Hat Virt V2V Tool for RHEL 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/v2vwin/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-se-1-debug-rpms
+Repo Name: Red Hat CloudForms System Engine (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-se/1/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-beta-rpms
+Repo Name: Red Hat Software Collections Beta RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhscl/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rhn-tools-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rhn-tools/os
+Enabled:   0
+
+Repo ID:   rhs-nagios-3-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 3 Nagios Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-nagios/3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.3-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.3 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-ce-1-rpms
+Repo Name: Red Hat CloudForms Cloud Engine (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-ce/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-htb-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rh-gluster-3-nfs-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Gluster Storage 3.1 NFS (Source RPMs)(for RHEL 6 Server)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhgs-server-nfs/3.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rhn-tools-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhn-tools/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-4.0-source-rpms
+Repo Name: Red Hat OpenStack 4.0 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/4.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6.2-scalefs-server-for-rhs-2.0-source-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Scalable File System for RHS 2.0 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3-beta-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3 Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevm/3/debug
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/loadbalancer/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.2-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.2 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhsc-3-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 3 Console (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-console/3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-satellite-tools-6.1-source-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server - EUS) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/sat-tools/6.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-server-6-rhds-9-beta-debug-rpms
+Repo Name: Red Hat Directory Server 9 Beta Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/directoryserver/9/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-eus-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossfuse-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss FUSE add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevh/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-eus-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rh-gluster-3-samba-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Gluster 3 Samba (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-gluster-samba/3/debug
+Enabled:   0
+
+Repo ID:   rhsc-3-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 3 Console (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-console/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-supplementary-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/supplementary/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-common/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-beta-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/eucjp/debug
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-ose-2.0-rhc-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Client Tools (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.0/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-source-rpms
+Repo Name: Red Hat Developer Toolset Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbosseap-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss EAP add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-beta-debug-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/subscription-asset-manager/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-node-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Application Node (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rh-common-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - RH Common (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rh-common/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-rhc-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Client Tools (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.1-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.1 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3-beta-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3 Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevm/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-5.0-rpms
+Repo Name: Red Hat OpenStack 5.0 for RHEL 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/5.0/os
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhsc-2.1-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 2.1 Management Console (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.1/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.4-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.4 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.4/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-debug-rpms
+Repo Name: MRG Grid (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-beta-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-rpms
+Repo Name: Red Hat Software Collections RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhscl/1/os
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-eus-rpms
+Repo Name: Red Hat Developer Toolset for RHEL 6 Server EUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/os
+Enabled:   1
+
+Repo ID:   rhel-6.4-scalefs-server-for-rhs-2.1-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Scalable File System for RHS 2.1 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossamq-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss A-MQ add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.2/debug
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/atomic/7/7Server/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/rh-common/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-beta-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-hpn-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/hpn/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-beta-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhn-tools/os
+Enabled:   0
+
+Repo ID:   rhel-6.2-server-for-rhs-2.0-source-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Server for RHS 2.0 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/atomic/7/x86_64/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-rhc-6-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Client Tools (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-beta-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-agent/3/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-eus-rpms
+Repo Name: Red Hat Software Collections RPMs for Red Hat Enterprise Linux 6 RHEL 6 Server EUS
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhscl/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevh/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-node-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Application Node (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-rhc-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Client Tools (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-infra-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Infrastructure (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-supplementary-debuginfo
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Supplementary (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/supplementary/debug
+Enabled:   0
+
+Repo ID:   jb-eap-6-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Application Platform 6 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6/os
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-rhc-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Client Tools Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rhn-tools-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - Extended Update Support (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rhn-tools/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6.4-server-for-rhs-2.1-rpms
+Repo Name: Red Hat Enterprise Linux 6.4 Server for RHS 2.1 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/rhel/6.4/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbosseap-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss EAP add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/eucjp/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6-beta-source-rpms
+Repo Name: Red Hat Satellite Tools 6 Beta (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/sat-tools/6/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-4.0-rpms
+Repo Name: Red Hat OpenStack 4.0 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/4.0/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.5-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.5 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.5/debug
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhs-nagios-3-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 3 Nagios Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-nagios/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-beta-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/rh-common/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-supplementary-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Supplementary (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/supplementary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-beta-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-beta-source-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/subscription-asset-manager/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/debug
+Enabled:   0
+
+Repo ID:   jb-eap-6.3-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Application Platform 6.3 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6.3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-preview-debug-rpms
+Repo Name: Red Hat OpenStack Essex Preview (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/essex/debug
+Enabled:   0
+
+Repo ID:   rhel-6.2-scalefs-server-for-rhs-2.0-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Scalable File System for RHS 2.0 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/scalablefilesystem/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-beta-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-infra-6-beta-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-infra-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Infrastructure Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-rhc-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Client Tools (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-supplementary-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Supplementary (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/supplementary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-aus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-sjis-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sjis/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-beta-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-calamari-debug-rpms
+Repo Name: Red Hat Ceph Storage Calamari 1.2 for Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-calamari/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-aus-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/highavailability/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-rhn-tools-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server - AUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/rhn-tools/debug
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sjis-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sjis/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rh-common-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - RH Common (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rh-common/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   0
+
+Repo ID:   rhel-hpn-for-rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/hpn/os
+Enabled:   0
+
+Repo ID:   rhs-2.0-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 2.0 Server for On-premise (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-source-rpms
+Repo Name: Red Hat Developer Toolset 2 Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevh/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-rhc-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Client Tools Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-agent-beta-rpms
+Repo Name: Red Hat Enterprise Virtualization Agents for RHEL 6 Server Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhev-agent/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-management-debug-rpms
+Repo Name: MRG Management (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-mgmt/2/debug
+Enabled:   0
+
+Repo ID:   jb-ews-2-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Web Server 2 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbews/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-osd-debug-rpms
+Repo Name: Red Hat Ceph Storage OSD 1.2 for Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-osd/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-debug-rpms
+Repo Name: Red Hat OpenStack Beta for Server 6 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-beta-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevh/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-node-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Application Node (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-cf-se-1-rpms
+Repo Name: Red Hat CloudForms System Engine (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-se/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-node-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Application Node Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-node/2/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-eus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2-beta-infra-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 Infrastructure Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/2/os
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/highavailability/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-eus-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Extended Update Support (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhev-mgmt-agent-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Management Agents (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhev-mgmt-agent/3/debug
+Enabled:   0
+
+Repo ID:   rhel-server-6-rhds-9-beta-source-rpms
+Repo Name: Red Hat Directory Server 9 Beta Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/directoryserver/9/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-cf-tools-1-source-rpms
+Repo Name: Red Hat CloudForms Tools for RHEL 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/cf-tools/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhs-2.1-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 2.1 Server for On-premise (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.1/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-rhb-source-rpms
+Repo Name: Red Hat Developer Toolset RHB Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/rhb/rhel/server/6/6Server/$basearch/devtoolset/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-jbosseap-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 JBoss EAP add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.0/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-jbosseap-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 JBoss EAP add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-node-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Application Node (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   cf-me-5.4-for-rhel-6-source-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.4 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.4/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-thirdparty-oracle-java-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Oracle Java (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/oracle-java/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-beta-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-hts-source-rpms
+Repo Name: Red Hat Hardware Certification Test Suite (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hts/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-infra-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Infrastructure (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.0/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6.2-server-for-rhs-2.0-rpms
+Repo Name: Red Hat Enterprise Linux 6.2 Server for RHS 2.0 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/server/2.0/$basearch/rhel/6.2/os
+Enabled:   0
+
+Repo ID:   rhs-nagios-3-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Storage 3 Nagios Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-nagios/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhsc-2.1-for-rhel-6-server-rpms
+Repo Name: Red Hat Storage 2.1 Management Console (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhs/console/2.1/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-rhb-rpms
+Repo Name: Red Hat Developer Toolset RHB RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/rhb/rhel/server/6/6Server/$basearch/devtoolset/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbosseap-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss EAP add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-jbossfuse-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 JBoss FUSE add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.2/debug
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-ose-2-beta-jbosseap-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2 JBoss EAP add-on Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/2/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/1/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-htb-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) HTB (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/resilientstorage/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-messaging-2-rpms
+Repo Name: Red Hat Enterprise MRG Messaging 2 (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-m/2/os
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/scalablefilesystem/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-rpms
+Repo Name: Red Hat OpenStack Beta for Server 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/os
+Enabled:   0
+
+Repo ID:   a-mq-clients-1-for-rhel-6-server-source-rpms
+Repo Name: JBoss A-MQ Clients 1 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/a-mq/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhn-tools/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-installer-debug-rpms
+Repo Name: Red Hat Ceph Storage Installer 1.2 for Red Hat Enterprise Linux 6 Server (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-installer/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-eus-source-rpms
+Repo Name: Red Hat Developer Toolset 2 for RHEL 6 Server EUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-optional-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS - Optional (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   rhs-big-data-3-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Storage 3 Server Big Data (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhs-server-bigdata/3/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-rpms
+Repo Name: Red Hat Developer Toolset RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-rhevm-3-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-node-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Application Node (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-execute-rpms
+Repo Name: MRG Grid Execute (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g-execute/2/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-aus-source-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/loadbalancer/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-infra-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Infrastructure (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.0/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-sam-source-rpms
+Repo Name: Red Hat Subscription Asset Manager (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/subscription-asset-manager/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-node-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise Application Node (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-beta-debug-rpms
+Repo Name: Red Hat Developer Toolset Beta Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-beta-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevh/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossfuse-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss FUSE add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossfuse/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-htb-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/preview/rhel/atomic/7/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-calamari-rpms
+Repo Name: Red Hat Ceph Storage Calamari 1.2 for Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-calamari/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/optional/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-extras-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extras (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/extras/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.6-source-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/rhevm/3.6/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-realtime-debug-rpms
+Repo Name: MRG Realtime (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-r/2/debug
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-source-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/eucjp/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/sap/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-ose-infra-6-source-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   jb-eap-5-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Application Platform 5 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/5/os
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-3-source-rpms
+Repo Name: Red Hat OpenStack 3.0 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/grizzly/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-v2vwin-1-source-rpms
+Repo Name: Red Hat Virt V2V Tool for RHEL 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/v2vwin/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-debug-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/loadbalancer/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-source-rpms
+Repo Name: Red Hat OpenStack Beta for Server 6 (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-eus-source-rpms
+Repo Name: Red Hat Developer Toolset for RHEL 6 Server EUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-hpn-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hpn/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.0-rhc-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.0 Client Tools (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.0/os
+Enabled:   0
+
+Repo ID:   rhel-atomic-host-beta-rpms
+Repo Name: Red Hat Enterprise Linux Atomic Host Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/atomic/7/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-lb-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-server-6-rhds-9-debug-rpms
+Repo Name: Red Hat Directory Server 9 Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/directoryserver/9/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-eus-rpms
+Repo Name: Red Hat Developer Toolset 2 for RHEL 6 Server EUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/2/os
+Enabled:   1
+
+Repo ID:   rhel-lb-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.2-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.2 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-osd-rpms
+Repo Name: Red Hat Ceph Storage OSD 1.2 for Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-osd/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/resilientstorage/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-thirdparty-oracle-java-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Oracle Java (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/oracle-java/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-rhevm-3.3-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.3 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.3/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-calamari-source-rpms
+Repo Name: Red Hat Ceph Storage Calamari 1.2 for Red Hat Enterprise Linux 6 Server (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-calamari/1.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   rhel-server-dts-6-eus-debug-rpms
+Repo Name: Red Hat Developer Toolset for RHEL 6 Server EUS (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/debug
+Enabled:   0
+
+Repo ID:   rh-gluster-3-samba-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Gluster 3 Samba (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rh-gluster-samba/3/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-mrg-grid-execute-source-rpms
+Repo Name: MRG Grid Execute (for RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/mrg-g-execute/2/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-debug-rpms
+Repo Name: Red Hat Developer Toolset 2 Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/2/debug
+Enabled:   0
+
+Repo ID:   rhel-server-ose-rhc-6-beta-rpms
+Repo Name: Red Hat OpenShift Enterprise Client Tools Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-rhc/1/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-node-6-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Application Node (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/1.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-eucjp-for-rhel-6-server-beta-source-rpms
+Repo Name: Red Hat EUCJP Support (RHEL 6 Server) Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/eucjp/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-openstack-beta-cts-rpms
+Repo Name: Red Hat OpenStack Beta Certification Test Suite for Server 6 (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/openstack-cts/os
+Enabled:   0
+
+Repo ID:   rhel-sap-for-rhel-6-server-source-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-rhc-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Client Tools (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-rhc/2.2/source/SRPMS
+Enabled:   0
+
+Repo ID:   jb-eap-6.4-for-rhel-6-server-rpms
+Repo Name: JBoss Enterprise Application Platform 6.4 (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6.4/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-1.2-infra-6-rpms
+Repo Name: Red Hat OpenShift Enterprise 1.2 Infrastructure (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-node-source-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Application Node (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhn-tools-beta-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 6 Server Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhn-tools/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-server-dts2-6-beta-debug-rpms
+Repo Name: Red Hat Developer Toolset 2 Beta Debug RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/devtoolset/2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-aus-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/scalablefilesystem/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-thirdparty-oracle-java-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - Oracle Java (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/oracle-java/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossamq-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss A-MQ add-on (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.1/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-beta-source-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/server/6/$basearch/optional/debug
+Enabled:   0
+
+Repo ID:   cf-me-5.4-for-rhel-6-debug-rpms
+Repo Name: Red Hat CloudForms Management Engine 5.4 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/cf-me/server/5.4/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-server-rhscl-6-beta-source-rpms
+Repo Name: Red Hat Software Collections Beta Source RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhscl/1/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-jbossamq-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 JBoss A-MQ add-on (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-jbossamq/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.2-infra-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.2 Infrastructure (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-infra/2.2/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-ose-2.1-node-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise 2.1 Application Node (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ose-node/2.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-extras-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extras (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/extras/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-supplementary-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Supplementary (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/supplementary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevh-beta-rpms
+Repo Name: Red Hat Enterprise Virtualization Hypervisor Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/rhevh/os
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-server-ose-infra-6-beta-rpms
+Repo Name: Red Hat OpenShift Enterprise Infrastructure Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-infra/1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.1-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.1 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-optional-source-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-rs-for-rhel-6-server-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/resilientstorage/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-eus-rh-common-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support - RH Common (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/rh-common/debug
+Enabled:   0
+
+Repo ID:   jb-eap-6-for-rhel-6-server-source-rpms
+Repo Name: JBoss Enterprise Application Platform 6 (RHEL 6 Server) (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/jbeap/6/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rh-common-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - RH Common Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/6Server/$basearch/rh-common/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-satellite-tools-6.1-rpms
+Repo Name: Red Hat Satellite Tools 6.1 (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/6Server/$basearch/sat-tools/6.1/os
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhevm-3.4-debug-rpms
+Repo Name: Red Hat Enterprise Virtualization Manager 3.4 (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhevm/3.4/debug
+Enabled:   0
+
+Repo ID:   rhel-ha-for-rhel-6-server-htb-source-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) HTB (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/highavailability/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-6-server-rhceph-1.2-installer-rpms
+Repo Name: Red Hat Ceph Storage Installer 1.2 for Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/ceph-installer/1.2/os
+Enabled:   0
+
+Repo ID:   rhel-server-ose-jbosseap-6-beta-debug-rpms
+Repo Name: Red Hat OpenShift Enterprise JBoss EAP add-on Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/ose-jbosseap/1/debug
+Enabled:   0
+
+Repo ID:   rhel-6-server-hts-beta-rpms
+Repo Name: Red Hat Hardware Certification Test Suite (for RHEL 6 Server) Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/server/6/$releasever/$basearch/hts/os
+Enabled:   0
+
+Repo ID:   rhel-server-ost-6-folsom-source-rpms
+Repo Name: Red Hat OpenStack Folsom Preview (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/openstack/folsom/source/SRPMS
+Enabled:   0
+

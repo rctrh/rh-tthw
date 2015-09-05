@@ -1,0 +1,138 @@
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-lb-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-server-dts2-6-rpms
+Repo Name: Red Hat Developer Toolset 2 RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/2/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-htb-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server HTB (RPMs)
+Repo URL:  https://cdn.redhat.com/content/htb/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-sfs-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-hpn-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux High Performance Networking (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/hpn/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-rs-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-sap-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux for SAP (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap/os
+Enabled:   1
+
+Repo ID:   rhel-rs-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-server-6-rhds-9-rpms
+Repo Name: Red Hat Directory Server 9 RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/directoryserver/9/os
+Enabled:   1
+
+Repo ID:   rhel-sjis-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux for S-JIS (RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sjis/os
+Enabled:   1
+
+Repo ID:   rhel-sfs-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-optional-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/optional/os
+Enabled:   1
+
+Repo ID:   rhel-sap-hana-for-rhel-6-server-rpms
+Repo Name: RHEL for SAP HANA (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/sap-hana/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-rs-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-server-rhscl-6-rpms
+Repo Name: Red Hat Software Collections RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/rhscl/1/os
+Enabled:   1
+
+Repo ID:   rhel-server-dts-6-eus-rpms
+Repo Name: Red Hat Developer Toolset for RHEL 6 Server EUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-scalefs-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Scalable File System (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/scalablefilesystem/os
+Enabled:   1
+
+Repo ID:   rhel-server-dts-6-rpms
+Repo Name: Red Hat Developer Toolset RPMs for Red Hat Enterprise Linux 6 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/devtoolset/os
+Enabled:   1
+
+Repo ID:   rhel-lb-for-rhel-6-server-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-server-dts2-6-eus-rpms
+Repo Name: Red Hat Developer Toolset 2 for RHEL 6 Server EUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/devtoolset/2/os
+Enabled:   1
+
+Repo ID:   rhel-lb-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux Load Balancer (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/loadbalancer/os
+Enabled:   1
+
+Repo ID:   rhel-6-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux 6 Server - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/6/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-6-server-aus-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 6 Server) - AUS (RPMs)
+Repo URL:  https://cdn.redhat.com/content/aus/rhel/server/6/$releasever/$basearch/highavailability/os
+Enabled:   1
+
