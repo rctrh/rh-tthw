@@ -9,7 +9,7 @@ In this tutorial, you will install the Eclipse 4.4.2 (Luna) IDE and the GNU Comp
 
 Red Hat DTS provides the latest, stable, open source C and {cpp} compilers and complementary development tools, including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+You will need a Red Hat Enterprise Linux 6 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
 Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
@@ -43,7 +43,7 @@ In this step, you will configure your system to obtain software, including the R
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
 . On the Subscription Manager _System_ menu, select _Repositories_.
-. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-7-rpms_ and _rhel-7-desktop-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the enabled column. +
+. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-6-rpms_ and _rhel-6-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-6-rpms_ and _rhel-6-desktop-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the enabled column. +
  
 If you don’t see any RHSCL repositories in the list, your subscription might not include it.
 [.content-img]
@@ -68,8 +68,8 @@ If you are using a desktop edition of Red Hat Enterprise Linux, change `-server-
 
 [.code-block]
 ```
-# subscription-manager repos --enable rhel-server-rhscl-7-rpms
-# subscription-manager repos --enable rhel-7-server-optional-rpms
+# subscription-manager repos --enable rhel-server-rhscl-6-rpms
+# subscription-manager repos --enable rhel-6-server-optional-rpms
 ```
 
 ## Step2 Content
@@ -241,11 +241,12 @@ For more information:
 
 You can view the list of packages available in RHSCL by running:
 
-`$ yum --disablerepo="*" --enablerepo="rhel-server-rhscl-7-rpms" list available`
+`$ yum --disablerepo="*" --enablerepo="rhel-server-rhscl-6-rpms" list available`
 
 
 *Developing with Red Hat Enterprise Linux* +
-link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Developer_Guide/index.html[Red Hat Enterprise Linux 7 Developer Guide] -- The developer guide for Red Hat Enterprise Linux 7 provides an introduction to application development tools and using source code management tools such as Git in Red Hat Enterprise Linux 7.
+link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Developer_Guide/[Red Hat Enterprise Linux 6 Developer Guide] -- The developer guide for Red Hat Enterprise Linux 6 provides an introduction to application development tools and using source code management tools such as Git in Red Hat Enterprise Linux 6. +  
+You may also want to view the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Developer_Guide/index.html[Red Hat Enterprise Linux 7 Developer Guide] for updated information. Red Hat Enterprise Linux 7 was released in 2014.
 
 
 ### Become a Red Hat developer: developers.redhat.com

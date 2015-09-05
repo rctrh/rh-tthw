@@ -18,6 +18,7 @@ RHEL6_SCL_SOURCES = get-started-scl-rhel6-python.adoc \
 	get-started-scl-rhel6-ruby.adoc \
 	get-started-scl-rhel6-php.adoc \
 	get-started-scl-rhel6-perl.adoc \
+	get-started-dts-rhel6-eclipse-cpp.adoc
 
 SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES)
 
