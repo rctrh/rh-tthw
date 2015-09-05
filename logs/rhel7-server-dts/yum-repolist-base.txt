@@ -1,0 +1,10 @@
+Loaded plugins: langpacks, product-id, subscription-manager
+repo id                                           repo name               status
+rhel-7-server-eus-rpms/7Server/x86_64             Red Hat Enterprise Linu 7,240
+rhel-7-server-rpms/7Server/x86_64                 Red Hat Enterprise Linu 7,240
+rhel-7-server-rt-beta-rpms/x86_64                 Red Hat Enterprise Linu    14
+rhel-ha-for-rhel-7-server-eus-rpms/7Server/x86_64 Red Hat Enterprise Linu   131
+rhel-ha-for-rhel-7-server-rpms/7Server/x86_64     Red Hat Enterprise Linu   131
+rhel-rs-for-rhel-7-server-eus-rpms/7Server/x86_64 Red Hat Enterprise Linu   151
+rhel-rs-for-rhel-7-server-rpms/7Server/x86_64     Red Hat Enterprise Linu   151
+repolist: 15,058
