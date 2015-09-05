@@ -13,7 +13,11 @@ RHEL7_NATIVE_SOURCES = get-started-rhel7-cpp.adoc \
 	get-started-rhel7-perl.adoc \
 	get-started-rhel7-ruby.adoc \
 
-RHEL6_SCL_SOURCES = get-started-scl-rhel6-python.adoc 
+RHEL6_SCL_SOURCES = get-started-scl-rhel6-python.adoc \
+	get-started-scl-rhel6-nodejs.adoc \
+	get-started-scl-rhel6-ruby.adoc \
+	get-started-scl-rhel6-php.adoc \
+	get-started-scl-rhel6-perl.adoc \
 
 SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES)
 
@@ -22,6 +26,9 @@ SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES)
 OUTPUTS = $(patsubst %.adoc,output/%.html,$(SOURCES)) 
 
 all:  $(OUTPUTS)
+
+clean:
+	rm $(OUTPUTS)
 
 output/%.html: %.adoc app.css
 	$(CMD) $< -o $@
