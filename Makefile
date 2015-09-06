@@ -20,7 +20,14 @@ RHEL6_SCL_SOURCES = get-started-scl-rhel6-python.adoc \
 	get-started-scl-rhel6-perl.adoc \
 	get-started-dts-rhel6-eclipse-cpp.adoc
 
-SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES)
+RHEL6_NATIVE_SOURCES = get-started-rhel6-cpp.adoc \
+	get-started-rhel6-python.adoc \
+	get-started-rhel6-php.adoc \
+	get-started-rhel6-perl.adoc \
+	get-started-rhel6-ruby.adoc \
+
+
+SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES) $(RHEL6_NATIVE_SOURCES)
 
 # OUTPUTS=$(SOURCES:.adoc=.html)
 

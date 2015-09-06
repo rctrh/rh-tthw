@@ -5,7 +5,7 @@
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will install the GNU Compiler Collection (GCC) and build a simple, C++ Hello World application.  This tutorial should take less than 15 minutes to complete.
+In this tutorial, you will install the GNU Compiler Collection (GCC) and build a simple, {cpp} Hello World application.  This tutorial should take less than 15 minutes to complete.
 
 You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 
@@ -51,7 +51,7 @@ Now download and install any available updates by running `yum update`.  If upda
 
 ## Step2 Content
 
-In this next step you will use a single command to download and install the GCC C and C++ compilers as well as other development tools. You should still have the previous Terminal session open, and still be running under su.
+In this next step you will use a single command to download and install the GCC C and {cpp} compilers as well as other development tools. You should still have the previous Terminal session open, and still be running under su.
 
 `# yum install @development`
 
@@ -69,7 +69,7 @@ $
 
 ## Step3 Content
 
-In this step you will create and run the C++ Hello World application.  You should still have a Terminal session open running under your regular user ID.
+In this step you will create and run the {cpp} Hello World application.  You should still have a Terminal session open running under your regular user ID.
 
 Now create `hello.cpp` using your preferred text editor or simply use cat:
 
@@ -92,7 +92,7 @@ Now compile and run the program:
 
 [.code-block]
 ```
-$ g++ -o hello hello.cpp
+$ pass:[g++] -o hello hello.cpp
 $ ./hello
 Hello, Red Hat Developers World!
 ```
@@ -116,7 +116,7 @@ link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-
 
 *Learn About the Red Hat Developer Toolset*
 
-Red Hat Developer Toolset provides the latest, stable open source C and C++ compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
+Red Hat Developer Toolset provides the latest, stable open source C and {cpp} compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
 
 * link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset Product page]
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/3.1_Release_Notes/index.html[Red Hat Developer Toolset 3.1 Release Notes]
@@ -137,14 +137,14 @@ If you don’t have a Red Hat Enterprise Linux subscription, you can try it for 
 +
 Red Hat Enterprise Linux includes a version of the GNU compiler collection that is supported for the same lifecycle as the release of Red Hat Enterprise Linux. Major releases of Red Hat Enterprise Linux are supported for up to 10 years.
 +
-Use `g++ -v` to see what version you have installed.
+Use `pass:[g++] -v` to see what version you have installed.
 +
 [.code-block]
 ```
-$ g++ -v
+$ pass:[g++] -v
 gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) 
 ```
 +
-3. How can I obtain a newer version of GCC/G++?
+3. How can I obtain a newer version of GCC/pass:[G++]?
 +
-Red Hat Developer Toolset provides the latest, stable open source C and C++ compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux. The Red Hat Developer Toolset uses Software Collections to install a parallel set of packages in `/opt/rh` where they will not override the system packages that come with Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
+Red Hat Developer Toolset provides the latest, stable open source C and {cpp} compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux. The Red Hat Developer Toolset uses Software Collections to install a parallel set of packages in `/opt/rh` where they will not override the system packages that come with Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
