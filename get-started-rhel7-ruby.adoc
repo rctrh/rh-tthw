@@ -81,7 +81,7 @@ In this step, you will first run Ruby in interactive mode.  Then you will create
 ```
 $ irb 
 irb(main):001:0> puts "Hello, Red Hat Developers World from Ruby " + RUBY_VERSION
- puts "Hello, Red Hat Developers World from Ruby " + RUBY_VERSION
+Hello, Red Hat Developers World from Ruby 2.0.0
 => nil
 irb(main):002:0> quit
 ```
