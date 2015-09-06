@@ -5,11 +5,11 @@
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to get started with Python 2.7 development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial should take five to ten minutes to complete.
+In this tutorial, you will see how to get started with Python 2.6 development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial should take five to ten minutes to complete.
 
-On Red Hat Enterprise Linux, Python 2.7 is installed by default. You can skip directly to the "Your First Application" step, or continue reading to learn more about installing and maintaining software packages. 
+On Red Hat Enterprise Linux, Python 2.6 is installed by default. You can skip directly to the "Your First Application" step, or continue reading to learn more about installing and maintaining software packages. 
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 6 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -52,7 +52,7 @@ Now download and install any available updates by running `yum update`.  If upda
 
 ## Step2 Content
 
-Python 2.7 and a number of popular Python modules are installed by default on Red Hat Enterprise Linux. To see what Python packages are already installed, run the following `yum` command after becoming root with `su`. If you don't already have a Terminal window open, start one from the _Applications_ Menu.
+Python 2.6 and a number of popular Python modules are installed by default on Red Hat Enterprise Linux. To see what Python packages are already installed, run the following `yum` command after becoming root with `su`. If you don't already have a Terminal window open, start one from the _Applications_ Menu.
 
 [.code-block]
 ```
@@ -86,10 +86,10 @@ In this step, you will first run Python in interactive mode.  Then you will crea
 [.code-block]
 ```
 $ python
-Python 2.7.5 (default, Apr  9 2015, 11:03:32) 
+Python 2.6.6 (r266:84292, May 22 2015, 08:34:51) 
 Type "help", "copyright", "credits" or "license" for more information.
->>> print("Hello, Red Hat Developers World")
-Hello, Red Hat Developers World
+>>> print "Hello, Red Hat Developers World!"
+Hello, Red Hat Developers World!
 >>> quit()
 ```
 
@@ -104,7 +104,7 @@ Add the following text to the file:
 
 import sys
 
-version = "Python %d.%d" % (sys.version_info.major, sys.version_info.minor)
+version = "Python %d.%d" % (sys.version_info[0], sys.version_info[1])
 print "Hello, Red Hat Developers World from",version
 ```
 
@@ -113,13 +113,13 @@ Save it and exit the editor. Then make the script executable and run it:
 ```
 $ chmod +x hello.py
 $ ./hello.py
-Hello, Red Hat Developers World from Python 2.7
+Hello, Red Hat Developers World from Python 2.6
 ```
 
 ### Where to go next?
 
-*Python 2.7 Tutorial at Python.org* +
-link:https://docs.python.org/2.7/tutorial/[]
+*Python 2.6 Tutorial at Python.org* +
+link:https://docs.python.org/2.6/tutorial/[]
 
 *Find additional Python modules* +
 `$ yum list available python\*`
@@ -157,7 +157,7 @@ I don't have a current Red Hat subscription, can I get an evaluation?
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
 +
-2. Some Python examples/code I’ve tried doesn’t work with Python 2 from Red Hat Enterprise Linux?
+2. Some Python examples/code I’ve tried doesn’t work with Python 2 from Red Hat Enterprise Linux.
 +
 Python 3.x is a new version of the Python language that is incompatible with the previous 2.x series. The version of Python included with Red Hat Enterprise Linux in `/usr/bin/python` is from the Python 2.x series. There is a large amount of code written for Python 2.x that will not run without modification on Python 3.x. Likewise, code that is written for Python 3 is incompatible with Python 2.
 +
