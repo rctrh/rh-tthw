@@ -221,7 +221,7 @@ You can use `subscription --list` to view the available software repositories an
 +
 [.code-block]
 ```
-$ su -<
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 

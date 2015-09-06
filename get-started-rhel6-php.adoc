@@ -7,7 +7,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will see how to get started with PHP development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial should take five to ten minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 6 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -83,7 +83,7 @@ $ php -a
 Interactive shell
 
 php > printf("Hello, Red Hat Developer's World from PHP %s\n",PHP_VERSION);
-Hello, Red Hat Developer's World from PHP 5.4.16
+Hello, Red Hat Developers World from PHP 5.3.3
 php > quit
 ```
 
@@ -105,7 +105,7 @@ Save it and exit the editor. Then make the script executable and run it:
 ```
 $ chmod +x hello.php
 $ ./hello.php
-Hello, Red Hat Developers World from PHP 5.4.16
+Hello, Red Hat Developers World from PHP 5.3.3
 ```
 
 

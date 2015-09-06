@@ -9,7 +9,7 @@ In this tutorial, you will see how to get started with Perl development on Red H
 
 On Red Hat Enterprise Linux, Perl is installed by default. You can skip directly to the "Your First Application" step, or continue reading to learn more about installing and maintaining software packages. 
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 6 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -54,9 +54,11 @@ Now download and install any available updates by running `yum update`.  If upda
 
 Perl and a number of popular Perl modules are installed by default on Red Hat Enterprise Linux. To see what Perl packages are already installed, run the following `yum` command after becoming root with `su`. If you don't already have a Terminal window open, start one from the _Applications_ Menu.
 
-
-`$ su` +
-`# yum list installed perl\*`
+[.code-block]
+```
+$ su +
+# yum list installed perl\*
+```
 
 If Perl wasn't installed or needed an update, you would only need to run one yum command.
 
@@ -101,7 +103,7 @@ Save it and exit the editor. Then make the script executable and run it:
 ```
 $ chmod +x hello.pl
 $ ./hello.pl
-Hello, Red Hat Developers World from Perl v5.16.3
+Hello, Red Hat Developers World from Perl v5.10.1
 ```
 
 ### Where to go next?
