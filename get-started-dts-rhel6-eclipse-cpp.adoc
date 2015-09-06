@@ -47,7 +47,7 @@ Red Hat Subscription Manager can be started from the _System_ -> _Administration
  
 If you don’t see any RHSCL repositories in the list, your subscription might not include it.
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollections_install_1.png')}[Manage Repositories]
+image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollections_install_rhel6_1.png')}[Manage Repositories]
 
 See <<troubleshooting,Troubleshooting and FAQ>> for more information. +
 
@@ -138,7 +138,7 @@ The following steps will create and run a {cpp} Hello World project using the sa
 You will see "Hello, Red Hat Developers World" in the _Console_ tab on the lower half of the Eclipse window. You may want to make the Eclipse window larger, or make the Console pane larger to see more of the output from the build and run steps. 
 
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/developertoolset/developertoolset_install_1.png')}[Eclipse Project]
+image:#{cdn(site.base_url + '/images/products/developertoolset/developertoolset_rhel_6_ds_eclipse_3.png')}[Eclipse Project]
 
 For more information, see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/User_Guide/sect-Eclipse-Use.html[Using Eclipse] section of the link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/User_Guide/index.html[Red Hat Developer Toolset 3.1 User Guide].
 
