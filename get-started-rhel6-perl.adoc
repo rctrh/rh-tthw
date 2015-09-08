@@ -60,7 +60,7 @@ $ su +
 # yum list installed perl\*
 ```
 
-If Perl wasn't installed or needed an update, you would only need to run one yum command.
+If Perl wasn't installed or needed an update, you would only need to run one `yum` command.
 
 `# yum install perl`
 

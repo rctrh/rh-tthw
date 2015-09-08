@@ -60,7 +60,7 @@ $ su -
 # yum list installed python\*
 ```
 
-If Python wasn't installed or needed an update, you would only need to run one yum command.
+If Python wasn't installed or needed an update, you would only need to run one `yum` command.
 
 `# yum install python`
 
