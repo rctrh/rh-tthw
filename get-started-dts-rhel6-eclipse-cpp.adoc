@@ -40,7 +40,7 @@ In this step, you will configure your system to obtain software, including the R
 
 ### Using the Red Hat Subscription Manager GUI
 
-Red Hat Subscription Manager can be started from the _System_ -> _Administration_ subgroup of the _Applications_ Menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
+Red Hat Subscription Manager can be started from the _System_ -> _Administration_ subgroup of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
 . On the Subscription Manager _System_ menu, select _Repositories_.
 . In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-6-rpms_ and _rhel-6-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-6-rpms_ and _rhel-6-desktop-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the enabled column. +
@@ -145,11 +145,11 @@ For more information, see the link:https://access.redhat.com/documentation/en-US
 
 ### Using DTS {cpp} from the command line without an IDE
 
-If you skipped installing Eclipse or prefer to work in a terminal session, you can run the DTS GNU {cpp} compiler from the command line. The GNU {cpp} compiler is run with the command, `pass:[g++]`. You need to add DTS to your environment with `scl enable` in a _Terminal_ window. Also see <<permanently-enable,Permanently adding DTS to your Development Environment>> for more information. 
+If you skipped installing Eclipse or prefer to work in a _Terminal_ window, you can run the DTS GNU {cpp} compiler from the command line. The GNU {cpp} compiler is run with the command, `pass:[g++]`. You need to add DTS to your environment with `scl enable` in a _Terminal_ window. Also see <<permanently-enable,Permanently adding DTS to your Development Environment>> for more information. 
 
 `$ scl enable devtoolset-3 bash`
 
-Now create `hello.cpp` using your preferred text editor or simply use cat:
+Now create `hello.cpp` using your preferred text editor or simply use `cat`:
 
 [.code-block]
 ```
@@ -164,7 +164,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Type `control-d` to exit cat, or if you used an editor save the file and exit.
+Type `control-d` to exit `cat`, or if you used an editor save the file and exit.
 
 Now compile and run the program:
 
@@ -224,7 +224,7 @@ gcc version 4.9.2. 20150212 (Red Hat 4.9.2-6) (GCC)
 
 *Learn more about the Red Hat Developer Toolset*
 
-* link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset Product page]
+* link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset product page]
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/3.1_Release_Notes/index.html[Red Hat Developer Toolset 3.1 Release Notes]
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/User_Guide/index.html[Red Hat Developer Toolset 3.1 User Guide]
 
@@ -313,7 +313,7 @@ You can view the list of packages with the following command:
 `# yum list available devtoolset-3-\*`
 8. How can I find out what RHSCL packages are installed?
 +
-`scl --list` will show the list of RHSCL packages that have been installed whether they are enabled or not.
+`scl --list` will show the list of RHSCL packages that have been installed, whether they are enabled or not.
 +
 [.code-block]
 ```

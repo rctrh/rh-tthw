@@ -86,7 +86,7 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-Under your normal user ID, start a terminal session. First, use `scl enable` to add Node.js to your environment, then start  `node` to check the version.
+Under your normal user ID, start a _Terminal_ window. First, use `scl enable` to add Node.js to your environment, then start  `node` to check the version.
 
 [.code-block]
 ```
@@ -161,16 +161,16 @@ When you deliver an application that uses RHSCL packages, a best practice is to 
 
 *Learn Node.js and JavaScript using NodeSchool.io tutorials* +
 
-Now that you have Node.js installed, use the tutorials from link:http://nodeschool.io/#workshopper-list[nodeschool.io] to learn Node.js and JavaScript. You need to have already run `scl enable nodejs010 bash` or have added Node.js permanently to development environment.  
+Now that you have Node.js installed, use the tutorials from link:http://nodeschool.io/#workshopper-list[nodeschool.io] to learn Node.js and JavaScript. You need to have already run `scl enable nodejs010 bash` or have added Node.js permanently to your development environment.  
 
 Install the JavaScript and Node.js tutorials into your current directory:
 [.code-block]
 ```
 $ npm install javascripting
-$ npm install learnyounode`
+$ npm install learnyounode
 ```
 
-Temporarily add node_modules/.bin to your PATH:
+Temporarily add `node_modules/.bin` to your PATH:
 
 `$ export PATH=$PATH:$PWD/node_modules/.bin`
 
@@ -186,7 +186,7 @@ Run the Node.js tutorial:
 *View documentation on the Nodejs.org web site* +
 link:http://nodejs.org/documentation/[]
 
-*Find additional RHSCL Node modules* +
+*Find additional RHSCL Node.js modules* +
 `$ yum list available nodejs\*`
 
 *View the list of software available in RHSCL* +
@@ -211,7 +211,7 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 
 1. The RHSCL repository is not available or is not found on my system.
 +
-The name of the repo depends on whether you have a server or desktop version of Red Hat Enterprise Linux installed.
+The name of the repository depends on whether you have a server or desktop version of Red Hat Enterprise Linux installed.
 +
 Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 +
@@ -223,12 +223,12 @@ $ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
-2. yum install fails due to a missing dependency such as scl-utils-build or texlive-*.
+2. yum install fails due to a missing dependency.
 +
 These packages are in the optional RPMs repository, which is not enabled by default. See <<Enable Red Hat Software Collections>> for how to enable both the optional RPMs and RHSCL repositories.
 3. How can I find out what RHSCL packages are installed?
 +
-`scl --list` will show the list of RHSCL packages that have been installed whether they are enabled or not.
+`scl --list` will show the list of RHSCL packages that have been installed, whether they are enabled or not.
 +
 [.code-block]
 ```
@@ -254,6 +254,6 @@ RHSCL does not alter the system path.  You need to use `scl enable` to change th
 `$ scl enable nodejs010 bash`
 +
 For more information see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/index.html[Red Hat Software Collection 2.0 Documentation].
-6. When I try to run node, I get an error about a missing shared library.
+6. When I try to run `node`, I get an error about a missing shared library.
 +
 This is due to not having run `scl enable` first. When `scl enable` runs, in addition to setting up the command search PATH, it also sets up the search path for shared libraries, LD_LIBRARY_PATH.
