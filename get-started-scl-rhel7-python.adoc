@@ -1,6 +1,9 @@
 :awestruct-layout: product-get-started
 :awestruct-interpolate: true
 
+## Path Intro section
+Install Python 3.4 from Red Hat Software Collections and create a simple Hello World Application in under 10 minutes.
+
 ## Prerequisites section title
 Introduction and Prerequisites
 
