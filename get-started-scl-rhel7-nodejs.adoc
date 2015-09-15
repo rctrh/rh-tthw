@@ -1,6 +1,10 @@
 :awestruct-layout: product-get-started
 :awestruct-interpolate: true
 
+## Path Intro section
+Get started developing with Node.js from Red Hat Software Collections in under 10 minutes.
+
+
 ## Prerequisites section title
 Introduction and Prerequisites
 
