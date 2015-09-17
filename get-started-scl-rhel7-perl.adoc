@@ -15,7 +15,7 @@ You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscri
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
 Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
 
-If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step1 Duration
 2 minutes

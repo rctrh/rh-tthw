@@ -14,7 +14,7 @@ On Red Hat Enterprise Linux, Perl is installed by default. You can skip directly
 
 You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
-If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step1 Duration
 2 minutes
