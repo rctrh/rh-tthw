@@ -8,7 +8,7 @@ Get started with Python containers on Red Hat Enterprise Linux Atomic Host in un
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic host. Red Hat Enterprise Linux Atomic Host is a secure, minimal-footprint OS optimized to run Linux containers.
+In this tutorial, you will see how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic Host. Atomic Host is a secure, minimal-footprint OS optimized to run Linux containers.
 
 You will need to have Red Hat Enterprise Linux Atomic Host installed on a virtual (or physical) machine. You will also need a current Red Hat subscription that allows you to download software and updates from Red Hat.
 
@@ -55,7 +55,7 @@ Note: If you are not using Atomic Host and following this tutorial on Red Hat En
 
 The process for installing updates on Atomic Host is different than other Red Hat systems. On Atomic Host, updates are applied atomically in a single indivisible step. Likewise, updates can also be rolled back in a single step. Most of the file systems on Atomic Host are mounted read-only, only `/etc` and `/var` are writable. Yum is not used for installing updates or software. Instead, the `rpm-ostree` system is used for installing updates. Software is installed using docker containers.
 
-Login to your virtual (or physical) machine running Atomic Host as the root user, or use `su` or `sudo bash` to start a root session. If you haven't registered your system you can do with `subscription-manager`.  Use the username and password that use for logging into the Red Hat Customer Portal, link:https://access.redhat.com/[].  
+Login to your virtual (or physical) machine running Atomic Host as the root user, or use `su` or `sudo bash` to start a root session. If you haven't registered your system you can do it with `subscription-manager`.  Use same the username and password that use for logging into the Red Hat Customer Portal, link:https://access.redhat.com/[access.redhat.com].  
 
 `# subscription-manager register --username=<username> --auto-attach`
 
@@ -71,7 +71,7 @@ The asterisk at the beginning of the line indicates which version the system is 
 
 `# systemctl reboot`
 
-After the system reboots `atomic host status` 
+After the system reboots `atomic host status` should confirm that the system is running the latest version.
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -136,7 +136,7 @@ default     10     1  0 14:53 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
-Now the container will no longer be running which can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm <container-name>`.
+Since bash was told to `exit`, the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm <container-name>`.
 
 `docker rm high_kowalevski`
 
@@ -255,11 +255,26 @@ If you don’t have a Red Hat Enterprise Linux subscription, you can try it for 
 +
 Atomic Host is specifically optimized for the deployment of Linux containers in environments such as Infrastructure as a Service (IaaS). It's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface, or development tools, Atomic Host isn't suited for software development activities. Instead, developers should use Red Hat Enterprise Linux which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application has been developed and packaged in a container, developers may want to test them on Atomic Host. Atomic Host can be helpful for developers that are creating continuous integration / continuous delivery (CI/CD) environments.
 +
-4. Can I run and build docker containers on Red Hat Enterprise Linux?
+4. How do I tell if a container image with a new version of Python is available?
++
+How can I see what other container images are available?
++
+I can't find the container mentioned in this tutorial, how can I tell if the name changed?
++
+To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
+
+[.code-block]
+```
+# docker search registry.redhat.com/openshift3
+# docker search registry.redhat.com/jboss
+# docker search registry.redhat.com/rhel
+```
++
+5. Can I run and build docker containers on Red Hat Enterprise Linux?
 +
 Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
 +
-5. Where can I learn more about delivering applications with Linux containers?
+6. Where can I learn more about delivering applications with Linux containers?
 +
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
 link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
