@@ -1,0 +1,195 @@
+:awestruct-layout: product-get-started
+:awestruct-interpolate: true
+
+## Path Intro section
+Get started with Python containers on Red Hat Enterprise Linux Atomic Host in under 10 minutes.
+
+## Prerequisites section title
+Introduction and Prerequisites
+
+## Prerequisites section
+In this tutorial, you will see how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic host. Red Hat Enterprise Linux Atomic Host is a secure, minimal-footprint OS optimized to run Linux containers.
+
+You will need to have Red Hat Enterprise Linux Atomic Host installed running on a virtual (or physical) machine. You will also need a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Downloading and installing Atomic Host requires a Red Hat Enterprise Linux Server Evaluation. Generally, developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset, however that evaluation does not include Atomic Host. *FIXME* If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] includes Red Hat Enterprise Linux Server, Red Hat Developer Toolset and Software Collections.  
+
+The best way to get started with Atomic Host this depends on what OS you are using on your development system:
+
+* If you are using Microsoft Windows, Apple Mac OS X, or Fedora Linux, the Red Hat Container Development Kit (CDK) provides pre-built virtual machines (VMs) for both Red Hat Enterprise Linux and the Atomic Host edition. The CDK is available through the link:http://developers.redhat.com/[Red Hat Developers program]. Membership is free, so If you haven't alreaddy joined, sign up at link:http://developers.redhat.com/[]. +
+Follow the CDK Installation Guide for your OS:
+** link:https://access.redhat.com/articles/1487723[Installing the CDK on Microsoft Windows]
+** link:https://access.redhat.com/articles/1487693[Installing the CDK on Mac OS X]
+** link:https://access.redhat.com/articles/1487733[Installing the CDK on Fedora Linux]
+* If you are already running Red Hat Enterprise Linux 7 server, you can run this tutorial directly on your system after configuring your system to run `docker`. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]
+* If you'd like to install Atomic on a physical machine or build your virtual machine, see Get Started with Red Hat Enterprise Linux Atomic Host. [*NOTE: FIXME: This should be a link to the Atomic Get Started guide that is part of this "get started" site*, not the KB article, https://access.redhat.com/articles/rhel-atomic-getting-started, Note: the names are too similar need to do something different.]
+
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+
+## Step1 Duration
+2 minutes
+
+## Step1 Title
+Prepare your system
+
+## Step2 Duration
+2 minutes
+
+## Step2 Title
+Setup your development environment
+
+## Step3 Duration
+2 minutes
+
+## Step3 Title
+Hello World and your first application
+
+## Step1 Content
+
+In this step, you will download and install the latest updates from Red Hat for your Atomic Host installation. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
+
+Note: If you are not using Atomic Host and following this tutorial on Red Hat Enterprise Linux Server, see link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
+
+The process for installing updates on Atomic Host is different than other Red Hat systems. On Atomic Host, updates are applied atomically in a single indivisible step. Likewise, updates can also be rolled back in a single step. Most of the file systems on Atomic Host are mounted read-only, only `/etc` and `/var` are writeable. Yum is not used for installing updates or software. Instead, the `rpm-ostree` system is used for installing updates. Software is installed using docker containers.
+
+Login to your virtual (or physical) machine running Atomic Host as the root user, or use `su` or `sudo bash` to start a root session. If you haven't registered your system you can do with `subscription-manager`.  Use the username and password that use for logging into the Red Hat Customer Portal, link:https://access.redhat.com/[].  
+
+`# subscription-manager register --username=<username> --auto-attach`
+
+To install the latest updates, use the following command:
+
+`# atomic host upgrade`
+
+To see the new version that got installed, use the following command:
+
+`# atomic host status`
+
+The asterisk at the beginning of the line indicates which version the system is current running. To make the update take effect, you must reboot the system.
+
+`# systemctl reboot`
+
+After the system reboots `atomic host status` 
+
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+
+## Step2 Content
+
+This step will download and install Python 3 using a container from the Red Hat container registry. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not altered by the installation. You must use `docker` commands to use or view the container's content.
+
+The commands shown in this section can be used for downloading and installing other containers, such as application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. When you build an application in a container that uses Python 3, you can specify that it requires Python 3 in the `Dockerfile` that is used to describe and build your container. Then when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat container registry.
+
+The Python 3 container is part of Red Hat Software Collections which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+
+Note: If you are not using Atomic Host and following this tutorial on Red Hat Enterprise Linux Server, you should have already installed `docker`.  See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
+
+If you don't have a root session running on your container host, login as the root user, or use `su` or `sudo bash` to start a root session.
+
+To download and install the Python 3 container, use the following command:
+
+`docker pull registry.acess.redhat.com/openshift3/python-33-rhel7`
+
+The `docker images` command should show the container image that was installed as well as any others that are on your system.
+
+`# docker images`
+
+Now start a bash shell inside the Python 3 container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` when you are done.
+
+[.code-block]
+```
+# docker run -it openshift3/python-33-rhel6 /bin/bash
+bash-4.2$ which python3
+/opt/rh/python33/root/usr/bin/python3
+bash-4.2$ python3 --version
+Python 3.3.2
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 21:56 ?        00:00:00 /bin/bash
+default     11     1  0 21:58 ?        00:00:00 ps -ef
+bash-4.2$ exit
+```
+
+To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
+
+[.code-block]
+```
+# docker search registry.redhat.com/openshift3
+# docker search registry.redhat.com/jboss
+# docker search registry.redhat.com/rhel
+```
+
+If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
+
+
+## Step3 Content
+
+In this step, you will first run Python in interactive mode.  Then you will create a Python application that can be run from the command line. If you don't have a _Terminal_ window open, start it from the _Applications_ menu.  You should run under your normal user ID,  If you are still running as root, type `exit`.
+
+[.code-block]
+```
+$ python
+Python 2.7.5 (default, Apr  9 2015, 11:03:32) 
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Hello, Red Hat Developers World")
+Hello, Red Hat Developers World
+>>> quit()
+```
+
+The next step is to create a Python application that can be run from the command line. Using your preferred text editor, create a file named `hello.py`:
+
+`$ nano hello.py`
+
+Add the following text to the file:
+[.code-block]
+```
+#!/usr/bin/python
+
+import sys
+
+version = "Python %d.%d" % (sys.version_info.major, sys.version_info.minor)
+print "Hello, Red Hat Developers World from",version
+```
+
+Save it and exit the editor. Then make the script executable and run it:
+[.code-block]
+```
+$ chmod +x hello.py
+$ ./hello.py
+Hello, Red Hat Developers World from Python 2.7
+```
+
+### Where to go next?
+
+*link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]* - This article provides an overview of using Docker containers on Red Hat Enterprise Linux. +
+
+*link:https://access.redhat.com/articles/rhel-atomic-getting-started[Getting Started with Red Hat Enterprise Linux Atomic Host]* - This article provides an overview of Atomic Host, how it is different, and how to use it. +
+
+
+
+## More Resources
+
+### Become a Red Hat developer: developers.redhat.com
+
+Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com].
+
+*Follow the Red Hat Developer Blog* +
+link:http://developerblog.redhat.com/[]
+
+
+
+## Faq section title
+[[troubleshooting]]Troubleshooting and FAQ
+
+## Faq section
+1. My system is unable to download updates from Red Hat.
++
+I don't have a current Red Hat subscription, can I get an evaluation?
++
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
++
+2. Some Python code/examples I’ve tried don’t work with Python 2 from Red Hat Enterprise Linux.
++
+Python 3.x is a new version of the Python language that is incompatible with the previous 2.x series. The version of Python included with Red Hat Enterprise Linux in `/usr/bin/python` is from the Python 2.x series. There is a large amount of code written for Python 2.x that will not run without modification on Python 3.x. Likewise, code that is written for Python 3 is incompatible with Python 2.
++
+For more information see link:https://wiki.python.org/moin/Python2orPython3[“Should I use Python 2 or Python 3 for my development activity?”] at link:python.org[Python.org]
++
+3. How can I get Python 3 on Red Hat Enterprise Linux?
++
+Python 3 is available through link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections], which delivers the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
