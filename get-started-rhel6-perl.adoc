@@ -59,7 +59,7 @@ Perl and a number of popular Perl modules are installed by default on Red Hat En
 
 [.code-block]
 ```
-$ su +
+$ su -
 # yum list installed perl\*
 ```
 

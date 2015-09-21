@@ -95,7 +95,7 @@ Now compile and run the program:
 
 [.code-block]
 ```
-$ pass:[g++] -o hello hello.cpp
+$ g++ -o hello hello.cpp
 $ ./hello
 Hello, Red Hat Developers World!
 ```
@@ -144,7 +144,7 @@ Use `pass:[g++] -v` to see what version you have installed.
 +
 [.code-block]
 ```
-$ pass:[g++] -v
+$ g++ -v
 gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) 
 ```
 +

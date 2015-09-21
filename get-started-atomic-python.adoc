@@ -2,7 +2,7 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started with Python containers on Red Hat Enterprise Linux Atomic Host in under 10 minutes.
+Get started building Python application containers on Red Hat Enterprise Linux Atomic Host in under 15 minutes.
 
 ## Prerequisites section title
 Introduction and Prerequisites
@@ -27,7 +27,7 @@ Follow the CDK Installation Guide for your OS:
 * If you'd like to install Atomic on a physical machine or build your virtual machine, see Get Started with Red Hat Enterprise Linux Atomic Host. [*NOTE: FIXME: This should be a link to the Atomic Get Started guide that is part of this "get started" site*, not the KB article, https://access.redhat.com/articles/rhel-atomic-getting-started, Note: the names are too similar need to come up with something different.]
 * [FIXME/TODO] - Is there a documented path for running Atomic Host under KVM on RHEL?  There is a qcow2 download that is listed as a "Cloud Image" instead of a "KVM image" the way it is listed for RHEL server/workstation.  link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-atomic-virtualization.html[] 
 
-###
+### About Red Hat Enterprise Linux Atomic Host
 
 Atomic Host is specifically optimized for the deployment of Linux containers in environments such as Infrastructure as a Service (IaaS) clouds. It's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface, or development tools, Atomic Host isn't suited for software development activities. Instead, developers should use Red Hat Enterprise Linux which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application has been developed and packaged in a container, developers may want to test them on Atomic Host. Atomic Host can be helpful for developers that are creating continuous integration / continuous delivery (CI/CD) environments.
 

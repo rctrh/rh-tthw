@@ -28,9 +28,12 @@ RHEL6_NATIVE_SOURCES = get-started-rhel6-cpp.adoc \
 
 ATOMIC_SOURCES = get-started-atomic-python.adoc \
 
+OS_INSTALL_SOURCES = get-started-rhel7-install.adoc 
+
+
 
 SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES) \
-	$(RHEL6_NATIVE_SOURCES) $(ATOMIC_SOURCES)
+	$(RHEL6_NATIVE_SOURCES) $(ATOMIC_SOURCES) $(OS_INSTALL_SOURCES)
 
 # OUTPUTS=$(SOURCES:.adoc=.html)
 
