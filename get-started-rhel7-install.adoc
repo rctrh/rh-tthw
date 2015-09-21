@@ -79,7 +79,7 @@ There are a few key steps to remember during the installation process:
 . Start the system from the bootable disk and select "Install Red hat Enterprise Linux 7".
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_a_0.png')}[Screenshot Boot Splash]
-image:rhel7-install/rhel_7_1_a_0.png[Screenshot Boot Splash]
+image::images/rhel7-install/rhel_7_1_a_0.png[Screenshot Boot Splash]
 +
 . Select your preferred language and keyboard layout to use during installation.
 . Under _Localization_ set the date and time, and your perferred languague and keyboard layout for the installed system. Note: the _Done_ button to return to the _Installation summary_ screen is located in the upper left corner of the screen.
