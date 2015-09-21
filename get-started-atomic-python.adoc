@@ -258,7 +258,7 @@ When you are done, stop the running container with the following command using t
 
 *link:https://access.redhat.com/articles/rhel-atomic-getting-started[Getting Started with Red Hat Enterprise Linux Atomic Host]* -- This article provides an overview of Atomic Host, how it is different, and how to use it. +
 
-*link:[Red Hat Enterprise Linux 7.1 Release Notes] -- includes information on recent updates to https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-Atomic_Host.html[Atomic Host] and https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-7.1_Release_Notes-Linux_Containers_with_Docker_Format.html[Dockeer formatted Linux containers]
+*link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/[Red Hat Enterprise Linux 7.1 Release Notes] -- includes information on recent updates to link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-Atomic_Host.html[Atomic Host] and link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-7.1_Release_Notes-Linux_Containers_with_Docker_Format.html[Docker formatted Linux containers]
 
 ## More Resources
 

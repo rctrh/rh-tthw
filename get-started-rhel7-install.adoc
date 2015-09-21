@@ -49,8 +49,11 @@ If you don't have an account, link:https://www.redhat.com/wapps/ugc/register.htm
 +
 Purchase a developer's subscription: https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Developer Suite] or https://www.redhat.com/apps/store/developers/rhel_developer_workstation_professional.html[Developer Workstation].
 +
-Or, get a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation]. After you sign up for the evaluation you will receive an email with a link to click on to activate your 30-day evaluation.
-. Download the _binary DVD ISO file_ for _link:https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads[Red Hat Enterprise Linux Server]_.
+Or, get a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation].
+.. After you sign up for the evaluation you will receive an email with a link to click on to activate your 30-day evaluation.
+.. After you click through the email, visit link:https://www.redhat.com/wapps/ugc[www.redhat.com/wapps/ugc] to accept the license agreement.
++
+. Download the _binary DVD .iso file_ for _link:https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads[Red Hat Enterprise Linux Server]_.
 +
 On the download page, under _Product Variant_ select _Red Hat Enterprise Linux Server_. Choosing the _Server_ edition gives you the widest range of software to choose from. During installation you will choose the _Server with a GUI_ option for a full graphical desktop.
 +
@@ -117,15 +120,53 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
+This section covers post-installation steps that prepate your system for software development.
+
+. After the system reboots, accept the license agreement
++
+// image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_d.png')}[Screenshot Installation Complete]
+image:images/rhel7-install/rhel_7_1_d.png[Screenshot Installation Complete]
++
+. Register your system with Red Hat.  Use the same username and password that you created for loggging in to the Red Hat Customer Portal. 
++
+Note: for this step to succeed you must have configured a network connection during boot
++
+If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/
++
+*NOTE TO REVIEWERS: There may be a bug here. I can't register the system with an eval, due to the agreement. I've tried visiting that link from another system, that still won't get me past the first-boot registration page.  There may be a bug that prevents registration at first boot.*
++
+. Login to the system with the username and password you created during installation.
++
+If you didn't create a regular user, you will need to login as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
++
+If you get a text based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
++
+. Select your preferred language.
++
+
+### Install the latest updates
+
+yum update,
+
+
+
 
 
 ### Where to go next?
 
-*link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]* -- This article explains how to install docker on Red Hat Enterprise Linux and Atomic Host. It also provides a more extensive set examples than this tutorial. +
+*Developing with Red Hat Enterprise Linux* +
+link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Developer_Guide/index.html[Red Hat Enterprise Linux 7 Developer Guide] -- The developer guide for Red Hat Enterprise Linux 7 provides an introduction to application development tools and using source code management tools such as Git in Red Hat Enterprise Linux 7.
 
-*link:https://access.redhat.com/articles/rhel-atomic-getting-started[Getting Started with Red Hat Enterprise Linux Atomic Host]* -- This article provides an overview of Atomic Host, how it is different, and how to use it. +
+*Learn about Red Hat Software Collections*
 
-*link:[Red Hat Enterprise Linux 7.1 Release Notes] -- includes information on recent updates to https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-Atomic_Host.html[Atomic Host] and https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-7.1_Release_Notes-Linux_Containers_with_Docker_Format.html[Dockeer formatted Linux containers]
+link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections] deliver the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
+
+*Learn about the Red Hat Developer Toolset*
+
+Red Hat Developer Toolset provides the latest, stable, open source C and {cpp} compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
+
+*FIXME, TODO ADD LINKS to the RHEL 7 native language, DTS, and SCL Getting Started Guides*
+
 
 ## More Resources
 
