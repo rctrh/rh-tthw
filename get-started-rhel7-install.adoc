@@ -74,6 +74,39 @@ There are a few key steps to remember during the installation process:
 . Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server, will not install a graphical desktop. Using the _server_ product variant of Red Hat Enterprise Linux gives you access to the widest range of software to develop with.
 . Create your primary user acccount during installation. After the installation begins, you will be instructed to set a password for the root administrator account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. You shouldn't use the root account as your primary login for development. If you don't create a user before the installation completes, you will need reboot and then login as root to create the user.
 
+### Installation instructions
+
+. Start the system from the bootable disk and select "Install Red hat Enterprise Linux 7".
++
+// image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_a_0.png')}[Screenshot Boot Splash]
+image:rhel7-install/rhel_7_1_a_0.png[Screenshot Boot Splash]
++
+. Select your preferred language and keyboard layout to use during installation.
+. Under _Localization_ set the date and time, and your perferred languague and keyboard layout for the installed system. Note: the _Done_ button to return to the _Installation summary_ screen is located in the upper left corner of the screen.
++
+#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_b.png')}[Screenshot 2 Installation Options]
++
+. Click _Software selection_.  Then on the next screen, under _Software selection_, in the _Base environment_ list on the left, select _Server with GUI_. Then in the list _Add-ons for selected environment_ on the right, select _Development tools_.  After you click the _Done_ button it will take several seconds to validate your choices.
+#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-3-software-selection.png')}[Screenshot Software Selection]
+#{images/rhel7-install/image-4-software-selection.png}
++
+. Click _Installation destination_ to specify what disk or partition(s) to install the software on. See the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination] section of the the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
++
+. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then, click the on/off button on the right to enable it. Click _Configure_ to adjust the settings for the adapter. Optionally, set a _Host name_ for the system.
+#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-6-network.png')}[Screenshot Network Configuration]
+#{images/rhel7-install/image-6-network.png}
++
+. Click the _Begin installation_ button when you are ready to start the actual installation.
+. On the next screen, while the installation is running, click _User creation_ to create the user ID you will use to login under for normal work.
+#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_c.png')}[Screenshot User Createion]
+#{images/rhel7-install/rhel_7_1_c.png}
++
+. Click _Root password_ to set the password for the root user.
+. After the installation process completes, click the _Reboot_ button.
+#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_d.png')}[Screenshot Installation Complete]
+#{images/rhel7-install/rhel_7_1_d.png}
+
+
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 
