@@ -162,12 +162,15 @@ In this step, you will create a tiny Hello World container that uses Python 3 as
 
 First, create an empty directory, and then create a file named `index.html` with the following contents:
 
-`<html>Hello, Red Hat Developers World~</html>`
+.index.html
+----
+<html>Hello, Red Hat Developers World~</html>
+----
 
 Now in the same directory, create a file named `Dockerfile` with the following contents. Change the `MAINTAINER` line to have your name and email address.
 
-[.code-block]
-```
+.Dockerfile
+----
 FROM openshift3/python-33-rhel7:latest
 
 MAINTAINER Your Name "your-email@example.com"
@@ -177,12 +180,12 @@ EXPOSE 8000
 COPY . /opt/openshift/src
 
 CMD /bin/bash -c 'python3 web.py'
-```
+----
 
 Create the file `web.py` with the following contents:
 
-[.code-block]
-```
+.web.py
+----
 #
 # A very simple Python HTTP server
 #
@@ -199,7 +202,7 @@ httpd = socketserver.TCPServer(("", PORT), Handler)
 
 print("serving at port", PORT)
 httpd.serve_forever()
-```
+----
 
 
 Now build the container image with the following command. You will need to be root using `su` or `sudo` in the directory you created that above that contains `Dockerfile` and `index.html`.
