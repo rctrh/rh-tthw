@@ -23,7 +23,7 @@ Follow the CDK Installation Guide for your OS:
 ** link:https://access.redhat.com/articles/1487733[Installing the CDK on Fedora Linux] 
 * If you are already running Red Hat Enterprise Linux 7 server, you can run this tutorial directly on your system after configuring your system to run `docker`. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
 +
-You can also run an Atomic Host VM as a KVM guest on your Red Hat Enterprise Linux 7 system. See link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-atomic-virtualization.html[Using Red Hat Enterprise Linux Atomic Host in a Red Hat Enterprise Virtualization Environment]. On the download page, select _cloud image_ to download the qcow2 file. [*FIXME* Note: I have not tested this -- rct]
+You can also run an Atomic Host VM as a KVM guest on your Red Hat Enterprise Linux 7 system. See link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-atomic-virtualization.html[Using Red Hat Enterprise Linux Atomic Host in a Red Hat Enterprise Virtualization Environment]. On the download page, select _cloud image_ to download the qcow2 file. [*FIXME* Note: I have not tested this yet -- rct]
 * If you'd like to install Atomic on a physical machine or build a virtual machine, see Get Started with Red Hat Enterprise Linux Atomic Host. [*FIXME*: This should be a link to the Atomic Get Started guide that is part of this "get started" site*, not the KB article, https://access.redhat.com/articles/rhel-atomic-getting-started, Note: the names are too similar need to come up with something different.]
 
 ### About Red Hat Enterprise Linux Atomic Host
@@ -288,18 +288,17 @@ How can I see what other container images are available?
 I can't find the container mentioned in this tutorial, how can I tell if the name changed?
 +
 To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
-
++
 [.code-block]
 ```
 # docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/jboss
 # docker search registry.access.redhat.com/rhel
 ```
-
++
 4. Can I run and build docker containers on Red Hat Enterprise Linux?
 +
 Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
-
 5. Where can I learn more about delivering applications with Linux containers?
 +
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
