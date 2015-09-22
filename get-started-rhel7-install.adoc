@@ -217,3 +217,17 @@ Red Hat Enterprise Linux includes docker, but it is not installed by default. Se
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
 link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
 If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
+
+
+ToDo
+. How can I get Python 3 in RHEL 7?
+. How do I get newer versions of languages like Perl, PHP, Python, and Ruby in RHEL7?
+. How can I get Eclipse installed in RHEL 7?
+. How can I get a newer C/C++ compiler in RHEL 7?
+. I an IDE for C/C++ development on RHEL 7?
+. I've got a text based login screen, how do I get a graphical one?
+. I didn't configure a network connection during installation, how do I do it on the running system?
+. How do I register my system after installation?
+
+
+

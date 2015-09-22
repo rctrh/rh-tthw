@@ -8,13 +8,11 @@ Get started building Python application containers on Red Hat Enterprise Linux A
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic Host. Atomic Host is a secure, minimal-footprint OS optimized to run Linux containers.
+In this tutorial, you will learn how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic Host, which is a secure, minimal-footprint OS optimized to run Linux containers. You will need to have Red Hat Enterprise Linux Atomic Host installed on a virtual (or physical) machine. You will also need a current Red Hat subscription that allows you to download software and updates from Red Hat.
 
-You will need to have Red Hat Enterprise Linux Atomic Host installed on a virtual (or physical) machine. You will also need a current Red Hat subscription that allows you to download software and updates from Red Hat.
+[*FIXME* Keep or delete??] If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Downloading and installing Atomic Host requires a Red Hat Enterprise Linux Server Evaluation. Typically, the recommended evaluation for developers is Red Hat Enterprise Linux Developer Workstation because it includes Red Hat Software Collections and the Red Hat Developer Toolset, however that evaluation does not include Atomic Host. Therefore, you should select an evaluation of Red Hat Enterprise Linux Server.
 
-[Keep or delete??] If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Downloading and installing Atomic Host requires a Red Hat Enterprise Linux Server Evaluation. Generally, developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset, however that evaluation does not include Atomic Host. *FIXME*
-
-If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset and Software Collections.  
+If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset, and Software Collections. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available. 
 
 The best way to get started with Atomic Host depends on what OS you are using on your development system:
 
