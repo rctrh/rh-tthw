@@ -295,11 +295,11 @@ To see what other containers are available in the Red Hat container registry, us
 # docker search registry.access.redhat.com/jboss
 # docker search registry.access.redhat.com/rhel
 ```
-+
-4. Can I run and build docker containers on Red Hat Enterprise Linux?
+
+. Can I run and build docker containers on Red Hat Enterprise Linux?
 +
 Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
-5. Where can I learn more about delivering applications with Linux containers?
+. Where can I learn more about delivering applications with Linux containers?
 +
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
 link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
