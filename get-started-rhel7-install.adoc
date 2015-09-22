@@ -8,11 +8,14 @@ Get started with Red Hat Enterprise Linux 7 for software development.
 Introduction and Prerequisites
 
 ## Prerequisites section
-This tutorial provides an overview of the key steps for obtaining and installing Red Hat Enterprise Linux so you can get started with software development today. Red Hat Enterprise Linux and the Red Hat Enterprise Linux Developer program bridges development agility with production stability. The developer tools supplied with Red Hat Enterprise Linux are supported for 10 years. This level of stability makes Red Hat Enterprise Linux the ideal platform for development and deployment of applications with a long life cycle. For application development that requires the latest tools and technologies, link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections (RHSCL)] and the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset (DTS)] provide tools that are updated annually. 
+This tutorial provides an overview of the key steps for obtaining and installing link:http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux[Red Hat Enterprise Linux] so you can get started with software development today. Red Hat Enterprise Linux and the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer[Red Hat Enterprise Linux Developer Program] bridge production stability with developer agility:
+
+* The developer tools supplied with Red Hat Enterprise Linux are supported for 10 years. This level of stability makes Red Hat Enterprise Linux the ideal platform for development and deployment of applications with a long life cycle.
+* For application development that requires the latest tools and technologies, link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections (RHSCL)] and the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset (DTS)] provide tools that are updated annually. 
 
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
 
-If you are interested in purchasing a Red Hat subscription for development, the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Red Hat Software Collections, and the Red Hat Developer Toolset. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
+If you are interested in purchasing a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer#dev-page=1[Red Hat subscription for development], the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, RHSCL, and DTS. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
 For this tutorial you will need an a 64-bit x86 physical or virtual machine with at least 16 GB of available disk space. For more detailed https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-installation-planning-x86.html[minimum hardware requirements and compatibility information], see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
 
@@ -47,15 +50,16 @@ In this step, you will download Red Hat Enterprise Linux from the Red Hat custom
 If you don't have an account, link:https://www.redhat.com/wapps/ugc/register.html[register to create one].
 . Obtain a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux subscription] if you don't already have one:
 +
-Purchase a developer's subscription: https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Developer Suite] or https://www.redhat.com/apps/store/developers/rhel_developer_workstation_professional.html[Developer Workstation].
+* Purchase a developer's subscription: https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Developer Suite] or https://www.redhat.com/apps/store/developers/rhel_developer_workstation_professional.html[Developer Workstation].
 +
-Or, get a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation].
+* Or, start a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation].
+
 .. After you sign up for the evaluation you will receive an email with a link to click on to activate your 30-day evaluation.
 .. After you click through the email, visit link:https://www.redhat.com/wapps/ugc[www.redhat.com/wapps/ugc] to accept the license agreement.
-+
+
 . Download the _binary DVD .iso file_ for _link:https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads[Red Hat Enterprise Linux Server]_.
 +
-On the download page, under _Product Variant_ select _Red Hat Enterprise Linux Server_. Choosing the _Server_ edition gives you the widest range of software to choose from. During installation you will choose the _Server with a GUI_ option for a full graphical desktop.
+On the download page, under _Product Variant_ select _Red Hat Enterprise Linux Server_. Choosing the _Server_ edition gives you the widest range of software to develop and test with. During installation you will choose the _Server with a GUI_ option for a full graphical desktop.
 +
 Under _Version_ select the latest released (non-beta) version of Red Hat Enterprise Linux 7. The _Architecture_ selection should be set to _x86_64_.
 +
@@ -74,8 +78,8 @@ There are a few key steps to remember during the installation process:
 
 . You will need to select an _Installation destination_, the disk or partition(s) where the software will be installed. *The disk or partition(s) you select will be overwritten.* Make sure you understand your selection before starting the installation to avoid accidental data loss.
 . You should configure networking under _Network and host name_ before starting the installation. You will need access to the Internet to complete registration and download additional software. The network can be configured after the system is installed. However, the steps are more straightforward during installation.
-. Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server, will not install a graphical desktop. Using the _server_ product variant of Red Hat Enterprise Linux gives you access to the widest range of software to develop with.
-. Create your primary user acccount during installation. After the installation begins, you will be instructed to set a password for the root administrator account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. You shouldn't use the root account as your primary login for development. If you don't create a user before the installation completes, you will need reboot and then login as root to create the user.
+. Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server, will not install a graphical desktop. Using the _server_ product variant of Red Hat Enterprise Linux gives you access to the widest range of software to develop and test with.
+. Create your primary user acccount during installation. After the installation begins, you will be instructed to set a password for the root account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. The regular user will be your primary login for development. The root account should only be used for systemin administration tasks. If you don't create a user before the installation completes, you will need reboot and then login as root to create user accounts.
 
 ### Installation instructions
 
@@ -142,14 +146,63 @@ If you didn't create a regular user, you will need to login as root and create a
 If you get a text based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
 . Select your preferred language.
-+
+
 
 ### Install the latest updates
 
-yum update,
+In this step, you will download and install the latest updates from Red Hat for your system. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
+
+First, start a _Terminal_ window from the _Application_ menu.  Then after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
+
+[.code-block]
+```
+$ su -
+# subscription-manager repos --list-enabled
+```
+
+If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
+
+Now download and install any available updates by running `yum update`.  If updates are available, `yum` will list them and ask if it is OK to proceed.
+
+`# yum update`
+
+### Enable Additional Software Repositories
+
+In this step you will configure your system to obtain software from the RHSCL software repository,  The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset). RHSCL includes the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. DTS provides the latest, stable, open source C and {cpp} compilers and complementary development tools, including Eclipse.  
+
+Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
+
+### Using the Red Hat Subscription Manager GUI
+
+Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
+
+. On the Subscription Manager _System_ menu, select _Repositories_.
+. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the enabled column. +
+ 
+If you don’t see any RHSCL repositories in the list, your subscription might not include it.
+[.content-img]
+image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollections_install_1.png')}[Manage Repositories]
+
+See <<troubleshooting,Troubleshooting and FAQ>> for more information. +
 
 
+### Using subscription-manager from the command line
 
+You can add or remove software repositories from the command line using the `subscription-manager` tool as the root user. Use the `--list` option to view the available software repositories and verify that you have access to RHSCL, which includes DTS:
+
+[.code-block]
+```
+$ su -
+# subscription-manager repos --list | egrep rhscl
+```
+
+If you don’t see any RHSCL repositories in the list, your subscription might not include it. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
+
+[.code-block]
+```
+# subscription-manager repos --enable rhel-server-rhscl-7-rpms
+# subscription-manager repos --enable rhel-7-server-optional-rpms
+```
 
 
 ### Where to go next?
@@ -183,48 +236,23 @@ link:http://developerblog.redhat.com/[]
 [[troubleshooting]]Troubleshooting and FAQ
 
 ## Faq section
-1. My system is unable to download updates from Red Hat.
+. My system is unable to download updates from Red Hat.
 +
-I don't have a current Red Hat subscription, can I get an evaluation?
-+
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
-+
-2. When I start Atomic Host, I don't see a graphical environment.
-+
-Atomic Host is specifically optimized for the deployment of Linux containers in environments such as Infrastructure as a Service (IaaS). It's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface, or development tools, Atomic Host isn't suited for software development activities. Instead, developers should use Red Hat Enterprise Linux which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application has been developed and packaged in a container, developers may want to test them on Atomic Host. Atomic Host can be helpful for developers that are creating continuous integration / continuous delivery (CI/CD) environments.
-+
-3. How do I tell if a container image with a new version of Python is available?
-+
-How can I see what other container images are available?
-+
-I can't find the container mentioned in this tutorial, how can I tell if the name changed?
-+
-To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
+Your system must be registered with Red Hat using `subscription-manager register`. You need to have a current Red Hat subscription or an evaluation.
 
-[.code-block]
-```
-# docker search registry.redhat.com/openshift3
-# docker search registry.redhat.com/jboss
-# docker search registry.redhat.com/rhel
-```
+. I don't have a current Red Hat subscription, can I get an evaluation?
 +
-4. Can I run and build docker containers on Red Hat Enterprise Linux?
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+. . The RHSCL repository is not available or is not found on my system.
 +
-Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
+The name of the repository depends on whether you have a server, workstation, or desktop version of Red Hat Enterprise Linux installed.
 +
-5. Where can I learn more about delivering applications with Linux containers?
-+
-If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
-link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
-If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
-
-
-ToDo
-. How can I get Python 3 in RHEL 7?
+Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 . How do I get newer versions of languages like Perl, PHP, Python, and Ruby in RHEL7?
+. How can I get Python 3 on RHEL 7?
 . How can I get Eclipse installed in RHEL 7?
 . How can I get a newer C/C++ compiler in RHEL 7?
-. I an IDE for C/C++ development on RHEL 7?
+. Where can I get an IDE for C/C++ development on RHEL 7?
 . I've got a text based login screen, how do I get a graphical one?
 . I didn't configure a network connection during installation, how do I do it on the running system?
 . How do I register my system after installation?
