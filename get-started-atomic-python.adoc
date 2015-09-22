@@ -271,7 +271,7 @@ link:http://developerblog.redhat.com/[]
 ## Faq section
 . My system is unable to download updates from Red Hat.
 +
-You system must be registered with Red Hat using `subscription-manager`. You need to have a current Red Hat subscription or an evaluation.
+You system must be registered with Red Hat using `subscription-manager register`. You need to have a current Red Hat subscription or an evaluation.
 
 . I don't have a current Red Hat subscription, can I get an evaluation?
 +
