@@ -98,22 +98,22 @@ image::images/rhel7-install/image-3-install-options-first.png[Screenshot Install
 .. Click _Software selection_.
 .. On the next screen, under _Software selection_, in the _Base environment_ list on the left, select _Server with GUI_.
 .. In the list _Add-ons for selected environment_ on the right, select _Development tools_.
-.. Click _Done_ button. Note: After returning to the _Installation summary_ screen, it will take several seconds to validate your choices.
+.. Click the _Done_ button. Note: After returning to the _Installation summary_ screen it will take several seconds to validate your choices.
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-4-software-selection.png')}[Screenshot Software Selection]
 image::images/rhel7-install/image-4-software-selection.png[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify what disk or partition(s) to install the software on. See the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination] section of the the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
+. Click _Installation destination_ to specify what disk or partition(s) to install the software on. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination] section of the the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
 +
-. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then, click the on/off button on the right to enable it. Click _Configure_ to adjust the settings for the adapter. Optionally, set a _Host name_ for the system.
+. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _on/off_ button on the right to enable the network adapter. Click _Configure_ to review or change the default settings for the adapter. Optionally, set a _Host name_ for the system.
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-6-network.png')}[Screenshot Network Configuration]
 image:images/rhel7-install/image-6-network.png[Screenshot Network Configuration]
 +
 . Click the _Begin installation_ button when you are ready to start the actual installation.
-. On the next screen, while the installation is running, click _User creation_ to create the user ID you will use to login under for normal work.
+. On the next screen, while the installation is running, click _User creation_ to create the user ID you will use to log in for normal work.
 +
-image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_c.png')}[Screenshot User Creation]
+// image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_c.png')}[Screenshot User Creation]
 image:images/rhel7-install/rhel_7_1_c.png[Screenshot User Creation]
 +
 . Click _Root password_ to set the password for the root user.
@@ -128,35 +128,35 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-This section covers post-installation steps that prepare your system for software development.
+This section provides an overview of post-installation steps that prepare your system for software development.
 
 . After the system reboots, accept the license agreement
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-10-first-boot-license.png')}[Screenshot Installation Complete]
 image:images/rhel7-install/image-10-first-boot-license.png[Screenshot Installation Complete]
 +
-. Register your system with Red Hat.  Use the same username and password that you created for logging in to the Red Hat Customer Portal. 
+. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal. 
 +
-Note: for this step to succeed you must have configured a network connection during boot
+Note: For this step to succeed, you must have configured a network connection during boot.
 +
-If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/
+If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/[www.redhat.com/wapps/ugc/].
 +
 *NOTE TO REVIEWERS: There may be a bug here, or a recent problem with the customer portal. I can't register the system with an eval, due to the agreement. I've tried visiting that link from another system, that still won't get me past the first-boot registration page.  There may be a bug that prevents registration at first boot. Lately I'm getting a Java error returned which I think is from the portal.*
 +
-. Login to the system with the username and password you created during installation.
+. Log in to the system with the username and password you created during installation.
 +
-If you didn't create a regular user, you will need to login as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
+If you didn't create a regular user, you will need to log in as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
 +
-If you get a text based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
+If you get a text-based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
 . Select your preferred language.
 
 
 ### Install the latest updates
 
-In this step, you will download and install the latest updates from Red Hat for your system. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
+In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu.  Then after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
+First, start a _Terminal_ window from the _Application_ menu.  Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
 
 [.code-block]
 ```
@@ -170,9 +170,9 @@ Now download and install any available updates by running `yum update`.  If upda
 
 `# yum update`
 
-### Enable Additional Software Repositories
+### Enable additional software repositories
 
-In this step you will configure your system to obtain software from the RHSCL software repository,  The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset). RHSCL includes the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. DTS provides the latest, stable, open source C and {cpp} compilers and complementary development tools, including Eclipse.  
+In this step you will configure your system to obtain software from the RHSCL software repository. The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset). RHSCL includes the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. DTS provides the latest, stable, open source C and {cpp} compilers and complementary development tools, including Eclipse.  
 
 Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
@@ -181,7 +181,7 @@ Instructions are provided for both the command line (CLI) and graphical user int
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
 . On the Subscription Manager _System_ menu, select _Repositories_.
-. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the enabled column. +
+. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. Note: After clicking, it might take several seconds for the check mark to appear in the _Enabled_ column. +
  
 If you don’t see any RHSCL repositories in the list, your subscription might not include it.
 [.content-img]
@@ -212,7 +212,7 @@ If you don’t see any RHSCL repositories in the list, your subscription might n
 ### Where to go next?
 
 *Developing with Red Hat Enterprise Linux* +
-link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Developer_Guide/index.html[Red Hat Enterprise Linux 7 Developer Guide] -- The developer guide for Red Hat Enterprise Linux 7 provides an introduction to application development tools and using source code management tools such as Git in Red Hat Enterprise Linux 7.
+link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Developer_Guide/index.html[Red Hat Enterprise Linux 7 Developer Guide] -- The developer guide for Red Hat Enterprise Linux 7 provides an introduction to application development tools and using source code management tools, such as Git, in Red Hat Enterprise Linux 7.
 
 *Learn about Red Hat Software Collections*
 
@@ -252,42 +252,43 @@ If you don’t have a Red Hat Enterprise Linux subscription, you can try it for 
 The name of the repository depends on whether you have a server, workstation, or desktop version of Red Hat Enterprise Linux installed.
 +
 Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
-. How do I get newer versions of languages like Perl, PHP, Python, and Ruby in RHEL7?
+. How do I get newer versions of languages like Perl, PHP, Python, and Ruby in Red Hat Enterprise Linux?
 +
-How can I get Python 3 on RHEL 7?
+How can I get Python 3 on Red Hat Enterprise Linux
 +
-link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections] delivers the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
-. How can I get Eclipse installed in RHEL 7?
+link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections] delivers the latest, stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
+. How can I get Eclipse installed on Red Hat Enterprise Linux?
 +
-How can I get a newer C/C++ compiler in RHEL 7?
+How can I get a newer C/C++ compiler for Red Hat Enterprise Linux 7?
 +
-Where can I get an IDE for C/C++ development on RHEL 7?
+Where can I get an IDE for C/C++ development on Red Hat Enterprise Linux 7?
 +
 Red Hat Developer Toolset provides the latest, stable, open source C and {cpp} compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux. The Red Hat Developer Toolset uses Red Hat Software Collections to install a parallel set of packages in `/opt/rh` where they will not override the system packages that come with Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
 +
 See [*FIXME -- Get started developing with C++ and Eclipse from the Red Hat Developer Toolset.  -- ADD LINK TO GET STARTED SITE*]
 
-. I've got a text based login screen, how do I get a graphical one?
+. I've got a text-based login screen, how do I get a graphical one?
 +
-During installation of Red Hat Enterprise Linux Server, selecting the _Server with a GUI_ software option will install a full graphical desktop and configure it to start at boot time. You can install the graphical desktop with `yum install` after registering your system with Red Hat. Log into the system as the `root` user, then use the following commands:
+During installation of Red Hat Enterprise Linux Server, selecting the _Server with a GUI_ software option will install a full graphical desktop and configure it to start at boot time. You can install the graphical desktop with `yum install` after registering your system with Red Hat. Log in to the system as the `root` user, then use the following commands:
 +
 [.code-block]
 ```
 # yum groupinstall 'Server with GUI'
 # yum install @gnome-desktop @x11 @internet-browser
 ```
-After that completes, type `systemctl reboot` to reboot your system.  When the system restarts, you should see a graphical login screen. [*FIXME* Note: I didn't give this much testing]
+When complete, type `systemctl reboot` to reboot your system.  When the system restarts, you should see a graphical login screen. [*FIXME* Note: I didn't give this much testing]
+
 . How do I install the C/{cpp} compiler?
 +
-During installation, selecting the _Development tools_ software option installs the C/{cpp} compiler GCC/pass:[G++] and other related development tools. You can install these tools with `yum install` after registering your system with Red Hat. Log into the system as the `root` user then use the following command:
+During installation, selecting the _Development tools_ software option installs the C/{cpp} compiler GCC/pass:[G++] and other related development tools. You can install these tools with `yum install` after registering your system with Red Hat. Log in to the system as the `root` user then use the following command:
 +
 [.code-block]
 ```
 # yum install @development
 ```
-. I didn't configure a network connection during installation, how do I do it on the running system?
+. I didn't configure a network connection during installation, how do I this on a running system?
 +
-Registration fails with a message that subscription.rhn.redhat.com is unreachable, how do I resolve that?
+Registration fails with the message that _subscription.rhn.redhat.com is unreachable_, how do I resolve this?
 +
 If you did not configure a network connection during installation or the configuration was unsuccesfull, see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/index.html[Red Hat Enterprise Linux Networking Guide] for information on configuring networking using either graphical or command-line tools.
 
