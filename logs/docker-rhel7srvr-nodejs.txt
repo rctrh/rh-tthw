@@ -108,3 +108,4 @@ tcp6       0      0 :::8000                 :::*                    LISTEN      
 # docker ps
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
 4edf44433b27        myname/nodeweb      "container-entrypoin   30 seconds ago      Up 29 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   modest_cori       
+
