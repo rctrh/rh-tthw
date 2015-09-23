@@ -132,7 +132,6 @@ At this point you are connected to the running shell inside the container. When 
 
 [.code-block]
 ```
-# docker attach nostalgic_ritchie
 
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
