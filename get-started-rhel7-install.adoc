@@ -243,7 +243,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 . I don't have a current Red Hat subscription, can I get an evaluation?
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
-. . The RHSCL repository is not available or is not found on my system.
+. The RHSCL repository is not available or is not found on my system.
 +
 The name of the repository depends on whether you have a server, workstation, or desktop version of Red Hat Enterprise Linux installed.
 +
