@@ -172,7 +172,7 @@ In this step you will configure your system to obtain software from the RHSCL so
 
 Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
-### Using the Red Hat Subscription Manager GUI
+#### Using the Red Hat Subscription Manager GUI
 
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
@@ -186,7 +186,7 @@ image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollec
 See <<troubleshooting,Troubleshooting and FAQ>> for more information. +
 
 
-### Using subscription-manager from the command line
+#### Using subscription-manager from the command line
 
 You can add or remove software repositories from the command line using the `subscription-manager` tool as the root user. Use the `--list` option to view the available software repositories and verify that you have access to RHSCL, which includes DTS:
 
@@ -249,13 +249,51 @@ The name of the repository depends on whether you have a server, workstation, or
 +
 Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 . How do I get newer versions of languages like Perl, PHP, Python, and Ruby in RHEL7?
-. How can I get Python 3 on RHEL 7?
++
+How can I get Python 3 on RHEL 7?
++
+link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections] delivers the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
 . How can I get Eclipse installed in RHEL 7?
-. How can I get a newer C/C++ compiler in RHEL 7?
-. Where can I get an IDE for C/C++ development on RHEL 7?
++
+How can I get a newer C/C++ compiler in RHEL 7?
++
+Where can I get an IDE for C/C++ development on RHEL 7?
++
+Red Hat Developer Toolset provides the latest, stable, open source C and {cpp} compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux. The Red Hat Developer Toolset uses Red Hat Software Collections to install a parallel set of packages in `/opt/rh` where they will not override the system packages that come with Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
++
+See [*FIXME -- Get started developing with C++ and Eclipse from the Red Hat Developer Toolset.  -- ADD LINK TO GET STARTED SITE*]
+
 . I've got a text based login screen, how do I get a graphical one?
++
+During installation of Red Hat Enterprise Linux Server, selecting the _Server with a GUI_ software option will install a full graphical desktop and configure it to start at boot time. You can install the graphical desktop with `yum install` after registering your system with Red Hat. Log into the system as the `root` user, then use the following commands:
++
+[.code-block]
+```
+# yum groupinstall 'Server with GUI'
+# yum install @gnome-desktop @x11 @internet-browser
+```
+After that completes, type `systemctl reboot` to reboot your system.  When the system restarts, you should see a graphical login screen. [*FIXME* Note: I didn't give this much testing]
+. How do I install the C/{cpp} compiler?
++
+During installation, selecting the _Development tools_ software option installs the C/{cpp} compiler GCC/pass:[G++] and other related development tools. You can install these tools with `yum install` after registering your system with Red Hat. Log into the system as the `root` user then use the following command:
++
+[.code-block]
+```
+# yum install @development
+```
 . I didn't configure a network connection during installation, how do I do it on the running system?
++
+Registration fails with a message that subscription.rhn.redhat.com is unreachable, how do I resolve that?
++
+If you did not configure a network connection during installation or the configuration was unsuccesfull, see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/index.html[Red Hat Enterprise Linux Networking Guide] for information on configuring networking using either graphical or command-line tools.
+
 . How do I register my system after installation?
++
+Use Red Hat Subscription Manager, which can be started from the system menu as a graphical tool, or from the command line using the following command:
++
+`# subscription-manager register --auto-attach`
++
+For more information see link:https://access.redhat.com/solutions/253273[How to register and subscribe a system to the Red Hat Customer Portal using Red Hat Subscription Manager].
 
 
 
