@@ -32,6 +32,11 @@ bash-4.2$ exit
 exit
 
 
+# docker ps -a
+CONTAINER ID        IMAGE                             COMMAND                CREATED             STATUS                     PORTS               NAMES
+a07bdee57770        openshift3/ruby-20-rhel7:latest   "container-entrypoin   2 minutes ago       Exited (0) 2 minutes ago                       pensive_payne       
+
+
 
 # docker start pensive_payne
 pensive_payne

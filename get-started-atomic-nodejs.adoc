@@ -102,12 +102,7 @@ Now start a bash shell inside the Node.js container to have a look around. The s
 
 [.code-block]
 ```
-# docker -it openshift3/nodejs-010-rhel7 /bin/bash
-flag provided but not defined: -it
-See 'docker --help'.
-[root@rhdsrvr rt]# docker run -it openshift3/nodejs-010-rhel7 /bin/bash
-Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devi\
-ces=true` to suppress this warning.
+# docker run -it openshift3/nodejs-010-rhel7 /bin/bash
 bash-4.2$ which node
 /opt/rh/nodejs010/root/usr/bin/node
 bash-4.2$ node --version
@@ -128,6 +123,9 @@ You can restart the container that was created above with `docker start`. Contai
 # docker ps -a
 CONTAINER ID        IMAGE                         COMMAND                CREATED              STATUS                          PORTS               NAMES
 84458ca538fb        openshift3/nodejs-010-rhel7   "container-entrypoin   About a minute ago   Exited (0) About a minute ago                       nostalgic_ritchie
+# docker start nostalgic_ritchie
+high_kowalevski
+# docker attach nostalgic_ritchie
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter get it to print another one.

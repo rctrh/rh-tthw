@@ -92,7 +92,7 @@ If you don't have a root session running on your container host, log in as the r
 
 To download and install the Python 3 container, use the following command:
 
-`docker pull registry.access.redhat.com/openshift3/python-33-rhel7`
+`# docker pull registry.access.redhat.com/openshift3/python-33-rhel7`
 
 The `docker images` command should show the container image that was installed as well as any others that are on your system.
 
@@ -123,9 +123,9 @@ You can restart the container that was created above with `docker start`. Contai
 # docker ps -a
 CONTAINER ID        IMAGE                        COMMAND             CREATED             STATUS                      PORTS               NAMES
 c3e47aafe6d1        openshift3/python-33-rhel7   "/bin/bash"         23 seconds ago      Exited (0) 19 seconds ago                       high_kowalevski     
-[root@rhdsrvr httpd-project]# docker start high_kowalevski
+# docker start high_kowalevski
 high_kowalevski
-[root@rhdsrvr httpd-project]# docker attach high_kowalevski
+# docker attach high_kowalevski
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter get it to print another one.
