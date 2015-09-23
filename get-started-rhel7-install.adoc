@@ -18,6 +18,7 @@ If you don’t have a Red Hat Enterprise Linux subscription, you can try it for 
 If you are interested in purchasing a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer#dev-page=1[Red Hat subscription for development], the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, RHSCL, and DTS. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
 For this tutorial you will need an a 64-bit x86 physical or virtual machine with at least 16 GB of available disk space. For more detailed https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-installation-planning-x86.html[minimum hardware requirements and compatibility information], see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
+*[mreid Are we assuming that they can set up a VM on their own? Is that 16gb value for the RHEL system we're going to be installing or the host system that will need to download and possibly make the ISO? I'm guessing that's supposed to give us enough wiggle room after installing SCL/DTS on top of the base RHEL Server + GUI disk requirements?*
 
 Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide]. Instead, this tutorial provides an overview of the key steps to obtain and install Red Hat Enterprise Linux for software developers. For detailed instructions, see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Installation Guide].
 
@@ -25,12 +26,14 @@ If you encounter difficulties at any point in this tutorial, see <<troubleshooti
 
 ## Step1 Duration
 10-20 minutes (verify?)
+*[mreid] This took us ~17 mins*
 
 ## Step1 Title
 Obtain Red Hat Enterprise Linux
 
 ## Step2 Duration
 30-60 minutes (verify?)
+*[mreid Step 2 up through attempting to register the system took us ~43 mins (not including Step 1's time)*
 
 ## Step2 Title
 Install Red Hat Enterprise Linux
@@ -45,7 +48,7 @@ Getting ready for software development
 
 In this step, you will download Red Hat Enterprise Linux from the Red Hat customer portal, link:https://access.redhat.com/[access.redhat.com]. The steps are:
 
-. Login to link:https://access.redhat.com/[access.redhat.com].
+. Log in to link:https://access.redhat.com/[access.redhat.com].
 +
 If you don't have an account, link:https://www.redhat.com/wapps/ugc/register.html[register to create one].
 . Obtain a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux subscription] if you don't already have one:
@@ -55,7 +58,8 @@ If you don't have an account, link:https://www.redhat.com/wapps/ugc/register.htm
 * Or, start a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation].
 
 .. After you sign up for the evaluation you will receive an email with a link to click on to activate your 30-day evaluation.
-.. After you click through the email, visit link:https://www.redhat.com/wapps/ugc[www.redhat.com/wapps/ugc] to accept the license agreement.
+*[mreid] The email just has info about the eval, you don't need to do anything with it. To activate the eval, you have to accept the terms of the eval (shown after you request it by clicking Continue during the process in Portal), and then you're good*
+.. After you click through the email, visit link:https://www.redhat.com/wapps/ugc[www.redhat.com/wapps/ugc] to accept the license agreement. *[mreid] If you stick with the flow in Portal, you should be prompted, without needing to manually enter links*
 
 . Download the _binary DVD .iso file_ for _link:https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads[Red Hat Enterprise Linux Server]_.
 +
@@ -63,11 +67,12 @@ On the download page, under _Product Variant_ select _Red Hat Enterprise Linux S
 +
 Under _Version_ select the latest released (non-beta) version of Red Hat Enterprise Linux 7. The _Architecture_ selection should be set to _x86_64_.
 +
-Click the _Download Now_ button for _Binary DVD_ installer.  The file size should be between 3 and 4 GBs. Do not select the much smaller smaller _Boot ISO_ as it doesn't contain the installation software.
+Click the _Download Now_ button for _Binary DVD_ installer.  The file size should be between 3 and 4 GBs. Do not select the much smaller _Boot ISO_ as it doesn't contain the installation software.
 
 . Create bootable installation media on a https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html#sect-making-cd-dvd-media[DVD] or https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-making-usb-media.html[USB] drive.
 +
 Instructions for making a bootable https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html#sect-making-cd-dvd-media[DVD] or https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-making-usb-media.html[USB] drive can be found in the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html[Red Hat Enterprise Linux Installation Guide]
+*[mreid] If we said previously that they can run this on a physical or virtual machine, and they end up setting RHEL up as a VM, there's no point in creating bootable media when you can just point it at the ISO you downloaded. They'd save time if they skipped past this in that case.*
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -78,12 +83,12 @@ There are a few key steps to remember during the installation process:
 
 . You will need to select an _Installation destination_, the disk or partition(s) where the software will be installed. *The disk or partition(s) you select will be overwritten.* Make sure you understand your selection before starting the installation to avoid accidental data loss.
 . You should configure networking under _Network and host name_ before starting the installation. You will need access to the Internet to complete registration and download additional software. The network can be configured after the system is installed. However, the steps are more straightforward during installation.
-. Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server, will not install a graphical desktop. Using the _server_ product variant of Red Hat Enterprise Linux gives you access to the widest range of software to develop and test with.
-. Create your primary user acccount during installation. After the installation begins, you will be instructed to set a password for the root account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. The regular user will be your primary login for development. The root account should only be used for systemin administration tasks. If you don't create a user before the installation completes, you will need reboot and then login as root to create user accounts.
+. Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server, will not install a graphical desktop.
+. Create your primary user acccount during installation. After the installation begins, you will be instructed to set a password for the root account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. The regular user will be your primary login for development. The root account should only be used for systemin administration tasks. If you don't create a user before the installation completes, you will reboot and then log in as root to create user accounts.
 
 ### Installation instructions
 
-. Start the system from the bootable disk and select "Install Red hat Enterprise Linux 7".
+. Start the system from the bootable disk and select "Install Red hat Enterprise Linux 7.1".
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_a_0.png')}[Screenshot Boot Splash]
 image::images/rhel7-install/rhel_7_1_a_0.png[Screenshot Boot Splash]
@@ -94,26 +99,30 @@ image::images/rhel7-install/rhel_7_1_a_0.png[Screenshot Boot Splash]
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-3-install-options-first.png')}[Screenshot Installation Options]
 image::images/rhel7-install/image-3-install-options-first.png[Screenshot Installation Options]
 +
-. Click _Software selection_.  Then on the next screen, under _Software selection_, in the _Base environment_ list on the left, select _Server with GUI_. Then in the list _Add-ons for selected environment_ on the right, select _Development tools_.  After you click the _Done_ button it will take several seconds to validate your choices.
-+
+. Click _Software selection_.  Then on the next screen, under _Software selection_, in the _Base environment_ list on the left, select _Server with GUI_. Then in the list _Add-ons for selected environment_ on the right, select _Development tools_.  Click _Done_. It will take several seconds to validate your choices.
++ *[mreid] This might be clearer if broken into multiple steps*
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-4-software-selection.png')}[Screenshot Software Selection]
 image::images/rhel7-install/image-4-software-selection.png[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify what disk or partition(s) to install the software on. See the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination] section of the the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
+. Click _Installation destination_ to specify which disk or partition(s) to install the software on. See the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination] section of the the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
+*[mreid] May want to reiterate that it should be 16gb+*
 +
-. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then, click the on/off button on the right to enable it. Click _Configure_ to adjust the settings for the adapter. Optionally, set a _Host name_ for the system.
+. Click _Network & Host Name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then, click the on/off button on the right to enable it. Click _Configure_ to adjust the settings for the adapter. Optionally, set a _Host name_ for the system. Click _Done_.
+*[mreid] I didn't need to adjust anything on 7.1 on my VM, my 1 NIC was enabled and configured by default. On a dev machine, I don't know that they're going to have a complicated enough network setup that they'd need to adjust stuff.*
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-6-network.png')}[Screenshot Network Configuration]
 image:images/rhel7-install/image-6-network.png[Screenshot Network Configuration]
 +
-. Click the _Begin installation_ button when you are ready to start the actual installation.
-. On the next screen, while the installation is running, click _User creation_ to create the user ID you will use to login under for normal work.
+*[mreid] What should we do about Kdump? All the other options were mentioned, even if we were just accepting the defaults. Should Kdump be enabled or disabled? I would guess disabled, since it's more of a server feature, than something needed for dev.*
+. Click _Begin installation_.
+. On the next screen, while the installation is running, click _User creation_ to create the user ID you will use to log in under for normal work.
 +
 image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_c.png')}[Screenshot User Creation]
 image:images/rhel7-install/rhel_7_1_c.png[Screenshot User Creation]
 +
 . Click _Root password_ to set the password for the root user.
-. After the installation process completes, click the _Reboot_ button.
+*[mreid] When entering a weak password, you'll have to click Done twice*
+. After the installation process completes, click _Reboot_.
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_d.png')}[Screenshot Installation Complete]
 image:images/rhel7-install/rhel_7_1_d.png[Screenshot Installation Complete]
@@ -124,21 +133,25 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-This section covers post-installation steps that prepate your system for software development.
+This section covers post-installation steps that prepare your system for software development.
 
-. After the system reboots, accept the license agreement
+. After the system reboots, accept the license agreement.
+*[mreid] They'll need to click on Finish Configuration to advance to the system registration and subscription*
 +
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-10-first-boot-license.png')}[Screenshot Installation Complete]
 image:images/rhel7-install/image-10-first-boot-license.png[Screenshot Installation Complete]
 +
-. Register your system with Red Hat.  Use the same username and password that you created for loggging in to the Red Hat Customer Portal. 
+. Register your system with Red Hat.  Use the same username and password that you created for logging in to the Red Hat Customer Portal. 
+*[mreid] There's another step before they get to the account credentials step, where they can change if it registers with Portal or a local server like Satellite*
 +
 Note: for this step to succeed you must have configured a network connection during boot
+*[mreid] Should we reinforce this on step 6, pg 6?*
 +
 If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/
 +
 *NOTE TO REVIEWERS: There may be a bug here, or a recent problem with the customer portal. I can't register the system with an eval, due to the agreement. I've tried visiting that link from another system, that still won't get me past the first-boot registration page.  There may be a bug that prevents registration at first boot. Lately I'm getting a Java error returned which I think is from the portal.*
 +
+*[mreid] We hit this as well*
 . Login to the system with the username and password you created during installation.
 +
 If you didn't create a regular user, you will need to login as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
