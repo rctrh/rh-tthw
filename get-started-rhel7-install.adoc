@@ -128,8 +128,8 @@ This section covers post-installation steps that prepate your system for softwar
 
 . After the system reboots, accept the license agreement
 +
-// image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel_7_1_d.png')}[Screenshot Installation Complete]
-image:images/rhel7-install/rhel_7_1_d.png[Screenshot Installation Complete]
+// image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/image-10-first-boot-license.png')}[Screenshot Installation Complete]
+image:images/rhel7-install/image-10-first-boot-license.png[Screenshot Installation Complete]
 +
 . Register your system with Red Hat.  Use the same username and password that you created for loggging in to the Red Hat Customer Portal. 
 +
@@ -137,7 +137,7 @@ Note: for this step to succeed you must have configured a network connection dur
 +
 If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/
 +
-*NOTE TO REVIEWERS: There may be a bug here. I can't register the system with an eval, due to the agreement. I've tried visiting that link from another system, that still won't get me past the first-boot registration page.  There may be a bug that prevents registration at first boot.*
+*NOTE TO REVIEWERS: There may be a bug here, or a recent problem with the customer portal. I can't register the system with an eval, due to the agreement. I've tried visiting that link from another system, that still won't get me past the first-boot registration page.  There may be a bug that prevents registration at first boot. Lately I'm getting a Java error returned which I think is from the portal.*
 +
 . Login to the system with the username and password you created during installation.
 +
