@@ -102,7 +102,7 @@ Now start a bash shell inside the Ruby container to have a look around. The shel
 
 [.code-block]
 ```
-# docker run -it openshift3/ruby-20-rhel7:latest bash
+# docker run -it openshift3/ruby-20-rhel7 /bin/bash
 bash-4.2$ which ruby
 /opt/rh/ruby200/root/usr/bin/ruby
 bash-4.2$ pwd
