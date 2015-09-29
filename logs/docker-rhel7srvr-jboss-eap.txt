@@ -1,0 +1,441 @@
+Log file from docker JBoss EAP container on RHEL 7 Server
+---------------------------------------------------------
+
+
+# docker pull registry.access.redhat.com/jboss-eap-6/eap-openshift
+Trying to pull repository registry.access.redhat.com/jboss-eap-6/eap-openshift ...
+5c93a30f18d0: Download complete 
+82ad5fa11820: Download complete 
+cfd190eb229e: Download complete 
+2bab487dc3fb: Download complete 
+537614ce8056: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/jboss-eap-6/eap-openshift:latest
+
+
+# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/jboss-eap-6/eap-openshift    latest              5c93a30f18d0        2 weeks ago         957.2 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        8 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        8 weeks ago         408.8 MB
+[root@rhdsrvr ruby]# docker images -a
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/jboss-eap-6/eap-openshift    latest              5c93a30f18d0        2 weeks ago         957.2 MB
+<none>                                                  <none>              537614ce8056        2 weeks ago         533.2 MB
+<none>                                                  <none>              2bab487dc3fb        2 weeks ago         361.6 MB
+<none>                                                  <none>              cfd190eb229e        2 weeks ago         168.7 MB
+<none>                                                  <none>              82ad5fa11820        2 weeks ago         158.3 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        8 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        8 weeks ago         408.8 MB
+<none>                                                  <none>              d0a516b529ab        8 weeks ago         158.2 MB
+
+
+
+]# docker inspect jboss-eap-6/eap-openshift
+[
+{
+    "Id": "5c93a30f18d087bd04653342ebf712faa6eb0b3cc4fd5384a9d2fcd7cad73dd6",
+    "Parent": "537614ce8056828861def7c22e708c5e6c86aaead48a7fb98a9e82b114240e62",
+    "Comment": "",
+    "Created": "2015-09-15T08:23:43.834476Z",
+    "Container": "",
+    "ContainerConfig": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "PortSpecs": null,
+        "ExposedPorts": null,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": null,
+        "Cmd": null,
+        "Image": "",
+        "Volumes": null,
+        "VolumeDriver": "",
+        "WorkingDir": "",
+        "Entrypoint": null,
+        "NetworkDisabled": false,
+        "MacAddress": "",
+        "OnBuild": null,
+        "Labels": null
+    },
+    "DockerVersion": "1.6.2",
+    "Author": "",
+    "Config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "185",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "PortSpecs": null,
+        "ExposedPorts": {
+            "8080/tcp": {},
+            "8443/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+            "container=docker",
+            "PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin",
+            "HOME=/home/jboss",
+            "JAVA_HOME=/usr/lib/jvm/java-1.8.0",
+            "JAVA_VENDOR=openjdk",
+            "JAVA_VERSION=1.8.0",
+            "JBOSS_PRODUCT=eap",
+            "JBOSS_EAP_VERSION=6.4.1.GA",
+            "JBOSS_HOME=/opt/eap",
+            "STI_SCRIPTS_URL=image:///usr/local/sti",
+            "JBOSS_MODULES_SYSTEM_PKGS=org.jboss.logmanager"
+        ],
+        "Cmd": [
+            "/opt/eap/bin/openshift-launch.sh"
+        ],
+        "Image": "537614ce8056828861def7c22e708c5e6c86aaead48a7fb98a9e82b114240e62",
+        "Volumes": null,
+        "VolumeDriver": "",
+        "WorkingDir": "/home/jboss",
+        "Entrypoint": null,
+        "NetworkDisabled": false,
+        "MacAddress": "",
+        "OnBuild": [],
+        "Labels": {
+            "Architecture": "x86_64",
+            "Authoritative_Registry": "registry.access.redhat.com",
+            "BZComponent": "jboss-eap-6-openshift-docker",
+            "Build_Host": "rcm-img-docker01.build.eng.bos.redhat.com",
+            "Name": "jboss-eap-6/eap-openshift",
+            "Release": "3.0_2",
+            "Vendor": "Red Hat, Inc.",
+            "Version": "6.4",
+            "io.openshift.sti.scripts-url": "image:///usr/local/sti",
+            "io.s2i.scripts-url": "image:///usr/local/sti",
+            "org.jboss.deployments-dir": "/opt/eap/standalone/deployments"
+        }
+    },
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 423982068,
+    "VirtualSize": 957177881
+}
+]
+
+
+Notes from docker inspect:
+
+        "Cmd": "/opt/eap/bin/openshift-launch.sh"
+	Working Dir: /home/jboss
+        org.jboss.deployments-dir": "/opt/eap/standalone/deployments"
+
+        "Env": [
+            "container=docker",
+            "PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin",
+            "HOME=/home/jboss",
+            "JAVA_HOME=/usr/lib/jvm/java-1.8.0",
+            "JAVA_VENDOR=openjdk",
+            "JAVA_VERSION=1.8.0",
+            "JBOSS_PRODUCT=eap",
+            "JBOSS_EAP_VERSION=6.4.1.GA",
+            "JBOSS_HOME=/opt/eap",
+            "STI_SCRIPTS_URL=image:///usr/local/sti",
+            "JBOSS_MODULES_SYSTEM_PKGS=org.jboss.logmanager"
+
+# docker run -it jboss-eap-6/eap-openshift /bin/bash
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[jboss@5f55e5a019c7 ~]$ 
+
+[jboss@5f55e5a019c7 ~]$ ps -ef
+bash: ps: command not found
+
+[jboss@5f55e5a019c7 ~]$ ls /proc/
+1/             cmdline        dma            interrupts     key-users      locks          mtrr           self/          sysrq-trigger  version
+acpi/          consoles       driver/        iomem          keys           mdstat         net/           slabinfo       sysvipc/       vmallocinfo
+asound/        cpuinfo        execdomains    ioports        kmsg           meminfo        pagetypeinfo   softirqs       timer_list     vmstat
+buddyinfo      crypto         fb             irq/           kpagecount     misc           partitions     stat           timer_stats    zoneinfo
+bus/           devices        filesystems    kallsyms       kpageflags     modules        sched_debug    swaps          tty/           
+cgroups        diskstats      fs/            kcore          loadavg        mounts         scsi/          sys/           uptime         
+
+[jboss@5f55e5a019c7 ~]$ netstat
+bash: netstat: command not found
+
+
+
+]$ ls /home/jboss/
+[jboss@5f55e5a019c7 ~]$ ls -l /home/jboss/
+total 0
+[jboss@5f55e5a019c7 ~]$ 
+[jboss@5f55e5a019c7 ~]$ df
+Filesystem                                                                                         1K-blocks    Used Available Use% Mounted on
+/dev/mapper/docker-253:1-20482070-5f55e5a019c7c5e276639b5221dbe8dce10002c9b8dcca0c42387453cd6b2c3b  10190100  827316   8822112   9% /
+tmpfs                                                                                                1941564       0   1941564   0% /dev
+shm                                                                                                    65536       0     65536   0% /dev/shm
+tmpfs                                                                                                1941564     112   1941452   1% /run/secrets
+/dev/mapper/rhel-root                                                                               14530560 7661448   6869112  53% /etc/hosts
+[jboss@5f55e5a019c7 ~]$ cat /etc/hosts
+172.17.0.24	    5f55e5a019c7
+127.0.0.1	    localhost
+::1		    localhost ip6-localhost ip6-loopback
+fe00::0		    ip6-localnet
+ff00::0		    ip6-mcastprefix
+ff02::1		    ip6-allnodes
+ff02::2		    ip6-allrouters
+
+
+
+$ ls /opt
+eap  rh
+[jboss@5f55e5a019c7 ~]$ ls /opt/rh
+mongodb24
+[jboss@5f55e5a019c7 ~]$ ls /opt/eap
+JBossEULA.txt  LICENSE.txt  appclient  bin  bundles  docs  domain  jboss-modules.jar  jolokia.jar  modules  standalone  version.txt  welcome-content
+[jboss@5f55e5a019c7 ~]$ 
+[jboss@5f55e5a019c7 ~]$ cat /opt/eap/version.txt 
+Red Hat JBoss Enterprise Application Platform - Version 6.4.1.GA
+
+
+
+# docker run -d jboss-eap-6/eap-openshift
+31ff2fc99c0b69692b98136203ba84cd7d3b2ff468a9e9bf5f0591fe5676c208
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[root@rhdsrvr ruby]# 
+[root@rhdsrvr ruby]# docker ps
+CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                NAMES
+31ff2fc99c0b        jboss-eap-6/eap-openshift   "/opt/eap/bin/opensh   9 seconds ago       Up 9 seconds        8080/tcp, 8443/tcp   adoring_kirch   
+
+
+
+
+
+# docker logs adoring_kirch
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/eap
+
+  JAVA: /usr/lib/jvm/java-1.8.0/bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/opt/eap/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.logmanager -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -Xbootclasspath/p:/opt/eap/jboss-modules.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/main/jboss-logmanager-1.5.4.Final-redhat-1.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/javax.json-1.0.4.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/jboss-logmanager-ext-1.0.0.Alpha2-redhat-1.jar -Djava.util.logging.manager=org.jboss.logmanager.LogManager -javaagent:/opt/eap/jolokia.jar=port=8778,host=127.0.0.1,discoveryEnabled=false
+
+=========================================================================
+
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+I> No access restrictor found, access to all MBean is allowed
+Jolokia: Agent started with URL http://127.0.0.1:8778/jolokia/
+17:02:51,060 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.6.Final-redhat-1
+17:02:51,647 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.5.Final-redhat-1
+17:02:51,783 INFO  [org.jboss.as] (MSC service thread 1-2) JBAS015899: JBoss EAP 6.4.1.GA (AS 7.5.1.Final-redhat-3) starting
+17:02:51,797 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	     [Standalone] = 
+	     awt.toolkit = sun.awt.X11.XToolkit
+	     file.encoding = ANSI_X3.4-1968
+	     file.encoding.pkg = sun.io
+	     file.separator = /
+	     java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	     java.awt.headless = true
+	     java.awt.printerjob = sun.print.PSPrinterJob
+	     java.class.path = /opt/eap/jboss-modules.jar:/opt/eap/jolokia.jar
+	     java.class.version = 52.0
+	     java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/endorsed
+	     java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	     java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre
+	     java.io.tmpdir = /tmp
+	     java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	     java.net.preferIPv4Stack = true
+	     java.runtime.name = OpenJDK Runtime Environment
+	     java.runtime.version = 1.8.0_45-b13
+	     java.specification.name = Java Platform API Specification
+	     java.specification.vendor = Oracle Corporation
+	     java.specification.version = 1.8
+	     java.util.logging.manager = org.jboss.logmanager.LogManager
+	     java.vendor = Oracle Corporation
+	     java.vendor.url = http://java.oracle.com/
+	     java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	     java.version = 1.8.0_45
+	     java.vm.info = mixed mode
+	     java.vm.name = OpenJDK 64-Bit Server VM
+	     java.vm.specification.name = Java Virtual Machine Specification
+	     java.vm.specification.vendor = Oracle Corporation
+	     java.vm.specification.version = 1.8
+	     java.vm.vendor = Oracle Corporation
+	     java.vm.version = 25.45-b02
+	     javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	     javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	     javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	     javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	     javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	     javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	     javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	     javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	     javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	     javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	     jboss.bind.address = 0.0.0.0
+	     jboss.bind.address.management = 0.0.0.0
+	     jboss.home.dir = /opt/eap
+	     jboss.host.name = 31ff2fc99c0b
+	     jboss.modules.dir = /opt/eap/modules
+	     jboss.modules.policy-permissions = true
+	     jboss.modules.system.pkgs = org.jboss.logmanager
+	     jboss.node.name = 31ff2fc99c0b
+	     jboss.qualified.host.name = 31ff2fc99c0b
+	     jboss.server.base.dir = /opt/eap/standalone
+	     jboss.server.config.dir = /opt/eap/standalone/configuration
+	     jboss.server.data.dir = /opt/eap/standalone/data
+	     jboss.server.deploy.dir = /opt/eap/standalone/data/content
+	     jboss.server.log.dir = /opt/eap/standalone/log
+	     jboss.server.name = 31ff2fc99c0b
+	     jboss.server.persist.config = true
+	     jboss.server.temp.dir = /opt/eap/standalone/tmp
+	     jolokia.agent = http://127.0.0.1:8778/jolokia/
+	     line.separator = 
+
+	     logging.configuration = file:/opt/eap/standalone/configuration/logging.properties
+	     module.path = /opt/eap/modules
+	     org.jboss.boot.log.file = /opt/eap/standalone/log/server.log
+	     org.jboss.resolver.warning = true
+	     org.xml.sax.driver = __redirected.__XMLReaderFactory
+	     os.arch = amd64
+	     os.name = Linux
+	     os.version = 3.10.0-229.14.1.el7.x86_64
+	     path.separator = :
+	     sun.arch.data.model = 64
+	     sun.boot.class.path = /opt/eap/jboss-modules.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/main/jboss-logmanager-1.5.4.Final-redhat-1.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/javax.json-1.0.4.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/jboss-logmanager-ext-1.0.0.Alpha2-redhat-1.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/classes
+	     sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45-30.b13.el7_1.x86_64/jre/lib/amd64
+	     sun.cpu.endian = little
+	     sun.cpu.isalist = 
+	     sun.io.unicode.encoding = UnicodeLittle
+	     sun.java.command = /opt/eap/jboss-modules.jar -mp /opt/eap/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/opt/eap -Djboss.server.base.dir=/opt/eap/standalone -c standalone-openshift.xml -bmanagement 0.0.0.0 -b 0.0.0.0 -Djboss.node.name=31ff2fc99c0b
+	     sun.java.launcher = SUN_STANDARD
+	     sun.jnu.encoding = ANSI_X3.4-1968
+	     sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	     sun.os.patch.level = unknown
+	     user.country = US
+	     user.dir = /home/jboss
+	     user.home = /home/jboss
+	     user.language = en
+	     user.name = jboss
+	     user.timezone = America/New_York
+17:02:51,797 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -XX:+UseCompressedOops -verbose:gc -Xloggc:/opt/eap/standalone/log/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.logmanager -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -Xbootclasspath/p:/opt/eap/jboss-modules.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/main/jboss-logmanager-1.5.4.Final-redhat-1.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/javax.json-1.0.4.jar:/opt/eap/modules/system/layers/base/org/jboss/logmanager/ext/main/jboss-logmanager-ext-1.0.0.Alpha2-redhat-1.jar -Djava.util.logging.manager=org.jboss.logmanager.LogManager -javaagent:/opt/eap/jolokia.jar=port=8778,host=127.0.0.1,discoveryEnabled=false -Dorg.jboss.boot.log.file=/opt/eap/standalone/log/server.log -Dlogging.configuration=file:/opt/eap/standalone/configuration/logging.properties 
+17:02:55,308 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute default-stack is deprecated, and it might be removed in future version!
+17:02:55,309 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,310 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,310 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,352 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,353 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,353 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,354 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,354 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,354 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,354 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,355 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,355 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,355 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,355 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,377 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,377 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,378 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,378 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,378 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,378 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,379 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,379 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,379 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,379 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,385 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,391 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,392 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,392 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 9) JBAS014627: Attribute type is deprecated, and it might be removed in future version!
+17:02:55,481 INFO  [org.xnio] (MSC service thread 1-2) XNIO Version 3.0.14.GA-redhat-1
+17:02:55,516 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+17:02:55,585 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.0.14.GA-redhat-1
+17:02:55,607 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 3.3.4.Final-redhat-1
+17:02:55,732 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 33) JBAS010280: Activating Infinispan subsystem.
+17:02:55,784 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 37) JBAS010260: Activating JGroups subsystem.
+17:02:55,808 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 40) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+17:02:55,871 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 43) JBAS011800: Activating Naming Subsystem
+17:02:55,934 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 50) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+17:02:55,921 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 48) JBAS013371: Activating Security Subsystem
+17:02:56,104 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 52) JBAS015537: Activating WebServices Extension
+17:02:56,181 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.31.Final-redhat-1)
+17:02:56,367 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013370: Current PicketBox version=4.1.1.Final-redhat-1
+17:02:56,648 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+17:02:56,721 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 29) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+17:02:56,726 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+17:02:56,999 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 29) JBAS010404: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+17:02:57,059 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 29) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.2)
+17:02:57,365 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 33) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+17:02:57,377 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 33) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+17:02:57,608 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) JBWEB003001: Coyote HTTP/1.1 initializing on : http-/172.17.0.25:8080
+17:02:57,646 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) JBWEB003000: Coyote HTTP/1.1 starting on: http-/172.17.0.25:8080
+17:02:58,607 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=true,backup=false,sharedStore=true,journalDirectory=/opt/eap/standalone/data/messagingjournal,bindingsDirectory=/opt/eap/standalone/data/messagingbindings,largeMessagesDirectory=/opt/eap/standalone/data/messaginglargemessages,pagingDirectory=/opt/eap/standalone/data/messagingpaging)
+17:02:58,609 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221006: Waiting to obtain live lock
+17:02:58,635 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.4.Final-redhat-1
+17:02:58,730 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221013: Using NIO Journal
+17:02:58,735 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) JBAS015012: Started FileSystemDeploymentService for directory /opt/eap/standalone/deployments
+17:02:58,761 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015876: Starting deployment of "activemq-rar.rar" (runtime-name: "activemq-rar.rar")
+17:02:58,764 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+17:02:58,824 INFO  [org.jboss.as.remoting] (MSC service thread 1-2) JBAS017100: Listening on 0.0.0.0:9999
+17:02:58,925 WARN  [org.jboss.as.domain.http.api] (MSC service thread 1-1) JBAS015102: Unable to load console module for slot eap, disabling console
+17:02:59,032 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on 172.17.0.25:4447
+17:02:59,154 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221034: Waiting to obtain live lock
+17:02:59,154 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221035: Live Server Obtained live lock
+17:03:00,744 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 172.17.0.25:5455 for CORE protocol
+17:03:00,759 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 172.17.0.25:5445 for CORE protocol
+17:03:01,673 INFO  [org.jboss.as.connector.deployers.RADeployer] (MSC service thread 1-1) IJ020001: Required license terms for file:/opt/eap/standalone/tmp/vfs/temp/tempa2a3beb50107da32/activemq-rar.rar-78a3d455fb2b1484/contents/
+17:03:03,836 WARN  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) No DNS SRV record found for service [ping]
+17:03:03,840 INFO  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) Starting JBossServer on port 8888 for channel address: 31ff2fc99c0b/hornetq-channel
+17:03:03,865 INFO  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) JBossServer started.
+17:03:03,873 INFO  [stdout] (ServerService Thread Pool -- 54) 
+17:03:03,873 INFO  [stdout] (ServerService Thread Pool -- 54) -------------------------------------------------------------------
+17:03:03,873 INFO  [stdout] (ServerService Thread Pool -- 54) GMS: address=31ff2fc99c0b/hornetq-channel, cluster=hornetq-channel, physical address=172.17.0.25:7600
+17:03:03,873 INFO  [stdout] (ServerService Thread Pool -- 54) -------------------------------------------------------------------
+17:03:06,943 WARN  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) No matching hosts found for service [ping]; continuing...
+17:03:09,947 WARN  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) No DNS SRV record found for service [ping]
+17:03:12,955 WARN  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) No matching hosts found for service [ping]; continuing...
+17:03:15,958 WARN  [org.jgroups.protocols.openshift.DNS_PING] (ServerService Thread Pool -- 54) No DNS SRV record found for service [ping]
+17:03:15,974 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221007: Server is now live
+17:03:15,974 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 54) HQ221001: HornetQ Server version 2.3.25.Final (2.3.x, 123) [767d184f-66ed-11e5-b8d2-5b4d9fe384f0] 
+17:03:15,989 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 54) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+17:03:16,043 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 58) HQ221003: trying to deploy queue jms.queue.DLQ
+17:03:16,109 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-1) JBAS010406: Registered connection factory java:/JmsXA
+17:03:16,173 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 58) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+17:03:16,184 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 57) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+17:03:16,191 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 57) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+17:03:16,195 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 59) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+17:03:16,260 INFO  [org.hornetq.ra] (MSC service thread 1-1) HornetQ resource adaptor started
+17:03:16,261 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-1) IJ020002: Deployed: file://RaActivatorhornetq-ra
+17:03:16,263 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-1) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+17:03:16,604 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 30) JBAS015859: Deployed "activemq-rar.rar" (runtime-name : "activemq-rar.rar")
+17:03:16,666 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://0.0.0.0:9990/management
+17:03:16,666 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://0.0.0.0:9990
+17:03:16,666 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.1.GA (AS 7.5.1.Final-redhat-3) started in 26057ms - Started 206 of 299 services (126 services are lazy, passive or on-demand)
+17:03:18,984 WARN  [org.jgroups.protocols.openshift.DNS_PING] (Timer-3,shared=tcp) No matching hosts found for service [ping]; continuing...
+17:03:21,992 WARN  [org.jgroups.protocols.openshift.DNS_PING] (Timer-3,shared=tcp) No DNS SRV record found for service [ping]
+17:04:25,412 WARN  [org.jgroups.protocols.openshift.DNS_PING] (Timer-4,shared=tcp) No matching hosts found for service [ping]; continuing...
+17:04:28,420 WARN  [org.jgroups.protocols.openshift.DNS_PING] (Timer-4,shared=tcp) No DNS SRV record found for service [ping]
+
+
+
+******* NOTE: couldn't exit from that ***************
+
+
+
+# docker run -d -p 8080:8080 -p 8443:8443 jboss-eap-6/eap-openshift
+1aa9747a4c44870299f68cab8661341a1f8382a61420df24ab9642da73efd2f9
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[root@rhdsrvr ruby]# 
+[root@rhdsrvr ruby]# docker ps
+CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                                            NAMES
+1aa9747a4c44        jboss-eap-6/eap-openshift   "/opt/eap/bin/opensh   9 seconds ago       Up 8 seconds        0.0.0.0:8080->8080/tcp, 0.0.0.0:8443->8443/tcp   fervent_jones       
+
+
+
+[rt@rhdsrvr hello]$ curl http://localhost:8080/
+[rt@rhdsrvr hello]$ curl https://localhost:8443/
+curl: (35) Encountered end of file
+
+
