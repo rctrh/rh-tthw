@@ -128,7 +128,7 @@ high_kowalevski
 # docker attach nostalgic_ritchie
 ```
 
-At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter get it to print another one.
+At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter to get it to print another one.
 
 [.code-block]
 ```
@@ -265,7 +265,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 Atomic Host is specifically optimized for deploying of Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface or development tools, Atomic Host isn't well suited for software development activities. Instead, developers should use Red Hat Enterprise Linux, which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application is developed and packaged in a container, developers can test them on Atomic Host to ensure it is ready for deployment. Atomic Host can be helpful for developers who are creating continuous integration/continuous delivery (CI/CD) environments.
 +
-. How do I tell there is a conteiner image availabe that has a newer version of Node.js?
+. How do I tell there is a container image available that has a newer version of Node.js?
 +
 How can I see what other container images are available?
 +
