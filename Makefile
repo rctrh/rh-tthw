@@ -27,6 +27,8 @@ RHEL6_NATIVE_SOURCES = get-started-rhel6-cpp.adoc \
 	get-started-rhel6-ruby.adoc \
 
 ATOMIC_SOURCES = get-started-atomic-python.adoc \
+	get-started-atomic-nodejs.adoc \
+	get-started-atomic-ruby.adoc \
 
 OS_INSTALL_SOURCES = get-started-rhel7-install.adoc 
 
