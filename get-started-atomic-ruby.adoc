@@ -32,19 +32,19 @@ Atomic Host is specifically optimized for deploying of Linux containers in envir
 If you encounter difficulties at any point in this tutorial, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step1 Duration
-2 minutes
+5 minutes
 
 ## Step1 Title
 Prepare your system
 
 ## Step2 Duration
-2 minutes
+5 minutes
 
 ## Step2 Title
 Setup your development environment
 
 ## Step3 Duration
-2 minutes
+5 minutes
 
 ## Step3 Title
 Hello World and your first application
