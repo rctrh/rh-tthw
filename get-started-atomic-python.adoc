@@ -28,7 +28,13 @@ Follow the CDK Installation Guide for your OS:
 
 ### About Red Hat Enterprise Linux Atomic Host
 
-Atomic Host is specifically optimized for deploying of Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface or development tools, Atomic Host isn't well suited for software development activities. Instead, developers should use Red Hat Enterprise Linux, which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application is developed and packaged in a container, developers can test them on Atomic Host to ensure it is ready for deployment. Atomic Host can be helpful for developers who are creating continuous integration/continuous delivery (CI/CD) environments.
+Atomic Host is specifically optimized for deploying Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Atomic Host isn't intended for software development activities as it doesn't include development tools or a graphical user interface.
+
+During software development it is suggested that you use Red Hat Enterprise Linux, which is suitable for many purposes including desktop and server installations. You can build and run containers on Red Hat Enterprise Linux, see link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. The steps to build a container image that include your application can be automated with a Dockerfile. 
+
+After your application is packaged in a container you should test it on Atomic Host to ensure that it is ready for deployment. In addition to minimized footprint, production environments built for running containers benefit from Atomic Host's enhanced security and atomic update and rollback capability.
+
+Developers who are creating continuous integration/continuous delivery (CI/CD) environments will want to consider containers deployed on Atomic Host. This allows test environments to be quickly created while minimizing system resource requirements.
 
 If you encounter difficulties at any point in this tutorial, see <<troubleshooting,Troubleshooting and FAQ>>.
 
