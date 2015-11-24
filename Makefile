@@ -30,13 +30,17 @@ ATOMIC_SOURCES = get-started-atomic-python.adoc \
 	get-started-atomic-nodejs.adoc \
 	get-started-atomic-ruby.adoc \
 
+DOCKER_SOURCES = get-started-dcr7-python.adoc 
+
+
 OS_INSTALL_SOURCES = get-started-rhel7-install.adoc \
 	get-started-atomic-install.adoc
 
 
 
 SOURCES = $(RHEL7_SCL_SOURCES) $(RHEL7_NATIVE_SOURCES) $(RHEL6_SCL_SOURCES) \
-	$(RHEL6_NATIVE_SOURCES) $(ATOMIC_SOURCES) $(OS_INSTALL_SOURCES)
+	$(RHEL6_NATIVE_SOURCES) $(ATOMIC_SOURCES) $(OS_INSTALL_SOURCES) \
+	$(DOCKER_SOURCES)
 
 # OUTPUTS=$(SOURCES:.adoc=.html)
 

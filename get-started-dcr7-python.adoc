@@ -2,41 +2,21 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started building Python application containers on Red Hat Enterprise Linux Atomic Host in under 15 minutes.
+Get started building Python application in docker containers on Red Hat Enterprise Linux in under 15 minutes.
 
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to deploy a Python 3 application in containers on Red Hat Enterprise Linux Atomic Host, which is a secure, minimal-footprint OS optimized to run Linux containers. You will need to have Red Hat Enterprise Linux Atomic Host installed on a virtual (or physical) machine. Alternatively, If you are already running Red Hat Enterprise Linux 7 server, you can run this tutorial directly on your system after configuring your system to run `docker`.
+In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
 
-You will need a current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset, and Software Collections. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available. 
+[*FIXME Confirm: I think docker is only available on RHEL 7 server. Docker is not available on desktop. I haven't tried workstation. I haven't changed the prerequisites to reflect that yet.*]
 
-The best way to get started with Atomic Host depends on what OS you are using on your development system:
+You will need a current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
-* If you are using Microsoft Windows, Apple Mac OS X, or Fedora Linux, the Red Hat Container Development Kit (CDK) provides pre-built virtual machines (VMs) for both Red Hat Enterprise Linux and the Atomic Host edition. A paid subscription, such as link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite], is required to download the CDK.
-Follow the CDK Installation Guide for your OS:
-** link:https://access.redhat.com/articles/1487723[Installing the CDK on Microsoft Windows] +
-** link:https://access.redhat.com/articles/1487693[Installing the CDK on Mac OS X] +
-** link:https://access.redhat.com/articles/1487733[Installing the CDK on Fedora Linux]
-* If you are already running Red Hat Enterprise Linux 7 server:
-** You can run this tutorial directly on your system after configuring your system to run `docker`. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. 
-** You can also run an Atomic Host VM as a KVM guest on your Red Hat Enterprise Linux 7 system. See link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-atomic-virtualization.html#sect-atomic-virtualization-libvirt[Using Red Hat Enterprise Linux Atomic Host in Virtualized Environments]. On the download page, select _Red Hat Atomic Cloud Image_ to download the qcow2 file. Note: The pre-built Atomic VM images do not have a default username and password, the cloud-init tool is used to create them. You will need to create a separate ISO file containing your login credentials to use with cloud-init.
-* If you'd like to install Atomic on a physical machine or build a virtual machine, see Get Started with Red Hat Enterprise Linux Atomic Host.
-// [*FIXME*: This should be a link to the Atomic Get Started guide that is part of this "get started" site*, not the KB article, https://access.redhat.com/articles/rhel-atomic-getting-started, Note: the names are too similar need to come up with something different.]
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
 
-
-### About Red Hat Enterprise Linux Atomic Host
-
-Atomic Host is specifically optimized for deploying Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Atomic Host isn't intended for software development activities as it doesn't include development tools or a graphical user interface.
-
-During software development it is suggested that you use Red Hat Enterprise Linux, which is suitable for many purposes including desktop and server installations. You can build and run containers on Red Hat Enterprise Linux, see link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. The steps to build a container image that include your application can be automated with a Dockerfile. 
-
-After your application is packaged in a container you should test it on Atomic Host to ensure that it is ready for deployment. In addition to minimized footprint, production environments built for running containers benefit from Atomic Host's enhanced security and atomic update and rollback capability.
-
-Developers who are creating continuous integration/continuous delivery (CI/CD) environments will want to consider containers deployed on Atomic Host. This allows test environments to be quickly created while minimizing system resource requirements.
-
-If you encounter difficulties at any point in this tutorial, see <<troubleshooting,Troubleshooting and FAQ>>.
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step1 Duration
 5 minutes
@@ -48,41 +28,86 @@ Prepare your system
 5 minutes
 
 ## Step2 Title
-Setup your development environment
+Run your first container
 
 ## Step3 Duration
 5 minutes
 
 ## Step3 Title
-Hello World and your first application
+Build Hello World in a container
 
 ## Step1 Content
 
-In this step, you will download and install the latest updates from Red Hat for your Atomic Host installation. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
+In this step, you will configure your system to build and run docker containers. In the process, you will add the necessary software repositories, verify that your system has a current Red Hat subscription, and is able to receive updates from Red Hat.
 
-Note: If you are not using Atomic Host and following this tutorial on Red Hat Enterprise Linux Server, see link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
+First, you will add two additional Red Hat software repositories that aren't enabled by default. Your system needs to be already registered with Red Hat. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
-The process for installing updates on Atomic Host is different than other Red Hat systems. On Atomic Host, updates are applied atomically in a single, indivisible step. Likewise, updates can also be rolled back in a single step. Most of the file systems on Atomic Host are mounted read-only, only `/etc` and `/var` are writable. Yum is not used for installing updates or software. Instead, the `rpm-ostree` system is used for installing updates. Software is installed using Docker containers.
+### Using the Red Hat Subscription Manager GUI
 
-Log in to your virtual (or physical) machine running Atomic Host as the root user, or use `su` or `sudo bash` to start a root session. If you haven't registered your system you can do it with `subscription-manager`.  Use the same the username and password that you use for logging in to the Red Hat Customer Portal, link:https://access.redhat.com/[access.redhat.com].  
+Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
-`# subscription-manager register --username=_<username>_ --auto-attach`
+Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-7-server-optional-rpms_ and _rhel-7-server-extras-rpms_. After clicking, it might take several seconds for the check mark to appear in the enabled column. If you are using the desktop or workstation version of Red Hat Enterprise Linux, the repositories will have _desktop_ or _workstation_ in the name instead of _server_. +
 
-To install the latest updates, use the following command:
+### Using subscription-manager from the command line
 
-`# atomic host upgrade`
+You can add or remove software repositories from the command line using the `subscription-manager` tool. Start a _Terminal_ window if you don't already have one open. Use `su` to become the root user.  Use `subscription-manager --list` option to to view the available software repositories.
 
-To see the newly installed version, use the following command:
+[.code-block]
+```
+$ su -
+# subscription-manager repos --list
+```
 
-`# atomic host status`
+Enable the two additional repositories. If you are using a desktop or workstation edition of Red Hat Enterprise Linux, change `-server-` to `-desktop-` or `-workstation-` in the following commands:
 
-The asterisk at the beginning of the line indicates which version the system is current running. To make the update take affect, you must reboot the system.
+[.code-block]
+```
+# subscription-manager repos --enable rhel-7-server-extras-rpms
+# subscription-manager repos --enable rhel-7-server-optional-rpms
+```
 
-`# systemctl reboot`
+### Install docker and start the docker daemon
 
-After the system reboots, `atomic host status` should confirm that the system is running the latest version.
+In the next step you will:
+. update your system with any available software updates
+. install _docker_, and a few additional rpms using _yum_
+. configure the _docker_ daemon to start at boot time
+. start the _docker_ daemon
 
-If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+
+If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
+
+Now download and install any available updates by running `yum update`.  If updates are available, `yum` will list them and ask if it is OK to proceed.
+
+[.code-block]
+```
+$ su -
+# yum update
+```
+
+Install `docker` and necessary additional rpms:
+
+[.code-block]
+```
+# yum install docker device-mapper-libs device-mapper-event-libs
+```
+
+Enable the docker daemon to start at boot time and start it now:
+
+[.code-block]
+```
+# systemctl enable docker.service
+# systemctl start docker.service
+```
+
+Now verify that the docker daemon is running:
+
+[.code-block]
+```
+# systemctl status docker.service
+```
+
+Your system is now ready to build and run docker formatted containers. If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step2 Content
 
@@ -92,9 +117,7 @@ The commands shown in this section can be used to download and install other con
 
 The Python 3 container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
-Note: If you are not using Atomic Host, but instead are following this tutorial on Red Hat Enterprise Linux Server, you should have already installed `docker`. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
-
-If you don't have a root session running on your container host, log in as the root user, or use `su` or `sudo bash` to start a root session.
+If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
 
 To download and install the Python 3 container, use the following command:
 
@@ -154,8 +177,9 @@ To see what other containers are available in the Red Hat container registry, us
 [.code-block]
 ```
 # docker search registry.access.redhat.com/openshift3
-# docker search registry.access.redhat.com/jboss
+# docker search registry.access.redhat.com/rhscl
 # docker search registry.access.redhat.com/rhel
+# docker search registry.access.redhat.com/jboss
 ```
 
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
@@ -251,14 +275,22 @@ When you are done, stop the running container with the following command using t
 ```
 
 
+## Where to go next?
 
-### Where to go next?
+* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] - This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About 
 
-*link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]* -- This article explains how to install docker on Red Hat Enterprise Linux and Atomic Host. It also provides a more extensive set of docker examples. +
+* link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] - includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
 
-*link:https://access.redhat.com/articles/rhel-atomic-getting-started[Getting Started with Red Hat Enterprise Linux Atomic Host]* -- This article provides an overview of Atomic Host, how it is different, and how to use it. +
+### About Red Hat Enterprise Linux Atomic Host
 
-*link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/[Red Hat Enterprise Linux 7.1 Release Notes]* -- includes information on recent updates to link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-Atomic_Host.html[Atomic Host] and link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.1_Release_Notes/chap-Red_Hat_Enterprise_Linux-7.1_Release_Notes-Linux_Containers_with_Docker_Format.html[Docker formatted Linux containers]
+Atomic Host is specifically optimized for deploying Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Atomic Host isn't intended for software development activities as it doesn't include development tools or a graphical user interface.
+
+During software development it is suggested that you use Red Hat Enterprise Linux, which is suitable for many purposes including desktop and server installations. You can build and run containers on Red Hat Enterprise Linux, see link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. The steps to build a container image that include your application can be automated with a Dockerfile. 
+
+After your application is packaged in a container you should test it on Atomic Host to ensure that it is ready for deployment. In addition to minimized footprint, production environments built for running containers benefit from Atomic Host's enhanced security and atomic update and rollback capability.
+
+Developers who are creating continuous integration/continuous delivery (CI/CD) environments will want to consider containers deployed on Atomic Host. This allows test environments to be quickly created while minimizing system resource requirements.
+
 
 ## More Resources
 
@@ -283,10 +315,6 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Downloading and installing Atomic Host requires a Red Hat Enterprise Linux Server evaluation. Typically, the recommended evaluation for developers is Red Hat Enterprise Linux Developer Workstation because it includes Red Hat Software Collections and the Red Hat Developer Toolset, however that evaluation does not include Atomic Host. Therefore, you should select an evaluation of Red Hat Enterprise Linux Server.
 +
-. When I start Atomic Host, I don't see a graphical environment.
-+
-Atomic Host is specifically optimized for deploying of Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Since it does not include a graphical user interface or development tools, Atomic Host isn't well suited for software development activities. Instead, developers should use Red Hat Enterprise Linux, which is design to suit many purposes including desktop and server installations. See link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. After an application is developed and packaged in a container, developers can test them on Atomic Host to ensure it is ready for deployment. Atomic Host can be helpful for developers who are creating continuous integration/continuous delivery (CI/CD) environments.
-+
 . How do I tell there is a container image available that has a newer version of Python 3?
 +
 How can I see what other container images are available?
@@ -298,10 +326,10 @@ To see what other containers are available in the Red Hat container registry, us
 [.code-block]
 ```
 # docker search registry.access.redhat.com/openshift3
-# docker search registry.access.redhat.com/jboss
+# docker search registry.access.redhat.com/rhscl
 # docker search registry.access.redhat.com/rhel
+# docker search registry.access.redhat.com/jboss
 ```
-
 . Can I run and build docker containers on Red Hat Enterprise Linux?
 +
 Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
@@ -310,3 +338,6 @@ Red Hat Enterprise Linux includes docker, but it is not installed by default. Se
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
 link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
 If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
+. `yum` is unable to find the `docker` rpm.
++
+[*FIXME - Confirm: I think docker is only available for RHEL 7 server*]
