@@ -2,13 +2,13 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started building Python applications in docker containers on Red Hat Enterprise Linux in under 15 minutes.
+Get started building Ruby applications in docker containers on Red Hat Enterprise Linux in under 15 minutes.
 
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
+In this tutorial, you will learn how to start building Ruby applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
 
 [*FIXME Confirm: I think docker is only available on RHEL 7 server. Docker is not available on desktop. I haven't tried workstation. I haven't changed the prerequisites to reflect that yet.*]
 
@@ -111,36 +111,37 @@ Your system is now ready to build and run docker formatted containers. If you en
 
 ## Step2 Content
 
-This step will download and install Python 3 using a container from the Red Hat container registry. Installing the Python 3 container will make Python 3 available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install Ruby using a container from the Red Hat container registry. Installing the Ruby container will make Ruby available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
-The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat container registry.
+The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Ruby. Then, when someone installs your container, their system will automatically download the required Ruby container directly from the Red Hat container registry.
 
-The Python 3 container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+The Ruby container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
 If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
 
-To download and install the Python 3 container, use the following command:
+To download and install the Ruby container, use the following command:
 
-`# docker pull registry.access.redhat.com/openshift3/python-33-rhel7`
+`# docker pull registry.access.redhat.com/openshift3/ruby-20-rhel7`
 
 The `docker images` command should show the container image that was installed as well as any others that are on your system.
 
 `# docker images`
 
-Now start a bash shell inside the Python 3 container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
+Now start a bash shell inside the Ruby container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
 
 [.code-block]
 ```
-# docker run -it openshift3/python-33-rhel7 /bin/bash
-bash-4.2$ which python3
-/opt/rh/python33/root/usr/bin/python3
-bash-4.2$ python3 --version
-Python 3.3.2
+# docker run -it openshift3/ruby-20-rhel7 /bin/bash
+bash-4.2$ which ruby
+/opt/rh/ruby200/root/usr/bin/ruby
+bash-4.2$ pwd
+/opt/app-root/src
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 21:56 ?        00:00:00 /bin/bash
-default     11     1  0 21:58 ?        00:00:00 ps -ef
+default      1     0  0 16:27 ?        00:00:00 bash
+default     29     1  0 16:28 ?        00:00:00 ps -ef
 bash-4.2$ exit
+exit
 ```
 
 The prior `docker run` command created a container to run your command, keep any state, and isolate it from the rest of the system. You can view the list of running containers with `docker ps`. To see all of the containers that have been created, including those that have exited, use `docker ps -a`.
@@ -150,36 +151,37 @@ You can restart the container that was created above with `docker start`. Contai
 [.code-block]
 ```
 # docker ps -a
-CONTAINER ID        IMAGE                        COMMAND             CREATED             STATUS                      PORTS               NAMES
-c3e47aafe6d1        openshift3/python-33-rhel7   "/bin/bash"         23 seconds ago      Exited (0) 19 seconds ago                       high_kowalevski     
-# docker start high_kowalevski
-high_kowalevski
-# docker attach high_kowalevski
+CONTAINER ID        IMAGE                             COMMAND                CREATED             STATUS                     PORTS               NAMES
+a07bdee57770        openshift3/ruby-20-rhel7:latest   "container-entrypoin   2 minutes ago       Exited (0) 2 minutes ago                       pensive_payne       
+
+# docker start pensive_payne
+pensive_payne
+# docker attach pensive_payne
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter to get it to print another one.
 
 [.code-block]
 ```
+
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 14:53 ?        00:00:00 /bin/bash
-default     10     1  0 14:53 ?        00:00:00 ps -ef
+default      1     0  0 16:32 ?        00:00:00 bash
+default     28     1  0 16:33 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
 Since bash was told to `exit`, the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
-`docker rm high_kowalevski`
+`docker rm pensive_payne`
 
 To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
 
 [.code-block]
 ```
 # docker search registry.access.redhat.com/openshift3
-# docker search registry.access.redhat.com/rhscl
-# docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
+# docker search registry.access.redhat.com/rhel
 ```
 
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
@@ -187,56 +189,58 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-In this step, you will create a tiny Hello World container that uses Python 3 as a web server. Once created, the container can be run on other systems that have `docker` installed.  You will need to create several files in an empty directory using your favorite editor, including a `Dockerfile` that describes the container. You don't need to be running under the root user to create the files, but you will need root privileges to run the `docker` commands.
+In this step, you will create a tiny Hello World container that uses Ruby as a web server. Once created, the container can be run on other systems that have `docker` installed.  You will need to create several files in an empty directory using your favorite editor, including a `Dockerfile` that describes the container. You don't need to be running under the root user to create the files, but you will need root privileges to run the `docker` commands.
 
-First, create an empty directory, and then create a file named `index.html` with the following contents:
-
-.index.html
-----
-<html>Hello, Red Hat Developers World!</html>
-----
-
-Now in the same directory, create a file named `Dockerfile` with the following contents, but change the `MAINTAINER` line to have your name and email address:
+First, create an empty directory, and then create a file named `Dockerfile` with the following contents, but change the `MAINTAINER` line to have your name and email address:
 
 .Dockerfile
 ----
-FROM openshift3/python-33-rhel7:latest
+FROM openshift3/ruby-20-rhel7
 
-MAINTAINER Your Name "your-email@example.com"
+MAINTAINER Shadow Man "shadow-man@redhat.com"
 
 EXPOSE 8000
 
-COPY . /opt/openshift/src
+COPY . /opt/app-root/src
 
-CMD /bin/bash -c 'python3 web.py'
+CMD /bin/bash -c 'ruby hello-http.rb'
 ----
 
-Create the file `web.py` with the following contents:
+Create the file `hello-http.rb` with the following contents:
 
-.web.py
+.hello-http.rb
 ----
-#
-# A very simple Python HTTP server
-#
+require 'socket'
 
-import http.server
-import socketserver
+port = 8000
+STDERR.print "Listening on port #{port}\n"
 
+server = TCPServer.new('0.0.0.0', port)
 
-PORT = 8000
+loop do
 
-Handler = http.server.SimpleHTTPRequestHandler
+  socket = server.accept
+  request = socket.gets
 
-httpd = socketserver.TCPServer(("", PORT), Handler)
+  STDERR.puts request
 
-print("serving at port", PORT)
-httpd.serve_forever()
+  response = "Hello, Red Hat Developers World!\n"
+
+  socket.print "HTTP/1.1 200 OK\r\n" +
+               "Content-Type: text/plain\r\n" +
+               "Content-Length: #{response.bytesize}\r\n" +
+               "Connection: close\r\n"
+  socket.print "\r\n"
+  socket.print response
+
+  socket.close
+end
 ----
 
 
 Now build the container image using `docker build`. You will need to be root using `su` or `sudo` in the directory you created that contains `Dockerfile` and `index.html`.
 
-`# docker build -t _myname_/pythonweb .`
+`# docker build -t _myname_/rubyweb .`
 
 
 You can see the container image that was created using the following command:
@@ -246,9 +250,9 @@ You can see the container image that was created using the following command:
 # docker images
 ```
 
-Now run the container using `docker run`. The Python 3 http.server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
+Now run the container using `docker run`. The Ruby http.server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
 
-`# docker run -d -p 8000:8000 _myname_/pythonweb`
+`# docker run -d -p 8000:8000 _myname_/rubyweb`
 
 The run command returns a ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name docker assigned to the running container.
 
@@ -256,22 +260,26 @@ The run command returns a ID for the container that you can ignore.  To check th
 ```
 # docker ps
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
-7d3b47bfded6        myname/pythonweb    "/bin/sh -c '/bin/ba   18 seconds ago      Up 17 seconds       8080/tcp, 0.0.0.0:8000->8000/tcp   grave_brown   
+c76ab9433737        myname/rubyweb      "container-entrypoin   40 seconds ago      Up 38 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   serene_pare         
 ```
 
-Use `curl` to access the Python web server:
+Use `curl` to access the Ruby web server:
 
 [.code-block]
 ```
 # curl http://localhost:8000/
-<html>Hello, Red Hat Developers World!</html>
+Hello, Red Hat Developers World!
 ```
+
+To view the logs from the running container use `docker logs _<container-name>_`:
+
+`# docker logs serene_pare`
 
 When you are done, stop the running container with the following command using the name obtained from running `docker ps`:
 
 [.code-block]
 ```
-# docker kill grave_brown
+# docker kill serene_pare
 ```
 
 
@@ -315,7 +323,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
 +
-. How do I tell there is a container image available that has a newer version of Python 3?
+. How do I tell there is a container image available that has a newer version of Ruby?
 +
 How can I see what other container images are available?
 +

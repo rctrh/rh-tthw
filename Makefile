@@ -30,7 +30,9 @@ ATOMIC_SOURCES = get-started-atomic-python.adoc \
 	get-started-atomic-nodejs.adoc \
 	get-started-atomic-ruby.adoc \
 
-DOCKER_SOURCES = get-started-dcr7-python.adoc 
+DOCKER_SOURCES = get-started-dcr7-python.adoc \
+	get-started-dcr7-nodejs.adoc \
+	get-started-dcr7-ruby.adoc \
 
 
 OS_INSTALL_SOURCES = get-started-rhel7-install.adoc \
