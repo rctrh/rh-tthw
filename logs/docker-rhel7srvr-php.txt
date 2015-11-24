@@ -1,0 +1,212 @@
+
+# systemctl status docker.service
+docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled)
+   Active: active (running) since Mon 2015-11-23 19:21:03 EST; 14min ago
+     Docs: http://docs.docker.com
+ Main PID: 1168 (docker)
+   CGroup: /system.slice/docker.service
+           └─1168 /usr/bin/docker -d --selinux-enabled --add-registry registry.access.redhat.com
+
+Nov 23 19:21:00 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:00.643809519-05:00" level=info msg="[graphdriver] using prior storage driver \"devicemapper\""
+Nov 23 19:21:00 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:00.735946346-05:00" level=warning msg="Running modprobe bridge nf_nat br_netfilter failed with me...t status 1"
+Nov 23 19:21:02 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:02.131123888-05:00" level=info msg="Firewalld running: true"
+Nov 23 19:21:03 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:03.123200001-05:00" level=info msg="Loading containers: start."
+Nov 23 19:21:03 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:03.124551912-05:00" level=info msg="Loading containers: done."
+Nov 23 19:21:03 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:03.124596749-05:00" level=info msg="Daemon has completed initialization"
+Nov 23 19:21:03 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:21:03.124633221-05:00" level=info msg="Docker daemon" commit="446ad9b/1.7.1" execdriver=native-0.2 g...rsion=1.7.1
+Nov 23 19:21:03 rhdsrvr.r-t.org systemd[1]: Started Docker Application Container Engine.
+Nov 23 19:33:23 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:33:23.754219551-05:00" level=info msg="GET /v1.19/images/search?term=registry.access.redhat.com%2Frhscl"
+Nov 23 19:33:37 rhdsrvr.r-t.org docker[1168]: time="2015-11-23T19:33:37.517645389-05:00" level=info msg="GET /v1.19/images/search?term=registry.access.redhat.com%2Fopenshift3"
+Hint: Some lines were ellipsized, use -l to show in full.
+
+
+
+
+# docker search registry.access.redhat.com/rhscl
+INDEX        NAME                                                            DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+redhat.com   registry.access.redhat.com/rhscl/devtoolset-4-toolchain-rhel7   Developer toolset toolchain                     0                    
+redhat.com   registry.access.redhat.com/rhscl/httpd-24-rhel7                 Apache HTTP 2.4 Server                          0                    
+redhat.com   registry.access.redhat.com/rhscl/mariadb-100-rhel7              MariaDB 10.0 SQL database server                0                    
+redhat.com   registry.access.redhat.com/rhscl/mongodb-26-rhel7               MongoDB 2.6 NoSQL database server               0                    
+redhat.com   registry.access.redhat.com/rhscl/mysql-56-rhel7                 MySQL 5.6 SQL database server                   0                    
+redhat.com   registry.access.redhat.com/rhscl/nginx-16-rhel7                 Nginx 1.6 server and a reverse proxy server     0                    
+redhat.com   registry.access.redhat.com/rhscl/passenger-40-rhel7             Phusion Passenger® 3.0 web server and app...    0                    
+redhat.com   registry.access.redhat.com/rhscl/perl-520-rhel7                 Perl 5.20 platform for building and runnin...   0                    
+redhat.com   registry.access.redhat.com/rhscl/php-56-rhel7                   PHP 5.6 platform for building and running ...   0                    
+redhat.com   registry.access.redhat.com/rhscl/postgresql-94-rhel7            PostgreSQL 9.4 SQL database server              0                    
+redhat.com   registry.access.redhat.com/rhscl/python-27-rhel7                Python 2.7 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl/python-34-rhel7                Python 3.4 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl/ror-41-rhel7                   Platform for building and running Ruby on ...   0                    
+redhat.com   registry.access.redhat.com/rhscl/ruby-22-rhel7                  Ruby 2.2 platform for building and running...   0                    
+redhat.com   registry.access.redhat.com/rhscl/s2i-base-rhel7                 Base image delivers all the essential libr...   0                    
+
+
+
+# docker search registry.access.redhat.com/openshift3
+INDEX        NAME                                                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+redhat.com   registry.access.redhat.com/openshift3/jenkins-1-rhel7             OpenShift Enterprise Jenkins                    0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-auth-proxy          No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-deployment          No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-elasticsearch       No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-fluentd             No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-kibana              No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-cassandra           No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-deployer            No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-hawkular-metrics    No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-heapster            No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/mongodb-24-rhel7            OpenShift Enterprise MongoDB 2.4                0                    
+redhat.com   registry.access.redhat.com/openshift3/mysql-55-rhel7              OpenShift Enterprise Mysql 5.5                  0                    
+redhat.com   registry.access.redhat.com/openshift3/node                        No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/nodejs-010-rhel7            OpenShift Enterprise Nodejs 0.10 Builder I...   0                    
+redhat.com   registry.access.redhat.com/openshift3/openvswitch                 No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/ose                         No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-deployer                OpenShift Enterprise Deployer                   0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-docker-builder          OpenShift Enterprise Docker Builder             0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-docker-registry         OpenShift Enterprise Docker Registry            0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-f5-router               OpenShift F5 Router Plugin                      0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-haproxy-router          OpenShift Enterprise Router                     0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-keepalived-ipfailover   OpenShift Enterprise Pod High Availability...   0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-pod                     OpenShift Enterprise Infrastructure Pod         0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-sti-builder             OpenShift Enterprise Source-To-Image Builder    0                    
+redhat.com   registry.access.redhat.com/openshift3/perl-516-rhel7              OpenShift Enterprise Perl 5.16 Builder Image    0                    
+redhat.com   registry.access.redhat.com/openshift3/php-55-rhel7                OpenShift Enterprise PHP 5.5 Builder Image      0                    
+redhat.com   registry.access.redhat.com/openshift3/postgresql-92-rhel7         OpenShift Enterprise Postgresql 9.2             0                    
+redhat.com   registry.access.redhat.com/openshift3/python-33-rhel7             OpenShift Enterprise Python 3.3 Builder Image   0                    
+redhat.com   registry.access.redhat.com/openshift3/ruby-20-rhel7               OpenShift Enterprise Ruby 2.0 Builder Image     0                    
+
+
+# docker pull registry.access.redhat.com/openshift3/php-55-rhel7
+Trying to pull repository registry.access.redhat.com/openshift3/php-55-rhel7 ...
+355eabcfbaf9: Download complete 
+6883d5422f4e: Download complete 
+d44ae2eb54bd: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/openshift3/php-55-rhel7:latest
+
+
+# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/openshift3/php-55-rhel7      latest              355eabcfbaf9        11 days ago         488.1 MB
+registry.access.redhat.com/jboss-eap-6/eap-openshift    latest              5c93a30f18d0        9 weeks ago         957.2 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        3 months ago        158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        3 months ago        408.8 MB
+
+# docker run -it openshift3/php-55-rhel7 /bin/bash
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+bash-4.2$ php -v
+PHP 5.5.21 (cli) (built: Jun 10 2015 05:30:18) 
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+    with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2014, by Zend Technologies
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 19:41 ?        00:00:00 /bin/bash
+default     13     1  0 19:41 ?        00:00:00 ps -ef
+bash-4.2$ exit
+
+
+# docker ps -a
+CONTAINER ID        IMAGE                     COMMAND                CREATED              STATUS                      PORTS               NAMES
+abcb164a5c1b        openshift3/php-55-rhel7   "container-entrypoin   About a minute ago   Exited (0) 51 seconds ago                       loving_heisenberg   
+
+
+# docker start loving_heisenberg
+loving_heisenberg
+[root@rhdsrvr rh-tthw]# docker attach loving_heisenberg
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 19:43 ?        00:00:00 /bin/bash
+default     12     1  0 19:43 ?        00:00:00 ps -ef
+bash-4.2$ uptime
+ 19:43:48 up 22 min,  0 users,  load average: 0.28, 0.52, 0.46
+bash-4.2$ exit
+exit
+
+
+
+# docker rm loving_heisenberg
+loving_heisenberg
+[root@rhdsrvr rh-tthw]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@rhdsrvr rh-tthw]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+
+
+
+
+$ cat Dockerfile
+FROM openshift3/php-55-rhel7
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'php -S 0.0.0.0:8000'
+
+
+[rt@rhdsrvr php]$ cat hello.php 
+#!/usr/bin/env php
+<?php
+print "Hello, Red Hat Developers World from PHP " . PHP_VERSION . "\n";
+?>
+
+
+
+# docker build -t myname/phpweb .
+Sending build context to Docker daemon  5.12 kB
+Sending build context to Docker daemon 
+Step 0 : FROM openshift3/php-55-rhel7
+ ---> 355eabcfbaf9
+Step 1 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 074f0db9b95a
+ ---> a94b79f790a1
+Removing intermediate container 074f0db9b95a
+Step 2 : EXPOSE 8000
+ ---> Running in 8e484e1b5933
+ ---> 7640a470aec1
+Removing intermediate container 8e484e1b5933
+Step 3 : COPY . /opt/app-root/src
+ ---> 7ae2de649f0b
+Removing intermediate container f56c97188d8e
+Step 4 : CMD /bin/bash -c 'php -S 0.0.0.0:8000'
+ ---> Running in ac1767604961
+ ---> f1768a50df68
+Removing intermediate container ac1767604961
+Successfully built f1768a50df68
+
+
+
+# docker run -d -p 8000:8000 myname/phpweb
+3d5fa5022a13db4b34af1a3d373b13755bc424665855491cc4977cda36df0415
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[root@rhdsrvr php]# curl http://localhost:8000/
+Hello, Red Hat Developers World from PHP 5.5.21
+
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
+3d5fa5022a13        myname/phpweb       "container-entrypoin   28 seconds ago      Up 27 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   pensive_colden      
+[root@rhdsrvr php]# docker logs pensive_colden
+[Mon Nov 23 20:05:04 2015] 172.17.42.1:45778 [200]: /
+
+
+# docker kill pensive_colden 
+pensive_colden
+[root@rhdsrvr php]# docker rm pensive_colden 
+pensive_colden
+
+
+# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/phpweb                                           latest              f1768a50df68        5 minutes ago       488.1 MB
+registry.access.redhat.com/openshift3/php-55-rhel7      latest              355eabcfbaf9        11 days ago         488.1 MB
+
+
+
+
