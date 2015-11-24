@@ -2,13 +2,13 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started building Node.js applications in docker containers on Red Hat Enterprise Linux in under 15 minutes.
+Get started building PHP applications in docker containers on Red Hat Enterprise Linux in under 15 minutes.
 
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Node.js applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
+In this tutorial, you will learn how to start building PHP applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
 
 [*FIXME Confirm: I think docker is only available on RHEL 7 server. Docker is not available on desktop. I haven't tried workstation. I haven't changed the prerequisites to reflect that yet.*]
 
@@ -111,36 +111,37 @@ Your system is now ready to build and run docker formatted containers. If you en
 
 ## Step2 Content
 
-This step will download and install Node.js using a container from the Red Hat container registry. Installing the Node.js container will make Node.js available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install PHP using a container from the Red Hat container registry. Installing the PHP container will make PHP available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
-The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Node.js. Then, when someone installs your container, their system will automatically download the required Node.js container directly from the Red Hat container registry.
+The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires PHP. Then, when someone installs your container, their system will automatically download the required PHP container directly from the Red Hat container registry.
 
-The Node.js container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+The PHP container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
 If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
 
-To download and install the Node.js container, use the following command:
+To download and install the PHP container, use the following command:
 
-`docker pull registry.access.redhat.com/openshift3/nodejs-010-rhel7`
+`# docker pull registry.access.redhat.com/openshift3/php-55-rhel7
 
 The `docker images` command should show the container image that was installed as well as any others that are on your system.
 
 `# docker images`
 
-Now start a bash shell inside the Node.js container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
+Now start a bash shell inside the PHP container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
 
 [.code-block]
 ```
-# docker run -it openshift3/nodejs-010-rhel7 /bin/bash
-bash-4.2$ which node
-/opt/rh/nodejs010/root/usr/bin/node
-bash-4.2$ node --version
-v0.10.35
+# docker run -it openshift3/php-55-rhel7 /bin/bash
+bash-4.2$ which php
+/opt/rh/php55/root/usr/bin/php
+bash-4.2$ pwd
+/opt/app-root/src
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 14:42 ?        00:00:00 /bin/bash
-default     14     1  0 14:42 ?        00:00:00 ps -ef
+default      1     0  0 19:41 ?        00:00:00 /bin/bash
+default     13     1  0 19:41 ?        00:00:00 ps -ef
 bash-4.2$ exit
+exit
 ```
 
 The prior `docker run` command created a container to run your command, keep any state, and isolate it from the rest of the system. You can view the list of running containers with `docker ps`. To see all of the containers that have been created, including those that have exited, use `docker ps -a`.
@@ -150,11 +151,12 @@ You can restart the container that was created above with `docker start`. Contai
 [.code-block]
 ```
 # docker ps -a
-CONTAINER ID        IMAGE                         COMMAND                CREATED              STATUS                          PORTS               NAMES
-84458ca538fb        openshift3/nodejs-010-rhel7   "container-entrypoin   About a minute ago   Exited (0) About a minute ago                       nostalgic_ritchie
-# docker start nostalgic_ritchie
-high_kowalevski
-# docker attach nostalgic_ritchie
+CONTAINER ID        IMAGE                     COMMAND                CREATED              STATUS                      PORTS               NAMES
+abcb164a5c1b        openshift3/php-55-rhel7   "container-entrypoin   About a minute ago   Exited (0) 51 seconds ago                       loving_heisenberg   
+# docker start loving_heisenberg
+loving_heisenberg
+[root@rhdsrvr rh-tthw]# docker attach loving_heisenberg
+
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter to get it to print another one.
@@ -164,14 +166,14 @@ At this point you are connected to the running shell inside the container. When 
 
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 14:44 ?        00:00:00 /bin/bash
-default     11     1  0 14:45 ?        00:00:00 ps -ef
+default      1     0  0 19:43 ?        00:00:00 /bin/bash
+default     12     1  0 19:43 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
 Since bash was told to `exit`, the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
-`docker rm nostalgic_ritchie`
+`docker rm loving_heisenberg`
 
 To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
 
@@ -188,13 +190,13 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-In this step, you will create a tiny Hello World container that uses Node.js as a web server. Once created, the container can be run on other systems that have `docker` installed.  You will need to create several files in an empty directory using your favorite editor, including a `Dockerfile` that describes the container. You don't need to be running under the root user to create the files, but you will need root privileges to run the `docker` commands.
+In this step, you will create a tiny Hello World container that uses PHP as a web server. Once created, the container can be run on other systems that have `docker` installed.  You will need to create several files in an empty directory using your favorite editor, including a `Dockerfile` that describes the container. You don't need to be running under the root user to create the files, but you will need root privileges to run the `docker` commands.
 
 First, create an empty directory, and then create a file named `Dockerfile` with the following contents, but change the `MAINTAINER` line to have your name and email address:
 
 .Dockerfile
 ----
-FROM openshift3/nodejs-010-rhel7
+FROM openshift3/php-55-rhel7
 
 MAINTAINER Shadow Man "shadow-man@redhat.com"
 
@@ -202,25 +204,22 @@ EXPOSE 8000
 
 COPY . /opt/app-root/src
 
-CMD /bin/bash -c 'node hello-http.js'
+CMD /bin/bash -c 'php -S 0.0.0.0:8000'
 ----
 
-Create the file `hello-http.js` with the following contents:
+Create the file `index.php` with the following contents:
 
-.hello-http.js
+.index.php
 ----
-var http = require('http');
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello, Red Hat Developers World!\n');
-}).listen(8000, '0.0.0.0');
-console.log('Server running at http://127.0.0.1:8000/');
+<?php
+print "Hello, Red Hat Developers World from PHP " . PHP_VERSION . "\n";
+?>
 ----
 
 
 Now build the container image using `docker build`. You will need to be root using `su` or `sudo` in the directory you created that contains `Dockerfile` and `index.html`.
 
-`# docker build -t _myname_/nodeweb .`
+`# docker build -t _myname_/phpweb .`
 
 
 You can see the container image that was created using the following command:
@@ -230,9 +229,9 @@ You can see the container image that was created using the following command:
 # docker images
 ```
 
-Now run the container using `docker run`. The Node.js http.server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
+Now run the container using `docker run`. The PHP http.server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
 
-`# docker run -d -p 8000:8000 _myname_/nodeweb`
+`# docker run -d -p 8000:8000 _myname_/phpweb`
 
 The run command returns a ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name docker assigned to the running container.
 
@@ -240,22 +239,26 @@ The run command returns a ID for the container that you can ignore.  To check th
 ```
 # docker ps
 CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
-4edf44433b27        myname/nodeweb      "container-entrypoin   30 seconds ago      Up 29 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   modest_cori
+3d5fa5022a13        myname/phpweb       "container-entrypoin   28 seconds ago      Up 27 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   pensive_colden      
 ```
 
-Use `curl` to access the Node.js web server:
+Use `curl` to access the PHP web server:
 
 [.code-block]
 ```
 # curl http://localhost:8000/
-Hello, Red Hat Developers World!
+Hello, Red Hat Developers World from PHP 5.5.21
 ```
+
+To view the logs from the running container use `docker logs _<container-name>_`:
+
+`# docker logs pensive_colden`
 
 When you are done, stop the running container with the following command using the name obtained from running `docker ps`:
 
 [.code-block]
 ```
-# docker kill modest_cori
+# docker kill pensive_colden
 ```
 
 
@@ -299,7 +302,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
 +
-. How do I tell there is a container image available that has a newer version of Node.js 3?
+. How do I tell there is a container image available that has a newer version of PHP?
 +
 How can I see what other container images are available?
 +

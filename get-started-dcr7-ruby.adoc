@@ -180,6 +180,7 @@ To see what other containers are available in the Red Hat container registry, us
 [.code-block]
 ```
 # docker search registry.access.redhat.com/openshift3
+# docker search registry.access.redhat.com/rhscl
 # docker search registry.access.redhat.com/jboss
 # docker search registry.access.redhat.com/rhel
 ```
