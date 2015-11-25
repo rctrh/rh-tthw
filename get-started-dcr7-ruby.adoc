@@ -337,11 +337,6 @@ To see what other containers are available in the Red Hat container registry, us
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
-. Where can I learn more about delivering applications with Linux containers?
-+
-If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free. +
-link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal]. +
-If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
 +
 . I can't find the `docker` rpm.
 +
@@ -350,3 +345,8 @@ If you are a Red Hat Technology Partner, visit the link:https://access.redhat.co
 When I try to install `docker`, `yum` gives the error _No package docker available_.
 +
 The `docker` rpm is in the _rhel-7-server-extras-rpms_ software repository. It is only available for the server version of Red Hat Enterprise Linux. The _rhel-7-server-extras-rpms_ repository is disabled by default. See the first step in this tutorial for information on enabling additional software repositories.
+. Where can I learn more about delivering applications with Linux containers?
++
+If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free. +
+link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal]. +
+If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
