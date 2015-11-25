@@ -68,10 +68,10 @@ Enable the two additional repositories:
 
 In the next step you will:
 
-. update your system with any available software updates
-. install _docker_, and a few additional rpms using _yum_
-. configure the _docker_ daemon to start at boot time
-. start the _docker_ daemon
+. Update your system with any available software updates
+. Install `docker` and a few additional rpms using `yum`
+. Configure the `docker` daemon to start at boot time
+. Start the `docker` daemon
 
 
 If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
@@ -106,11 +106,11 @@ Now verify that the docker daemon is running:
 # systemctl status docker.service
 ```
 
-Your system is now ready to build and run docker formatted containers. If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+Your system is now ready to build and run docker-formatted containers. If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step2 Content
 
-This step will download and install Python 3 using a container from the Red Hat container registry. Installing the Python 3 container will make Python 3 available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install Python 3 using a container from the Red Hat container registry. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
 The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat container registry.
 
@@ -122,11 +122,11 @@ To download and install the Python 3 container, use the following command:
 
 `# docker pull registry.access.redhat.com/openshift3/python-33-rhel7`
 
-The `docker images` command should show the container image that was installed as well as any others that are on your system.
+The `docker images` command shows the container image that was installed as well as any others that are on your system.
 
 `# docker images`
 
-Now start a bash shell inside the Python 3 container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
+Now start a `bash` shell inside the Python 3 container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
 
 [.code-block]
 ```
@@ -167,7 +167,7 @@ default     10     1  0 14:53 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
-Since bash was told to `exit`, the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
+Since the only process in the container, `bash`, was told to `exit` the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
 `docker rm high_kowalevski`
 
@@ -249,7 +249,7 @@ Now run the container using `docker run`. The Python 3 http.server module will c
 
 `# docker run -d -p 8000:8000 _myname_/pythonweb`
 
-The run command returns a ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name docker assigned to the running container.
+The run command returns an ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name that docker assigned to the running container.
 
 [.code-block]
 ```
@@ -276,9 +276,9 @@ When you are done, stop the running container with the following command using t
 
 ## Where to go next?
 
-* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] - This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
+* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] -- This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
 
-* link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] - includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
+* link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] -- includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
 
 ### About Red Hat Enterprise Linux Atomic Host
 
@@ -314,7 +314,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
 +
-. How do I tell there is a container image available that has a newer version of Python 3?
+. How do I tell if there is a container image available that has a newer version of Python 3?
 +
 How can I see what other container images are available?
 +
@@ -334,9 +334,12 @@ To see what other containers are available in the Red Hat container registry, us
 Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
 . Where can I learn more about delivering applications with Linux containers?
 +
-If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
-link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
-If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site. +
+If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.
++
+link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].
++
+If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
++
 . I can't find the `docker` rpm.
 +
 `yum` is unable to find the `docker` rpm.
