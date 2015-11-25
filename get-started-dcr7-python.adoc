@@ -8,7 +8,7 @@ Get started building Python applications in docker containers on Red Hat Enterpr
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on a system running the server edition of Red Hat Enterprise Linux 7.
+In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to build and run containers you will first install `docker` on your Red Hat Enterprise Linux 7 system.
 
 You will need a system running Red Hat Enterprise Linux Server and current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
@@ -36,9 +36,9 @@ Build Hello World in a container
 
 ## Step1 Content
 
-In this step, you will configure your system to build and run docker containers. In the process, you will add the necessary software repositories, verify that your system has a current Red Hat subscription, and is able to receive updates from Red Hat.
+In this step, you will configure your system to build and run docker containers. In the process, you will add the necessary software repositories, then verify that your system has a current Red Hat subscription and is able to receive updates from Red Hat. Your system needs to be already registered with Red Hat. 
 
-First, you will add two additional Red Hat software repositories that aren't enabled by default. Your system needs to be already registered with Red Hat. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
+First, you will enable two Red Hat software repositories that are disabled by default. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
 ### Using the Red Hat Subscription Manager GUI
 
@@ -67,6 +67,7 @@ Enable the two additional repositories:
 ### Install docker and start the docker daemon
 
 In the next step you will:
+
 . update your system with any available software updates
 . install _docker_, and a few additional rpms using _yum_
 . configure the _docker_ daemon to start at boot time
