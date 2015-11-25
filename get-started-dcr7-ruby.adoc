@@ -8,13 +8,11 @@ Get started building Ruby applications in docker containers on Red Hat Enterpris
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Ruby applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
+In this tutorial, you will learn how to start building Ruby applications in docker containers on Red Hat Enterprise Linux. In order to build and run containers you will first install `docker` on your Red Hat Enterprise Linux 7 system.
 
-[*FIXME Confirm: I think docker is only available on RHEL 7 server. Docker is not available on desktop. I haven't tried workstation. I haven't changed the prerequisites to reflect that yet.*]
+You will need a system running Red Hat Enterprise Linux Server and current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
-You will need a current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
-
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ evaluation option to ensure your evaluation will include both RHSCL and DTS, then download and install Red Hat Enterprise Linux Server. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide on the live developer's site.]*.
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -38,15 +36,15 @@ Build Hello World in a container
 
 ## Step1 Content
 
-In this step, you will configure your system to build and run docker containers. In the process, you will add the necessary software repositories, verify that your system has a current Red Hat subscription, and is able to receive updates from Red Hat.
+In this step, you will configure your system to build and run docker containers. In the process, you will add the necessary software repositories, then verify that your system has a current Red Hat subscription and is able to receive updates from Red Hat. Your system needs to be already registered with Red Hat. 
 
-First, you will add two additional Red Hat software repositories that aren't enabled by default. Your system needs to be already registered with Red Hat. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
+First, you will enable two Red Hat software repositories that are disabled by default. Instructions are provided for both the command line (CLI) and graphical user interface (GUI).
 
 ### Using the Red Hat Subscription Manager GUI
 
-Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
+Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`.
 
-Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-7-server-optional-rpms_ and _rhel-7-server-extras-rpms_. After clicking, it might take several seconds for the check mark to appear in the enabled column. If you are using the desktop or workstation version of Red Hat Enterprise Linux, the repositories will have _desktop_ or _workstation_ in the name instead of _server_. +
+Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-7-server-optional-rpms_ and _rhel-7-server-extras-rpms_. After clicking, it might take several seconds for the check mark to appear in the enabled column.
 
 ### Using subscription-manager from the command line
 
@@ -58,7 +56,7 @@ $ su -
 # subscription-manager repos --list
 ```
 
-Enable the two additional repositories. If you are using a desktop or workstation edition of Red Hat Enterprise Linux, change `-server-` to `-desktop-` or `-workstation-` in the following commands:
+Enable the two additional repositories:
 
 [.code-block]
 ```
@@ -69,11 +67,11 @@ Enable the two additional repositories. If you are using a desktop or workstatio
 ### Install docker and start the docker daemon
 
 In the next step you will:
-. update your system with any available software updates
-. install _docker_, and a few additional rpms using _yum_
-. configure the _docker_ daemon to start at boot time
-. start the _docker_ daemon
 
+. Update your system with any available software updates
+. Install `docker` and a few additional rpms using `yum`
+. Configure the `docker` daemon to start at boot time
+. Start the `docker` daemon
 
 If you don't have a root _Terminal_ window open, start a _Terminal_ window and become the root user with `su`.
 
@@ -107,11 +105,11 @@ Now verify that the docker daemon is running:
 # systemctl status docker.service
 ```
 
-Your system is now ready to build and run docker formatted containers. If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+Your system is now ready to build and run docker-formatted containers. If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step2 Content
 
-This step will download and install Ruby using a container from the Red Hat container registry. Installing the Ruby container will make Ruby available for other containers on your system to use. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install Ruby using a container from the Red Hat container registry. Installing the Ruby container will make Ruby available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
 The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Ruby. Then, when someone installs your container, their system will automatically download the required Ruby container directly from the Red Hat container registry.
 
@@ -123,11 +121,11 @@ To download and install the Ruby container, use the following command:
 
 `# docker pull registry.access.redhat.com/openshift3/ruby-20-rhel7`
 
-The `docker images` command should show the container image that was installed as well as any others that are on your system.
+The `docker images` command shows the container image that was installed as well as any others that are on your system.
 
 `# docker images`
 
-Now start a bash shell inside the Ruby container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
+Now start a `bash` shell inside the Ruby container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
 
 [.code-block]
 ```
@@ -171,7 +169,7 @@ default     28     1  0 16:33 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
-Since bash was told to `exit`, the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
+Since the only process in the container, `bash`, was told to `exit` the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
 `docker rm pensive_payne`
 
@@ -181,8 +179,8 @@ To see what other containers are available in the Red Hat container registry, us
 ```
 # docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
-# docker search registry.access.redhat.com/jboss
 # docker search registry.access.redhat.com/rhel
+# docker search registry.access.redhat.com/jboss
 ```
 
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
@@ -255,7 +253,7 @@ Now run the container using `docker run`. The Ruby http.server module will creat
 
 `# docker run -d -p 8000:8000 _myname_/rubyweb`
 
-The run command returns a ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name docker assigned to the running container.
+The run command returns an ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name that docker assigned to the running container.
 
 [.code-block]
 ```
@@ -286,9 +284,9 @@ When you are done, stop the running container with the following command using t
 
 ## Where to go next?
 
-* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] - This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About 
+* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] -- This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
 
-* link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] - includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
+* link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] -- includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
 
 ### About Red Hat Enterprise Linux Atomic Host
 
@@ -324,7 +322,7 @@ Your system must be registered with Red Hat using `subscription-manager register
 +
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
 +
-. How do I tell there is a container image available that has a newer version of Ruby?
+. How do I tell if there is a container image available that has a newer version of Ruby?
 +
 How can I see what other container images are available?
 +
@@ -339,14 +337,16 @@ To see what other containers are available in the Red Hat container registry, us
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
-. Can I run and build docker containers on Red Hat Enterprise Linux?
-+
-Red Hat Enterprise Linux includes docker, but it is not installed by default. See link:https://access.redhat.com/articles/881893#get[Getting Docker on RHEL 7] in the article link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems].
 . Where can I learn more about delivering applications with Linux containers?
 +
-If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
-link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
+If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free. +
+link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal]. +
 If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
-. `yum` is unable to find the `docker` rpm.
 +
-[*FIXME - Confirm: I think docker is only available for RHEL 7 server*]
+. I can't find the `docker` rpm.
++
+`yum` is unable to find the `docker` rpm.
++
+When I try to install `docker`, `yum` gives the error _No package docker available_.
++
+The `docker` rpm is in the _rhel-7-server-extras-rpms_ software repository. It is only available for the server version of Red Hat Enterprise Linux. The _rhel-7-server-extras-rpms_ repository is disabled by default. See the first step in this tutorial for information on enabling additional software repositories.
