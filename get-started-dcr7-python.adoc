@@ -8,13 +8,11 @@ Get started building Python applications in docker containers on Red Hat Enterpr
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on your Red Hat Enterprise Linux 7 system.
+In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to be able to build and run containers you will install `docker` on a system running the server edition of Red Hat Enterprise Linux 7.
 
-[*FIXME Confirm: I think docker is only available on RHEL 7 server. Docker is not available on desktop. I haven't tried workstation. I haven't changed the prerequisites to reflect that yet.*]
+You will need a system running Red Hat Enterprise Linux Server and current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
-You will need a current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
-
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
+If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ evaluation option to ensure your evaluation will include both RHSCL and DTS, then download and install Red Hat Enterprise Linux Server. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide on the live developer's site.]*.
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -46,7 +44,7 @@ First, you will add two additional Red Hat software repositories that aren't ena
 
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
-Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-7-server-optional-rpms_ and _rhel-7-server-extras-rpms_. After clicking, it might take several seconds for the check mark to appear in the enabled column. If you are using the desktop or workstation version of Red Hat Enterprise Linux, the repositories will have _desktop_ or _workstation_ in the name instead of _server_. +
+Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-7-server-optional-rpms_ and _rhel-7-server-extras-rpms_. After clicking, it might take several seconds for the check mark to appear in the enabled column. +
 
 ### Using subscription-manager from the command line
 
@@ -58,7 +56,7 @@ $ su -
 # subscription-manager repos --list
 ```
 
-Enable the two additional repositories. If you are using a desktop or workstation edition of Red Hat Enterprise Linux, change `-server-` to `-desktop-` or `-workstation-` in the following commands:
+Enable the two additional repositories:
 
 [.code-block]
 ```
@@ -277,7 +275,7 @@ When you are done, stop the running container with the following command using t
 
 ## Where to go next?
 
-* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] - This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About 
+* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] - This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
 
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] - includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
 
@@ -337,7 +335,11 @@ Red Hat Enterprise Linux includes docker, but it is not installed by default. Se
 +
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free.+
 link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].+
-If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
-. `yum` is unable to find the `docker` rpm.
+If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site. +
+. I can't find the `docker` rpm.
 +
-[*FIXME - Confirm: I think docker is only available for RHEL 7 server*]
+`yum` is unable to find the `docker` rpm.
++
+When I try to install `docker`, `yum` gives the error _No package docker available_.
++
+The `docker` rpm is in the _rhel-7-server-extras-rpms_ software repository. It is only available for the server version of Red Hat Enterprise Linux. The _rhel-7-server-extras-rpms_ repository is disabled by default. See the first step in this tutorial for information on enabling additional software repositories. 
