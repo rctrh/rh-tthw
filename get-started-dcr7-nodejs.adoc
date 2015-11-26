@@ -175,8 +175,8 @@ To see what other containers are available in the Red Hat container registry, us
 
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
@@ -261,6 +261,12 @@ When you are done, stop the running container with the following command using t
 # docker kill modest_cori
 ```
 
+Information about a container is available using `docker inspect`:
+
+`# docker inspect _myname_/nodeweb`
+
+The output is a JSON structure that is easily readable. The _Config_ section has details of the container's runtime environment such as environment variables and default command. Note that much of the information in the container's configuration was inherited from the parent container, which in this case is the Node.js runtime container.
+
 
 ## Where to go next?
 
@@ -312,8 +318,8 @@ To see what other containers are available in the Red Hat container registry, us
 +
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
