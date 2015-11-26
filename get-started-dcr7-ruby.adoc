@@ -119,7 +119,7 @@ If you don't have a root _Terminal_ window open, start a _Terminal_ window and b
 
 To download and install the Ruby container, use the following command:
 
-`# docker pull registry.access.redhat.com/openshift3/ruby-20-rhel7`
+`# docker pull registry.access.redhat.com/rhscl/ruby-22-rhel7`
 
 The `docker images` command shows the container image that was installed as well as any others that are on your system.
 
@@ -129,17 +129,18 @@ Now start a `bash` shell inside the Ruby container to have a look around. The sh
 
 [.code-block]
 ```
-# docker run -it openshift3/ruby-20-rhel7 /bin/bash
+# docker run -it rhscl/ruby-22-rhel7 /bin/bash
 bash-4.2$ which ruby
-/opt/rh/ruby200/root/usr/bin/ruby
+/opt/rh/rh-ruby22/root/usr/bin/ruby
+bash-4.2$ ruby --version
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
 bash-4.2$ pwd
 /opt/app-root/src
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 16:27 ?        00:00:00 bash
-default     29     1  0 16:28 ?        00:00:00 ps -ef
+default      1     0  0 19:40 ?        00:00:00 /bin/bash
+default     19     1  0 19:41 ?        00:00:00 ps -ef
 bash-4.2$ exit
-exit
 ```
 
 The prior `docker run` command created a container to run your command, keep any state, and isolate it from the rest of the system. You can view the list of running containers with `docker ps`. To see all of the containers that have been created, including those that have exited, use `docker ps -a`.
@@ -149,36 +150,36 @@ You can restart the container that was created above with `docker start`. Contai
 [.code-block]
 ```
 # docker ps -a
-CONTAINER ID        IMAGE                             COMMAND                CREATED             STATUS                     PORTS               NAMES
-a07bdee57770        openshift3/ruby-20-rhel7:latest   "container-entrypoin   2 minutes ago       Exited (0) 2 minutes ago                       pensive_payne       
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                     PORTS               NAMES
+8b08a6244a4c        rhscl/ruby-22-rhel7   "container-entrypoint"   3 minutes ago       Exited (0) 2 minutes ago                       determined_mayer
 
-# docker start pensive_payne
-pensive_payne
-# docker attach pensive_payne
+# docker start determined_mayer
+determined_mayer
+
+# docker attach determined_mayer
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter to get it to print another one.
 
 [.code-block]
 ```
-
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 16:32 ?        00:00:00 bash
-default     28     1  0 16:33 ?        00:00:00 ps -ef
+default      1     0  0 19:44 ?        00:00:00 /bin/bash
+default     17     1  0 19:44 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
 Since the only process in the container, `bash`, was told to `exit` the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
-`docker rm pensive_payne`
+`docker rm determined_mayer`
 
 To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
 
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
@@ -194,9 +195,9 @@ First, create an empty directory, and then create a file named `Dockerfile` with
 
 .Dockerfile
 ----
-FROM openshift3/ruby-20-rhel7
+FROM rhscl/ruby-22-rhel7
 
-MAINTAINER Shadow Man "shadow-man@redhat.com"
+MAINTAINER Your Name "your-email@example.com"
 
 EXPOSE 8000
 
@@ -257,9 +258,8 @@ The run command returns an ID for the container that you can ignore.  To check t
 
 [.code-block]
 ```
-# docker ps
-CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
-c76ab9433737        myname/rubyweb      "container-entrypoin   40 seconds ago      Up 38 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   serene_pare         
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+c9b1362b16de        myname/rubyweb      "container-entrypoint"   19 seconds ago      Up 18 seconds       8080/tcp, 0.0.0.0:8000->8000/tcp   grave_brown
 ```
 
 Use `curl` to access the Ruby web server:
@@ -272,14 +272,20 @@ Hello, Red Hat Developers World!
 
 To view the logs from the running container use `docker logs _<container-name>_`:
 
-`# docker logs serene_pare`
+`# docker logs grave_brown`
 
 When you are done, stop the running container with the following command using the name obtained from running `docker ps`:
 
 [.code-block]
 ```
-# docker kill serene_pare
+# docker kill grave_brown
 ```
+
+Information about a container is available using `docker inspect`:
+
+`# docker inspect _myname_/rubyweb`
+
+The output is a JSON structure that is easily readable. The _Config_ section has details of the container's runtime environment such as environment variables and default command. Note that much of the information in the container's configuration was inherited from the parent container, which in this case is the Ruby container.
 
 
 ## Where to go next?
@@ -332,8 +338,8 @@ To see what other containers are available in the Red Hat container registry, us
 +
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```

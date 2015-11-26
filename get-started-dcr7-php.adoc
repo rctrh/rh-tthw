@@ -119,7 +119,7 @@ If you don't have a root _Terminal_ window open, start a _Terminal_ window and b
 
 To download and install the PHP container, use the following command:
 
-`# docker pull registry.access.redhat.com/openshift3/php-55-rhel7`
+`# docker pull registry.access.redhat.com/rhscl/php-56-rhel7`
 
 The `docker images` command shows the container image that was installed as well as any others that are on your system.
 
@@ -129,32 +129,32 @@ Now start a `bash` shell inside the PHP container to have a look around. The she
 
 [.code-block]
 ```
-# docker run -it openshift3/php-55-rhel7 /bin/bash
+# docker run -it rhscl/php-56-rhel7 /bin/bash
 bash-4.2$ which php
-/opt/rh/php55/root/usr/bin/php
+/opt/rh/rh-php56/root/usr/bin/php
+bash-4.2$ php -v
+PHP 5.6.5 (cli) (built: Jun 10 2015 06:11:40) 
 bash-4.2$ pwd
 /opt/app-root/src
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 19:41 ?        00:00:00 /bin/bash
-default     13     1  0 19:41 ?        00:00:00 ps -ef
+default      1     0  0 20:10 ?        00:00:00 /bin/bash
+default     14     1  0 20:10 ?        00:00:00 ps -ef
 bash-4.2$ exit
-exit
 ```
 
 The prior `docker run` command created a container to run your command, keep any state, and isolate it from the rest of the system. You can view the list of running containers with `docker ps`. To see all of the containers that have been created, including those that have exited, use `docker ps -a`.
 
 You can restart the container that was created above with `docker start`. Containers are referred to by name. Docker will automatically generate a name if you don't provide one. Once the container has been restarted, `docker attach` will let you interact with the shell running inside of it.  See the following example:
- 
+
 [.code-block]
 ```
 # docker ps -a
-CONTAINER ID        IMAGE                     COMMAND                CREATED              STATUS                      PORTS               NAMES
-abcb164a5c1b        openshift3/php-55-rhel7   "container-entrypoin   About a minute ago   Exited (0) 51 seconds ago                       loving_heisenberg   
-# docker start loving_heisenberg
-loving_heisenberg
-[root@rhdsrvr rh-tthw]# docker attach loving_heisenberg
-
+CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS                        PORTS               NAMES
+ca29ebc027dd        rhscl/php-56-rhel7   "container-entrypoint"   About a minute ago   Exited (0) 42 seconds ago                         determined_mayer
+# docker start determined_mayer
+pensive_lalande
+# docker attach determined_mayer
 ```
 
 At this point you are connected to the running shell inside the container. When you attach you won't see the command prompt, so hit Enter to get it to print another one.
@@ -164,21 +164,21 @@ At this point you are connected to the running shell inside the container. When 
 
 bash-4.2$ ps -ef
 UID        PID  PPID  C STIME TTY          TIME CMD
-default      1     0  0 19:43 ?        00:00:00 /bin/bash
-default     12     1  0 19:43 ?        00:00:00 ps -ef
+default      1     0  0 20:11 ?        00:00:00 /bin/bash
+default     12     1  0 20:12 ?        00:00:00 ps -ef
 bash-4.2$ exit
 ```
 
 Since the only process in the container, `bash`, was told to `exit` the container will no longer be running. This can be verified with `docker ps -a`. Containers that are no longer needed can be cleaned up with `docker rm _<container-name>_`.
 
-`docker rm loving_heisenberg`
+`docker rm determined_mayer`
 
 To see what other containers are available in the Red Hat container registry, use one or more of the following searches:
 
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```
@@ -194,7 +194,7 @@ First, create an empty directory, and then create a file named `Dockerfile` with
 
 .Dockerfile
 ----
-FROM openshift3/php-55-rhel7
+FROM rhscl/php-56-rhel7
 
 MAINTAINER Your Name "your-email@example.com"
 
@@ -236,8 +236,8 @@ The run command returns an ID for the container that you can ignore.  To check t
 [.code-block]
 ```
 # docker ps
-CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
-3d5fa5022a13        myname/phpweb       "container-entrypoin   28 seconds ago      Up 27 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   pensive_colden      
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+39392f89cbd2        myname/phpweb       "container-entrypoint"   24 seconds ago      Up 23 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   grave_brown
 ```
 
 Use `curl` to access the PHP web server:
@@ -245,19 +245,25 @@ Use `curl` to access the PHP web server:
 [.code-block]
 ```
 # curl http://localhost:8000/
-Hello, Red Hat Developers World from PHP 5.5.21
+Hello, Red Hat Developers World from PHP 5.6.5
 ```
 
 To view the logs from the running container use `docker logs _<container-name>_`:
 
-`# docker logs pensive_colden`
+`# docker logs grave_brown`
 
 When you are done, stop the running container with the following command using the name obtained from running `docker ps`:
 
 [.code-block]
 ```
-# docker kill pensive_colden
+# docker kill grave_brown
 ```
+
+Information about a container is available using `docker inspect`:
+
+`# docker inspect _myname_/phpweb`
+
+The output is a JSON structure that is easily readable. The _Config_ section has details of the container's runtime environment such as environment variables and default command. Note that much of the information in the container's configuration was inherited from the parent container, which in this case is the PHP runtime container.
 
 
 ## Where to go next?
@@ -310,8 +316,8 @@ To see what other containers are available in the Red Hat container registry, us
 +
 [.code-block]
 ```
-# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhscl
+# docker search registry.access.redhat.com/openshift3
 # docker search registry.access.redhat.com/rhel
 # docker search registry.access.redhat.com/jboss
 ```

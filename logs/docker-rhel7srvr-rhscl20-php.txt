@@ -1,0 +1,88 @@
+PHP 5.5 RHSCL 2.0 Docker RHEL 7.2 Logs
+======================================
+
+# docker pull registry.access.redhat.com/rhscl/php-56-rhel7
+Using default tag: latest
+f03be54af158: Download complete 
+c4f590bbcbe3: Download complete 
+93f5d18e18d9: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/rhscl/php-56-rhel7:latest
+
+
+# docker run -it rhscl/php-56-rhel7 /bin/bash
+bash-4.2$ which php
+/opt/rh/rh-php56/root/usr/bin/php
+bash-4.2$ php -v
+PHP 5.6.5 (cli) (built: Jun 10 2015 06:11:40) 
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
+    with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2014, by Zend Technologies
+    with Xdebug v2.2.7, Copyright (c) 2002-2015, by Derick Rethans
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 20:10 ?        00:00:00 /bin/bash
+default     14     1  0 20:10 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+
+# docker ps -a
+CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS                        PORTS               NAMES
+ca29ebc027dd        rhscl/php-56-rhel7   "container-entrypoint"   About a minute ago   Exited (0) 42 seconds ago                         pensive_lalande
+
+# docker start pensive_lalande
+pensive_lalande
+# docker attach pensive_lalande
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 20:11 ?        00:00:00 /bin/bash
+default     12     1  0 20:12 ?        00:00:00 ps -ef
+bash-4.2$ uptime
+ 20:12:09 up  6:18,  0 users,  load average: 0.32, 0.35, 0.36
+bash-4.2$ exit
+
+
+# docker ps -a
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS                      PORTS               NAMES
+ca29ebc027dd        rhscl/php-56-rhel7   "container-entrypoint"   2 minutes ago       Exited (0) 32 seconds ago                       pensive_lalande
+
+# docker build -t myname/phpweb .
+Sending build context to Docker daemon  5.12 kB
+Step 0 : FROM rhscl/php-56-rhel7
+ ---> f03be54af158
+Step 1 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in 78282b6eab80
+ ---> 4c0d2821a576
+Removing intermediate container 78282b6eab80
+Step 2 : EXPOSE 8000
+ ---> Running in f4d97cd9e83d
+ ---> c7285af838c0
+Removing intermediate container f4d97cd9e83d
+Step 3 : COPY . /opt/app-root/src
+ ---> 7d0122088404
+Removing intermediate container 37dfe036e927
+Step 4 : CMD /bin/bash -c 'php -S 0.0.0.0:8000'
+ ---> Running in f1f9f6147a05
+ ---> 04a7806219c0
+Removing intermediate container f1f9f6147a05
+Successfully built 04a7806219c0
+# docker run -d -p 8000:8000 myname/phpweb
+39392f89cbd2b3f073cf4a88b6bf1796d2bf005eebb8fbd3868cea31add0c1a0
+# curl http://localhost:8000/
+Hello, Red Hat Developers World from PHP 5.6.5
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+39392f89cbd2        myname/phpweb       "container-entrypoint"   24 seconds ago      Up 23 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   drunk_feynman
+# docker logs drunk_feynman
+[Wed Nov 25 20:16:26 2015] 172.17.42.1:50440 [200]: /
+# docker kill drunk_feynman
+drunk_feynman
+# docker rm drunk_feynman
+drunk_feynman
+
+
+
+

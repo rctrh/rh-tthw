@@ -1,0 +1,96 @@
+Ruby 2.2 RHSCL 2.0 docker container RHEL 7.2 logs
+=================================================
+
+# docker pull registry.access.redhat.com/rhscl/ruby-22-rhel7
+Using default tag: latest
+81327bb80f6e: Download complete 
+c4f590bbcbe3: Download complete 
+93f5d18e18d9: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/rhscl/ruby-22-rhel7:latest
+
+
+# docker images
+REPOSITORY                                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhscl/python-34-rhel7   latest              5be94041c916        2 weeks ago         428.9 MB
+registry.access.redhat.com/rhscl/ruby-22-rhel7     latest              81327bb80f6e        2 weeks ago         396.8 MB
+registry.access.redhat.com/rhel                    latest              275be1d3d070        3 months ago        158.3 MB
+
+
+# docker run -it rhscl/ruby-22-rhel7 /bin/bash
+bash-4.2$ which ruby
+/opt/rh/rh-ruby22/root/usr/bin/ruby
+bash-4.2$ ruby --version
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 19:40 ?        00:00:00 /bin/bash
+default     19     1  0 19:41 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+# docker ps -a
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                     PORTS               NAMES
+8b08a6244a4c        rhscl/ruby-22-rhel7   "container-entrypoint"   3 minutes ago       Exited (0) 2 minutes ago                       cocky_kalam
+
+# docker start cocky_kalam
+cocky_kalam
+
+# docker attach cocky_kalam
+
+bash-4.2$ uptime
+ 19:44:44 up  5:50,  0 users,  load average: 0.74, 0.59, 0.42
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 19:44 ?        00:00:00 /bin/bash
+default     17     1  0 19:44 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+# docker rm cocky_kalam
+cocky_kalam
+
+
+
+# docker build -t myname/rubyweb .
+Sending build context to Docker daemon 4.096 kB
+Step 0 : FROM rhscl/ruby-22-rhel7
+ ---> 81327bb80f6e
+Step 1 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in 270b9f019aa5
+ ---> 65023589c682
+Removing intermediate container 270b9f019aa5
+Step 2 : EXPOSE 8000
+ ---> Running in d5c06968a802
+ ---> adc6cf774201
+Removing intermediate container d5c06968a802
+Step 3 : COPY . /opt/app-root/src
+ ---> 8ef0b2695069
+Removing intermediate container 8c3827fac52e
+Step 4 : CMD /bin/bash -c 'ruby hello-http.rb'
+ ---> Running in 4b0b466d9e6a
+ ---> 5a474e90a315
+Removing intermediate container 4b0b466d9e6a
+Successfully built 5a474e90a315
+
+
+# docker run -d -p 8000:8000 myname/rubyweb
+c9b1362b16de0dfd1a95d056702312ba135f27bdd4b36e3ae2a3e8aebbb3a197
+
+# curl http://localhost:8000/
+Hello, Red Hat Developers World!
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+c9b1362b16de        myname/rubyweb      "container-entrypoint"   19 seconds ago      Up 18 seconds       8080/tcp, 0.0.0.0:8000->8000/tcp   distracted_mestorf
+# docker logs distracted_mestorf
+Listening on port 8000
+GET / HTTP/1.1
+
+# docker kill distracted_mestorf
+distracted_mestorf
+
+# docker rm distracted_mestorf
+distracted_mestorf
+
