@@ -142,6 +142,8 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 In this step, you will create a tiny Hello World container that uses Python 3 as a web server. Once created, the container can be run on other systems that have `docker` installed.  You will need to create several files in an empty directory using your favorite editor, including a `Dockerfile` that describes the container.
 
+Note: you can edit files on your host system that can be synchronized to your vagrant box with `vagrant sync`. For more information see _Vagrant synchronizad folders_ in the _CDK Installation Guide_. 
+
 First, create an empty directory, and then create a file named `index.html` with the following contents:
 
 .index.html
@@ -220,6 +222,8 @@ Use `curl` to access the Python web server:
 <html>Hello, Red Hat Developers World!</html>
 ```
 
+Note: you should also be able to access the Python web server running inside your container from the browser on your host machine. The `rhel-ose/Vagrantfile` sets the vagrant box's IP address to 10.1.2.2. The url to use is `http://10.1.2.2/`.
+
 To view the logs from the running container use `docker logs _<container-name>_`:
 
 `$ docker logs grave_brown`
@@ -243,16 +247,6 @@ The output is a JSON structure that is easily readable. The _Config_ section has
 * link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] -- This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
 
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/[Red Hat Enterprise Linux 7.2 Release Notes] -- includes information on recent updates to the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/7.2_Release_Notes/atomic_host_and_containers.html[container tools included in Red Hat Enterprise Linux and Atomic Host].
-
-### About Red Hat Enterprise Linux Atomic Host
-
-Atomic Host is specifically optimized for deploying Linux containers in environments like Infrastructure as a Service (IaaS) clouds. Atomic Host's minimal footprint contains only the software needed to efficiently host containers. Atomic Host isn't intended for software development activities as it doesn't include development tools or a graphical user interface.
-
-During software development it is suggested that you use Red Hat Enterprise Linux, which is suitable for many purposes including desktop and server installations. You can build and run containers on Red Hat Enterprise Linux, see link:https://access.redhat.com/articles/881893[Get Started with Docker Formatted Container Images on Red Hat Systems]. The steps to build a container image that include your application can be automated with a Dockerfile. 
-
-After your application is packaged in a container you should test it on Atomic Host to ensure that it is ready for deployment. In addition to minimized footprint, production environments built for running containers benefit from Atomic Host's enhanced security and atomic update and rollback capability.
-
-Developers who are creating continuous integration/continuous delivery (CI/CD) environments will want to consider containers deployed on Atomic Host. This allows test environments to be quickly created while minimizing system resource requirements.
 
 
 ## More Resources
