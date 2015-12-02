@@ -31,17 +31,15 @@ Run your first container
 Build Hello World in a container
 
 ## Step1 Content
-[*FIXME - Note to reviewers - leaving this section in temporarily*]
 
-The steps in this tutorial run on the `rhel-cdk-kubernetes` vagrant box that you downloaded after installing the CDK. The vagrant box has docker and kubernetes installed and configur
-ed for running containers. You will enter the commands in this tutorial after logging into the box with `vagrant ssh`.
+The steps in this tutorial run on the `rhel-cdk-kubernetes` vagrant box that you downloaded after installing the CDK. The vagrant box has docker and kubernetes installed and configured for running containers. You will enter the commands in this tutorial after logging into the box with `vagrant ssh`.
 
-Open a _Terminal_ or _command_ window to enter the commands in this tutorial.
+Open a _Terminal_ or _Command_ window to enter the commands in this tutorial.
 
 If you haven't already installed the CDK, follow the _CDK Installation Guide_ for your operating system to:
 
-. Install a virtualization provider (hypervisor) for your system such as VirtualBox, VMware, KVM/libvirt.
-. Install vagrant, from link:http://vagrantup.com/[vagrantup.com], or from your operating system's packages.
+. Install a virtualization provider (hypervisor) for your system such as VirtualBox, VMware, or KVM/libvirt.
+. Install Vagrant, from link:http://vagrantup.com/[vagrantup.com], or from your operating system's packages.
 . Download and unzip cdk-2.0.0.zip from [*FIXME point to access.redhat.com or developers.redhat.com?*]
 . Install the vagrant plugins `vagrant-registration` and `vagrant-adbinfo`.  The plugins are located in the `plugins` directory of the CDK zip file.
 
@@ -284,5 +282,6 @@ $ docker search registry.access.redhat.com/jboss
 . Where can I learn more about delivering applications with Linux containers?
 +
 If you haven't already joined the link:http://developers.redhat.com/[Red Hat Developers program], sign up at link:http://developers.redhat.com/[developers.redhat.com]. Membership is free. +
-link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal]. +
+link:https://access.redhat.com/articles/1483053[Recommended Practices for Container Development] and many other container articles are available from the link:https://access.redhat.com/[Red Hat Customer Portal].
++
 If you are a Red Hat Technology Partner, visit the link:https://access.redhat.com/articles/1483053[Container Zone] at the link:http://connect.redhat.com/[Red Hat Connect for Technology Partners] web site.
