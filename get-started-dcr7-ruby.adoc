@@ -278,7 +278,7 @@ When you are done, stop the running container with the following command using t
 
 [.code-block]
 ```
-# docker kill grave_brown
+# docker stop grave_brown
 ```
 
 Information about a container is available using `docker inspect`:

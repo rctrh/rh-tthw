@@ -255,7 +255,7 @@ When you are done, stop the running container with the following command using t
 
 [.code-block]
 ```
-# docker kill serene_pare
+# docker stop serene_pare
 ```
 
 
