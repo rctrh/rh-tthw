@@ -146,7 +146,7 @@ First, create an empty directory, and then create a file named `index.html` with
 
 .index.html
 ----
-<html>Hello, Red Hat Developers World!</html>
+<html>Hello, Red Hat Developers World from Python 3!</html>
 ----
 
 Now in the same directory, create a file named `Dockerfile` with the following contents, but change the `MAINTAINER` line to have your name and email address:
@@ -217,10 +217,10 @@ Use `curl` to access the Python web server:
 [.code-block]
 ```
 # curl http://localhost:8000/
-<html>Hello, Red Hat Developers World!</html>
+<html>Hello, Red Hat Developers World from Python 3!</html>
 ```
 
-Note: you should also be able to access the Python web server running inside your container from the browser on your host machine. The `rhel-ose/Vagrantfile` sets the vagrant box's IP address to 10.1.2.2. The url to use on your host system is `http://10.1.2.2/`.
+Note: you should also be able to access the Python web server running inside your container from the browser on your host machine. The `rhel-ose/Vagrantfile` sets the vagrant box's IP address to 10.1.2.2. The url to use on your host system is `http://10.1.2.2:8000/`.
 
 To view the logs from the running container use `docker logs _<container-name>_`:
 
