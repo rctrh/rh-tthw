@@ -220,7 +220,7 @@ Use `curl` to access the Python web server:
 <html>Hello, Red Hat Developers World from Python 3!</html>
 ```
 
-Note: you should also be able to access the Python web server running inside your container from the browser on your host machine. The `rhel-ose/Vagrantfile` sets the vagrant box's IP address to 10.1.2.2. The url to use on your host system is `http://10.1.2.2:8000/`.
+Note: you should also be able to access the Python web server running inside your container from the browser on your host machine. The `rhel-ose/Vagrantfile` sets the vagrant box's IP address to 10.1.2.2. The url to use on your host system is `link:http://10.1.2.2:8000/[]`.
 
 To view the logs from the running container use `docker logs _<container-name>_`:
 
