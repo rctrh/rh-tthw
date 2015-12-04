@@ -45,7 +45,7 @@ If you haven't already installed the CDK, follow the _CDK Installation Guide_ fo
 
 If you haven't already downloaded and added the `rhel-cdk-kubernetes` box the steps are:
 
-. Download the `rhel-cdk-kubernetes` box that matches your virtualization provider (VirtualBox, VMware, or KVM/libvirt).  Note the filename/path of the saved `.box` file.
+. Download the `rhel-cdk-kubernetes` box that matches your virtualization provider (VirtualBox, VMware, or KVM/libvirt).  Note the file name/path of the saved `.box` file.
 . Add the vagrant box with the command `vagrant add --name cdkv2 _path to saved .box file_`.
 
 ### Start the vagrant box
@@ -53,7 +53,7 @@ If you haven't already downloaded and added the `rhel-cdk-kubernetes` box the st
 To start the vagrant box:
 
 . Change to the directory where you unpacked the CDK zip file.
-. Change to the sub-direcotry `components/rhel/rhel-ose`. Alternatively, copy the `Vagrantfile` in that directory to a working directory of your choosing.
+. Change to the sub-directory `components/rhel/rhel-ose`. Alternatively, copy the `Vagrantfile` in that directory to a working directory of your choosing.
 . Start the box by entering `vagrant up`. Note: the `Vagrantfile` needs to be in the current directory when entering vagrant commands without specifying a box name or a path to the `Vagrantfile`.
 
 You should now be able to log into the vagrant box using `vagrant ssh`.
@@ -66,7 +66,7 @@ The commands shown in this section can be used to download and install other con
 
 The Python 3 container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
-All of the following commands are run on the vagrant box. If you haven't logged into the vagrant box, open a _Terminal_ or _command_ window and change to the direotory with the `rhel-ose/Vagrantfile`.  Log in with `vagrant ssh`
+Run all of the following commands on the vagrant box. If you haven't logged into the vagrant box, open a _Terminal_ or _Command_ window and change to the directory with the `rhel-ose/Vagrantfile`.  Log in with `vagrant ssh`
 
 
 To download and install the Python 3 container, use the following command:
@@ -201,15 +201,15 @@ $ docker images
 
 Now run the container using `docker run`. The Python 3 http.server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
 
-`$ docker run -d -p 8000:8000 _myname_/pythonweb`
+`$ docker run -d -p 8000:8000 --name helloweb _myname_/pythonweb`
 
-The run command returns an ID for the container that you can ignore.  To check that the container is running, use `docker ps`.  Take note of the name that docker assigned to the running container.
+The run command returns a unique ID for the container, which you can ignore. To check that the container is running, use `docker ps`. The output should show a container named `helloweb` that is running the `_myname_/pythonweb` container image you created.
 
 [.code-block]
 ```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
-c7885aa23773        myname/pythonweb    "container-entrypoint"   6 seconds ago       Up 4 seconds        0.0.0.0:8000->8000/tcp, 8080/tcp   grave_brown
+c7885aa23773        myname/pythonweb    "container-entrypoint"   6 seconds ago       Up 4 seconds        0.0.0.0:8000->8000/tcp, 8080/tcp   helloweb
 ```
 
 Use `curl` to access the Python web server:
@@ -224,20 +224,24 @@ Note: you should also be able to access the Python web server running inside you
 
 To view the logs from the running container use `docker logs _<container-name>_`:
 
-`$ docker logs grave_brown`
+`$ docker logs helloweb`
 
-When you are done, stop the running container with the following command using the name obtained from running `docker ps`:
+When you are done, stop the running container:
 
 [.code-block]
 ```
-$ docker stop grave_brown
+$ docker stop helloweb
 ```
 
-Information about a container is available using `docker inspect`:
+The `helloweb` container will be retained until you remove it with `docker rm`. You can restart the container with `docker start helloweb`. Note: A subsequent `docker run` will generate an error if a container with the same name already exists.
+
+You can view information about a container using `docker inspect`:
 
 `$ docker inspect _myname_/pythonweb`
 
 The output is a JSON structure that is easily readable. The _Config_ section has details of the container's runtime environment such as environment variables and default command. Note that much of the information in the container's configuration was inherited from the parent container, which in this case is the Python 3 runtime container.
+
+Finally, when the application container images you create are ready, you can distribute them by pushing them to a public or private container registry. These containers will then be available to install on other systems using `docker pull`.
 
 
 ## Where to go next?
