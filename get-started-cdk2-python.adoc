@@ -2,13 +2,13 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started building Python applications in docker containers using the Red Hat Container Development CDK (CDK) 2.0
+Get started building Python applications in docker formatted containers using the Red Hat Container Development CDK (CDK) 2.0
 
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the rhel-cdk vagrant box for your system. See the CDK 2.0 Installation Guide for more information. [*FIXME -- Add link: CDK install guide(s)*]
+In this tutorial, you will learn how to start building Python 3 applications in docker formatted containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the rhel-cdk vagrant box for your system. See the CDK 2.0 Installation Guide for more information. [*FIXME -- Add link: CDK install guide(s)*]
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -60,9 +60,9 @@ You should now be able to log into the vagrant box using `vagrant ssh`.
 
 ## Step2 Content
 
-This step will download and install Python 3 using a container from the Red Hat container registry. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install Python 3 using a container from the Red Hat Atomic Registry, a repository of container images. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
-The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat container registry.
+The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat Atomic Registry.
 
 The Python 3 container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
