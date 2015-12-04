@@ -142,3 +142,88 @@ serving at port 8000
 # docker kill furious_varahamihira
 furious_varahamihira
 
+
+----------------------------------------------------------------------
+Updated Step 3 content using --name, etc.
+----------------------------------------------------------------------
+
+
+# docker build -t myname/pythonweb .
+Sending build context to Docker daemon 4.096 kB
+Step 0 : FROM rhscl/python-34-rhel7:latest
+ ---> 5be94041c916
+Step 1 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in f2076ca281fe
+ ---> 32ec3cfd24b0
+Removing intermediate container f2076ca281fe
+Step 2 : EXPOSE 8000
+ ---> Running in 2d5fd12f348a
+ ---> f3af17e525e4
+Removing intermediate container 2d5fd12f348a
+Step 3 : COPY . /opt/app-root/src
+ ---> 5f20ab322fc6
+Removing intermediate container d35ca2c23454
+Step 4 : CMD /bin/bash -c 'python3 -u web.py'
+ ---> Running in 168fcb0b8187
+ ---> 8d983f039b32
+Removing intermediate container 168fcb0b8187
+Successfully built 8d983f039b32
+
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+a721d0738b4f70672c667b220ad85d2dfc8597b69826200d318fccbf08391152
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+a721d0738b4f        myname/pythonweb    "container-entrypoint"   35 seconds ago      Up 34 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   helloweb
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:40:24] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+# docker rm helloweb
+helloweb
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+bc5e4f59874445291f901de61c82c54b17cd2d925b958b0744ac2cb1f88a7aad
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+bc5e4f598744        myname/pythonweb    "container-entrypoint"   14 seconds ago      Up 12 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   helloweb
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:42:41] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+Error response from daemon: Conflict. The name "helloweb" is already in use by container bc5e4f598744. You have to delete (or rename) that container to be able to reuse that name.
+
+# docker start helloweb
+helloweb
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:42:41] "GET / HTTP/1.1" 200 -
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:43:36] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+
+
