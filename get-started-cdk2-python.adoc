@@ -8,7 +8,7 @@ Get started building Python applications in docker formatted containers using th
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker formatted containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the rhel-cdk vagrant box for your system. See the link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/[CDK 2.0 Installation Guide] for more information. 
+In this tutorial, you will learn how to start building Python 3 applications in docker formatted containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the Red Hat Enterprise Linux vagrant box for your system. See the link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/[CDK 2.0 Installation Guide] for more information. 
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -40,10 +40,10 @@ If you haven't already installed the CDK, follow the link:https://access.redhat.
 
 . Install a virtualization provider (hypervisor) for your system such as VirtualBox, VMware, or KVM/libvirt.
 . Install Vagrant, from link:http://vagrantup.com/[vagrantup.com], or from your operating system's packages.
-. From link:https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software[Red Hat Customer Portal] download Red Hat Container Tools (cdk-2.0.0.zip) and the RHEL 7.2 Vagrant box that matches your virtualization provider VirtualBox, VMare, or KVM/libvirt.
-. Unzip cdk-2.0.0.zip into a directory of your choice. 
+. From link:https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software[Red Hat Customer Portal] download _Red Hat Container Tools_ (cdk-2.0.0.zip) and the _RHEL 7.2 Vagrant box_ that matches your virtualization provider: VirtualBox, VMare, or KVM/libvirt.
+. Unzip `cdk-2.0.0.zip` into a directory of your choosing.
 . Install the vagrant plugins `vagrant-registration` and `vagrant-adbinfo`.  The plugins are located in the `plugins` directory of the CDK zip file.
-. Add the RHEL 7.2 Vagrant box (rhel-cdk-kubernetes) to Vagrant with the command `vagrant add --name cdkv2 _path to saved .box file_`.
+. Add the _RHEL 7.2 Vagrant box_ to Vagrant with the command `vagrant add --name cdkv2 _path to saved .box file_`.
 
 
 ### Start the vagrant box
@@ -59,16 +59,16 @@ You should now be able to log into the vagrant box using `vagrant ssh`.
 
 ## Step2 Content
 
-This step will download and install Python 3 using a container from the Red Hat Atomic Registry, a repository of container images. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
+This step will download and install Python 3 using a container image from the Red Hat Atomic Registry, a repository of container images. Installing the Python 3 container will make Python 3 available for use by other containers on your system. Because containers run in isolated environments, your host system will not be altered by the installation. You must use `docker` commands to use or view the container's content.
 
-The commands shown in this section can be used to download and install other containers, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat Atomic Registry.
+The commands shown in this section can be used to download and install other container images, like application containers you build. Containers can specify that they require other containers to be installed, which can happen automatically. For example, you can specify in the `Dockerfile` that is used to describe and build your container that your application requires Python 3. Then, when someone installs your container, their system will automatically download the required Python 3 container directly from the Red Hat Atomic Registry.
 
-The Python 3 container is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+The Python 3 container image is part of Red Hat Software Collections, which provides the latest development technologies for Red Hat Enterprise Linux. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 
 Run all of the following commands on the vagrant box. If you haven't logged into the vagrant box, open a _Terminal_ or _Command_ window and change to the directory with the `rhel-ose/Vagrantfile`.  Log in with `vagrant ssh`
 
 
-To download and install the Python 3 container, use the following command:
+To download and install the Python 3 container image, use the following command:
 
 `$ docker pull registry.access.redhat.com/rhscl/python-34-rhel7`
 
@@ -76,7 +76,7 @@ The `docker images` command shows the container image that was installed as well
 
 `$ docker images`
 
-Now start a `bash` shell inside the Python 3 container to have a look around. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
+Now start a `bash` shell to have a look around inside a container that uses the Python 3 container image. The shell prompt changes, which is an indication that you are typing at the shell inside the container. A `ps -ef` shows the only thing running inside the container is `bash` and `ps`. Type `exit` to leave the container's bash shell.
 
 [.code-block]
 ```
