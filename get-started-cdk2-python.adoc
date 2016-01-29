@@ -8,7 +8,7 @@ Get started building Python applications in docker formatted containers using th
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will learn how to start building Python 3 applications in docker formatted containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the rhel-cdk vagrant box for your system. See the CDK 2.0 Installation Guide for more information. [*FIXME -- Add link: CDK install guide(s)*]
+In this tutorial, you will learn how to start building Python 3 applications in docker formatted containers using the Red Hat Container Development Kit (CDK) 2.0 on Red Hat Enterprise Linux. You need to have CDK 2.0 installed and should have downloaded the rhel-cdk vagrant box for your system. See the link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/[CDK 2.0 Installation Guide] for more information. 
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -36,17 +36,15 @@ The steps in this tutorial run on the `rhel-cdk-kubernetes` vagrant box that you
 
 Open a _Terminal_ or _Command_ window to enter the commands in this tutorial.
 
-If you haven't already installed the CDK, follow the _CDK Installation Guide_ for your operating system to:
+If you haven't already installed the CDK, follow the link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/[CDK Installation Guide]. An overview of the steps:
 
 . Install a virtualization provider (hypervisor) for your system such as VirtualBox, VMware, or KVM/libvirt.
 . Install Vagrant, from link:http://vagrantup.com/[vagrantup.com], or from your operating system's packages.
-. Download and unzip cdk-2.0.0.zip from [*FIXME point to access.redhat.com or developers.redhat.com?*]
+. From link:https://access.redhat.com/downloads/content/293/ver=2/rhel---7/2.0.0/x86_64/product-software[Red Hat Customer Portal] download Red Hat Container Tools (cdk-2.0.0.zip) and the RHEL 7.2 Vagrant box that matches your virtualization provider VirtualBox, VMare, or KVM/libvirt.
+. Unzip cdk-2.0.0.zip into a directory of your choice. 
 . Install the vagrant plugins `vagrant-registration` and `vagrant-adbinfo`.  The plugins are located in the `plugins` directory of the CDK zip file.
+. Add the RHEL 7.2 Vagrant box (rhel-cdk-kubernetes) to Vagrant with the command `vagrant add --name cdkv2 _path to saved .box file_`.
 
-If you haven't already downloaded and added the `rhel-cdk-kubernetes` box the steps are:
-
-. Download the `rhel-cdk-kubernetes` box that matches your virtualization provider (VirtualBox, VMware, or KVM/libvirt).  Note the file name/path of the saved `.box` file.
-. Add the vagrant box with the command `vagrant add --name cdkv2 _path to saved .box file_`.
 
 ### Start the vagrant box
 
@@ -55,6 +53,7 @@ To start the vagrant box:
 . Change to the directory where you unpacked the CDK zip file.
 . Change to the sub-directory `components/rhel/rhel-ose`. Alternatively, copy the `Vagrantfile` in that directory to a working directory of your choosing.
 . Start the box by entering `vagrant up`. Note: the `Vagrantfile` needs to be in the current directory when entering vagrant commands without specifying a box name or a path to the `Vagrantfile`.
+. You will be prompted to register the RHEL Vagrant box during startup. You will need to enter your username and password for the customer portal, link:https://access.redhat.com/[access.redhat.com]. The box must be registered to download software from Red Hat. The registration plugin will attach the box to a Red Hat subscription when it starts up and release it when the box is shutdown using the `vagrant halt` command.
 
 You should now be able to log into the vagrant box using `vagrant ssh`.
 
@@ -245,6 +244,10 @@ Finally, when the application container images you create are ready, you can dis
 
 
 ## Where to go next?
+
+* link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-container-development-kit/[Getting Started with Container Development Kit] -- contains detailed information on the components that make up the CDK along with instructions on how to interact with containers in the CDK environment.
+
+* Container Development Guide (under development) -- Provides guidance for more advanced container development. It illustrates the different ways of creating containers to run with Docker, Kubernetes, Nulecule, Atomic and other container run-time environments.
 
 * link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/getting-started-with-containers/[Red Hat Enterprise Linux Atomic Host 7 Getting Started with Containers] -- This document covers working with and deploying containers on both Red Hat Enterprise Linux and Red Hat Enterprise Linux Atomic Host. It also provides information on orchestrating multi-container environments with _kubernetes_. See <<About Red Hat Enterprise Linux Atomic Host>>. 
 
