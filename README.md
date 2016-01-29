@@ -16,8 +16,8 @@ NOTE: headings won't make sense, these are template keys that will be substitute
   * get-started-rhel7-install - Install RHEL from iso for developers.
   * get-started-atomic-install - Install Atomic Host from iso for developers.
 * Containers
-  * get-started-atomic-* - simple container tutorials, dynamic languages on Atomic Host
-  * get-started-dcr7-* - Install docker on RHEL7, simple container tutorials using dynamic languages.
+  * get-started-dcr7-* - Install docker on RHEL7, simple container tutorials using dynamic languages
+  * get-started-atomic-* - simple container tutorials, dynamic languages on Atomic Host (deprecated since developers should really use RHEL for development instead of Atomic Host)
 * CDK/Containers
   * get-started-cdk2-* - CDK v2 simple container tutorials, a first taste using dynamic languages.
 
