@@ -1,0 +1,237 @@
+RHEL 7 Server Java Install Log
+==============================
+
+
+# yum list installed | egrep ^java
+java-1.7.0-openjdk.x86_64            1:1.7.0.91-2.6.2.3.el7
+java-1.7.0-openjdk-headless.x86_64   1:1.7.0.91-2.6.2.3.el7
+java-1.8.0-openjdk.x86_64            1:1.8.0.65-3.b17.el7
+java-1.8.0-openjdk-headless.x86_64   1:1.8.0.65-3.b17.el7
+javapackages-tools.noarch            3.4.1-11.el7      @rhel-7-server-rpms      
+
+
+[root@rhdsrvr log]# which java
+/usr/bin/java
+
+
+[root@rhdsrvr log]# java -version
+openjdk version "1.8.0_65"
+OpenJDK Runtime Environment (build 1.8.0_65-b17)
+OpenJDK 64-Bit Server VM (build 25.65-b01, mixed mode)
+
+
+[root@rhdsrvr log]# alternatives --display java | head
+java - status is auto.
+ link currently points to /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/java
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/java - priority 1800065
+ slave jjs: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/jjs
+ slave keytool: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/keytool
+ slave orbd: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/orbd
+ slave pack200: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/pack200
+ slave policytool: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/policytool
+ slave rmid: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/rmid
+ slave rmiregistry: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/rmiregistry
+
+
+[root@rhdsrvr log]# alternatives --config java
+
+There are 2 programs which provide 'java'.
+
+  Selection    Command
+-----------------------------------------------
+*+ 1           /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/bin/java
+   2           /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.3.el7.x86_64/jre/bin/java
+
+Enter to keep the current selection[+], or type selection number: ^C
+
+
+
+
+# repoquery --whatrequires --installed --recursive java
+devtoolset-3-0:3.1-12.el7.x86_64
+devtoolset-3-apache-commons-el-0:1.0-31.el7.noarch
+devtoolset-3-args4j-0:2.0.30-3.el7.noarch
+devtoolset-3-eclipse-cdt-1:8.6.0-1.el7.x86_64
+devtoolset-3-eclipse-cdt-parsers-1:8.6.0-1.el7.x86_64
+devtoolset-3-eclipse-cdt-sdk-1:8.6.0-1.el7.x86_64
+devtoolset-3-eclipse-changelog-2:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-ecf-core-0:3.9.1-2.5.el7.x86_64
+devtoolset-3-eclipse-egit-0:3.6.1-3.el7.noarch
+devtoolset-3-eclipse-emf-core-1:2.10.2-2.el7.x86_64
+devtoolset-3-eclipse-emf-examples-0:2.10.2-2.el7.noarch
+devtoolset-3-eclipse-emf-runtime-0:2.10.2-2.el7.noarch
+devtoolset-3-eclipse-emf-sdk-0:2.10.2-2.el7.noarch
+devtoolset-3-eclipse-equinox-osgi-1:4.4.2-4.el7.x86_64
+devtoolset-3-eclipse-filesystem-0:1.0-3.3.el7.x86_64
+devtoolset-3-eclipse-gcov-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-gef-0:3.9.101-2.2.el7.noarch
+devtoolset-3-eclipse-gef-examples-0:3.9.101-2.2.el7.noarch
+devtoolset-3-eclipse-gef-sdk-0:3.9.101-2.2.el7.noarch
+devtoolset-3-eclipse-gprof-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-jdt-1:4.4.2-4.el7.x86_64
+devtoolset-3-eclipse-jgit-0:3.6.1-3.el7.noarch
+devtoolset-3-eclipse-linuxtools-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-manpage-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-mylyn-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-builds-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-builds-hudson-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-context-cdt-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-context-java-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-context-pde-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-context-team-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-docs-epub-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-docs-htmltext-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-docs-wikitext-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-ide-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-sdk-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-tasks-bugzilla-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-tasks-trac-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-tasks-web-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-versions-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-versions-cvs-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-mylyn-versions-git-0:3.14.2-1.el7.noarch
+devtoolset-3-eclipse-oprofile-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-pde-1:4.4.2-4.el7.x86_64
+devtoolset-3-eclipse-perf-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-platform-1:4.4.2-4.el7.x86_64
+devtoolset-3-eclipse-remote-0:1.1.1-1.el7.noarch
+devtoolset-3-eclipse-rpm-editor-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-rse-0:3.6.0-8.el7.noarch
+devtoolset-3-eclipse-rse-server-0:3.6.0-8.el7.noarch
+devtoolset-3-eclipse-swt-1:4.4.2-4.el7.x86_64
+devtoolset-3-eclipse-systemtap-0:3.2.0-2.el7.noarch
+devtoolset-3-eclipse-valgrind-0:3.2.0-2.el7.noarch
+devtoolset-3-felix-gogo-command-0:0.12.0-12.el7.noarch
+devtoolset-3-felix-gogo-runtime-0:0.10.0-13.el7.noarch
+devtoolset-3-felix-gogo-shell-0:0.10.0-8.el7.noarch
+devtoolset-3-glassfish-el-0:3.0.0-6.el7.noarch
+devtoolset-3-glassfish-servlet-api-0:3.1.0-6.el7.noarch
+devtoolset-3-icu4j-1:54.1.1-4.4.el7.noarch
+devtoolset-3-ide-0:3.1-12.el7.x86_64
+devtoolset-3-javaewah-0:0.8.4-4.el7.noarch
+devtoolset-3-jgit-0:3.6.1-3.el7.noarch
+devtoolset-3-jsoup-0:1.7.2-2.el7.noarch
+devtoolset-3-lpg-java-compat-0:1.1.0-6.el7.noarch
+devtoolset-3-mockito-0:1.9.0-16.el7.noarch
+devtoolset-3-nekohtml-0:1.9.21-6.el7.noarch
+devtoolset-3-rome-0:0.9-19.el7.noarch
+devtoolset-3-sat4j-0:2.3.5-1.el7.noarch
+devtoolset-3-swt-chart-0:0.9.0-4.1.el7.noarch
+devtoolset-3-tika-0:1.4-6.el7.noarch
+devtoolset-3-tika-parsers-epub-0:1.4-6.el7.noarch
+devtoolset-3-xmlrpc-client-1:3.1.3-8.4.el7.noarch
+devtoolset-3-xmlrpc-common-1:3.1.3-8.4.el7.noarch
+devtoolset-3-xmlrpc-server-1:3.1.3-8.4.el7.noarch
+hsqldb-1:1.8.1.3-13.el7.noarch
+icedtea-web-0:1.6.1-4.el7.x86_64
+jline-0:1.0-8.el7.noarch
+rh-java-common-PyXB-0:1.2.4-1.4.el7.noarch
+rh-java-common-ant-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-antlr-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-bcel-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-bsf-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-log4j-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-oro-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-regexp-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-resolver-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-apache-xalan2-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-commons-logging-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-commons-net-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-javamail-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-jdepend-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-jmf-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-jsch-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-junit-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-swing-0:1.9.2-9.24.el7.noarch
+rh-java-common-ant-testutil-0:1.9.2-9.24.el7.noarch
+rh-java-common-antlr-tool-0:2.7.7-29.18.el7.noarch
+rh-java-common-apache-commons-codec-0:1.8-7.12.el7.noarch
+rh-java-common-apache-commons-compress-0:1.5-4.12.el7.noarch
+rh-java-common-apache-commons-io-1:2.4-12.11.el7.noarch
+rh-java-common-apache-commons-lang-0:2.6-15.11.el7.noarch
+rh-java-common-apache-commons-logging-0:1.1.2-7.15.el7.noarch
+rh-java-common-apache-commons-net-0:3.2-8.11.el7.noarch
+rh-java-common-atinject-0:1-13.20100611svn86.10.el7.noarch
+rh-java-common-batik-0:1.8-0.12.svn1230816.13.el7.noarch
+rh-java-common-bcel-0:5.2-18.12.el7.noarch
+rh-java-common-bea-stax-0:1.2.0-9.13.el7.noarch
+rh-java-common-bea-stax-api-0:1.2.0-9.13.el7.noarch
+rh-java-common-bsf-0:2.4.0-19.12.el7.noarch
+rh-java-common-cglib-0:2.2-18.13.el7.noarch
+rh-java-common-dom4j-0:1.6.1-20.12.el7.noarch
+rh-java-common-easymock2-0:2.5.2-12.15.el7.noarch
+rh-java-common-felix-framework-0:4.2.1-5.12.el7.noarch
+rh-java-common-geronimo-annotation-0:1.0-15.12.el7.noarch
+rh-java-common-glassfish-el-api-0:2.2.4-5.11.el7.noarch
+rh-java-common-glassfish-jsp-0:2.2.6-11.12.el7.noarch
+rh-java-common-glassfish-jsp-api-0:2.2.1-9.12.el7.noarch
+rh-java-common-google-gson-0:2.2.2-8.3.el7.noarch
+rh-java-common-hamcrest-0:1.3-6.14.el7.noarch
+rh-java-common-httpcomponents-client-0:4.3.6-1.2.el7.noarch
+rh-java-common-httpcomponents-core-0:4.3.3-1.3.el7.noarch
+rh-java-common-isorelax-1:0-0.15.release20050331.12.el7.noarch
+rh-java-common-jai-imageio-core-0:1.2-0.14.20100217cvs.14.el7.noarch
+rh-java-common-jakarta-commons-httpclient-1:3.1-15.14.el7.noarch
+rh-java-common-jakarta-oro-0:2.0.8-16.12.el7.noarch
+rh-java-common-javamail-0:1.4.6-8.13.el7.noarch
+rh-java-common-javapackages-tools-0:4.3.2-1.10.el7.noarch
+rh-java-common-jaxen-0:1.1.3-11.12.el7.noarch
+rh-java-common-jdepend-0:2.9.1-10.14.el7.noarch
+rh-java-common-jdom-0:1.1.3-6.13.el7.noarch
+rh-java-common-jetty-continuation-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-http-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-io-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-jmx-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-security-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-server-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-servlet-0:9.0.3-8.20.el7.noarch
+rh-java-common-jetty-util-0:9.0.3-8.20.el7.noarch
+rh-java-common-jsch-0:0.1.50-5.14.el7.noarch
+rh-java-common-junit-0:4.11-8.15.el7.noarch
+rh-java-common-jzlib-0:1.1.1-6.10.el7.noarch
+rh-java-common-log4j-0:1.2.17-15.14.el7.noarch
+rh-java-common-lucene-0:4.8.0-6.7.el7.noarch
+rh-java-common-lucene-analysis-0:4.8.0-6.7.el7.noarch
+rh-java-common-lucene-queries-0:4.8.0-6.7.el7.noarch
+rh-java-common-lucene-queryparser-0:4.8.0-6.7.el7.noarch
+rh-java-common-lucene-sandbox-0:4.8.0-6.7.el7.noarch
+rh-java-common-msv-msv-1:2013.5.1-6.16.el7.noarch
+rh-java-common-msv-xsdlib-1:2013.5.1-6.16.el7.noarch
+rh-java-common-objectweb-asm-0:3.3.1-9.14.el7.noarch
+rh-java-common-objectweb-asm5-0:5.0.3-1.4.el7.noarch
+rh-java-common-objenesis-0:1.2-16.5.el7.noarch
+rh-java-common-python-javapackages-0:4.3.2-1.10.el7.noarch
+rh-java-common-qdox-0:1.12.1-9.13.el7.noarch
+rh-java-common-regexp-0:1.5-13.14.el7.noarch
+rh-java-common-relaxngDatatype-0:1.0-11.11.el7.noarch
+rh-java-common-runtime-0:1.1-43.el7.x86_64
+rh-java-common-tomcat-servlet-3.0-api-0:7.0.42-1.21.el7.noarch
+rh-java-common-ws-commons-util-0:1.0.1-29.12.el7.noarch
+rh-java-common-ws-jaxme-0:0.5.2-10.12.el7.noarch
+rh-java-common-xalan-j2-0:2.7.1-23.8.el7.noarch
+rh-java-common-xerces-j2-0:2.11.0-17.7.el7.noarch
+rh-java-common-xml-commons-apis-0:1.4.01-16.14.el7.noarch
+rh-java-common-xml-commons-resolver-0:1.2-15.13.el7.noarch
+rh-java-common-xpp3-0:1.1.3.8-11.12.el7.noarch
+rh-java-common-xz-java-0:1.3-3.12.el7.noarch
+rhino-0:1.7R4-5.el7.noarch
+sac-0:1.3-17.el7.noarch
+
+
+
+# repoquery --whatrequires --installed --recursive java-1.7.0-openjdk
+devtoolset-3-0:3.1-12.el7.x86_64
+devtoolset-3-apache-commons-el-0:1.0-31.el7.noarch
+devtoolset-3-args4j-0:2.0.30-3.el7.noarch
+devtoolset-3-eclipse-
+hsqldb-1:1.8.1.3-13.el7.noarch
+icedtea-web-0:1.6.1-4.el7.x86_64
+java-1.7.0-openjdk-1:1.7.0.91-2.6.2.3.el7.x86_64
+java-1.7.0-openjdk-headless-1:1.7.0.91-2.6.2.3.el7.x86_64
+java-1.8.0-openjdk-1:1.8.0.65-3.b17.el7.x86_64
+java-1.8.0-openjdk-headless-1:1.8.0.65-3.b17.el7.x86_64
+jline-0:1.0-8.el7.noarch
+rh-java-common-
+rhino-0:1.7R4-5.el7.noarch
+sac-0:1.3-17.el7.noarch
+
