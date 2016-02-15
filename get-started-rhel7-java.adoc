@@ -61,7 +61,7 @@ Your system may have one or more Java Runtime Environments (JRE) installed. You 
 
 `# yum list installed java\*`
 
-The list includes package name, version information, and which software repository it was installed from. 
+The output includes package name, version information, and which software repository it was installed from. 
 
 If you have a JRE installed, you can skip the following steps. When you install a JDK, a JRE will also be installed.
 
@@ -77,18 +77,18 @@ If `java` is in your path, determine which version:
 
 You can view or search packages that are available to be installed with `yum list available`:
 
-`yum list available java\*devel`
+`# yum list available java\*devel`
 
-The list will show the package name and what software repository it resides in. Only software repositories that have been enabled for downloading are included in the results.
+The output will show the package name and what software repository it resides in. Only software repositories that have been enabled for downloading are included in the results.
 
 
 ### Enabling additional software repositories
 
 There are a number of additional software repositories for Red Hat Enterprise Linux. These aren't enabled by default as the packages in them have support policies that differ from the main Red Hat Enterprise Linux packages. Some of these repositories have packages that are of interest to Java developers:
 
-* The optional RPMs repository includes a number of Java development tools and libraries. Most Java developers will want to enable this repository.
-* Versions of the JRE and JDK from IBM can be found in the supplementary RPMs repository.
-* The Oracle JRE and JDK are located in the Oracle third-party oracle repository.
+* The _Optional RPMs) repository includes a number of Java development tools and libraries. Most Java developers will want to enable this repository.
+* Versions of the JRE and JDK from IBM can be found in the _Supplementary RPMs_ repository.
+* The Oracle JRE and JDK are located in the _Third-party Oracle Java RPMs_ repository.
 
 Instructions are provided below for the command-line. If your system has a graphical desktop installed, you can use the graphical version of `subscription-manager`. Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. Select _Repositories_ from the _System_ menu of subscription manager.
 
@@ -209,7 +209,7 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 ## Faq section
 . Where can I find Java development tools as libraries such as `ant` and `maven` for Red Hat Enterprise Linux?
 +
-. I can't find many Java packages for Red Hat Enterprise Linux, where should I look?
+I can't find many Java packages for Red Hat Enterprise Linux, where should I look?
 +
 Many Java development tools and libraries are located in the _Optional RPMs_ repository. The _Optional RPMs_ repository isn't enabled by default as the packages in them have support policies that differ from the main Red Hat Enterprise Linux packages. Step 1 of this tutorial shows how to enable the _Optional RPMs_ repository, which is recommended for Java developers. 
 +
@@ -219,7 +219,7 @@ The following command will enable the repository:
 +
 . Is a Java Interactive Development Environment (IDE) such as Eclipse available for Red Hat Enterprise Linux?
 +
-JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[]
+JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[jboss.org]
 +
 For more information see link:http://www.jboss.org/products/devstudio/overview/[JBoss Developer Studio Overview].
 . How do I find out what JRE and JDKs are already installed?
@@ -236,7 +236,7 @@ Several Red Hat packages require a JRE. The most common is the Internet browser 
 +
 . Are JRE/JDKs other than OpenJDK available for Red Hat Enterprise Linux?
 +
-. Can I install Oracle's JRE/JDK on Red Hat Enterprise Linux?
+Can I install Oracle's JRE/JDK on Red Hat Enterprise Linux?
 +
 OpenJDK, IBM, and Oracle JRE/JDKs are available from Red Hat software repositories for easy installation through `yum`. The IBM and Oracle packages are in optional repositories which aren't enabled by default. Enable the _supplementary RPMS_ repository for the IBM packages, or the _Third-party Oracle Java RPMs_ repository for the Oracles packages.
 +
@@ -257,7 +257,7 @@ For more information, see _link:https://access.redhat.com/solutions/732883[Where
 . Can I use Oracle Java packages from Java.com on Red Hat Enterprise Linux?
 +
 Yes you can use Oracle Java packages from link:http://java.com/[] in addition to the packages supplied with Red Hat Enterprise Linux. On link:http://java.com/ you can find Oracle Java packaged into RPM files that are compatible with Red Hat Enterprise Linux, `yum` and `rpm`, the Red Hat package manager. Download the Java package labeled 'Linux x64 RPM'.  To install the package using `yum`:
-
++
 `# yum localinstall _path_to_downloaded_java_rpm_`
 +
 Note: The Java RPM packages from Oracle will install under `/usr/java` instead of `/usr/lib/jvm`.
@@ -266,7 +266,7 @@ Note: The Java RPM packages from Oracle will install under `/usr/java` instead o
 +
 It is possible to have multiple versions of the JRE and JDK packages installed concurrently. JRE and JDK packages for Red Hat Enterprise Linux are installed in separate directories under `/usr/lib/jvm`. This allows them to be installed concurrently. However only one version can be in the shell's command path as `java` or `javac` at a time. See _Managing Java versions_ above.
 +
-. What should JAVA_HOME be set to?
+. What should `JAVA_HOME` be set to?
 +
 For tools that need the `JAVA_HOME` environment variable, set it to `/usr/lib/jvm/_java-version_`. For example, to specify the OpenJDK 1.8.0 JDK, use `JAVA_HOME=/usr/lib/java-1.8.0-openjdk` in your scripts and/or build configuration. There are several permutations under `/usr/lib/jvm` that include the full name of the JRE or JDK down to the specific patch number, or progressively more general references such as `java-1.8.0-openjdk`, 'java-1.8.0`, or just `java`. Using a `JAVA_HOME` value like `java-1.8.0-openjdk` is recommended as it lets you specify which JVM, without being tied to a particular patch level.
 +
