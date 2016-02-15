@@ -217,6 +217,9 @@ The following command will enable the repository:
 +
 `# subscription-manager repos --enable rhel-7-server-optional-rpms`
 +
+Now you can install `ant`, `maven`, and other Java development tools:
+`# yum install ant maven`
++
 . Is a Java Interactive Development Environment (IDE) such as Eclipse available for Red Hat Enterprise Linux?
 +
 JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[jboss.org]
