@@ -444,3 +444,457 @@ $ javac hello.java
 $ java hello
 Hello, World from Java 1.8.0_71
 
+--------------------------------
+
+
+[root@rhdsrvr Downloads]# yum info ./jre-8u73-linux-x64.rpm 
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Error: No matching Packages to list
+[root@rhdsrvr Downloads]# yum localinstall ./jre-8u73-linux-x64.rpm 
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Examining ./jre-8u73-linux-x64.rpm: jre1.8.0_73-1.8.0_73-fcs.x86_64
+Marking ./jre-8u73-linux-x64.rpm to be installed
+Resolving Dependencies
+--> Running transaction check
+---> Package jre1.8.0_73.x86_64 0:1.8.0_73-fcs will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+======================================================================================================================
+ Package                   Arch                 Version                       Repository                         Size
+======================================================================================================================
+Installing:
+ jre1.8.0_73               x86_64               1.8.0_73-fcs                  /jre-8u73-linux-x64               119 M
+
+Transaction Summary
+======================================================================================================================
+Install  1 Package
+
+Total size: 119 M
+Installed size: 119 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jre1.8.0_73-1.8.0_73-fcs.x86_64                                                                    1/1 
+Unpacking JAR files...
+	  plugin.jar...
+	  javaws.jar...
+	  deploy.jar...
+	  rt.jar...
+	  jsse.jar...
+	  charsets.jar...
+	  localedata.jar...
+	  jfxrt.jar...
+  Verifying  : jre1.8.0_73-1.8.0_73-fcs.x86_64                                                                    1/1 
+
+Installed:
+  jre1.8.0_73.x86_64 0:1.8.0_73-fcs                                                                                   
+
+Complete!
+[root@rhdsrvr Downloads]# yum install ant
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package ant.noarch 0:1.9.2-9.el7 will be installed
+--> Processing Dependency: java-devel >= 1.5.0 for package: ant-1.9.2-9.el7.noarch
+--> Processing Dependency: xerces-j2 for package: ant-1.9.2-9.el7.noarch
+--> Running transaction check
+---> Package java-1.7.0-openjdk-devel.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be installed
+--> Processing Dependency: java-1.7.0-openjdk = 1:1.7.0.95-2.6.4.0.el7_2 for package: 1:java-1.7.0-openjdk-devel-1.7.0.95-2.6.4.0.el7_2.x86_64
+---> Package xerces-j2.noarch 0:2.11.0-17.el7_0 will be installed
+--> Processing Dependency: xml-commons-resolver >= 1.2 for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: xalan-j2 >= 2.7.1 for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(org.apache.xml.serializer) for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(org.apache.xml.resolver) for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(javax.xml) for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Running transaction check
+---> Package java-1.7.0-openjdk.x86_64 1:1.7.0.91-2.6.2.3.el7 will be updated
+---> Package java-1.7.0-openjdk.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be an update
+--> Processing Dependency: java-1.7.0-openjdk-headless = 1:1.7.0.95-2.6.4.0.el7_2 for package: 1:java-1.7.0-openjdk-1.7.0.95-2.6.4.0.el7_2.x86_64
+---> Package xalan-j2.noarch 0:2.7.1-23.el7 will be installed
+---> Package xml-commons-apis.noarch 0:1.4.01-16.el7 will be installed
+---> Package xml-commons-resolver.noarch 0:1.2-15.el7 will be installed
+--> Running transaction check
+---> Package java-1.7.0-openjdk-headless.x86_64 1:1.7.0.91-2.6.2.3.el7 will be updated
+---> Package java-1.7.0-openjdk-headless.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+======================================================================================================================
+ Package                            Arch          Version                         Repository                     Size
+======================================================================================================================
+Installing:
+ ant                                noarch        1.9.2-9.el7                     rhel-7-server-eus-rpms        1.9 M
+Installing for dependencies:
+ java-1.7.0-openjdk-devel           x86_64        1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms        9.2 M
+ xalan-j2                           noarch        2.7.1-23.el7                    rhel-7-server-eus-rpms        1.9 M
+ xerces-j2                          noarch        2.11.0-17.el7_0                 rhel-7-server-eus-rpms        1.1 M
+ xml-commons-apis                   noarch        1.4.01-16.el7                   rhel-7-server-eus-rpms        227 k
+ xml-commons-resolver               noarch        1.2-15.el7                      rhel-7-server-eus-rpms        108 k
+Updating for dependencies:
+ java-1.7.0-openjdk                 x86_64        1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms        207 k
+ java-1.7.0-openjdk-headless        x86_64        1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms         25 M
+
+Transaction Summary
+======================================================================================================================
+Install  1 Package  (+5 Dependent packages)
+Upgrade             ( 2 Dependent packages)
+
+Total download size: 40 M
+Is this ok [y/d/N]: ^Cn
+Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2016-02-15.16-40.LhYTNY.yumtx
+[root@rhdsrvr Downloads]# yum install maven
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package maven.noarch 0:3.0.5-16.el7 will be installed
+--> Processing Dependency: aether-api for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: aether-connector-wagon for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: aether-impl for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: aether-spi for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: aether-util for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: aopalliance for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: apache-commons-cli for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: apache-commons-codec for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: apache-commons-logging for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: atinject for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: cglib for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: google-guice for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: guava for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: httpcomponents-client for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: httpcomponents-core for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: java-devel for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: maven-wagon for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(commons-cli:commons-cli) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.apache.maven.wagon:wagon-provider-api) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-classworlds) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-component-annotations) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-container-default) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-interpolation) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-utils) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.aether:aether-api) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.aether:aether-impl) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.aether:aether-spi) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.aether:aether-util) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.plexus:plexus-cipher) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.plexus:plexus-sec-dispatcher) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: mvn(org.sonatype.sisu:sisu-inject-plexus) for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: objectweb-asm for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: plexus-cipher for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: plexus-containers-component-annotations for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: plexus-interpolation for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: plexus-sec-dispatcher for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: plexus-utils for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: sisu-inject-bean for package: maven-3.0.5-16.el7.noarch
+--> Processing Dependency: sisu-inject-plexus for package: maven-3.0.5-16.el7.noarch
+--> Running transaction check
+---> Package aether-api.noarch 0:1.13.1-13.el7 will be installed
+---> Package aether-connector-wagon.noarch 0:1.13.1-13.el7 will be installed
+---> Package aether-impl.noarch 0:1.13.1-13.el7 will be installed
+---> Package aether-spi.noarch 0:1.13.1-13.el7 will be installed
+---> Package aether-util.noarch 0:1.13.1-13.el7 will be installed
+---> Package aopalliance.noarch 0:1.0-8.el7 will be installed
+---> Package apache-commons-cli.noarch 0:1.2-13.el7 will be installed
+---> Package apache-commons-codec.noarch 0:1.8-7.el7 will be installed
+---> Package apache-commons-logging.noarch 0:1.1.2-7.el7 will be installed
+--> Processing Dependency: mvn(logkit:logkit) for package: apache-commons-logging-1.1.2-7.el7.noarch
+--> Processing Dependency: mvn(log4j:log4j) for package: apache-commons-logging-1.1.2-7.el7.noarch
+--> Processing Dependency: mvn(avalon-framework:avalon-framework-api) for package: apache-commons-logging-1.1.2-7.el7.noarch
+---> Package atinject.noarch 0:1-13.20100611svn86.el7 will be installed
+---> Package cglib.noarch 0:2.2-18.el7 will be installed
+---> Package google-guice.noarch 0:3.1.3-9.el7 will be installed
+--> Processing Dependency: mvn(org.slf4j:slf4j-api) for package: google-guice-3.1.3-9.el7.noarch
+---> Package guava.noarch 0:13.0-6.el7 will be installed
+---> Package httpcomponents-client.noarch 0:4.2.5-5.el7_0 will be installed
+---> Package httpcomponents-core.noarch 0:4.2.4-6.el7 will be installed
+---> Package java-1.7.0-openjdk-devel.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be installed
+--> Processing Dependency: java-1.7.0-openjdk = 1:1.7.0.95-2.6.4.0.el7_2 for package: 1:java-1.7.0-openjdk-devel-1.7.0.95-2.6.4.0.el7_2.x86_64
+---> Package maven-wagon.noarch 0:2.4-3.el7 will be installed
+--> Processing Dependency: mvn(com.jcraft:jsch) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(commons-httpclient:commons-httpclient) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(commons-io:commons-io) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(commons-lang:commons-lang) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(commons-net:commons-net) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(nekohtml:nekohtml) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-interactivity-api) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(org.jsoup:jsoup) for package: maven-wagon-2.4-3.el7.noarch
+--> Processing Dependency: mvn(xerces:xercesImpl) for package: maven-wagon-2.4-3.el7.noarch
+---> Package objectweb-asm.noarch 0:3.3.1-9.el7 will be installed
+--> Processing Dependency: xml-commons-jaxp-1.3-apis for package: objectweb-asm-3.3.1-9.el7.noarch
+---> Package plexus-cipher.noarch 0:1.7-5.el7 will be installed
+---> Package plexus-classworlds.noarch 0:2.4.2-8.el7 will be installed
+---> Package plexus-containers-component-annotations.noarch 0:1.5.5-14.el7 will be installed
+---> Package plexus-containers-container-default.noarch 0:1.5.5-14.el7 will be installed
+--> Processing Dependency: mvn(junit:junit) for package: plexus-containers-container-default-1.5.5-14.el7.noarch
+--> Processing Dependency: mvn(org.apache.xbean:xbean-reflect) for package: plexus-containers-container-default-1.5.5-14.el7.noarch
+---> Package plexus-interpolation.noarch 0:1.15-8.el7 will be installed
+---> Package plexus-sec-dispatcher.noarch 0:1.4-13.el7 will be installed
+---> Package plexus-utils.noarch 0:3.0.9-9.el7 will be installed
+---> Package sisu-inject-bean.noarch 0:2.3.0-11.el7 will be installed
+--> Processing Dependency: mvn(javax.enterprise:cdi-api) for package: sisu-inject-bean-2.3.0-11.el7.noarch
+---> Package sisu-inject-plexus.noarch 0:2.3.0-11.el7 will be installed
+--> Running transaction check
+---> Package apache-commons-io.noarch 1:2.4-12.el7 will be installed
+---> Package apache-commons-lang.noarch 0:2.6-15.el7 will be installed
+---> Package apache-commons-net.noarch 0:3.2-8.el7 will be installed
+---> Package avalon-framework.noarch 0:4.3-10.el7 will be installed
+--> Processing Dependency: xalan-j2 for package: avalon-framework-4.3-10.el7.noarch
+---> Package avalon-logkit.noarch 0:2.1-14.el7 will be installed
+--> Processing Dependency: jms for package: avalon-logkit-2.1-14.el7.noarch
+---> Package cdi-api.noarch 0:1.0-11.SP4.el7 will be installed
+--> Processing Dependency: geronimo-annotation for package: cdi-api-1.0-11.SP4.el7.noarch
+--> Processing Dependency: jboss-ejb-3.1-api for package: cdi-api-1.0-11.SP4.el7.noarch
+--> Processing Dependency: jboss-el-2.2-api for package: cdi-api-1.0-11.SP4.el7.noarch
+--> Processing Dependency: jboss-interceptors-1.1-api for package: cdi-api-1.0-11.SP4.el7.noarch
+---> Package jakarta-commons-httpclient.noarch 1:3.1-16.el7_0 will be installed
+---> Package java-1.7.0-openjdk.x86_64 1:1.7.0.91-2.6.2.3.el7 will be updated
+---> Package java-1.7.0-openjdk.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be an update
+--> Processing Dependency: java-1.7.0-openjdk-headless = 1:1.7.0.95-2.6.4.0.el7_2 for package: 1:java-1.7.0-openjdk-1.7.0.95-2.6.4.0.el7_2.x86_64
+---> Package jsch.noarch 0:0.1.50-5.el7 will be installed
+--> Processing Dependency: jzlib >= 1.0.5 for package: jsch-0.1.50-5.el7.noarch
+---> Package jsoup.noarch 0:1.6.1-10.el7 will be installed
+---> Package junit.noarch 0:4.11-8.el7 will be installed
+--> Processing Dependency: osgi(org.hamcrest.core) for package: junit-4.11-8.el7.noarch
+--> Processing Dependency: hamcrest for package: junit-4.11-8.el7.noarch
+---> Package log4j.noarch 0:1.2.17-15.el7 will be installed
+--> Processing Dependency: mvn(javax.mail:mail) for package: log4j-1.2.17-15.el7.noarch
+---> Package nekohtml.noarch 0:1.9.14-13.el7 will be installed
+--> Processing Dependency: bcel for package: nekohtml-1.9.14-13.el7.noarch
+---> Package plexus-interactivity.noarch 0:1.0-0.14.alpha6.el7 will be installed
+--> Processing Dependency: mvn(org.codehaus.plexus:plexus-component-api) for package: plexus-interactivity-1.0-0.14.alpha6.el7.noarch
+---> Package slf4j.noarch 0:1.7.4-3.el7 will be installed
+--> Processing Dependency: mvn(javassist:javassist) for package: slf4j-1.7.4-3.el7.noarch
+--> Processing Dependency: mvn(ch.qos.cal10n:cal10n-api) for package: slf4j-1.7.4-3.el7.noarch
+---> Package xbean.noarch 0:3.13-6.el7 will be installed
+--> Processing Dependency: mvn(org.apache.felix:org.apache.felix.framework) for package: xbean-3.13-6.el7.noarch
+---> Package xerces-j2.noarch 0:2.11.0-17.el7_0 will be installed
+--> Processing Dependency: xml-commons-resolver >= 1.2 for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(org.apache.xml.resolver) for package: xerces-j2-2.11.0-17.el7_0.noarch
+---> Package xml-commons-apis.noarch 0:1.4.01-16.el7 will be installed
+--> Running transaction check
+---> Package bcel.noarch 0:5.2-18.el7 will be installed
+--> Processing Dependency: mvn(regexp:regexp) for package: bcel-5.2-18.el7.noarch
+---> Package cal10n.noarch 0:0.7.7-4.el7 will be installed
+---> Package devtoolset-3-hamcrest.noarch 0:1.3-6.6.el7 will be installed
+--> Processing Dependency: qdox for package: devtoolset-3-hamcrest-1.3-6.6.el7.noarch
+---> Package felix-framework.noarch 0:4.2.1-5.el7 will be installed
+---> Package geronimo-annotation.noarch 0:1.0-15.el7 will be installed
+---> Package geronimo-jms.noarch 0:1.1.1-19.el7 will be installed
+---> Package hamcrest.noarch 0:1.3-6.el7 will be installed
+--> Processing Dependency: easymock2 for package: hamcrest-1.3-6.el7.noarch
+---> Package java-1.7.0-openjdk-headless.x86_64 1:1.7.0.91-2.6.2.3.el7 will be updated
+---> Package java-1.7.0-openjdk-headless.x86_64 1:1.7.0.95-2.6.4.0.el7_2 will be an update
+---> Package javamail.noarch 0:1.4.6-8.el7 will be installed
+---> Package javassist.noarch 0:3.16.1-10.el7 will be installed
+---> Package jboss-ejb-3.1-api.noarch 0:1.0.2-10.el7 will be installed
+--> Processing Dependency: jboss-jaxrpc-1.1-api for package: jboss-ejb-3.1-api-1.0.2-10.el7.noarch
+--> Processing Dependency: jboss-transaction-1.1-api for package: jboss-ejb-3.1-api-1.0.2-10.el7.noarch
+---> Package jboss-el-2.2-api.noarch 0:1.0.1-0.7.20120212git2fabd8.el7 will be installed
+---> Package jboss-interceptors-1.1-api.noarch 0:1.0.2-0.9.20120319git49a904.el7 will be installed
+---> Package jzlib.noarch 0:1.1.1-6.el7 will be installed
+---> Package plexus-component-api.noarch 0:1.0-0.16.alpha15.el7 will be installed
+---> Package xalan-j2.noarch 0:2.7.1-23.el7 will be installed
+---> Package xml-commons-resolver.noarch 0:1.2-15.el7 will be installed
+--> Running transaction check
+---> Package easymock2.noarch 0:2.5.2-12.el7 will be installed
+---> Package jboss-jaxrpc-1.1-api.noarch 0:1.0.1-7.el7 will be installed
+--> Processing Dependency: jboss-servlet-3.0-api for package: jboss-jaxrpc-1.1-api-1.0.1-7.el7.noarch
+---> Package jboss-transaction-1.1-api.noarch 0:1.0.1-8.el7 will be installed
+---> Package qdox.noarch 0:1.12.1-9.el7 will be installed
+--> Processing Dependency: mvn(org.apache.ant:ant) for package: qdox-1.12.1-9.el7.noarch
+---> Package regexp.noarch 0:1.5-13.el7 will be installed
+--> Running transaction check
+---> Package ant.noarch 0:1.9.2-9.el7 will be installed
+---> Package jboss-servlet-3.0-api.noarch 0:1.0.1-9.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+======================================================================================================================
+ Package                                 Arch   Version                         Repository                       Size
+======================================================================================================================
+Installing:
+ maven                                   noarch 3.0.5-16.el7                    rhel-7-server-eus-optional-rpms 1.3 M
+Installing for dependencies:
+ aether-api                              noarch 1.13.1-13.el7                   rhel-7-server-eus-optional-rpms  89 k
+ aether-connector-wagon                  noarch 1.13.1-13.el7                   rhel-7-server-eus-optional-rpms  34 k
+ aether-impl                             noarch 1.13.1-13.el7                   rhel-7-server-eus-optional-rpms 124 k
+ aether-spi                              noarch 1.13.1-13.el7                   rhel-7-server-eus-optional-rpms  19 k
+ aether-util                             noarch 1.13.1-13.el7                   rhel-7-server-eus-optional-rpms 119 k
+ ant                                     noarch 1.9.2-9.el7                     rhel-7-server-eus-rpms          1.9 M
+ aopalliance                             noarch 1.0-8.el7                       rhel-7-server-eus-optional-rpms  11 k
+ apache-commons-cli                      noarch 1.2-13.el7                      rhel-7-server-eus-rpms           51 k
+ apache-commons-codec                    noarch 1.8-7.el7                       rhel-7-server-eus-rpms          223 k
+ apache-commons-io                       noarch 1:2.4-12.el7                    rhel-7-server-eus-rpms          189 k
+ apache-commons-lang                     noarch 2.6-15.el7                      rhel-7-server-eus-rpms          276 k
+ apache-commons-logging                  noarch 1.1.2-7.el7                     rhel-7-server-eus-rpms           78 k
+ apache-commons-net                      noarch 3.2-8.el7                       rhel-7-server-eus-optional-rpms 261 k
+ atinject                                noarch 1-13.20100611svn86.el7          rhel-7-server-eus-optional-rpms  13 k
+ avalon-framework                        noarch 4.3-10.el7                      rhel-7-server-eus-rpms           87 k
+ avalon-logkit                           noarch 2.1-14.el7                      rhel-7-server-eus-rpms           87 k
+ bcel                                    noarch 5.2-18.el7                      rhel-7-server-eus-rpms          469 k
+ cal10n                                  noarch 0.7.7-4.el7                     rhel-7-server-eus-rpms           36 k
+ cdi-api                                 noarch 1.0-11.SP4.el7                  rhel-7-server-eus-optional-rpms  41 k
+ cglib                                   noarch 2.2-18.el7                      rhel-7-server-eus-optional-rpms 255 k
+ devtoolset-3-hamcrest                   noarch 1.3-6.6.el7                     rhel-server-rhscl-7-rpms        125 k
+ easymock2                               noarch 2.5.2-12.el7                    rhel-7-server-eus-rpms           92 k
+ felix-framework                         noarch 4.2.1-5.el7                     rhel-7-server-eus-optional-rpms 481 k
+ geronimo-annotation                     noarch 1.0-15.el7                      rhel-7-server-eus-rpms           24 k
+ geronimo-jms                            noarch 1.1.1-19.el7                    rhel-7-server-eus-rpms           31 k
+ google-guice                            noarch 3.1.3-9.el7                     rhel-7-server-eus-optional-rpms 385 k
+ guava                                   noarch 13.0-6.el7                      rhel-7-server-eus-optional-rpms 1.6 M
+ hamcrest                                noarch 1.3-6.el7                       rhel-7-server-eus-rpms          125 k
+ httpcomponents-client                   noarch 4.2.5-5.el7_0                   rhel-7-server-eus-rpms          425 k
+ httpcomponents-core                     noarch 4.2.4-6.el7                     rhel-7-server-eus-rpms          466 k
+ jakarta-commons-httpclient              noarch 1:3.1-16.el7_0                  rhel-7-server-eus-rpms          241 k
+ java-1.7.0-openjdk-devel                x86_64 1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms          9.2 M
+ javamail                                noarch 1.4.6-8.el7                     rhel-7-server-eus-rpms          758 k
+ javassist                               noarch 3.16.1-10.el7                   rhel-7-server-eus-rpms          627 k
+ jboss-ejb-3.1-api                       noarch 1.0.2-10.el7                    rhel-7-server-eus-optional-rpms  54 k
+ jboss-el-2.2-api                        noarch 1.0.1-0.7.20120212git2fabd8.el7 rhel-7-server-eus-optional-rpms  44 k
+ jboss-interceptors-1.1-api              noarch 1.0.2-0.9.20120319git49a904.el7 rhel-7-server-eus-optional-rpms  27 k
+ jboss-jaxrpc-1.1-api                    noarch 1.0.1-7.el7                     rhel-7-server-eus-optional-rpms  44 k
+ jboss-servlet-3.0-api                   noarch 1.0.1-9.el7                     rhel-7-server-eus-optional-rpms  82 k
+ jboss-transaction-1.1-api               noarch 1.0.1-8.el7                     rhel-7-server-eus-optional-rpms  40 k
+ jsch                                    noarch 0.1.50-5.el7                    rhel-7-server-eus-optional-rpms 239 k
+ jsoup                                   noarch 1.6.1-10.el7                    rhel-7-server-eus-optional-rpms 263 k
+ junit                                   noarch 4.11-8.el7                      rhel-7-server-eus-rpms          261 k
+ jzlib                                   noarch 1.1.1-6.el7                     rhel-7-server-eus-optional-rpms  72 k
+ log4j                                   noarch 1.2.17-15.el7                   rhel-7-server-eus-rpms          443 k
+ maven-wagon                             noarch 2.4-3.el7                       rhel-7-server-eus-optional-rpms 188 k
+ nekohtml                                noarch 1.9.14-13.el7                   rhel-7-server-eus-optional-rpms 152 k
+ objectweb-asm                           noarch 3.3.1-9.el7                     rhel-7-server-eus-optional-rpms 197 k
+ plexus-cipher                           noarch 1.7-5.el7                       rhel-7-server-eus-optional-rpms  22 k
+ plexus-classworlds                      noarch 2.4.2-8.el7                     rhel-7-server-eus-optional-rpms  54 k
+ plexus-component-api                    noarch 1.0-0.16.alpha15.el7            rhel-7-server-eus-optional-rpms  27 k
+ plexus-containers-component-annotations noarch 1.5.5-14.el7                    rhel-7-server-eus-optional-rpms  11 k
+ plexus-containers-container-default     noarch 1.5.5-14.el7                    rhel-7-server-eus-optional-rpms 183 k
+ plexus-interactivity                    noarch 1.0-0.14.alpha6.el7             rhel-7-server-eus-optional-rpms  17 k
+ plexus-interpolation                    noarch 1.15-8.el7                      rhel-7-server-eus-optional-rpms  57 k
+ plexus-sec-dispatcher                   noarch 1.4-13.el7                      rhel-7-server-eus-optional-rpms  29 k
+ plexus-utils                            noarch 3.0.9-9.el7                     rhel-7-server-eus-optional-rpms 225 k
+ qdox                                    noarch 1.12.1-9.el7                    rhel-7-server-eus-rpms          170 k
+ regexp                                  noarch 1.5-13.el7                      rhel-7-server-eus-rpms           47 k
+ sisu-inject-bean                        noarch 2.3.0-11.el7                    rhel-7-server-eus-optional-rpms 181 k
+ sisu-inject-plexus                      noarch 2.3.0-11.el7                    rhel-7-server-eus-optional-rpms 179 k
+ slf4j                                   noarch 1.7.4-3.el7                     rhel-7-server-eus-rpms          170 k
+ xalan-j2                                noarch 2.7.1-23.el7                    rhel-7-server-eus-rpms          1.9 M
+ xbean                                   noarch 3.13-6.el7                      rhel-7-server-eus-optional-rpms 376 k
+ xerces-j2                               noarch 2.11.0-17.el7_0                 rhel-7-server-eus-rpms          1.1 M
+ xml-commons-apis                        noarch 1.4.01-16.el7                   rhel-7-server-eus-rpms          227 k
+ xml-commons-resolver                    noarch 1.2-15.el7                      rhel-7-server-eus-rpms          108 k
+Updating for dependencies:
+ java-1.7.0-openjdk                      x86_64 1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms          207 k
+ java-1.7.0-openjdk-headless             x86_64 1:1.7.0.95-2.6.4.0.el7_2        rhel-7-server-eus-rpms           25 M
+
+Transaction Summary
+======================================================================================================================
+Install  1 Package  (+67 Dependent packages)
+Upgrade             (  2 Dependent packages)
+
+Total download size: 53 M
+Is this ok [y/d/N]: n
+Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2016-02-15.16-40.yKvQ_V.yumtx
+[root@rhdsrvr Downloads]# yum install tomcat
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package tomcat.noarch 0:7.0.54-2.el7_1 will be installed
+--> Processing Dependency: tomcat-lib = 7.0.54-2.el7_1 for package: tomcat-7.0.54-2.el7_1.noarch
+--> Processing Dependency: apache-commons-pool for package: tomcat-7.0.54-2.el7_1.noarch
+--> Processing Dependency: apache-commons-logging for package: tomcat-7.0.54-2.el7_1.noarch
+--> Processing Dependency: apache-commons-dbcp for package: tomcat-7.0.54-2.el7_1.noarch
+--> Processing Dependency: apache-commons-daemon for package: tomcat-7.0.54-2.el7_1.noarch
+--> Processing Dependency: apache-commons-collections for package: tomcat-7.0.54-2.el7_1.noarch
+--> Running transaction check
+---> Package apache-commons-collections.noarch 0:3.2.1-22.el7_2 will be installed
+---> Package apache-commons-daemon.x86_64 0:1.0.13-6.el7 will be installed
+---> Package apache-commons-dbcp.noarch 0:1.4-17.el7 will be installed
+--> Processing Dependency: mvn(org.apache.geronimo.specs:geronimo-jta_1.1_spec) for package: apache-commons-dbcp-1.4-17.el7.noarch
+---> Package apache-commons-logging.noarch 0:1.1.2-7.el7 will be installed
+--> Processing Dependency: mvn(logkit:logkit) for package: apache-commons-logging-1.1.2-7.el7.noarch
+--> Processing Dependency: mvn(log4j:log4j) for package: apache-commons-logging-1.1.2-7.el7.noarch
+--> Processing Dependency: mvn(avalon-framework:avalon-framework-api) for package: apache-commons-logging-1.1.2-7.el7.noarch
+---> Package apache-commons-pool.noarch 0:1.6-9.el7 will be installed
+---> Package tomcat-lib.noarch 0:7.0.54-2.el7_1 will be installed
+--> Processing Dependency: tomcat-jsp-2.2-api = 7.0.54-2.el7_1 for package: tomcat-lib-7.0.54-2.el7_1.noarch
+--> Processing Dependency: tomcat-el-2.2-api = 7.0.54-2.el7_1 for package: tomcat-lib-7.0.54-2.el7_1.noarch
+--> Processing Dependency: ecj >= 1:4.2.1 for package: tomcat-lib-7.0.54-2.el7_1.noarch
+--> Running transaction check
+---> Package avalon-framework.noarch 0:4.3-10.el7 will be installed
+--> Processing Dependency: xalan-j2 for package: avalon-framework-4.3-10.el7.noarch
+---> Package avalon-logkit.noarch 0:2.1-14.el7 will be installed
+--> Processing Dependency: jms for package: avalon-logkit-2.1-14.el7.noarch
+---> Package ecj.x86_64 1:4.2.1-8.el7 will be installed
+---> Package geronimo-jta.noarch 0:1.1.1-17.el7 will be installed
+---> Package log4j.noarch 0:1.2.17-15.el7 will be installed
+--> Processing Dependency: mvn(javax.mail:mail) for package: log4j-1.2.17-15.el7.noarch
+---> Package tomcat-el-2.2-api.noarch 0:7.0.54-2.el7_1 will be installed
+---> Package tomcat-jsp-2.2-api.noarch 0:7.0.54-2.el7_1 will be installed
+--> Running transaction check
+---> Package geronimo-jms.noarch 0:1.1.1-19.el7 will be installed
+---> Package javamail.noarch 0:1.4.6-8.el7 will be installed
+---> Package xalan-j2.noarch 0:2.7.1-23.el7 will be installed
+--> Processing Dependency: xerces-j2 for package: xalan-j2-2.7.1-23.el7.noarch
+--> Processing Dependency: osgi(org.apache.xerces) for package: xalan-j2-2.7.1-23.el7.noarch
+--> Running transaction check
+---> Package xerces-j2.noarch 0:2.11.0-17.el7_0 will be installed
+--> Processing Dependency: xml-commons-resolver >= 1.2 for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(org.apache.xml.resolver) for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Processing Dependency: osgi(javax.xml) for package: xerces-j2-2.11.0-17.el7_0.noarch
+--> Running transaction check
+---> Package xml-commons-apis.noarch 0:1.4.01-16.el7 will be installed
+---> Package xml-commons-resolver.noarch 0:1.2-15.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+======================================================================================================================
+ Package                             Arch            Version                    Repository                       Size
+======================================================================================================================
+Installing:
+ tomcat                              noarch          7.0.54-2.el7_1             rhel-7-server-eus-rpms           85 k
+Installing for dependencies:
+ apache-commons-collections          noarch          3.2.1-22.el7_2             rhel-7-server-eus-rpms          509 k
+ apache-commons-daemon               x86_64          1.0.13-6.el7               rhel-7-server-eus-rpms           54 k
+ apache-commons-dbcp                 noarch          1.4-17.el7                 rhel-7-server-eus-rpms          167 k
+ apache-commons-logging              noarch          1.1.2-7.el7                rhel-7-server-eus-rpms           78 k
+ apache-commons-pool                 noarch          1.6-9.el7                  rhel-7-server-eus-rpms          113 k
+ avalon-framework                    noarch          4.3-10.el7                 rhel-7-server-eus-rpms           87 k
+ avalon-logkit                       noarch          2.1-14.el7                 rhel-7-server-eus-rpms           87 k
+ ecj                                 x86_64          1:4.2.1-8.el7              rhel-7-server-eus-rpms          1.4 M
+ geronimo-jms                        noarch          1.1.1-19.el7               rhel-7-server-eus-rpms           31 k
+ geronimo-jta                        noarch          1.1.1-17.el7               rhel-7-server-eus-rpms           20 k
+ javamail                            noarch          1.4.6-8.el7                rhel-7-server-eus-rpms          758 k
+ log4j                               noarch          1.2.17-15.el7              rhel-7-server-eus-rpms          443 k
+ tomcat-el-2.2-api                   noarch          7.0.54-2.el7_1             rhel-7-server-eus-rpms           76 k
+ tomcat-jsp-2.2-api                  noarch          7.0.54-2.el7_1             rhel-7-server-eus-rpms           90 k
+ tomcat-lib                          noarch          7.0.54-2.el7_1             rhel-7-server-eus-rpms          3.7 M
+ xalan-j2                            noarch          2.7.1-23.el7               rhel-7-server-eus-rpms          1.9 M
+ xerces-j2                           noarch          2.11.0-17.el7_0            rhel-7-server-eus-rpms          1.1 M
+ xml-commons-apis                    noarch          1.4.01-16.el7              rhel-7-server-eus-rpms          227 k
+ xml-commons-resolver                noarch          1.2-15.el7                 rhel-7-server-eus-rpms          108 k
+
+Transaction Summary
+======================================================================================================================
+Install  1 Package (+19 Dependent packages)
+
+Total download size: 11 M
+Installed size: 14 M
+Is this ok [y/d/N]: n
+Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2016-02-15.16-40.9fAMbm.yumtx
+
+
+--------------------------------------
+
