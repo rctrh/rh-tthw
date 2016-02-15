@@ -37,7 +37,7 @@ Hello World and your first application
 
 ## Step1 Content
 
-In this step, you will learn how to use the `yum` package management tool to find out what Java packages are available and to download and install updates for your system. You will also see how to enable access to additional software repositories for a wider selectione of packages.
+In this step, you will learn how to use the `yum` package management tool to find out what Java packages are available and to download and install updates for your system. You will also see how to enable access to additional software repositories for a wider selection of packages.
 
 First, start a _Terminal_ window from the _Application_ menu.  Then after using `su -` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
 
@@ -69,13 +69,13 @@ To tell if `java` is in your `PATH` use `which`:
 
 `# which java`
 
-If `java` is in your path, determine which verion:
+If `java` is in your path, determine which version:
 
 `# java -version`
 
 ### View available JDKs
 
-Yuo can view or search packages that are available to be installed with `yum list available`:
+You can view or search packages that are available to be installed with `yum list available`:
 
 `yum list available java\*devel`
 
@@ -92,7 +92,7 @@ There are a number of additional software repositories for Red Hat Enterprise Li
 
 Instructions are provided below for the command-line. If your system has a graphical desktop installed, you can use the graphical version of `subscription-manager`. Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. Select _Repositories_ from the _System_ menu of subscription manager.
 
-Note: The naming of Red Hat software repositories is specific to the server, workstation, or desktop editions of Red Hat Enterprise Linux your system is using. The examples below are for server installations. If you are using the workstation or desktop edition, subtitute `-workstation-` or `-desktop-` for `-server-` in the following commands.
+Note: The naming of Red Hat software repositories is specific to the server, workstation, or desktop editions of Red Hat Enterprise Linux your system is using. The examples below are for server installations. If you are using the workstation or desktop edition, substitute `-workstation-` or `-desktop-` for `-server-` in the following commands.
 
 To see what repositories are currently have enabled:
 
@@ -169,11 +169,10 @@ Add the following text to the file:
 ----
 public class hello {
 
-        public static void main(String[] args) {
-                // TODO Auto-generated method stub
-                System.out.println("Hello, Red Hat Developers World from Java " +
-				   System.getProperty("java.version"));
-        }
+    public static void main(String[] args) {
+        System.out.println("Hello, Red Hat Developers World from Java " +
+			   System.getProperty("java.version"));
+    }
 }
 ----
 
@@ -208,7 +207,21 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 [[troubleshooting]]Troubleshooting and FAQ
 
 ## Faq section
-
+. Where can I find Java development tools as libraries such as `ant` and `maven` for Red Hat Enterprise Linux?
++
+. I can't find many Java packages for Red Hat Enterprise Linux, where should I look?
++
+Many Java development tools and libraries are located in the _Optional RPMs_ repository. The _Optional RPMs_ repository isn't enabled by default as the packages in them have support policies that differ from the main Red Hat Enterprise Linux packages. Step 1 of this tutorial shows how to enable the _Optional RPMs_ repository, which is recommended for Java developers. 
++
+The following command will enable the repository:
++
+`# subscription-manager repos --enable rhel-7-server-optional-rpms`
++
+. Is a Java Interactive Development Environment (IDE) such as Eclipse available for Red Hat Enterprise Linux?
++
+JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[]
++
+For more information see link:http://www.jboss.org/products/devstudio/overview/[JBoss Developer Studio Overview].
 . How do I find out what JRE and JDKs are already installed?
 +
 You can see the list of installed packages with `yum list installed`.  You can narrow the list to show only package names starting with java. The naming convention for JDK packages is `java-_version_-_provider_-devel_`. Version 1.8.0 of the OpenJDK is named `java-1.8.0-openjdk-devel`. The JRE components are packed separately. The JRE package name is the same as the JDK without `-devel`.
@@ -221,7 +234,7 @@ The list includes package name, version information, and which software reposito
 +
 Several Red Hat packages require a JRE. The most common is the Internet browser package, which installs Firefox and OpenJDK to be able to run Java applets.
 +
-. Are other JRE/JDKs othan than OpenJDK available for Red Hat Enterprise Linux?
+. Are JRE/JDKs other than OpenJDK available for Red Hat Enterprise Linux?
 +
 . Can I install Oracle's JRE/JDK on Red Hat Enterprise Linux?
 +
@@ -261,12 +274,6 @@ For tools that need the `JAVA_HOME` environment variable, set it to `/usr/lib/jv
 +
 The JRE and JDKs are packaged in separate but complementary RPM to avoid redundancy. When you installed the JDK using the `-devel` package, the matching JRE package will be automatically installed if necessary. Setting `JAVA_HOME` to point to one of the `java-` directories will pick up both JDK and JRE components. If you want only JRE components set `JAVA_HOME` to `jre-1.8.0-openjdk`.
 +
-. Is a Java interactive development environment such as the Eclipse IDE available for Red Hat Enterprise Linux?
+. How can I change which JRE/JDK is used when I type `java` or `javac`?
 +
-JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[]
-
-For more information see link:http://www.jboss.org/products/devstudio/overview/[JBoss Developer Studio Overview].
-
-
-
-
+With a default `PATH` setup, typing `java` or `javac` will use the commands from `/usr/bin/`. These are managed by the `alternatives` command to make it easy to switch between different packages. See _Managing Java Versions_ above for more information. Note that using the `alternatives` command will change which JRE/JDK is used system-wide for any command or application that doesn't explicitly specify which JVM to use. This could have unintended side effects on a shared system or server.
