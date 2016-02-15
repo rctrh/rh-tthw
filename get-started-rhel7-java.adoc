@@ -218,6 +218,7 @@ The following command will enable the repository:
 `# subscription-manager repos --enable rhel-7-server-optional-rpms`
 +
 Now you can install `ant`, `maven`, and other Java development tools:
++
 `# yum install ant maven`
 +
 . Is a Java Interactive Development Environment (IDE) such as Eclipse available for Red Hat Enterprise Linux?
@@ -231,8 +232,12 @@ You can see the list of installed packages with `yum list installed`.  You can n
 +
 `# yum list installed java\*`
 +
-The list includes package name, version information, and which software repository it was installed from. 
-
+The output includes package name, version information, and which software repository it was installed from.
++
+If you want to install the matching JDK for a JRE that is already installed, add `-devel` to the package name.  For example, if you have the `java-1.8.0-openjdk` JRE, you can install the JDK with the following command:
++
+`# yum install java-1.8.0-openjdk-devel`
++
 . Why is an OpenJDK JRE already installed on my system?
 +
 Several Red Hat packages require a JRE. The most common is the Internet browser package, which installs Firefox and OpenJDK to be able to run Java applets.
