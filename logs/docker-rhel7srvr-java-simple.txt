@@ -1,0 +1,377 @@
+
+[rt@rhdsrvr rh-tthw]$ cat hello/hello_http.java
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+import java.net.URI;
+
+public class hello_http {
+
+    public static void main(String[] args) throws Exception {
+	int port = 8000;
+        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+        server.createContext("/", new MyHandler());
+        server.setExecutor(null);
+	System.out.println("Listening on port: " + port);
+        server.start();
+    }
+
+    static class MyHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+	    URI uri = t.getRequestURI();
+            String response = "Hello, Red Hat Developers World from Java " +
+		System.getProperty("java.version") + "\n";
+	    System.out.println("Sending response for " + uri);
+            t.sendResponseHeaders(200, response.length());
+            OutputStream os = t.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
+        }
+    }
+}
+
+
+[rt@rhdsrvr rh-tthw]$ cat hello/docker/java-simple/Dockerfile
+#
+# Trivial Java HTTP Hello World app in a container
+#
+# installs JRE and JDK
+# compiles class file
+# specifies how to run app
+FROM rhel:latest
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+COPY . /opt/myapp
+
+RUN yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel && yum -y clean all
+
+WORKDIR /opt/myapp
+
+RUN javac hello_http.java
+
+EXPOSE 8000
+ENTRYPOINT ["java"]
+CMD ["hello_http"]
+
+
+
+
+----------------------------
+
+
+[root@rhdsrvr java-simple]# docker build -t myname/javasimple .
+Sending build context to Docker daemon  5.12 kB
+Step 0 : FROM rhel:latest
+ ---> 6883d5422f4e
+Step 1 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Using cache
+ ---> 0f66c45c1170
+Step 2 : COPY . /opt/myapp
+ ---> 728e24015515
+Removing intermediate container 19d0cf18bb94
+Step 3 : RUN yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel && yum -y clean all
+ ---> Running in a3d03b16df08
+Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package java-1.8.0-openjdk.x86_64 1:1.8.0.71-2.b15.el7_2 will be installed
+--> Processing Dependency: java-1.8.0-openjdk-headless = 1:1.8.0.71-2.b15.el7_2 for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: xorg-x11-fonts-Type1 for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libpng15.so.15(PNG15_0)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: fontconfig for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libpng15.so.15()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjvm.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libjava.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libgif.so.4()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libawt.so()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
+---> Package java-1.8.0-openjdk-devel.x86_64 1:1.8.0.71-2.b15.el7_2 will be installed
+--> Running transaction check
+---> Package alsa-lib.x86_64 0:1.0.28-2.el7 will be installed
+---> Package fontconfig.x86_64 0:2.10.95-7.el7 will be installed
+--> Processing Dependency: freetype for package: fontconfig-2.10.95-7.el7.x86_64
+--> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.10.95-7.el7.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: fontconfig-2.10.95-7.el7.x86_64
+---> Package giflib.x86_64 0:4.1.6-9.el7 will be installed
+--> Processing Dependency: libSM.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64
+--> Processing Dependency: libICE.so.6()(64bit) for package: giflib-4.1.6-9.el7.x86_64
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.71-2.b15.el7_2 will be installed
+--> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: lksctp-tools for package: 1:java-1.8.0-openjdk-headless-1.8.0.71-2.b15.el7_2.x86_64
+--> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.71-2.b15.el7_2.x86_64
+---> Package libX11.x86_64 0:1.6.3-2.el7 will be installed
+--> Processing Dependency: libX11-common >= 1.6.3-2.el7 for package: libX11-1.6.3-2.el7.x86_64
+--> Processing Dependency: libxcb.so.1()(64bit) for package: libX11-1.6.3-2.el7.x86_64
+---> Package libXext.x86_64 0:1.3.3-3.el7 will be installed
+---> Package libXi.x86_64 0:1.7.4-2.el7 will be installed
+---> Package libXrender.x86_64 0:0.9.8-2.1.el7 will be installed
+---> Package libXtst.x86_64 0:1.2.2-2.1.el7 will be installed
+---> Package libjpeg-turbo.x86_64 0:1.2.90-5.el7 will be installed
+---> Package libpng.x86_64 2:1.5.13-7.el7_2 will be installed
+---> Package xorg-x11-fonts-Type1.noarch 0:7.5-9.el7 will be installed
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+--> Processing Dependency: ttmkfdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+--> Processing Dependency: mkfontdir for package: xorg-x11-fonts-Type1-7.5-9.el7.noarch
+--> Running transaction check
+---> Package fontpackages-filesystem.noarch 0:1.44-8.el7 will be installed
+---> Package freetype.x86_64 0:2.4.11-11.el7 will be installed
+---> Package javapackages-tools.noarch 0:3.4.1-11.el7 will be installed
+--> Processing Dependency: python-javapackages = 3.4.1-11.el7 for package: javapackages-tools-3.4.1-11.el7.noarch
+--> Processing Dependency: libxslt for package: javapackages-tools-3.4.1-11.el7.noarch
+---> Package libICE.x86_64 0:1.0.9-2.el7 will be installed
+---> Package libSM.x86_64 0:1.2.2-2.el7 will be installed
+---> Package libX11-common.noarch 0:1.6.3-2.el7 will be installed
+---> Package libxcb.x86_64 0:1.11-4.el7 will be installed
+--> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.11-4.el7.x86_64
+---> Package lksctp-tools.x86_64 0:1.0.13-3.el7 will be installed
+---> Package ttmkfdir.x86_64 0:3.0.9-42.el7 will be installed
+---> Package tzdata-java.noarch 0:2016a-1.el7 will be installed
+---> Package xorg-x11-font-utils.x86_64 1:7.5-20.el7 will be installed
+--> Processing Dependency: libfontenc.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-20.el7.x86_64
+--> Processing Dependency: libXfont.so.1()(64bit) for package: 1:xorg-x11-font-utils-7.5-20.el7.x86_64
+--> Running transaction check
+---> Package libXau.x86_64 0:1.0.8-2.1.el7 will be installed
+---> Package libXfont.x86_64 0:1.5.1-2.el7 will be installed
+---> Package libfontenc.x86_64 0:1.1.2-3.el7 will be installed
+---> Package libxslt.x86_64 0:1.1.28-5.el7 will be installed
+---> Package python-javapackages.noarch 0:3.4.1-11.el7 will be installed
+--> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.el7.noarch
+--> Running transaction check
+---> Package python-lxml.x86_64 0:3.2.1-4.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch   Version                Repository              Size
+================================================================================
+Installing:
+ java-1.8.0-openjdk  x86_64 1:1.8.0.71-2.b15.el7_2 rhel-7-server-eus-rpms 217 k
+ java-1.8.0-openjdk-devel
+                     x86_64 1:1.8.0.71-2.b15.el7_2 rhel-7-server-eus-rpms 9.7 M
+Installing for dependencies:
+ alsa-lib            x86_64 1.0.28-2.el7           rhel-7-server-eus-rpms 391 k
+ fontconfig          x86_64 2.10.95-7.el7          rhel-7-server-eus-rpms 228 k
+ fontpackages-filesystem
+                     noarch 1.44-8.el7             rhel-7-server-eus-rpms 9.9 k
+ freetype            x86_64 2.4.11-11.el7          rhel-7-server-eus-rpms 391 k
+ giflib              x86_64 4.1.6-9.el7            rhel-7-server-eus-rpms  40 k
+ java-1.8.0-openjdk-headless
+                     x86_64 1:1.8.0.71-2.b15.el7_2 rhel-7-server-eus-rpms  31 M
+ javapackages-tools  noarch 3.4.1-11.el7           rhel-7-server-eus-rpms  73 k
+ libICE              x86_64 1.0.9-2.el7            rhel-7-server-eus-rpms  65 k
+ libSM               x86_64 1.2.2-2.el7            rhel-7-server-eus-rpms  39 k
+ libX11              x86_64 1.6.3-2.el7            rhel-7-server-eus-rpms 606 k
+ libX11-common       noarch 1.6.3-2.el7            rhel-7-server-eus-rpms 162 k
+ libXau              x86_64 1.0.8-2.1.el7          rhel-7-server-eus-rpms  29 k
+ libXext             x86_64 1.3.3-3.el7            rhel-7-server-eus-rpms  39 k
+ libXfont            x86_64 1.5.1-2.el7            rhel-7-server-eus-rpms 150 k
+ libXi               x86_64 1.7.4-2.el7            rhel-7-server-eus-rpms  40 k
+ libXrender          x86_64 0.9.8-2.1.el7          rhel-7-server-eus-rpms  26 k
+ libXtst             x86_64 1.2.2-2.1.el7          rhel-7-server-eus-rpms  20 k
+ libfontenc          x86_64 1.1.2-3.el7            rhel-7-server-eus-rpms  30 k
+ libjpeg-turbo       x86_64 1.2.90-5.el7           rhel-7-server-eus-rpms 134 k
+ libpng              x86_64 2:1.5.13-7.el7_2       rhel-7-server-eus-rpms 213 k
+ libxcb              x86_64 1.11-4.el7             rhel-7-server-eus-rpms 189 k
+ libxslt             x86_64 1.1.28-5.el7           rhel-7-server-eus-rpms 242 k
+ lksctp-tools        x86_64 1.0.13-3.el7           rhel-7-server-eus-rpms  87 k
+ python-javapackages noarch 3.4.1-11.el7           rhel-7-server-eus-rpms  31 k
+ python-lxml         x86_64 3.2.1-4.el7            rhel-7-server-eus-rpms 758 k
+ ttmkfdir            x86_64 3.0.9-42.el7           rhel-7-server-eus-rpms  48 k
+ tzdata-java         noarch 2016a-1.el7            rhel-7-server-eus-rpms 176 k
+ xorg-x11-font-utils x86_64 1:7.5-20.el7           rhel-7-server-eus-rpms  87 k
+ xorg-x11-fonts-Type1
+                     noarch 7.5-9.el7              rhel-7-server-eus-rpms 521 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages (+29 Dependent packages)
+
+Total download size: 46 M
+Installed size: 156 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7Server/rhel-7-server-eus-rpms/packages/fontconfig-2.10.95-7.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+Public key for fontconfig-2.10.95-7.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              1.0 MB/s |  46 MB  00:44     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Importing GPG key 0xFD431D51:
+ Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
+ Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@koji-override-0/7.0)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Importing GPG key 0x2FA658E0:
+ Userid     : "Red Hat, Inc. (auxiliary key) <security@redhat.com>"
+ Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
+ Package    : redhat-release-server-7.2-9.el7.x86_64 (@koji-override-0/7.0)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : freetype-2.4.11-11.el7.x86_64                               1/31 
+  Installing : libfontenc-1.1.2-3.el7.x86_64                               2/31 
+  Installing : libICE-1.0.9-2.el7.x86_64                                   3/31 
+  Installing : libxslt-1.1.28-5.el7.x86_64                                 4/31 
+  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                           5/31 
+  Installing : python-lxml-3.2.1-4.el7.x86_64                              6/31 
+  Installing : python-javapackages-3.4.1-11.el7.noarch                     7/31 
+  Installing : javapackages-tools-3.4.1-11.el7.noarch                      8/31 
+  Installing : libSM-1.2.2-2.el7.x86_64                                    9/31 
+  Installing : libXfont-1.5.1-2.el7.x86_64                                10/31 
+  Installing : 1:xorg-x11-font-utils-7.5-20.el7.x86_64                    11/31 
+  Installing : ttmkfdir-3.0.9-42.el7.x86_64                               12/31 
+  Installing : tzdata-java-2016a-1.el7.noarch                             13/31 
+  Installing : lksctp-tools-1.0.13-3.el7.x86_64                           14/31 
+  Installing : libXau-1.0.8-2.1.el7.x86_64                                15/31 
+  Installing : libxcb-1.11-4.el7.x86_64                                   16/31 
+  Installing : alsa-lib-1.0.28-2.el7.x86_64                               17/31 
+  Installing : libX11-common-1.6.3-2.el7.noarch                           18/31 
+  Installing : libX11-1.6.3-2.el7.x86_64                                  19/31 
+  Installing : libXext-1.3.3-3.el7.x86_64                                 20/31 
+  Installing : libXi-1.7.4-2.el7.x86_64                                   21/31 
+  Installing : libXtst-1.2.2-2.1.el7.x86_64                               22/31 
+  Installing : giflib-4.1.6-9.el7.x86_64                                  23/31 
+  Installing : libXrender-0.9.8-2.1.el7.x86_64                            24/31 
+  Installing : fontpackages-filesystem-1.44-8.el7.noarch                  25/31 
+  Installing : fontconfig-2.10.95-7.el7.x86_64                            26/31 
+  Installing : xorg-x11-fonts-Type1-7.5-9.el7.noarch                      27/31 
+  Installing : 2:libpng-1.5.13-7.el7_2.x86_64                             28/31 
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.71-2.b15.el7_2.x86_6   29/31 
+  Installing : 1:java-1.8.0-openjdk-devel-1.8.0.71-2.b15.el7_2.x86_64     30/31 
+  Installing : 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64           31/31 
+  Verifying  : libXext-1.3.3-3.el7.x86_64                                  1/31 
+  Verifying  : python-javapackages-3.4.1-11.el7.noarch                     2/31 
+  Verifying  : giflib-4.1.6-9.el7.x86_64                                   3/31 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                           4/31 
+  Verifying  : libXtst-1.2.2-2.1.el7.x86_64                                5/31 
+  Verifying  : freetype-2.4.11-11.el7.x86_64                               6/31 
+  Verifying  : 1:java-1.8.0-openjdk-devel-1.8.0.71-2.b15.el7_2.x86_64      7/31 
+  Verifying  : python-lxml-3.2.1-4.el7.x86_64                              8/31 
+  Verifying  : libxcb-1.11-4.el7.x86_64                                    9/31 
+  Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                             10/31 
+  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                  11/31 
+  Verifying  : ttmkfdir-3.0.9-42.el7.x86_64                               12/31 
+  Verifying  : libX11-1.6.3-2.el7.x86_64                                  13/31 
+  Verifying  : 1:java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64           14/31 
+  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                            15/31 
+  Verifying  : libX11-common-1.6.3-2.el7.noarch                           16/31 
+  Verifying  : xorg-x11-fonts-Type1-7.5-9.el7.noarch                      17/31 
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.71-2.b15.el7_2.x86_6   18/31 
+  Verifying  : libxslt-1.1.28-5.el7.x86_64                                19/31 
+  Verifying  : libXfont-1.5.1-2.el7.x86_64                                20/31 
+  Verifying  : libICE-1.0.9-2.el7.x86_64                                  21/31 
+  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                     22/31 
+  Verifying  : alsa-lib-1.0.28-2.el7.x86_64                               23/31 
+  Verifying  : libXi-1.7.4-2.el7.x86_64                                   24/31 
+  Verifying  : libXau-1.0.8-2.1.el7.x86_64                                25/31 
+  Verifying  : libSM-1.2.2-2.el7.x86_64                                   26/31 
+  Verifying  : libfontenc-1.1.2-3.el7.x86_64                              27/31 
+  Verifying  : fontconfig-2.10.95-7.el7.x86_64                            28/31 
+  Verifying  : lksctp-tools-1.0.13-3.el7.x86_64                           29/31 
+  Verifying  : tzdata-java-2016a-1.el7.noarch                             30/31 
+  Verifying  : 1:xorg-x11-font-utils-7.5-20.el7.x86_64                    31/31 
+
+Installed:
+  java-1.8.0-openjdk.x86_64 1:1.8.0.71-2.b15.el7_2                              
+  java-1.8.0-openjdk-devel.x86_64 1:1.8.0.71-2.b15.el7_2                        
+
+Dependency Installed:
+  alsa-lib.x86_64 0:1.0.28-2.el7                                                
+  fontconfig.x86_64 0:2.10.95-7.el7                                             
+  fontpackages-filesystem.noarch 0:1.44-8.el7                                   
+  freetype.x86_64 0:2.4.11-11.el7                                               
+  giflib.x86_64 0:4.1.6-9.el7                                                   
+  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.71-2.b15.el7_2                     
+  javapackages-tools.noarch 0:3.4.1-11.el7                                      
+  libICE.x86_64 0:1.0.9-2.el7                                                   
+  libSM.x86_64 0:1.2.2-2.el7                                                    
+  libX11.x86_64 0:1.6.3-2.el7                                                   
+  libX11-common.noarch 0:1.6.3-2.el7                                            
+  libXau.x86_64 0:1.0.8-2.1.el7                                                 
+  libXext.x86_64 0:1.3.3-3.el7                                                  
+  libXfont.x86_64 0:1.5.1-2.el7                                                 
+  libXi.x86_64 0:1.7.4-2.el7                                                    
+  libXrender.x86_64 0:0.9.8-2.1.el7                                             
+  libXtst.x86_64 0:1.2.2-2.1.el7                                                
+  libfontenc.x86_64 0:1.1.2-3.el7                                               
+  libjpeg-turbo.x86_64 0:1.2.90-5.el7                                           
+  libpng.x86_64 2:1.5.13-7.el7_2                                                
+  libxcb.x86_64 0:1.11-4.el7                                                    
+  libxslt.x86_64 0:1.1.28-5.el7                                                 
+  lksctp-tools.x86_64 0:1.0.13-3.el7                                            
+  python-javapackages.noarch 0:3.4.1-11.el7                                     
+  python-lxml.x86_64 0:3.2.1-4.el7                                              
+  ttmkfdir.x86_64 0:3.0.9-42.el7                                                
+  tzdata-java.noarch 0:2016a-1.el7                                              
+  xorg-x11-font-utils.x86_64 1:7.5-20.el7                                       
+  xorg-x11-fonts-Type1.noarch 0:7.5-9.el7                                       
+
+Complete!
+Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
+Cleaning repos: rhel-7-server-eus-rpms rhel-7-server-rpms
+              : rhel-7-server-rt-beta-rpms rhel-7-server-rt-rpms
+              : rhel-ha-for-rhel-7-server-eus-rpms
+              : rhel-ha-for-rhel-7-server-rpms
+              : rhel-rs-for-rhel-7-server-eus-rpms
+              : rhel-rs-for-rhel-7-server-rpms
+Cleaning up everything
+ ---> 3d2812589c7c
+Removing intermediate container a3d03b16df08
+Step 4 : WORKDIR /opt/myapp
+ ---> Running in 852e30a10dc1
+ ---> 9e560841c474
+Removing intermediate container 852e30a10dc1
+Step 5 : RUN javac hello_http.java
+ ---> Running in 8aa9d564c5b1
+ ---> e174c0191856
+Removing intermediate container 8aa9d564c5b1
+Step 6 : EXPOSE 8000
+ ---> Running in df6893221874
+ ---> 6af4ecb3be04
+Removing intermediate container df6893221874
+Step 7 : ENTRYPOINT java
+ ---> Running in cb61fe5bc361
+ ---> e7c7cb804e82
+Removing intermediate container cb61fe5bc361
+Step 8 : CMD hello_http
+ ---> Running in 9d61fc06b903
+ ---> 91696859668c
+Removing intermediate container 9d61fc06b903
+Successfully built 91696859668c
+[root@rhdsrvr java-simple]# docker run -d -p 8000:8000 --rm --name hellojava myname/javasimple
+Conflicting options: --rm and -d
+[root@rhdsrvr java-simple]# docker run -d -p 8000:8000  --name hellojava myname/javasimple
+025629cbec3292600e34d4e4e4e6bb9a2471f215331b7b24c066ebe222fba34b
+[root@rhdsrvr java-simple]# docker logs hellojava
+Listening on port: 8000
+[root@rhdsrvr java-simple]# docker logs hellojava
+Listening on port: 8000
+Sending response for /index.html
+[root@rhdsrvr java-simple]# docker logs hellojava
+Listening on port: 8000
+Sending response for /index.html
+Sending response for /
+[root@rhdsrvr java-simple]# docker stop hellojava
+hellojava
+[root@rhdsrvr java-simple]# docker rm hellojava
+hellojava
+
+
