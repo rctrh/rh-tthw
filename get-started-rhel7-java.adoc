@@ -123,7 +123,7 @@ Install the JDK, changing the version number if necessary, with the following co
 
 `# yum install java-1.8.0-openjdk-devel`
 
-Check that `javac` is now in your path and verify version:
+Check that `javac` is now in your path and check which version:
 
 `# javac -version`
 
