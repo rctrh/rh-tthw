@@ -123,6 +123,10 @@ Install the JDK, changing the version number if necessary, with the following co
 
 `# yum install java-1.8.0-openjdk-devel`
 
+Check that `javac` is now in your path and verify version:
+
+`# javac -version`
+
 ### Managing Java versions
 
 It is possible to have multiple versions of the JRE and JDK packages installed concurrently. You might have a set of applications or services installed your system that require more than one versions of Java. JRE and JDK packages for Red Hat Enterprise Linux are installed in separate directories under `/usr/lib/jvm`. This allows them to be installed concurrently. However only one version can be in the shell's command path as `java` or `javac` at a time.
@@ -234,7 +238,7 @@ You can see the list of installed packages with `yum list installed`.  You can n
 +
 The output includes package name, version information, and which software repository it was installed from.
 +
-If you want to install the matching JDK for a JRE that is already installed, add `-devel` to the package name.  For example, if you have the `java-1.8.0-openjdk` JRE, you can install the JDK with the following command:
+If you want to install the matching JDK for a JRE that is already installed, add `-devel` to the package name.  For example, if you have the `java-1.8.0-openjdk` JRE, you can add the JDK components with the following command:
 +
 `# yum install java-1.8.0-openjdk-devel`
 +
