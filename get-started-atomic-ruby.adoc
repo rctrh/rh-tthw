@@ -119,6 +119,7 @@ default     29     1  0 16:28 ?        00:00:00 ps -ef
 bash-4.2$ exit
 exit
 ```
+* [mreid] this is the only guide that uses just 'bash' for run, the others use '/bin/bash'. Doesn't seem to affect what happens, but they're not consistent with each other.*
 
 The prior `docker run` command created a container to run your command, keep any state, and isolate it from the rest of the system. You can view the list of running containers with `docker ps`. To see all of the containers that have been created, including those that have exited, use `docker ps -a`.
 
