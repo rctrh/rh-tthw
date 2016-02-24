@@ -8,7 +8,7 @@ Get started developing with Java on Red Hat Enterprise Linux in under 10 minutes
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to get started with Java development on Red Hat Enterprise Linux by creating a simple Hello World application. You will install a Java Development Kit (JDK), and learn what Java packages are available.  The whole tutorial should take less than 10 minutes to complete.
+In this tutorial, you will see how to get started with Java development on Red Hat Enterprise Linux by creating a simple Hello World application. You will install a Java Development Kit (JDK), and learn which Java packages are available.  The whole tutorial should take less than 10 minutes to complete.
 
 You will need a Red Hat Enterprise Linux 7+ system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
@@ -37,7 +37,7 @@ Hello World and your first application
 
 ## Step1 Content
 
-In this step, you will learn how to use the `yum` package management tool to find out what Java packages are available and to download and install updates for your system. You will also see how to enable access to additional software repositories for a wider selection of packages.
+In this step, you will learn how to use the `yum` package management tool to find out which Java packages are available and to download and install updates for your system. You will also see how to enable access to additional software repositories for a wider selection of packages.
 
 First, start a _Terminal_ window from the _Application_ menu.  Then use `su -` to change to the root user ID, and use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
 
@@ -79,7 +79,7 @@ You can view or search packages that are available to be installed with `yum lis
 
 `# yum list available java\*devel`
 
-The output will show the package name and what software repository it resides in. Only software repositories that have been enabled for downloading are included in the results.
+The output will show the package name and on which software repository it resides in. Only software repositories that have been enabled for downloading are included in the results.
 
 
 ### Enabling additional software repositories
@@ -94,7 +94,7 @@ Instructions are provided below for the command-line. If your system has a graph
 
 Note: The naming of Red Hat software repositories is specific to the server, workstation, or desktop editions of Red Hat Enterprise Linux your system is using. The examples below are for server installations. If you are using the workstation or desktop edition, substitute `-workstation-` or `-desktop-` for `-server-` in the following commands.
 
-To see what repositories are currently have enabled:
+To see which repositories are currently have enabled:
 
 `# subscription-manager repos --list-enabled`
 
@@ -230,7 +230,7 @@ Now you can install `ant`, `maven`, and other Java development tools:
 JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[jboss.org]
 +
 For more information see link:http://www.jboss.org/products/devstudio/overview/[JBoss Developer Studio Overview].
-. How do I find out what JRE and JDKs are already installed?
+. How do I find out which JRE and JDKs are already installed?
 +
 You can see the list of installed packages with `yum list installed`.  You can narrow the list to show only package names starting with java. The naming convention for JDK packages is `java-_version_-_provider_-devel_`. Version 1.8.0 of the OpenJDK is named `java-1.8.0-openjdk-devel`. The JRE components are packed separately. The JRE package name is the same as the JDK without `-devel`.
 +
