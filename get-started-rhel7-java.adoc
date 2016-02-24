@@ -8,9 +8,9 @@ Get started developing with Java on Red Hat Enterprise Linux in under 10 minutes
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to get started with Java development on Red Hat Enterprise Linux by creating a simple Hello World application. You will install a packaged Java Development Kit (JDK), and learn what Java packages are available.  The whole tutorial should take less than 10 minutes to complete.
+In this tutorial, you will see how to get started with Java development on Red Hat Enterprise Linux by creating a simple Hello World application. You will install a Java Development Kit (JDK), and learn what Java packages are available.  The whole tutorial should take less than 10 minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
+You will need a Red Hat Enterprise Linux 7+ system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
 Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
@@ -39,7 +39,7 @@ Hello World and your first application
 
 In this step, you will learn how to use the `yum` package management tool to find out what Java packages are available and to download and install updates for your system. You will also see how to enable access to additional software repositories for a wider selection of packages.
 
-First, start a _Terminal_ window from the _Application_ menu.  Then after using `su -` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
+First, start a _Terminal_ window from the _Application_ menu.  Then use `su -` to change to the root user ID, and use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
 
 [.code-block]
 ```
@@ -86,7 +86,7 @@ The output will show the package name and what software repository it resides in
 
 There are a number of additional software repositories for Red Hat Enterprise Linux. These aren't enabled by default as the packages in them have support policies that differ from the main Red Hat Enterprise Linux packages. Some of these repositories have packages that are of interest to Java developers:
 
-* The _Optional RPMs) repository includes a number of Java development tools and libraries. Most Java developers will want to enable this repository.
+* The _Optional RPMs_ repository includes a number of Java development tools and libraries. Most Java developers will want to enable this repository.
 * Versions of the JRE and JDK from IBM can be found in the _Supplementary RPMs_ repository.
 * The Oracle JRE and JDK are located in the _Third-party Oracle Java RPMs_ repository.
 
@@ -163,15 +163,15 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 In this step, you will create and compile a simple Java application using the command line. If you don't have a _Terminal_ window open, start it from the _Applications_ menu.  You should run under your normal user ID,  If you are still running as root, type `exit`.
 
-First you need to create `hello.java` using your preferred text editor such as `vi`, `nano`, or `gedit`:
+First you need to create `Hello.java` using your preferred text editor such as `vi`, `nano`, or `gedit`:
 
-`$ nano hello.java`
+`$ nano Hello.java`
 
 Add the following text to the file:
 
-.hello.java
+.Hello.java
 ----
-public class hello {
+public class Hello {
 
     public static void main(String[] args) {
         System.out.println("Hello, Red Hat Developers World from Java " +
@@ -182,13 +182,13 @@ public class hello {
 
 Now compile with `javac`:
 
-`$ javac hello.java`
+`$ javac Hello.java`
 
 If it compiled without error, run it:
 
 [.code-block]
 ```
-`$ java hello
+`$ java Hello
 Hello, Red Hat Developers World from Java 1.8.0_71
 ```
 
