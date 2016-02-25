@@ -254,7 +254,7 @@ OpenJDK, IBM, and Oracle JRE/JDKs are available from Red Hat software repositori
 +
 If you have a graphical desktop installed, Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Select _Repositories_ from subscription manager's  _System_ menu.
 +
-To enable additional repositories from the command line, run either of the following commands after changing to the root user ID with `su -`: 
+To enable additional repositories from the command line, run one, or both of the following commands after changing to the root user ID with `su -`: 
 +
 ```
 # subscription-manager repos --enable rhel-7-server-supplementary-rpms
