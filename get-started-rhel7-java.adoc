@@ -227,9 +227,10 @@ Now you can install `ant`, `maven`, and other Java development tools:
 +
 . Is a Java Interactive Development Environment (IDE) such as Eclipse available for Red Hat Enterprise Linux?
 +
-JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing java applications. For development purposes, $0 subscriptions are available after registering at link:http://jboss.org/[jboss.org]
+JBoss Developer Studio is built on Eclipse, it provides superior support for your entire development lifecycle. It includes features that will help you quickly get started developing Java applications. For development purposes, $0 subscriptions are available after registering at link:http://developers.redhat.com/[developers.redhat.com]
 +
-For more information see link:http://www.jboss.org/products/devstudio/overview/[JBoss Developer Studio Overview].
+For more information see link:http://developers.redhat.com/products/devstudio/[JBoss Developer Studio Overview].
++
 . How do I find out what JRE and JDKs are already installed?
 +
 You can see the list of installed packages with `yum list installed`.  You can narrow the list to show only package names starting with java. The naming convention for JDK packages is `java-_version_-_provider_-devel_`. Version 1.8.0 of the OpenJDK is named `java-1.8.0-openjdk-devel`. The JRE components are packed separately. The JRE package name is the same as the JDK without `-devel`.
