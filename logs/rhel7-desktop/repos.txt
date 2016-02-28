@@ -1,0 +1,257 @@
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-7-desktop-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-optional-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/optional/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-beta-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/optional/
+           os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rhn-tools/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-thirdparty-oracle-java-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Oracle Java (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/oracle-java/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/supplemen
+           tary/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-beta-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-beta-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rhn-tools
+           /source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-thirdparty-oracle-java-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Oracle Java (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/oracle-java/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rh-common
+           /debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-source-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rhn-tools/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/optio
+           nal/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-fastrack-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Fastrack (RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/optio
+           nal/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rh-common/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/optional/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/supplementary/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-fastrack-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Fastrack (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/sourc
+           e/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/supplemen
+           tary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/source/SR
+           PMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/supplementary/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-beta-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rhn-tools
+           /os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/optional/
+           source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-thirdparty-oracle-java-beta-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Oracle Java Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/oracle-ja
+           va/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-beta-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/supplemen
+           tary/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-extras-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Extras (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/7Client/$basearch/e
+           xtras/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-optional-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/optional/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/optio
+           nal/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-thirdparty-oracle-java-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Oracle Java Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/oracle-ja
+           va/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rh-common/os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-supplementary-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/supplementary/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-optional-beta-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/optional/
+           debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-beta-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop Beta (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rhn-tools
+           /debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-beta-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common Beta (RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rh-common
+           /os
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-beta-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common Beta (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/beta/rhel/client/7/$basearch/rh-common
+           /source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rhn-tools-debug-rpms
+Repo Name: RHN Tools for Red Hat Enterprise Linux 7 Desktop (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rhn-tools/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-extras-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Extras (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/7Client/$basearch/e
+           xtras/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-rh-common-source-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - RH Common (Source RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/rh-common/source/SRPMS
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-extras-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Extras (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/7Client/$basearch/e
+           xtras/debug
+Enabled:   0
+
+Repo ID:   rhel-7-desktop-fastrack-debug-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Fastrack (Debug RPMs)
+Repo URL:  https://cdn.redhat.com/content/fastrack/rhel/client/7/$basearch/debug
+Enabled:   0
+
