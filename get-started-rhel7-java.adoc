@@ -194,12 +194,10 @@ Hello, Red Hat Developers World from Java 1.8.0_71
 
 ### Where to go next?
 
-*Get Started with JBoss Development Technologies* +
-link:http://www.jboss.org/get-started/[]
+* Dive into Java enterprise application development with link:http://developers.redhat.com/ticket-monster/[Ticket Monster], a moderately complex application that demonstrates how to build modern applications using JBoss web technologies.
++
+* Go to the Red Hat Developers site, to learn more about link:http://developers.redhat.com/enterprise-java/[Enterprise Java and JBoss technologies].
 
-[*FIXME - Mike/Burr - Any suggestions? Red Hat Java Resources?*]
-
-*Fedora/CentOS Java SIG
 
 ## More Resources
 
