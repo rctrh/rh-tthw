@@ -8,10 +8,7 @@ Get started with Red Hat Enterprise Linux 7 for software development.
 Introduction and Prerequisites
 
 ## Prerequisites section
-This tutorial provides an overview of the key steps for obtaining and installing link:http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux[Red Hat Enterprise Linux] so you can get started with software development today. Red Hat Enterprise Linux and the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer[Red Hat Enterprise Linux Developer Program] combine production stability with developer agility:
-
-* The developer tools supplied with Red Hat Enterprise Linux are supported for 10 years. This level of stability makes Red Hat Enterprise Linux the ideal platform for development and deployment of applications with a long life cycle.
-* For application development that requires the latest tools and technologies, link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections (RHSCL)] and the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset (DTS)] provide tools that are updated annually. 
+This tutorial provides an overview of the key steps for obtaining and installing link:http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux[Red Hat Enterprise Linux] so you can get started with software development today.
 
 If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
 
