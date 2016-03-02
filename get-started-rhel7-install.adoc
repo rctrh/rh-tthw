@@ -131,18 +131,17 @@ image:images/rhel7-install/rhel-72/rhel-13-firstboot-config.png[Screenshot Insta
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the checkbox to accept the license.
-.. Click Done in the upper left corner to return to the configuration screen.
+.. Click _Done_ in the upper left corner to return to the configuration screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
 . Click to On the _Subscription Management Registration_ screen
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next screen.
 // image:#{cdn(site.base_url + '/images/products/xxx/rhel7-install/rhel-72/rhel-15b-subscription-credentials.png')}[Screenshot Installation Complete]
 image:images/rhel7-install/rhel-72/rhel-72/rhel-15b-subscription-credentials.png[Screenshot Installation Complete]
-. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal.
+. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal.  Note: For this step to succeed, you must have configured your network connection.
+.. If you have more than one subscription available, select which subscription to attach this installation to
+.. Click _Done_.
 +
-Note: For this step to succeed, you must have configured your network connection.
-+
-. If you have more than one subscription available, select which subscription to attach this installation to.
 . Click _Finish configuration_ when you are done.
 +
 // If you are using an evaluation, you must first agree to the terms and conditions at link:https://www.redhat.com/wapps/ugc/[www.redhat.com/wapps/ugc/].
