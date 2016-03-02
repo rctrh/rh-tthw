@@ -2,17 +2,17 @@
 :awestruct-interpolate: true
 
 ## Path Intro section
-Get started with Red Hat Enterprise Linux 7 for software development.
+Developer quick start: Install Red Hat Enterprise Linux 7
 
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-This tutorial provides an overview of the key steps for obtaining and installing link:http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux[Red Hat Enterprise Linux] so you can get started with software development today.
+This tutorial provides an overview of the key steps for obtaining and installing link:http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux[Red Hat Enterprise Linux] so you can get started with software development today. You will install Red Hat Enterprise Linux Server with a full graphical desktop.
 
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
+If you don’t have a Red Hat Enterprise Linux subscription, get link:https://developers.redhat.com/products/rhel/download/[Red Hat Enterprise Developer Suite] after registering at link:https://developers.redhat.com/[developers.redhat.com]. Red Hat Enterprise Linux Developer Suite includes Red Hat Enterprise Linux Server, Red Hat Software Collections (RHSCL) and Red Hat Developer Toolset (DTS).
 
-If you are interested in purchasing a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer#dev-page=1[Red Hat subscription for development], the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, RHSCL, and DTS. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
+// If you are interested in purchasing a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer#dev-page=1[Red Hat subscription for development], the link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, RHSCL, and DTS. For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
 
 For the installation, you will need a 64-bit x86 physical or virtual machine with at least 16 GB of available disk space. For more detailed link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-installation-planning-x86.html[minimum hardware requirements and compatibility information], see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
 
@@ -45,15 +45,7 @@ In this step, you will download Red Hat Enterprise Linux from the Red Hat custom
 . Log in to link:https://access.redhat.com/[access.redhat.com].
 +
 If you don't have an account, link:https://www.redhat.com/wapps/ugc/register.html[register to create one].
-. Obtain a link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=1[Red Hat Enterprise Linux subscription] if you don't already have one:
 +
-* Purchase a developer's subscription: https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Developer Suite] or https://www.redhat.com/apps/store/developers/rhel_developer_workstation_professional.html[Developer Workstation].
-+
-* Or, start a link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[Red Hat Enterprise Linux Developer Workstation evaluation].
-
-.. After you sign up for the evaluation you will receive an email with a link to click on to activate your 30-day evaluation.
-.. After you click through the email, visit link:https://www.redhat.com/wapps/ugc[www.redhat.com/wapps/ugc] to accept the license agreement.
-
 . Download the _binary DVD .iso file_ for link:https://access.redhat.com/downloads/content/69/ver=/rhel---7/x86_64/product-downloads[Red Hat Enterprise Linux Server].
 +
 On the download page, under _Product Variant_ select _Red Hat Enterprise Linux Server_. Choosing the _Server_ edition gives you the widest range of software to develop and test with. During installation you will choose the _Server with a GUI_ option for a full graphical desktop.
@@ -245,16 +237,20 @@ link:http://developerblog.redhat.com/[]
 ## Faq section
 . My system is unable to download updates from Red Hat.
 +
-Your system must be registered with Red Hat using `subscription-manager register`. You need to have a current Red Hat subscription or an evaluation.
+Your system must be registered with Red Hat using `subscription-manager register`. You need to have a current Red Hat subscription.
 
-. I don't have a current Red Hat subscription, can I get an evaluation?
+. As a developer, how can I get a Red Hat Enterprise Linux subscription?
 +
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[access.redhat.com/products/red-hat-enterprise-linux/evaluation]. Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes additional tools from the Red Hat Developer Toolset and Red Hat Software Collections.
+If you don’t have a Red Hat Enterprise Linux subscription, get link:https://developers.redhat.com/products/rhel/download/[Red Hat Enterprise Developer Suite] after registering at link:https://developers.redhat.com/[developers.redhat.com]. Red Hat Enterprise Linux Developer Suite includes Red Hat Enterprise Linux Server, Red Hat Software Collections and Red Hat Developer Toolset.
++
 . The RHSCL repository is not available or is not found on my system.
 +
 The name of the repository depends on whether you have a server, workstation, or desktop version of Red Hat Enterprise Linux installed.
 +
-Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
+Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. For developers, Red Hat Enterprise Linux Developer Suite includes both RHSCL and DTS.
++
+See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
++
 . How do I get newer versions of languages like Perl, PHP, Python, and Ruby in Red Hat Enterprise Linux?
 +
 How can I get Python 3 on Red Hat Enterprise Linux
