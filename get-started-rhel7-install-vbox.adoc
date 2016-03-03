@@ -132,8 +132,8 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 .. Ensure that _Type_ is set to _Linux_ and _Version_ is set to _Red Hat (64-bit)_.
 .. Click _Next_.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-02-create.png')}[Screenshot Boot Splash]
-image::images/rhel7-install/vbox/vbox-02-create.png[Screenshot Create VM]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-02-create.png')}[Screenshot Boot Splash]
+image::images/rhel7-install/vbox/ubuntu-vbox-02-create.png[Screenshot Create VM]
 +
 . Set the VM memory size ro _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, cloick _Next_.
 
@@ -143,29 +143,29 @@ Next you will configure the new VM's virtual hard disk. The size of the virtual 
 . Select _Create a virtual hard disk now_ on the _Hard disk_ dialog. Then, click _Create_ to move to the next dialog.
 . Select _VDI (VirtualBox Disk Image)_ on the _Hard disk file type_ dialog. Then, click _Next_.
 . Select _Dynamically allocated_ on the _Storage on physical hard disk_ dialog. Then, click _Next_.
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-05-hd4.png')}[Screenshot HD Dynamic]
-image::images/rhel7-install/vbox/vbox-05-hd4.png[Screenshot HD Dynamic]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-05-hd4.png')}[Screenshot HD Dynamic]
+image::images/rhel7-install/vbox/ubuntu-vbox-05-hd4.png[Screenshot HD Dynamic]
 . On the _File location and size+ dialog:
 .. Change the _name_ and _location_ if desired.
 .. Set the _size_ to be a minimum of _16 GB_.
 .. Click _Create_.
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-05-hd2.png')}[Screenshot File Location]
-image::images/rhel7-install/vbox/vbox-05-hd2.png[Screenshot File Location]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-05-hd2.png')}[Screenshot File Location]
+image::images/rhel7-install/vbox/ubuntu-vbox-05-hd2.png[Screenshot File Location]
 
 
 At this point the basic VM configuration has been completed, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-06-settings1.png')}[Screenshot VM Created]
-image::images/rhel7-install/vbox/vbox-06-settings1.png[Screenshot VM Created]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings1.png')}[Screenshot VM Created]
+image::images/rhel7-install/vbox/ubuntu-vbox-06-settings1.png[Screenshot VM Created]
 
 . Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-06-settings2.png')}[Screenshot Settings Advanced]
-image::images/rhel7-install/vbox/vbox-06-settings1.png[Screenshot Settings Advanced]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings2.png')}[Screenshot Settings Advanced]
+image::images/rhel7-install/vbox/ubuntu-vbox-06-settings1.png[Screenshot Settings Advanced]
 +
 . By default, the VM will have a single virtual processor. If your system has multiple processors or cores, you can add more. Select the _System_ group, then click the _Processor_ tab. Adjust _Processors_ to the desired value.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-06-settings3.png')}[Screenshot Settings Processor]
-image::images/rhel7-install/vbox/vbox-06-settings3.png[Screenshot Settings Processor]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings3.png')}[Screenshot Settings Processor]
+image::images/rhel7-install/vbox/ubuntu-vbox-06-settings3.png[Screenshot Settings Processor]
 +
 . In the _Network_ group, under the _Adapter 1_ tab, you can configure the VM’s networking configuration. See _VirtualBox Networking_ below for more information.
 
@@ -178,8 +178,8 @@ Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO
 . Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
 . Click _OK_ to close the VM settings dialog.
 
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/vbox-04-settings4.png')}[Screenshot Settings RHEL DVD]
-image::images/rhel7-install/vbox/vbox-06-settings4.png[Screenshot Settings RHEL DVD]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-04-settings4.png')}[Screenshot Settings RHEL DVD]
+image::images/rhel7-install/vbox/ubuntu-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
 
 
 #### Create a shared folder between the host system and the VM (Optional)
