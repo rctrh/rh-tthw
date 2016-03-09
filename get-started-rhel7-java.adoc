@@ -10,10 +10,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will see how to get started with Java development on Red Hat Enterprise Linux by creating a simple Hello World application. You will install a Java Development Kit (JDK), and learn what Java packages are available.  The whole tutorial should take less than 10 minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
-
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
-Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
+You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, get link:https://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux Developer Suite] after registering at link:https://developers.redhat.com/[developers.redhat.com]
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -209,6 +206,10 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 [[troubleshooting]]Troubleshooting and FAQ
 
 ## Faq section
+. As a developer, how can I get a Red Hat Enterprise Linux subscription?
++
+If you don't have a Red Hat Enterprise Linux subscription, register at link:https://developers.redhat.com/[developers.redhat.com] and then download link:https://developers.redhat.com/products/rhel/download[Red Hat Enterprise Linux Developer Suite].
+
 . Where can I find Java development tools as libraries such as `ant` and `maven` for Red Hat Enterprise Linux?
 +
 I can't find many Java packages for Red Hat Enterprise Linux, where should I look?
