@@ -10,9 +10,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will learn how to start building Python 3 applications in docker containers on Red Hat Enterprise Linux. In order to build and run containers you will first install `docker` on your Red Hat Enterprise Linux 7 system.
 
-You will need a system running Red Hat Enterprise Linux Server and current Red Hat subscription that allows you to download software and updates from Red Hat. If you are interested in purchasing a Red Hat subscription for development, the link:https://www.redhat.com/apps/store/developers/rhel_developer_suite.html[Red Hat Developer Suite] is an affordable choice that includes Red Hat Enterprise Linux Server, Atomic Host, Red Hat Developer Toolset (DTS), and Red Hat Software Collections (RHSCL). For developer support with a guaranteed response time service-level agreement (SLA), Red Hat Developer Workstation Professional or Enterprise subscriptions are available.
-
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ evaluation option to ensure your evaluation will include both RHSCL and DTS, then download and install Red Hat Enterprise Linux Server. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide on the live developer's site.]*.
+You will need a system running Red Hat Enterprise Linux 7 Server with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux Server subscription, get link:https://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux Developer Suite] after registering at link:https://developers.redhat.com/[developers.redhat.com].
 
 If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -319,10 +317,10 @@ link:http://developerblog.redhat.com/[]
 . My system is unable to download updates from Red Hat.
 +
 Your system must be registered with Red Hat using `subscription-manager register`. You need to have a current Red Hat subscription or an evaluation.
-
-. I don't have a current Red Hat subscription, can I get an evaluation?
 +
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[]. Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS. See _Get Started with Red Hat Enterprise Linux_ for an overview of installing Red Hat Enterprise Linux for development. *[FIXME - Need a link to get-started-rhel7-install TTHW guide]*.
+. As a developer, how can I get a Red Hat Enterprise Linux subscription?
++
+If you don't have a Red Hat Enterprise Linux subscription, register at link:https://developers.redhat.com/[developers.redhat.com] and then download link:https://developers.redhat.com/products/rhel/download[Red Hat Enterprise Linux Developer Suite].
 +
 . How do I tell if there is a container image available that has a newer version of Python 3?
 +
