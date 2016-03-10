@@ -3,18 +3,24 @@
 
 # VirtualBox Installation Guide for inclusion in combined install guide.
 
+*Include this in VirtualBox tab of combined install guide as Steps 2 and Steps 3.*
+
+*Bare Metal step 2 is included in this document, any changes made to the bare metal step 2, need to be made here as well!*
+
+*Original guide for reference: link:get-started-rhel7-install.adoc[]*
+
+
 ## Step2 content 
 
-This tutorial provides an overview of the key steps for installing link:http://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux] in a link:https://www.virtualbox.org/[VirtualBox] Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows, Mac OS X, Ubuntu, or other Linux.
-
-Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] or link:https://www.virtualbox.org/manual/UserManual.html[VirtualBox User Manual]. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manaul.
+This step provides an overview of the key steps for installing link:http://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux] in a link:https://www.virtualbox.org/[VirtualBox] Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows, Mac OS X, Ubuntu, or other Linux.
 
 ### Overview of steps
 
 . Download and install VirtualBox.
-. Download Red Hat Enterprise Linux Server DVD ISO file.
-. Create a VM and install Red Hat Enterprise Linux.
-. Customize your Red Hat Enterprise Linux VM for software development.
+. Configure a VM to run Red Hat Enterprise Linux.
+. Boot the VM using the ISO file you downloaded in step 1.
+
+Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] or link:https://www.virtualbox.org/manual/UserManual.html[VirtualBox User Manual]. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manaul.
 
 A few things to keep in mind:
 
@@ -32,8 +38,6 @@ The requirements for your physical system that will host the Red Hat Enterprise 
 * 24 GB of available disk space for the VM, the installation ISO file, and VirtualBox.
 * A processor with hardware virtualization assistance (Intel VT-x or AMD-V).
 
-
-// For the installation, you will need a 64-bit x86 physical or virtual machine with at least 16 GB of available disk space. For more detailed link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-installation-planning-x86.html[minimum hardware requirements and compatibility information], see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
 
 If you encounter difficulties at any point in this tutorial, see <<troubleshooting,Troubleshooting and FAQ>>.
 
