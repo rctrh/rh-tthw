@@ -4,7 +4,8 @@
 ## Do Not Use This Document for OCTOPUS
 
 *This document has been replaced with a new shorter doc for the Octopus content*
-See link:https://github.com/rctrh/rh-tthw/blob/master/install-rhel7.adoc
+
+*See link:install-rhel7.adoc[]*
 
 
 ## Path Intro section

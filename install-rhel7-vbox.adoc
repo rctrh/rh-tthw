@@ -7,7 +7,8 @@
 
 *Bare Metal step 2 is included in this document, any changes made to the bare metal step 2, need to be made here as well!*
 
-*Original guide for reference: link:get-started-rhel7-install.adoc[]*
+
+*Original guide for reference: link:get-started-rhel7-install-vbox.adoc[]*
 
 
 ## Step2 content 
