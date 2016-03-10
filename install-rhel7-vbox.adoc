@@ -12,13 +12,14 @@
 
 ## Step2 content 
 
-This step provides an overview of the key steps for installing link:http://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux] in a link:https://www.virtualbox.org/[VirtualBox] Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows, Mac OS X, Ubuntu, or other Linux.
+This step provides an overview of the key steps for installing link:http://developers.redhat.com/products/rhel/overview/[Red Hat Enterprise Linux Server] in a link:https://www.virtualbox.org/[VirtualBox] Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows, Mac OS X, Ubuntu, or other Linux.
 
 ### Overview of steps
 
 . Download and install VirtualBox.
 . Configure a VM to run Red Hat Enterprise Linux.
-. Boot the VM using the ISO file you downloaded in step 1.
+. Boot the VM using the ISO file you downloaded in step 1 as a virtual DVD.
+. Install Red Hat Enterprise Linux.
 
 Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] or link:https://www.virtualbox.org/manual/UserManual.html[VirtualBox User Manual]. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manaul.
 
@@ -165,6 +166,7 @@ There are a few key steps to remember during the installation process:
 . Select _Server with a GUI_ under _Software Selection_ so the system will boot into the full graphical environment after installation. By default, Red Hat Enterprise Linux Server will not install a graphical desktop.
 . Create your primary user account during installation: After the installation begins, you will be instructed to set a password for the root account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. The regular user will be your primary login for development. The root account should only be used for system administration tasks. If you don't create a user before the installation completes, you will need to reboot and then log in as root to create user accounts.
 
+// BEGIN STEP 2 - KEEP THIS IN SYNC WITH BARE METAL
 ### Installation instructions
 
 . Start the system from the bootable disk and select _Install Red Hat Enterprise Linux_.
@@ -210,7 +212,8 @@ image:images/rhel7-install/rhel-72/rhel-12-install-finished.png[Screenshot Insta
 
 If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
-
+// END STEP 2 - KEEP THIS IN SYNC WITH BARE METAL
+// BEGIN STEP 3 - This is a SUPERSET of bare metal STEP 3. Keep in sync.
 ## Step3 Content
 
 This section has a number of post-installation steps that complete the installation of Red Hat Enterprise Linux and prepare it for software development. The steps are:
@@ -317,3 +320,7 @@ You can make specific services on the VM accessible using port forwarding. For e
 Alternatively, you can attach the VM to directly network by sharing the network adapter from the host system as a bridged network adapter. In this configuration, the VM gets its own IP address, usually using your network’s DHCP server. The VM appears on the network the same way a physical computer would with its own hardware MAC address. The host’s network adapter is shared by a device driver that is installed by VirtualBox. The VM’s virtual network adapter can only be bridged to one physical network adapter at a time. If your system has more than one network adapter you need to choose which one to attach to. If your system switches between wired and wireless connections, you will need to switch bridged adapters for the VM.
 
 Networking, both physical and virtual, is a large topic beyond the scope of this guide. For more information see link:https://www.virtualbox.org/manual/ch06.html[Virtual Networking] in the link:https://www.virtualbox.org/manual/[VirtualBox User Manual].
+
+// End of VirtualBOX tab
+
+## Step4 Content
