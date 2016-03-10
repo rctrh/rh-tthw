@@ -302,7 +302,7 @@ If you get a text-based login screen instead of a graphical one, see <<troublesh
 +
 . Select your preferred language.
 
-### Disable lock screen and acreen power saving
+### Disable lock screen and screen power saving
 
 For security and to save energy, the default configuration of Red Hat Enterpise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
 
