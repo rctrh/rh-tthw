@@ -44,8 +44,9 @@ If you encounter difficulties at any point in this tutorial, see <<troubleshooti
 ### Download and install VMware.
 
 You will need to download a VMware desktop virtualization product for your system:
-+ Microsoft Windows: link:https://www.vmware.com/products/workstation/[VMware Workstation Pro] or link:https://www.vmware.com/products/player/[VMware Workstation Player].
-+ Apple Mac OS X: VMware link:https://www.vmware.com/products/fusion/[Fusion] or link:https://www.vmware.com/products/fusion-pro/[VMware Fusion Pro].
+
+* Microsoft Windows: link:https://www.vmware.com/products/workstation/[VMware Workstation Pro] or link:https://www.vmware.com/products/player/[VMware Workstation Player].
+* Apple Mac OS X: VMware link:https://www.vmware.com/products/fusion/[Fusion] or link:https://www.vmware.com/products/fusion-pro/[VMware Fusion Pro].
 
 After the download completes, click on the downloaded `.exe` or `.dmg` file to start the installation. During the installation you will need to agree to using administrative privileges for a number of the steps.
 
@@ -76,22 +77,31 @@ Click _Create a New Virtual Machine_ to bring up the _New Virtual Machine Wizard
 .. Select _Installer disc image file (.iso)_
 .. Click _Browse_, then locate the ISO file you downloaded in step 1.
 .. Click _Next_.
++
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-win/vmw-01-create-iso.png')}[Screenshot Create VM]
 image::images/rhel7-install/vmware-win/vmw-01-create-iso.png[Screenshot Create VM ISO selection]
++
 . On the _Select a Guest Operating System_ dialog
 .. Select _Linux_ under _Guest Operating _system
 .. Select _Red Hat Enterprise Linux 7 64-bit_ from the list of choices under _Version_.
++
 image::images/rhel7-install/vmware-win/vmw-02-create-os.png[Screenshot Create VM OS Type]
++
 .. Click _Next_.
 . On the _Name the Virtual Machine_ dialog:
 .. Enter `rhel` or your preferred name in the _Virtual machine name_ box.
 .. Change the _location_ of the VMs files, including the virtual hard disk if necessary. By default it will be placed in your _Documents_ folder. You will need 20 GB of space in the choosen location.
++
 image::images/rhel7-install/vmware-win/vmw-03-create-name.png[Screenshot Create VM name]
++
 . On the _Specify Disk Capacity_ dialog you will set the size of the VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialogs to configure the virtual hard disk
 .. Change the _Maximum disk size (GB)_ if needed. The default is 20 GB.
 .. Click _Next_.
++
 image::images/rhel7-install/vmware-win/vmw-04-create-disk-size.png[Screenshot Create VM disk size]
++
 . Click _Finish_ to create the VM.
++
 image::images/rhel7-install/vmware-win/vmw-05-create-finish.png[Screenshot Create VM finished]
 
 
