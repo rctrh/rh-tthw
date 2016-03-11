@@ -144,6 +144,8 @@ image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Creat
 
 At this point the basic VM configuration has been completed, but some additional configuration is needed. Click the Settings button (wrench icon), or select _Settings_ from the _Virtual Machine_ menu.
 
+image::images/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Settings]
+
 . Click the _CD/DVD_ icon in the _VM Settings_ dialog.
 .. Select _Choose a disk or disk image..._  from the CD/DVD dialog. By default it is set to _Autodetect_.
 .. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1.  Then click _Open_.
@@ -151,8 +153,14 @@ At this point the basic VM configuration has been completed, but some additional
 .. Click _Show All_ to return to _VM Settings_.
 . Optionally, you can tailor the configuration of the VM to suit your needs. 
 .. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon.
++
+image::images/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png[Screenshot CPU and Memory Settings]
++
 .. You can change the size of the virtual hard disk by clicking the _Hard Disk_ icon. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM.
 .. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
++
+image::images/rhel7-install/vmware-mac/vmf-06-settings-network.png[Screenshot VM Network Settings]
++
 . Close the _VM settings_ dialog.
 
 
