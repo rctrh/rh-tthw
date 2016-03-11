@@ -133,7 +133,7 @@ Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO
 . Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
 . Click _OK_ to close the VM settings dialog.
 
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-04-settings4.png')}[Screenshot Settings RHEL DVD]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
 image::images/rhel7-install/vbox/ubuntu-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
 
 
