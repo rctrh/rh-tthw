@@ -20,7 +20,7 @@ This step provides an overview of the key steps for installing link:http://devel
 . Boot the VM using the ISO file you downloaded in step 1 as a virtual DVD.
 . Install Red Hat Enterprise Linux.
 
-Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] or link:https://www.vmware.com/support/pubs/[VMware documentation]. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manaul.
+Note: This tutorial does not replace the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] or link:https://www.vmware.com/support/pubs/[VMware documentation]. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manual.
 
 A few things to keep in mind:
 
@@ -50,12 +50,12 @@ You will need to download a VMware desktop virtualization product for your syste
 
 After the download completes, click on the downloaded `.exe` or `.dmg` file to start the installation. During the installation you will need to agree to using administrative privileges for a number of the steps.
 
-The Windows enhanched virtual keyboard driver is not required. You may install it if needed for improved support of international keyboards.
+The Windows enhanced virtual keyboard driver is not required. You may install it if needed for improved support of international keyboards.
 
 Note: This guide uses VMware Workstation 12 and VMware Fusion 8. Older versions may work but the steps might be slightly different.
 
 
-#### Enable Intel VT-x or AMD-V Virtualizatoin in BIOS/UEFI
+#### Enable Intel VT-x or AMD-V Virtualization in BIOS/UEFI
 
 Intel and AMD processors have hardware extensions for accelerating virtualization. On some systems this support may be disabled by default in the system’s BIOS/UEFI.  To enable the extensions, you might have to go into the system’s BIOS/UEFI setup configuration at boot time. Consult your system’s hardware documentation for more information.
 
@@ -90,7 +90,7 @@ image::images/rhel7-install/vmware-win/vmw-02-create-os.png[Screenshot Create VM
 .. Click _Next_.
 . On the _Name the Virtual Machine_ dialog:
 .. Enter `rhel` or your preferred name in the _Virtual machine name_ box.
-.. Change the _location_ of the VMs files, including the virtual hard disk if necessary. By default it will be placed in your _Documents_ folder. You will need 20 GB of space in the choosen location.
+.. Change the _location_ of the VMs files, including the virtual hard disk if necessary. By default it will be placed in your _Documents_ folder. You will need 20 GB of space in the chosen location.
 +
 image::images/rhel7-install/vmware-win/vmw-03-create-name.png[Screenshot Create VM name]
 +
@@ -117,7 +117,7 @@ At this point the basic VM configuration has been completed. You may optional ch
 
 When you launch VMware Fusion without having any VM's it will automatically open dialog to begin creating a VM. If you already have a VM created, select _New_ from the _File_ menu. At the select
 
-. Click _Create a cutom virtual machine_ on the _Select the Installation Method_ dialog. Then, click _Continue_.
+. Click _Create a custom virtual machine_ on the _Select the Installation Method_ dialog. Then, click _Continue_.
 +
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-01-create.png')}[Screenshot Create VM]
 image::images/rhel7-install/vmware-mac/vmf-01-create.png[Screenshot Create VM]
@@ -136,9 +136,9 @@ image::images/rhel7-install/vmware-mac/vmf-03-create-disk.png[Screenshot Create 
 +
 image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Create VM Create Finished]
 +
-. Choose the name and location to start the VM files. Note: By default it will be placed in your _Documents_ folder. You will need at least 20 GB of space in the choosen location.
+. Choose the name and location to start the VM files. Note: By default it will be placed in your _Documents_ folder. You will need at least 20 GB of space in the chosen location.
 .. Set the VM name to `rhel` in the _Save As_ box.
-.. Chanage the location for the files in the _Where_ box if needed.
+.. Change the location for the files in the _Where_ box if needed.
 .. Click _Save_.
 
 
@@ -149,7 +149,7 @@ image::images/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Setting
 . Click the _CD/DVD_ icon in the _VM Settings_ dialog.
 .. Select _Choose a disk or disk image..._  from the CD/DVD dialog. By default it is set to _Autodetect_.
 .. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1.  Then click _Open_.
-.. Click the _Connect CD/DVD Drive_ checkbox.
+.. Click the _Connect CD/DVD Drive_ check box.
 .. Click _Show All_ to return to _VM Settings_.
 . Optionally, you can tailor the configuration of the VM to suit your needs. 
 .. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon.
@@ -159,7 +159,7 @@ image::images/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png[Screenshot
 .. You can change the size of the virtual hard disk by clicking the _Hard Disk_ icon. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM.
 .. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
 +
-image::images/rhel7-install/vmware-mac/vmf-06-settings-network.png[Screenshot VM Network Settings]
+image::images/rhel7-install/vmware-mac/vmf-07-settings-network.png[Screenshot VM Network Settings]
 +
 . Close the _VM settings_ dialog.
 
@@ -167,7 +167,7 @@ image::images/rhel7-install/vmware-mac/vmf-06-settings-network.png[Screenshot VM
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
-To start the VM and begin installation, start VMware if it isn’t already running, then select your VM and click the Play button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD.
+To start the VM and begin installation, start VMware if it isn’t already running, then select your VM and click the Play button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD `.iso` file.
 
 Note: When you click inside the VM window, the keyboard and mouse will be captured by the VM until you hit _Ctrl_ and _Alt_ on Windows or the left option key on the Mac. When the system is fully installed this will no longer be necessary. See <<Open VM Tools replaces VMware Tools for Linux>>. 
 
@@ -245,7 +245,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:images/rhel7-install/rhel-72/rhel-13-firstboot-config.png[Screenshot Installation Complete]
 
 . Click _License information_ to go the license acceptance screen.
-.. Click the checkbox to accept the license.
+.. Click the check box to accept the license.
 .. Click _Done_ in the upper left corner to return to the configuration screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
 . Click to On the _Subscription Management Registration_ screen
@@ -271,7 +271,7 @@ If you get a text-based login screen instead of a graphical one, see <<troublesh
 
 ### Disable lock screen and screen power saving
 
-For security and to save energy, the default configuration of Red Hat Enterpise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
+For security and to save energy, the default configuration of Red Hat Enterprise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
 
 To disable these features, from the desktop _Application_ menu, select the _System Tools_ group, then select _Settings_. Follow these steps in the _Settings_ application.
 
@@ -313,23 +313,14 @@ In this step you will configure your system to obtain software from the _Optiona
 # subscription-manager repos --enable rhel-7-server-optional-rpms
 ```
 
-### Create a shared folder between the host system and the VM (Optional)
-
-[*FIXME*]
-
-You may create a folder that is shared between your host system and the Red Hat Enterprise Linux VM. This makes it easy to share files such as source code between the two systems. The configuration for shared folders can be performed now or anytime later.
-
-Shared folders will only be available on the VM after the _VirtualBox Guest Additions_ software is installed on the VM. Installation of VirtualBox Guest Additions is covered later with the other Red Hat Enterprise Linux post-installation steps.
-
-To add a shared folder:
-
-. Select your _RHEL VM_ in VirtualBox, the click the _Settings_ button.
-. Select the _Shared Folders_ group.
-. Click the folder icon with a _+_ in the upper right corner.
-. In the _Add Share_ dialog:
-.. Enter the path on the host system in the _Folder Path_.
-.. Ehter a name without spaces for the shared folder on the VM.
-. Click _OK_ to close the _VM Settings_ dialog.
+// ### Create a shared folder between the host system and the VM (Optional)
+//
+//[*FIXME*]
+// 
+// You may create a folder that is shared between your host system and the Red Hat Enterprise Linux VM. This makes it easy to share files such as source code between the two systems. The configuration for shared folders can be performed now or anytime later.
+//
+// To use shared folders, open-vm-tools needs to be installed which should happen automatically on Red Hat Enterprise Linux.  
+//
 
 
 ### VMware Networking
@@ -352,3 +343,5 @@ Red Hat Enterprise Linux includes _Open VM Tools_ which replaces the VMware's Op
 // End of VMware tab
 
 ## Step4 Content
+
+LocalWords:  VMware hypervisor hypervisors
