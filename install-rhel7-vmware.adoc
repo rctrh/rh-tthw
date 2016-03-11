@@ -85,6 +85,7 @@ image::images/rhel7-install/vmware-win/vmw-01-create-iso.png[Screenshot Create V
 .. Select _Linux_ under _Guest Operating _system
 .. Select _Red Hat Enterprise Linux 7 64-bit_ from the list of choices under _Version_.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-win/vmw-02-create-os.png[Screenshot Create VM OS Type]
 image::images/rhel7-install/vmware-win/vmw-02-create-os.png[Screenshot Create VM OS Type]
 +
 .. Click _Next_.
@@ -92,16 +93,19 @@ image::images/rhel7-install/vmware-win/vmw-02-create-os.png[Screenshot Create VM
 .. Enter `rhel` or your preferred name in the _Virtual machine name_ box.
 .. Change the _location_ of the VMs files, including the virtual hard disk if necessary. By default it will be placed in your _Documents_ folder. You will need 20 GB of space in the chosen location.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-win/vmw-03-create-name.png[Screenshot Create VM name]
 image::images/rhel7-install/vmware-win/vmw-03-create-name.png[Screenshot Create VM name]
 +
 . On the _Specify Disk Capacity_ dialog you will set the size of the VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialogs to configure the virtual hard disk
 .. Change the _Maximum disk size (GB)_ if needed. The default is 20 GB.
 .. Click _Next_.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-win/vmw-04-create-disk-size.png[Screenshot Create VM disk size]
 image::images/rhel7-install/vmware-win/vmw-04-create-disk-size.png[Screenshot Create VM disk size]
 +
 . Click _Finish_ to create the VM.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-win/vmw-05-create-finish.png[Screenshot Create VM finished]
 image::images/rhel7-install/vmware-win/vmw-05-create-finish.png[Screenshot Create VM finished]
 +
 
@@ -126,14 +130,17 @@ image::images/rhel7-install/vmware-mac/vmf-01-create.png[Screenshot Create VM]
 .. Select _Red Hat Enterprise Linux 7 64-bit_ from the list on the right.
 .. Click _Continue_.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-02-create-os.png[Screenshot Create VM Choose OS]
 image::images/rhel7-install/vmware-mac/vmf-02-create-os.png[Screenshot Create VM Choose OS]
 +
 . Click _Continue_ on the _Choose a Virtual Disk_ dialog. The option _Create a new virtual disk_ should be selected by default. The default virtual disk size is 20 GB. 
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-03-create-disk.png[Screenshot Create VM Create Disk]
 image::images/rhel7-install/vmware-mac/vmf-03-create-disk.png[Screenshot Create VM Create Disk]
 +
 . Click _Finish_.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Create VM Create Finished]
 image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Create VM Create Finished]
 +
 . Choose the name and location to start the VM files. Note: By default it will be placed in your _Documents_ folder. You will need at least 20 GB of space in the chosen location.
@@ -142,6 +149,7 @@ image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Creat
 .. Click _Save_.
 . At this point the basic VM configuration has been completed, but some additional configuration is needed. Click the Settings button (wrench icon), or select _Settings_ from the _Virtual Machine_ menu.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Settings]
 image::images/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Settings]
 +
 . Click the _CD/DVD_ icon in the _VM Settings_ dialog.
@@ -152,11 +160,13 @@ image::images/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Setting
 . Optionally, you can tailor the configuration of the VM to suit your needs. 
 .. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png[Screenshot CPU and Memory Settings]
 image::images/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png[Screenshot CPU and Memory Settings]
 +
 .. You can change the size of the virtual hard disk by clicking the _Hard Disk_ icon. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM.
 .. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
 +
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-07-settings-network.png[Screenshot VM Network Settings]
 image::images/rhel7-install/vmware-mac/vmf-07-settings-network.png[Screenshot VM Network Settings]
 +
 . Close the _VM settings_ dialog.
