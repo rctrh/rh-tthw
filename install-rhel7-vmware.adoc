@@ -115,7 +115,46 @@ At this point the basic VM configuration has been completed. You may optional ch
 
 #### VMware Fusion or VMware Fusion Pro on Mac OS X
 
-TODO -
+When you launch VMware Fusion without having any VM's it will automatically open dialog to begin creating a VM. If you already have a VM created, select _New_ from the _File_ menu. At the select
+
+. Click _Create a cutom virtual machine_ on the _Select the Installation Method_ dialog. Then, click _Continue_.
++
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-01-create.png')}[Screenshot Create VM]
+image::images/rhel7-install/vmware-mac/vmf-01-create.png[Screenshot Create VM]
++
+. Select _Linux_ on the left side of the _Choose Operating System_ dialog.
+.. Select _Red Hat Enterprise Linux 7 64-bit_ from the list on the right.
+.. Click _Continue_.
++
+image::images/rhel7-install/vmware-mac/vmf-02-create-os.png[Screenshot Create VM Choose OS]
++
+. Click _Continue_ on the _Choose a Virtual Disk_ dialog. The option _Create a new virtual disk_ should be selected by default. The default virtual disk size is 20 GB. 
++
+image::images/rhel7-install/vmware-mac/vmf-03-create-disk.png[Screenshot Create VM Create Disk]
++
+. Click _Finish_.
++
+image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Create VM Create Finished]
++
+. Choose the name and location to start the VM files. Note: By default it will be placed in your _Documents_ folder. You will need at least 20 GB of space in the choosen location.
+.. Set the VM name to `rhel` in the _Save As_ box.
+.. Chanage the location for the files in the _Where_ box if needed.
+.. Click _Save_.
+
+
+At this point the basic VM configuration has been completed, but some additional configuration is needed. Click the Settings button (wrench icon), or select _Settings_ from the _Virtual Machine_ menu.
+
+. Click the _CD/DVD_ icon in the _VM Settings_ dialog.
+.. Select _Choose a disk or disk image..._  from the CD/DVD dialog. By default it is set to _Autodetect_.
+.. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1.  Then click _Open_.
+.. Click the _Connect CD/DVD Drive_ checkbox.
+.. Click _Show All_ to return to _VM Settings_.
+. Optionally, you can tailor the configuration of the VM to suit your needs. 
+.. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon.
+.. You can change the size of the virtual hard disk by clicking the _Hard Disk_ icon. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM.
+.. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
+. Close the _VM settings_ dialog.
+
 
 
 ### Boot the VM and install Red Hat Enterprise Linux
