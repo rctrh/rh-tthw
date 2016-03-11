@@ -103,9 +103,9 @@ image::images/rhel7-install/vmware-win/vmw-04-create-disk-size.png[Screenshot Cr
 . Click _Finish_ to create the VM.
 +
 image::images/rhel7-install/vmware-win/vmw-05-create-finish.png[Screenshot Create VM finished]
++
 
-
-At this point the basic VM configuration has been completed. You may optional change the configuration:
+At this point the basic VM configuration has been completed. You may optionally change the configuration:
 
 . Select the newly created VM from the _Home_ list on the left side.  Then click _Edit virtual machine settings_ on the lower right to bring up the _Virtual Machine Settings_ dialog. On the _Hardware_ tab:
 .. Adjust the amount of _Memory_ (RAM) if desired. A 2 GB or more is suggested for development.
@@ -140,12 +140,10 @@ image::images/rhel7-install/vmware-mac/vmf-04-create-finish.png[Screenshot Creat
 .. Set the VM name to `rhel` in the _Save As_ box.
 .. Change the location for the files in the _Where_ box if needed.
 .. Click _Save_.
-
-
-At this point the basic VM configuration has been completed, but some additional configuration is needed. Click the Settings button (wrench icon), or select _Settings_ from the _Virtual Machine_ menu.
-
+. At this point the basic VM configuration has been completed, but some additional configuration is needed. Click the Settings button (wrench icon), or select _Settings_ from the _Virtual Machine_ menu.
++
 image::images/rhel7-install/vmware-mac/vmf-05-settings.png[Screenshot VM Settings]
-
++
 . Click the _CD/DVD_ icon in the _VM Settings_ dialog.
 .. Select _Choose a disk or disk image..._  from the CD/DVD dialog. By default it is set to _Autodetect_.
 .. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1.  Then click _Open_.
