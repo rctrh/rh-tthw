@@ -59,13 +59,13 @@ To enable Hyper-V the Hyper-V role:
 
 For more information see link:https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install[Install Hyper-V on Windows 10] or consult the documentation for your version of Microsoft Windows. Note: some of the Hyper-V documentation may be listed as "Client Hyper-V" since Hyper-V was originally a server feature.
 
-
-#### Enable Intel VT-x or AMD-V Virtualizatoin in BIOS/UEFI
-
-Intel and AMD processors have hardware extensions for accelerating virtualization. On some systems this support may be disabled by default in the system’s BIOS/UEFI.  To enable the extensions, you might have to go into the system’s BIOS/UEFI setup configuration at boot time. Consult your system’s hardware documentation for more information.
-
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-01-enable-role.png[Screenshot Enable Hyper-V Role]
 image::images/rhel7-install/hyperv/hv-01-enable-role.png[Screenshot Enable Hyper-V Role]
+
+
+#### Enable Intel VT-x or AMD-V Virtualization in BIOS/UEFI
+
+Intel and AMD processors have hardware extensions for accelerating virtualization. On some systems this support may be disabled by default in the system’s BIOS/UEFI.  To enable the extensions, you might have to go into the system’s BIOS/UEFI setup configuration at boot time. Consult your system’s hardware documentation for more information.
 
 
 ### Create and configure a VM in Hyper-V
