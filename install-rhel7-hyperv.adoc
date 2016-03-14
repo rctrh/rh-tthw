@@ -59,7 +59,7 @@ To enable Hyper-V the Hyper-V role:
 
 For more information see link:https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install[Install Hyper-V on Windows 10] or consult the documentation for your version of Microsoft Windows. Note: some of the Hyper-V documentation may be listed as "Client Hyper-V" since Hyper-V was originally a server feature.
 
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-01-enable-role.png[Screenshot Enable Hyper-V Role]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-01-enable-role.png')}[Screenshot Enable Hyper-V Role]
 image::images/rhel7-install/hyperv/hv-01-enable-role.png[Screenshot Enable Hyper-V Role]
 
 
@@ -74,7 +74,7 @@ In this step you will create and configure the VM that will run Red Hat Enterpri
 
 First, launch _Hyper-V Manager_ from the Windows menu.  Use the _New Virtual Machine Wizard_ dialog to configure the VM:
 
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-02-hyperv-manager.png[Screenshot Hyper-V Manager]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-02-hyperv-manager.png')}[Screenshot Hyper-V Manager]
 image::images/rhel7-install/hyperv/hv-02-hyperv-manager.png[Screenshot Hyper-V Manager]
 
 Create a new virtual network switch to provide the VM with network connectivity:
@@ -90,7 +90,7 @@ Create a new virtual network switch to provide the VM with network connectivity:
 .. Click _Yes_ in the _Apply Networking Changes_ dialog that warns about disrupting your network connection while making this change.
 
 
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-03-virtual-switch-2.png[Screenshot Virtual Switch Setup]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-03-virtual-switch-2.png')}[Screenshot Virtual Switch Setup]
 image::images/rhel7-install/hyperv/hv-03-virtual-switch-2.png[Screenshot Virtual Switch Setup]
 
 
@@ -116,7 +116,7 @@ Create a VM by clicking _New_, then _Virtual Machine..._ in the _Actions_ pane o
 .. Set the size to _20 GB_ or larger.
 .. Click _Next_.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-07-vhd.png[Screenshot Virtual Hard Disk Settings]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-07-vhd.png')}[Screenshot Virtual Hard Disk Settings]
 image::images/rhel7-install/hyperv/hv-07-vhd.png[Screenshot Virtual Hard Disk Settings]
 +
 . Under _Installation Options_:
@@ -124,13 +124,13 @@ image::images/rhel7-install/hyperv/hv-07-vhd.png[Screenshot Virtual Hard Disk Se
 .. Select _Image fie (.iso)_.
 .. Enter the location or click _Browse..._ to navigate to the Red Hat Enterprise Linux Server DVD `.iso` file you downloaded in step 1.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-08-iso.png[Screenshot Virtual CD/DVD Settings]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-08-iso.png')}[Screenshot Virtual CD/DVD Settings]
 image::images/rhel7-install/hyperv/hv-08-iso.png[Screenshot Virtual CD/DVD Settings]
 +
 .. Click _Next_.
 . Check your settings on the _Summary_ dialog.  Then, click _Finish_ to create the VM.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-09-summary.png[Screenshot VM Settings Summary]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-09-summary.png')}[Screenshot VM Settings Summary]
 image::images/rhel7-install/hyperv/hv-09-summary.png[Screenshot VM Settings Summary]
 
 
