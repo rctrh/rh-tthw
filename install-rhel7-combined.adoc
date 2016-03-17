@@ -18,7 +18,7 @@ Set up your programming language
 
 In this step, you will download Red Hat Enterprise Linux Server. For the download, you will need to register with developers.redhat.com. After you register as a developer, you will be given a subscription for Red Hat Enterprise Linux Developer Suite. Red Hat Enterprise Linux Server and additional development tools are included in Red Hat Enterprise Linux Developer Suite.
 
-Download the https://developers.stage.redhat.com/download-manager/file/rhel-server-7.2-x86_64-dvd.iso[Red Hat Enterprise Linux Server DVD] `.iso` file.
+Download the #{site.base_url}/download-manager/file/rhel-server-7.2-x86_64-dvd.iso[Red Hat Enterprise Linux Server DVD] `.iso` file.
 
 ## Step2 Baremetal Content
 
@@ -146,7 +146,6 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-01-en
 For more information see https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install[Install Hyper-V on Windows 10, window='_blank'] or consult the documentation for your version of Microsoft Windows. Note: some of the Hyper-V documentation may be listed as "Client Hyper-V" since Hyper-V was originally a server feature.
 
 
-
 #### Enable Intel VT-x or AMD-V Virtualization in BIOS/UEFI
 
 Intel and AMD processors have hardware extensions for accelerating virtualization. On some systems this support may be disabled by default in the system’s BIOS/UEFI. To enable the extensions, you might have to go into the system’s BIOS/UEFI setup configuration at boot time. Consult your system’s hardware documentation for more information.
@@ -215,8 +214,6 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-08-is
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-09-summary.png')}[Screenshot VM Settings Summary]
-
-
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
@@ -357,7 +354,6 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot VirtualBox VM Create]
-// image:images/rhel7-install/vbox/win-vbox-02-create.png[Screenshot VirtualBox VM Create]
 +
 . Set the VM memory size to _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, click _Next_.
 . Next you will configure the new VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialog boxes to configure the virtual hard disk:
@@ -367,7 +363,6 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd4.png')}[Screenshot HD Dynamic]
-// image:images/rhel7-install/vbox/win-vbox-05-hd4.png[Screenshot HD Dynamic]
 .. On the _File location and size_ dialog:
 ... Change the _name_ and _location_ if desired.
 ... Set the _size_ to be a minimum of _20 GB_.
@@ -375,24 +370,20 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd2.png')}[Screenshot File Location]
-// image:images/rhel7-install/vbox/win-vbox-05-hd2.png[Screenshot File Location]
 
 At this point the basic VM configuration has been completed, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings1.png')}[Screenshot VM Created]
-// image:images/rhel7-install/vbox/win-vbox-06-settings1.png[Screenshot VM Created]
 
 . Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings2.png')}[Screenshot Settings Advanced]
-// image:images/rhel7-install/vbox/win-vbox-06-settings2.png[Screenshot Settings Advanced]
 +
 . By default, the VM will have a single virtual processor. If your system has multiple processors or cores, you can add more. Select the _System_ group, then click the _Processor_ tab. Adjust _Processors_ to the desired value.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings3.png')}[Screenshot Settings Processor]
-// image:images/rhel7-install/vbox/win-vbox-06-settings3.png[Screenshot Settings Processor]
 +
 . In the _Network_ group, under the _Adapter 1_ tab, you can configure the VM’s networking configuration. The default is Network Address Translation (NAT) which is recommended because it is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VirtualBox Networking>> below for more information.
 +
@@ -403,10 +394,9 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 .. Select _Choose Virtual Optical Disk File_.
 .. Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
 . Click _OK_ to close the VM settings dialog.
-
++
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
-// image:images/rhel7-install/vbox/win-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
 
 #### Create a shared folder between the host system and the VM (Optional)
 
@@ -425,7 +415,6 @@ To add a shared folder:
 . Click _OK_ to close the _VM Settings_ dialog.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder-1.png')}[Screenshot VirtualBox Shared Folder]
-// image:images/rhel7-install/vbox/win-vbox-shared-folder-1.png[Screenshot VirtualBox Shared Folder]
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
@@ -1114,6 +1103,12 @@ Developed by the GNU project as the free compiler of the GNU system, it includes
 [.large-7.columns.tc-button]
 #{site.base_url}/products/rhel/get-started-rhel7-cpp/[Get Started]
 
+[.large-17.columns]
+*GCC 5 base version on RHEL 7* +
+Supported for the entire life of RHEL 7.
+[.large-7.columns.tc-link]
+#{site.base_url}/products/rhel/get-started-rhel7-cpp/[Get Started]
+
 ## Java Tab
 
 [.large-17.columns.recommended]
@@ -1228,7 +1223,7 @@ In addition to the above, see the entire list of software collections including 
 Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions. Register for free at #{site.base_url}/register[developers.redhat.com].
 
 *Follow the Red Hat Developer Blog* +
-http://developerblog.redhat.com/[window='_blank']
+http://developerblog.redhat.com/[http://developerblog.redhat.com, window='_blank']
 
 ## Faq section title
 [[troubleshooting]]Troubleshooting and FAQ
