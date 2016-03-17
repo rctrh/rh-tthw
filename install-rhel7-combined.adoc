@@ -360,21 +360,18 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 image:images/rhel7-install/vbox/win-vbox-02-create.png[Screenshot VirtualBox VM Create]
 +
 . Set the VM memory size to _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, click _Next_.
-
-
-Next you will configure the new VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialog boxes to configure the virtual hard disk:
-
-. Select _Create a virtual hard disk now_ on the _Hard disk_ dialog. Then, click _Create_ to move to the next dialog.
-. Select _VDI (VirtualBox Disk Image)_ on the _Hard disk file type_ dialog. Then, click _Next_.
-. Select _Dynamically allocated_ on the _Storage on physical hard disk_ dialog. Then, click _Next_.
+. Next you will configure the new VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialog boxes to configure the virtual hard disk:
+.. Select _Create a virtual hard disk now_ on the _Hard disk_ dialog. Then, click _Create_ to move to the next dialog.
+.. Select _VDI (VirtualBox Disk Image)_ on the _Hard disk file type_ dialog. Then, click _Next_.
+.. Select _Dynamically allocated_ on the _Storage on physical hard disk_ dialog. Then, click _Next_.
 +
 [.content-img]
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd4.png')}[Screenshot HD Dynamic]
 image:images/rhel7-install/vbox/win-vbox-05-hd4.png[Screenshot HD Dynamic]
-. On the _File location and size_ dialog:
-.. Change the _name_ and _location_ if desired.
-.. Set the _size_ to be a minimum of _20 GB_.
-.. Click _Create_.
+.. On the _File location and size_ dialog:
+... Change the _name_ and _location_ if desired.
+... Set the _size_ to be a minimum of _20 GB_.
+... Click _Create_.
 +
 [.content-img]
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd2.png')}[Screenshot File Location]
@@ -428,8 +425,8 @@ To add a shared folder:
 .. Enter a name without spaces for the shared folder on the VM.
 . Click _OK_ to close the _VM Settings_ dialog.
 +
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder.png')}[Screenshot VirtualBox Shared Folder]
-image:images/rhel7-install/vbox/win-vbox-shared-folder.png[Screenshot VirtualBox Shared Folder]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder-1.png')}[Screenshot VirtualBox Shared Folder]
+image:images/rhel7-install/vbox/win-vbox-shared-folder-1.png[Screenshot VirtualBox Shared Folder]
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
@@ -445,14 +442,14 @@ There are a few key steps to remember during the installation process:
 // BEGIN STEP 2 - KEEP THIS IN SYNC WITH BARE METAL
 ### Installation instructions
 
-To start the VM and begin installation, start VirtualBox if it isn’t already running, then select your VM and click the Start button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD.
-
 A few notes about working with VirtualBox:
 
 * When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the _Host Key_. The lower right corner of the VirtualBox window shows which key is the _Host Key_ for your OS. On Windows and Linux it is the right _Ctrl_ key. On Mac OS is it the left _Command_ key.
 * When you <<Install VirtualBox Guest Addition>>, the integration the of mouse pointer will be improved. You will no longer need to hit the _Host Key_ to move the focus outside of the VM window.
 * VirtualBox will display some pop-up messages in the VM window. You can dismiss those after to reading them. Note: you won't be able to click on the pop-up messages if your mouse pointer is captured by the VM. Hit the _Host Key_ to release the pointer, then click to dismiss the pop-up boxes.
 * For more information see https://www.virtualbox.org/manual/ch06.html[Chapter 1. First steps, window='_blank'] in the https://www.virtualbox.org/manual/[VirtualBox User Manual, window='_blank'].
+
+To start the VM and begin installation, start VirtualBox if it isn’t already running, then select your VM and click the Start button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD.
 
 . When the VM boots, select _Install Red Hat Enterprise Linux_.
 +
