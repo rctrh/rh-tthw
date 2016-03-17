@@ -22,14 +22,22 @@ Download the https://developers.stage.redhat.com/download-manager/file/rhel-serv
 
 ## Step2 Baremetal Content
 
-This section provides a brief overview of the steps for installing Red Hat Enterprise Linux. Detailed instructions can be found in the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank'].
+This section provides an overview of the key steps for installing Red Hat Enterprise Linux so you can get started with software development. Note: This tutorial does not replace the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank'].  Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manual.
 
-There are a few key steps to remember during the installation process:
+A few things to keep in mind:
 
 . The Red Hat Enterprise Linux Server `.iso` you downloaded in step 1 will be used to install a system with a full graphical desktop. You will select _Server with a GUI_ under _Software Selection_ during installation. By default, Red Hat Enterprise Linux Server will not install a graphical desktop.
 . You will need to select an _Installation destination_, which is the disk or partition(s) where the software will be installed. *The disk or partition(s) you select will be overwritten.* Make sure you understand your selection before starting the installation to avoid accidental data loss.
 . You should configure networking under _Network and host name_ before starting the installation. You will need access to the Internet to complete registration and download additional software. The network can be configured after the system is installed. However, the steps are more straightforward during installation.
 . Create your primary user account during installation: After the installation begins, you will be instructed to set a password for the root account and be given the opportunity to create a regular user account. You should create a user before the installation process completes. The regular user will be your primary login for development. The root account should only be used for system administration tasks. If you don't create a user before the installation completes, you will need to reboot and then log in as root to create user accounts.
+
+### System Requirements
+
+The requirements for your physical system are:
+
+* a 64-bit x86 machine.
+* 4 GB of RAM
+* 20 GB of available disk space.
 
 Instructions for making a bootable https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html#sect-making-cd-dvd-media[DVD, window='_blank'] or https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-making-usb-media.html[USB, window='_blank'] drive can be found in the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html[Red Hat Enterprise Linux Installation Guide, window='_blank'].
 
@@ -348,7 +356,8 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 .. Click _Next_.
 +
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-02-create.png')}[Screenshot Boot Splash]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot Boot Splash]
+image:images/rhel7-install/vbox/win-vbox-02-create.png[Screenshot Boot Splash]
 +
 . Set the VM memory size to _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, click _Next_.
 
@@ -360,31 +369,35 @@ Next you will configure the new VM's virtual hard disk. The size of the virtual 
 . Select _Dynamically allocated_ on the _Storage on physical hard disk_ dialog. Then, click _Next_.
 +
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-05-hd4.png')}[Screenshot HD Dynamic]
-. On the _File location and size+ dialog:
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd4.png')}[Screenshot HD Dynamic]
+image:images/rhel7-install/vbox/win-vbox-05-hd4.png[Screenshot HD Dynamic]
+. On the _File location and size_ dialog:
 .. Change the _name_ and _location_ if desired.
 .. Set the _size_ to be a minimum of _20 GB_.
 .. Click _Create_.
 +
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-05-hd2.png')}[Screenshot File Location]
-
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd2.png')}[Screenshot File Location]
+image:rhel7-install/vbox/win-vbox-05-hd2.png[Screenshot File Location]
 
 At this point the basic VM configuration has been completed, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings1.png')}[Screenshot VM Created]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings1.png')}[Screenshot VM Created]
+image:rhel7-install/vbox/win-vbox-06-settings1.png[Screenshot VM Created]
 
 . Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_.
 +
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings2.png')}[Screenshot Settings Advanced]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings2.png')}[Screenshot Settings Advanced]
+image:images/rhel7-install/vbox/win-vbox-06-settings2.png[Screenshot Settings Advanced]
 +
 . By default, the VM will have a single virtual processor. If your system has multiple processors or cores, you can add more. Select the _System_ group, then click the _Processor_ tab. Adjust _Processors_ to the desired value.
 +
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings3.png')}[Screenshot Settings Processor]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings3.png')}[Screenshot Settings Processor]
+image:images/rhel7-install/vbox/win-vbox-06-settings3.png[Screenshot Settings Processor]
 +
-. In the _Network_ group, under the _Adapter 1_ tab, you can configure the VM’s networking configuration. See <<VirtualBox Networking>> below for more information.
+. In the _Network_ group, under the _Adapter 1_ tab, you can configure the VM’s networking configuration. The default is Network Address Translation (NAT) which is recommended because it is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VirtualBox Networking>> below for more information.
 
 Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO file as a virtual CD/DVD:
 
@@ -396,8 +409,8 @@ Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO
 . Click _OK_ to close the VM settings dialog.
 
 [.content-img]
-image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/ubuntu-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
-
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
+images:rhel7-install/vbox/win-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
 
 #### Create a shared folder between the host system and the VM (Optional)
 
@@ -414,11 +427,10 @@ To add a shared folder:
 .. Enter the path on the host system in the _Folder Path_.
 .. Enter a name without spaces for the shared folder on the VM.
 . Click _OK_ to close the _VM Settings_ dialog.
-
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder.png')}[Screenshot VirtualBox Shared Folder]
+image:images/rhel7-install/vbox/win-vbox-shared-folder.png[Screenshot VirtualBox Shared Folder]
 
 ### Boot the VM and install Red Hat Enterprise Linux
-
-To start the VM and begin installation, start VirtualBox if it isn’t already running, then select your VM and click the Start button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD.
 
 This section provides a brief overview of the steps for installing Red Hat Enterprise Linux. Detailed instructions can be found in the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank'].
 
@@ -432,7 +444,16 @@ There are a few key steps to remember during the installation process:
 // BEGIN STEP 2 - KEEP THIS IN SYNC WITH BARE METAL
 ### Installation instructions
 
-. Start the system from the bootable disk and select _Install Red Hat Enterprise Linux_.
+To start the VM and begin installation, start VirtualBox if it isn’t already running, then select your VM and click the Start button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD.
+
+A few notes about working with VirtualBox:
+
+* When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the _Host Key_. The lower right corner of the VirtualBox window shows which key is the _Host Key_ for your OS. On Windows and Linux it is the right _Ctrl_ key. On Mac OS is it the left _Command_ key.
+* When you <<Install VirtualBox Guest Addition>>, the integration the of mouse pointer will be improved. You will no longer need to hit the _Host Key_ to move the focus outside of the VM window.
+* VirtualBox will display some pop-up messages in the VM window. You can dismiss those after to reading them. Note: you won't be able to click on the pop-up messages if your mouse pointer is captured by the VM. Hit the _Host Key_ to release the pointer, then click to dismiss the pop-up boxes.
+* For more information see https://www.virtualbox.org/manual/ch06.html[Chapter 1. First steps, window='_blank'] in the https://www.virtualbox.org/manual/[VirtualBox User Manual, window='_blank'].
+
+. When the VM boots, select _Install Red Hat Enterprise Linux_.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-01-boot-dvd.png')}[Screenshot Boot Splash]
@@ -586,7 +607,7 @@ At this point the basic VM configuration has been completed. You may optionally 
 . Select the newly created VM from the _Home_ list on the left side. Then click _Edit virtual machine settings_ on the lower right to bring up the _Virtual Machine Settings_ dialog. On the _Hardware_ tab:
 .. Adjust the amount of _Memory_ (RAM) if desired. A 2 GB or more is suggested for development.
 .. By default, the VM will have a single virtual processor. If your system has multiple processors or cores, you can add more to the VM.
-.. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
+.. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is recommended because it is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
 . Click _OK_ to close the _Virtual Machine Settings_ dialog.
 
 #### VMware Fusion or VMware Fusion Pro on Mac OS X
@@ -636,7 +657,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png')}[Screenshot CPU and Memory Settings]
 +
 .. You can change the size of the virtual hard disk by clicking the _Hard Disk_ icon. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM.
-.. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
+.. Under _Network Adapter_, you can set the VM’s networking configuration. The default is Network Address Translation (NAT) which is recommended as it is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VMware Networking>> below for more information.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-07-settings-network.png')}[Screenshot VM Network Settings]
@@ -709,7 +730,16 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Baremetal Content
 
-This section provides an overview of post-installation steps that prepare your system for software development. After the system reboots, you will be prompted to accept the license agreement and register the system.
+This section has a number of post-installation steps that complete the installation of Red Hat Enterprise Linux and prepare it for software development. The steps are:
+
+. Accept the license agreements and register the system with the Red Hat Subscription Management.
+. Install the latest software updates.
+. Add additional software repositories containing development software.
+
+### Complete installation and register the system
+
+After installation, during the first boot of the system, you will be asked to accept the license agreement and register the system with Red Hat Subscription Management. Completing these steps are required for your system to download software from Red Hat.
+
 
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
@@ -772,8 +802,8 @@ In this step you will configure your system to obtain software from the _Optiona
 
 This section has a number of post-installation steps that complete the installation of Red Hat Enterprise Linux and prepare it for software development. The steps are:
 
-. Accept the license agreements and register the system with the Red Hat Subscription Management..
-. Install the latest software updates and Microsoft Hyper-V Integration Services on the VM.
+. Accept the license agreements and register the system with the Red Hat Subscription Management.
+. Install the latest software updates.
 . Add additional software repositories containing development software.
 
 
@@ -976,6 +1006,7 @@ Networking, both physical and virtual, is a large topic beyond the scope of this
 This section has a number of post-installation steps that complete the installation of Red Hat Enterprise Linux and prepare it for software development. The steps are:
 
 . Accept the license agreements and register the system with the Red Hat Subscription Management..
+. Install the latest software updates.
 . Add additional software repositories containing development software.
 
 
