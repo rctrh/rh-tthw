@@ -356,8 +356,8 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 .. Click _Next_.
 +
 [.content-img]
-// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot Boot Splash]
-image:images/rhel7-install/vbox/win-vbox-02-create.png[Screenshot Boot Splash]
+// image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot VirtualBox VM Create]
+image:images/rhel7-install/vbox/win-vbox-02-create.png[Screenshot VirtualBox VM Create]
 +
 . Set the VM memory size to _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, click _Next_.
 
@@ -378,12 +378,12 @@ image:images/rhel7-install/vbox/win-vbox-05-hd4.png[Screenshot HD Dynamic]
 +
 [.content-img]
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd2.png')}[Screenshot File Location]
-image:rhel7-install/vbox/win-vbox-05-hd2.png[Screenshot File Location]
+image:images/rhel7-install/vbox/win-vbox-05-hd2.png[Screenshot File Location]
 
 At this point the basic VM configuration has been completed, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
 [.content-img]
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings1.png')}[Screenshot VM Created]
-image:rhel7-install/vbox/win-vbox-06-settings1.png[Screenshot VM Created]
+image:images/rhel7-install/vbox/win-vbox-06-settings1.png[Screenshot VM Created]
 
 . Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_.
 +
@@ -410,7 +410,7 @@ Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO
 
 [.content-img]
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
-images:rhel7-install/vbox/win-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
+image:images/rhel7-install/vbox/win-vbox-06-settings4.png[Screenshot Settings RHEL DVD]
 
 #### Create a shared folder between the host system and the VM (Optional)
 
@@ -427,6 +427,7 @@ To add a shared folder:
 .. Enter the path on the host system in the _Folder Path_.
 .. Enter a name without spaces for the shared folder on the VM.
 . Click _OK_ to close the _VM Settings_ dialog.
++
 // image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder.png')}[Screenshot VirtualBox Shared Folder]
 image:images/rhel7-install/vbox/win-vbox-shared-folder.png[Screenshot VirtualBox Shared Folder]
 
