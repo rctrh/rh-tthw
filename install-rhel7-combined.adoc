@@ -395,14 +395,13 @@ image:images/rhel7-install/vbox/win-vbox-06-settings2.png[Screenshot Settings Ad
 image:images/rhel7-install/vbox/win-vbox-06-settings3.png[Screenshot Settings Processor]
 +
 . In the _Network_ group, under the _Adapter 1_ tab, you can configure the VM’s networking configuration. The default is Network Address Translation (NAT) which is recommended because it is the easiest to manage. You may want to choose _Bridged_ to attach the VM directly to the physical network. See <<VirtualBox Networking>> below for more information.
-
-Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO file as a virtual CD/DVD:
-
-. Select the _Storage_ section of the _VM Settings_ dialog.
-. Under _Controller: IDE_, select the CD icon that says _Empty_ next to it.
-. On the right side, under _Attributes_, click the CD icon on the far right. 
-. Select _Choose Virtual Optical Disk File_.
-. Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
++
+. Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO file as a virtual CD/DVD:
+.. Select the _Storage_ section of the _VM Settings_ dialog.
+.. Under _Controller: IDE_, select the CD icon that says _Empty_ next to it.
+.. On the right side, under _Attributes_, click the CD icon on the far right. 
+.. Select _Choose Virtual Optical Disk File_.
+.. Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
 . Click _OK_ to close the VM settings dialog.
 
 [.content-img]
