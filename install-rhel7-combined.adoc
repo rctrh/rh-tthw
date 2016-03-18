@@ -998,9 +998,36 @@ In this step you will configure your system to obtain software from the _Optiona
 
 ### Install VirtualBox Guest Additions
 
-VirtualBox Guest Additions provides a number of enhancements including shared folders, better video support and mouse pointer integration. The software is packaged as an ISO file, which will be used on the VM as a virtual CD. The VirtualBox desktop will load the virtual CD when you select _Insert Guest Additions CD image_ from the _Devices_ menu of the VM window. You should do this step after when Red Hat Enterprise Linux is running, after logging in, with the full graphical desktop running. The graphical desktop will prompt you to automatically run the software on the CD image.
+Enhanced VM integration is available by installing VirtualBox Guest Additions on the Red Hat Enterprise Linux VM. The enchancements include:
 
-Once the installation is complete reboot the VM. To do this using the command line:
+* Better mouse pointer integration that eliminates the need to capture the pointer within the VM.
+* Copy and paste between the VM and the host system.
+* Folders that are shared from the host system to the VM. This can be helpful for making your source code available on the VM.
+* Ability to dynamically resize the VM's window which will change the size of the graphic desktop inside the VM.
+
+VirtualBox Guest Additions are packaged as an ISO file, which will be used on the VM as a virtual CD. VirtualBox will load the virtual CD when you select _Insert Guest Additions CD image_ from the menu. To install VirtualBox Guest Editions:
+
+* You need to be logged into Red Hat Enterprise Linux with the graphical desktop running.
+* You need to have installed _Development Tools_ during installation. The development tools are used to compile the VirtualBox drivers.
+
+The steps to install VirtualBox Guest Additions are:
+
+. Select _Insert Guest Additions CD image_ from the _Devices_ menu of the VM window.
+. A dialog box will pop up asking you if you want to run the software on the virtual CD.  Click _Run_.
++
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-01-autorun.png')}[Screenshot VirtualBox Guest Additions Auto Run]
++
+. Enter the password for the root user when prompted. Then click _Authenticate_.
++
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-02-rootpw.png')}[Screenshot VirtualBox Root Password Prompt]
++
+. A _Terminal_ window will appear with the install proces running inside of it.  When the process it complete you will be prompted to hit _Return_ to close the window.
++
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-03-install-complete.png')}[Screenshot VirtualBox Guest Addition Install Complete]
++
+. Eject the virtual CD by right clicking on its icon on the desktop and selecting _Eject_.  
+
+Once the installation is complete reboot the VM. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
 
 `# reboot`
 
