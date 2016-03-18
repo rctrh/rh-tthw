@@ -38,6 +38,7 @@ The requirements for your physical system are:
 * a 64-bit x86 machine.
 * 4 GB of RAM
 * 20 GB of available disk space.
+* For more detailed link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-installation-planning-x86.html[minimum hardware requirements and compatibility information], see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide].
 
 Instructions for making a bootable https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html#sect-making-cd-dvd-media[DVD, window='_blank'] or https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-making-usb-media.html[USB, window='_blank'] drive can be found in the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/chap-making-media.html[Red Hat Enterprise Linux Installation Guide, window='_blank'].
 
@@ -378,7 +379,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-05-hd2.png')}[Screenshot File Location]
 
-At this point the basic VM configuration has been completed, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
+At this point the basic VM has been created, however additional configuration is necessary. Click to select the new VM so that it is highlighted, then click the Settings button. Make the following changes:
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings1.png')}[Screenshot VM Created]
 
