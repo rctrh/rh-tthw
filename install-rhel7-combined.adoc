@@ -186,7 +186,7 @@ Create a VM by clicking _New_, then _Virtual Machine..._ in the _Actions_ pane o
 . Under _Specify Generation_:
 .. make sure _Generation 1_ is checked.
 .. click _Next_.
-. Under _Assign Memory_, set the amount of memory available to the VM. The suggested is value is 4096 MB. The minimum is 2048 MB.
+. Under _Assign Memory_, set the amount of memory available to the VM. The minimum is 2048 MB, however 4096 MB is suggested. 
 .. Click _Next_.
 . Under _Configure Networking_:
 .. Select the virtual switch you created earlier from the _Connection_ list.
@@ -355,7 +355,7 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot VirtualBox VM Create]
 +
-. Set the VM memory size to _4096 MB_ on the _Memory size_ dialog. This value can be changed later. Then, click _Next_.
+. Set the VM memory size to at least _2048 MB_ on the _Memory size_ dialog. This value can be changed later. The minimum is you should use is 2048 MB, however 4096 MB is suggested. Then, click _Next_.
 . Next you will configure the new VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialog boxes to configure the virtual hard disk:
 .. Select _Create a virtual hard disk now_ on the _Hard disk_ dialog. Then, click _Create_ to move to the next dialog.
 .. Select _VDI (VirtualBox Disk Image)_ on the _Hard disk file type_ dialog. Then, click _Next_.
@@ -375,7 +375,7 @@ At this point the basic VM configuration has been completed, however additional 
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings1.png')}[Screenshot VM Created]
 
-. Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_.
+. Select the _General_ group, then click the _Advanced_ tab. Enable copy-and-paste between the host system and the VM by setting _Shared Clipboard_ and _Drag’n’Drop_ to _Bidirectional_. Note: copy-and-paste will only be available after VirtualBox Guest Additions are installed on the VM during step 3.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings2.png')}[Screenshot Settings Advanced]
@@ -402,7 +402,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 
 You may create a folder that is shared between your host system and the Red Hat Enterprise Linux VM. This makes it easy to share files such as source code between the two systems. The configuration for shared folders can be performed now or anytime later.
 
-Shared folders will only be available on the VM after the _VirtualBox Guest Additions_ software is installed on the VM. Installation of VirtualBox Guest Additions is covered later with the other Red Hat Enterprise Linux post-installation steps.
+Shared folders will only be available on the VM after the _VirtualBox Guest Additions_ software is installed on the VM. Installation of VirtualBox Guest Additions is covered in step 3 with the other Red Hat Enterprise Linux post-installation steps.
 
 To add a shared folder:
 
@@ -433,7 +433,7 @@ There are a few key steps to remember during the installation process:
 A few notes about working with VirtualBox:
 
 * When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the _Host Key_. The lower right corner of the VirtualBox window shows which key is the _Host Key_ for your OS. On Windows and Linux it is the right _Ctrl_ key. On Mac OS is it the left _Command_ key.
-* When you <<Install VirtualBox Guest Addition>>, the integration the of mouse pointer will be improved. You will no longer need to hit the _Host Key_ to move the focus outside of the VM window.
+* After you install <<Install VirtualBox Guest Addition,VirtualBox Guest Additions>>, the integration the of mouse pointer will be improved. You will no longer need to hit the _Host Key_ to move the focus outside of the VM window.
 * VirtualBox will display some pop-up messages in the VM window. You can dismiss those after to reading them. Note: you won't be able to click on the pop-up messages if your mouse pointer is captured by the VM. Hit the _Host Key_ to release the pointer, then click to dismiss the pop-up boxes.
 * For more information see https://www.virtualbox.org/manual/ch06.html[Chapter 1. First steps, window='_blank'] in the https://www.virtualbox.org/manual/[VirtualBox User Manual, window='_blank'].
 
@@ -726,34 +726,44 @@ This section has a number of post-installation steps that complete the installat
 
 After installation, during the first boot of the system, you will be asked to accept the license agreement and register the system with Red Hat Subscription Management. Completing these steps are required for your system to download software from Red Hat.
 
-
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the check box to accept the license.
-.. Click _Done_ in the upper left corner to return to the configuration screen.
+.. Click _Done_ in the upper left corner to return to the _Initial Setup_ screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
-. Click to On the _Subscription Management Registration_ screen
+. In the next step you will register your system with Red Hat and attach it to your subscription. Note: For this step to succeed, you must have successfully configured your network connection.
+.. Click _Subscription Manager_
+.. Leave _I will register with_ set to the default.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next screen.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-15b-subscription-credentials.png')}[Screenshot Installation Complete]
-. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal. Note: For this step to succeed, you must have configured your network connection.
-.. If you have more than one subscription available, select which subscription to attach this installation to
+.. Enter the same username and password that you use for the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
+.. Click _Register_.
+.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
+.. Click _Attach_.
 .. Click _Done_.
 +
-. Click _Finish configuration_ when you are done.
+. Finally, Click _Finish configuration_.
 +
-
 . Log in to the system with the username and password you created during installation.
 +
 If you didn't create a regular user, you will need to log in as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
 +
 If you get a text-based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
-. Select your preferred language.
+. Select your preferred language for the GNOME desktop. Then click _Next_.
+. Select your keyboard layout. Then click _Next_.
+. Optionally follow the dialogs to connect your online accounts or click _Skip_.
+. Click _Start using Red Hat Enterprise Linux_.
+
+You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of the GNOME Help viewer is opened automatically as a full screen application after your first login. You may minimize, resize, or exit out of that application by using the window controls on the upper right corner.
+
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
 
 
 ### Install the latest updates
@@ -802,22 +812,24 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the check box to accept the license.
-.. Click _Done_ in the upper left corner to return to the configuration screen.
+.. Click _Done_ in the upper left corner to return to the _Initial Setup_ screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
-. Click to On the _Subscription Management Registration_ screen
+. In the next step you will register your system with Red Hat and attach it to your subscription. Note: For this step to succeed, you must have successfully configured your network connection.
+.. Click _Subscription Manager_
+.. Leave _I will register with_ set to the default.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next screen.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-15b-subscription-credentials.png')}[Screenshot Installation Complete]
-+
-. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal. Note: For this step to succeed, you must have configured your network connection.
-.. If you have more than one subscription available, select which subscription to attach this installation to
+.. Enter the same username and password that you use for the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
+.. Click _Register_.
+.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
+.. Click _Attach_.
 .. Click _Done_.
 +
-. Click _Finish configuration_ when you are done.
-+
-// If you are using an evaluation, you must first agree to the terms and conditions at https://www.redhat.com/wapps/ugc/[www.redhat.com/wapps/ugc, window='_blank'].
+. Finally, Click _Finish configuration_.
 +
 . Log in to the system with the username and password you created during installation.
 +
@@ -825,7 +837,15 @@ If you didn't create a regular user, you will need to log in as root and create 
 +
 If you get a text-based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
-. Select your preferred language.
+. Select your preferred language for the GNOME desktop. Then click _Next_.
+. Select your keyboard layout. Then click _Next_.
+. Optionally follow the dialogs to connect your online accounts or click _Skip_.
+. Click _Start using Red Hat Enterprise Linux_.
+
+You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of the GNOME Help viewer is opened automatically as a full screen application after your first login. You may minimize, resize, or exit out of that application by using the window controls on the upper right corner.
+
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
+
 
 ### Disable lock screen and screen power saving
 
@@ -892,27 +912,29 @@ This section has a number of post-installation steps that complete the installat
 
 After installation, during the first boot of the system, you will be asked to accept the license agreement and register the system with Red Hat Subscription Management. Completing these steps are required for your system to download software from Red Hat.
 
-
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the check box to accept the license.
-.. Click _Done_ in the upper left corner to return to the configuration screen.
+.. Click _Done_ in the upper left corner to return to the _Initial Setup_ screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
-. Click to On the _Subscription Management Registration_ screen
+. In the next step you will register your system with Red Hat and attach it to your subscription. Note: For this step to succeed, you must have successfully configured your network connection.
+.. Click _Subscription Manager_
+.. Leave _I will register with_ set to the default.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next screen.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-15b-subscription-credentials.png')}[Screenshot Installation Complete]
-. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal. Note: For this step to succeed, you must have configured your network connection.
-.. If you have more than one subscription available, select which subscription to attach this installation to
+.. Enter the same username and password that you use for the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
+.. Click _Register_.
+.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
+.. Click _Attach_.
 .. Click _Done_.
 +
-. Click _Finish configuration_ when you are done.
-+
-// If you are using an evaluation, you must first agree to the terms and conditions at https://www.redhat.com/wapps/ugc/[www.redhat.com/wapps/ugc, window='_blank'].
+. Finally, Click _Finish configuration_.
 +
 . Log in to the system with the username and password you created during installation.
 +
@@ -920,7 +942,15 @@ If you didn't create a regular user, you will need to log in as root and create 
 +
 If you get a text-based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
-. Select your preferred language.
+. Select your preferred language for the GNOME desktop. Then click _Next_.
+. Select your keyboard layout. Then click _Next_.
+. Optionally follow the dialogs to connect your online accounts or click _Skip_.
+. Click _Start using Red Hat Enterprise Linux_.
+
+You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of the GNOME Help viewer is opened automatically as a full screen application after your first login. You may minimize, resize, or exit out of that application by using the window controls on the upper right corner.
+
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
+
 
 ### Disable lock screen and screen power saving
 
@@ -995,32 +1025,33 @@ This section has a number of post-installation steps that complete the installat
 . Install the latest software updates.
 . Add additional software repositories containing development software.
 
-
 ### Complete installation and register the system
 
 After installation, during the first boot of the system, you will be asked to accept the license agreement and register the system with Red Hat Subscription Management. Completing these steps are required for your system to download software from Red Hat.
-
 
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the check box to accept the license.
-.. Click _Done_ in the upper left corner to return to the configuration screen.
+.. Click _Done_ in the upper left corner to return to the _Initial Setup_ screen.
 . If you didn't configure a network during installation, click _Network and host name_ to configure your network connection.
-. Click to On the _Subscription Management Registration_ screen
+. In the next step you will register your system with Red Hat and attach it to your subscription. Note: For this step to succeed, you must have successfully configured your network connection.
+.. Click _Subscription Manager_
+.. Leave _I will register with_ set to the default.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next screen.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-15b-subscription-credentials.png')}[Screenshot Installation Complete]
-. Register your system with Red Hat. Use the same username and password that you created for the Red Hat Customer Portal. Note: For this step to succeed, you must have configured your network connection.
-.. If you have more than one subscription available, select which subscription to attach this installation to
+.. Enter the same username and password that you use for the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
+.. Click _Register_.
+.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
+.. Click _Attach_.
 .. Click _Done_.
 +
-. Click _Finish configuration_ when you are done.
-+
-// If you are using an evaluation, you must first agree to the terms and conditions at https://www.redhat.com/wapps/ugc/[www.redhat.com/wapps/ugc, window='_blank'].
+. Finally, Click _Finish configuration_.
 +
 . Log in to the system with the username and password you created during installation.
 +
@@ -1028,7 +1059,15 @@ If you didn't create a regular user, you will need to log in as root and create 
 +
 If you get a text-based login screen instead of a graphical one, see <<troubleshooting,Troubleshooting and FAQ>>.
 +
-. Select your preferred language.
+. Select your preferred language for the GNOME desktop. Then click _Next_.
+. Select your keyboard layout. Then click _Next_.
+. Optionally follow the dialogs to connect your online accounts or click _Skip_.
+. Click _Start using Red Hat Enterprise Linux_.
+
+You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of the GNOME Help viewer is opened automatically as a full screen application after your first login. You may minimize, resize, or exit out of that application by using the window controls on the upper right corner.
+
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
+
 
 ### Disable lock screen and screen power saving
 
