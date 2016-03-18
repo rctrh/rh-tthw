@@ -67,9 +67,14 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-03
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04-software-selection.png')}[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify which disk or partition(s) to install the software on. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination, window='_blank'] section of the the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. The installation destination should be at least 20 GB or larger to accommodate the OS, graphical desktop, and development tools.
+. Click _Installation destination_ to specify which disk or partition(s) to use for Red Hat Enterprise Linux. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination, window='_blank'] section of the the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. The installation destination should be at least 20 GB or larger to accommodate the OS, graphical desktop, and development tools.
 +
-. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter. Click _Configure_ to review and/or change the default settings for the network adapter. Optionally, set a _Host name_ for the system. Before leaving this screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
+.. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
+.. Optionally, set a _Host name_ for the system.
+.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+.. Click _Done_.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-07-network.png')}[Screenshot Network Configuration]
@@ -253,7 +258,9 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-03
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04-software-selection.png')}[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify which disk or partition(s) to install the software on. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination, window='_blank'] section of the the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. The installation destination should be at least 20 GB or larger to accommodate the OS, graphical desktop, and development tools.
+. Click _Installation destination_ to specify the disk/partition to use.
+.. On the _Installation Destination_ screen, under _Local Standard Disks_, make sure the one disk is checked. This is the virtual hard disk you created earlier.
+.. Click _Done_.
 +
 . Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter. Click _Configure_ to review and/or change the default settings for the network adapter. Optionally, set a _Host name_ for the system. Before leaving this screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
 +
@@ -355,7 +362,7 @@ Click the _New_ button to create a new VM. A series of dialog boxes will come up
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-02-create.png')}[Screenshot VirtualBox VM Create]
 +
-. Set the VM memory size to at least _2048 MB_ on the _Memory size_ dialog. This value can be changed later. The minimum is you should use is 2048 MB, however 4096 MB is suggested. Then, click _Next_.
+. Set the VM memory size to at least _2048 MB_ on the _Memory size_ dialog. This value can be changed later. The minimum you should use is 2048 MB, however 4096 MB is suggested. Then, click _Next_.
 . Next you will configure the new VM's virtual hard disk. The size of the virtual hard disk, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the virtual hard disk to be large enough for your software development activities. Note: The space on your host system's physical disk will not be allocated until it is used by the VM. Complete the next set of dialog boxes to configure the virtual hard disk:
 .. Select _Create a virtual hard disk now_ on the _Hard disk_ dialog. Then, click _Create_ to move to the next dialog.
 .. Select _VDI (VirtualBox Disk Image)_ on the _Hard disk file type_ dialog. Then, click _Next_.
@@ -406,7 +413,7 @@ Shared folders will only be available on the VM after the _VirtualBox Guest Addi
 
 To add a shared folder:
 
-. Select your _RHEL VM_ in VirtualBox, the click the _Settings_ button.
+. Select your _RHEL_ VM in VirtualBox, the click the _Settings_ button.
 . Select the _Shared Folders_ group.
 . Click the folder icon with a _+_ in the upper right corner.
 . In the _Add Share_ dialog:
@@ -415,6 +422,8 @@ To add a shared folder:
 . Click _OK_ to close the _VM Settings_ dialog.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-shared-folder-1.png')}[Screenshot VirtualBox Shared Folder]
+
+The path to shared folders on the VM will be `/media/sf_<foldername>`.
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
@@ -461,9 +470,15 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-03
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04-software-selection.png')}[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify which disk or partition(s) to install the software on. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination, window='_blank'] section of the the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. The installation destination should be at least 20 GB or larger to accommodate the OS, graphical desktop, and development tools.
+. Click _Installation destination_ to specify the disk/partition to use.
+.. On the _Installation Destination_ screen, under _Local Standard Disks_, make sure the disk _sda_ is checked. This is the virtual hard disk you created earlier.
 +
-. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter. Click _Configure_ to review and/or change the default settings for the network adapter. Optionally, set a _Host name_ for the system. Before leaving this screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
+.. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
+.. Optionally, set a _Host name_ for the system.
+.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+.. Click _Done_.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-07-network.png')}[Screenshot Network Configuration]
@@ -635,9 +650,9 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-
 .. Select _Choose a disk or disk image..._ from the CD/DVD dialog. By default it is set to _Autodetect_.
 .. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1. Then click _Open_.
 .. Click the _Connect CD/DVD Drive_ check box.
-.. Click _Show All_ to return to _VM Settings_.
+.. Click _Show All_  in the top left corner to return to _VM Settings_.
 . Optionally, you can tailor the configuration of the VM to suit your needs. 
-.. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon.
+.. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon. The minimum memory for the VM is 2048 MB, however 4096 is suggested. You can change the amount of memory later.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png')}[Screenshot CPU and Memory Settings]
@@ -652,7 +667,12 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-
 
 ### Boot the VM and install Red Hat Enterprise Linux
 
-To start the VM and begin installation, start VMware if it isn’t already running, then select your VM and click the Play button. The VM should now boot up from the Red Hat Enterprise Linux Server DVD `.iso` file.
+To start the VM and begin installation:
+. Start VMware if it isn’t already running
+. select the _rhel_ VM.
+. click the _Play_ button.
+
+The VM should now boot up from the Red Hat Enterprise Linux Server DVD `.iso` file.
 
 Note: When you click inside the VM window, the keyboard and mouse will be captured by the VM until you hit _Ctrl_ and _Alt_ on Windows or the left option key on the Mac. When the system is fully installed this will no longer be necessary. See <<Open VM Tools replaces VMware Tools for Linux>>. 
 
@@ -691,9 +711,16 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-03
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04-software-selection.png')}[Screenshot Software Selection]
 +
-. Click _Installation destination_ to specify which disk or partition(s) to install the software on. Note: It is important that you understand the choices that you are making in this section to avoid accidental data loss. It is strongly recommended that you read the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/sect-disk-partitioning-setup-x86.html[Installation Destination, window='_blank'] section of the the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. The installation destination should be at least 20 GB or larger to accommodate the OS, graphical desktop, and development tools.
+. Click _Installation destination_ to specify the disk/partition to use.
+.. On the _Installation Destination_ screen, under _Local Standard Disks_, make sure the one disk is checked. This is the virtual hard disk you created earlier.
+.. Click _Done_.
 +
-. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter. Click _Configure_ to review and/or change the default settings for the network adapter. Optionally, set a _Host name_ for the system. Before leaving this screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+. Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
+.. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
+.. Optionally, set a _Host name_ for the system.
+.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
+.. Click _Done_.
 +
 [.content-img]
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-07-network.png')}[Screenshot Network Configuration]
@@ -780,9 +807,9 @@ $ su -
 
 If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
-Now download and install any available updates by running `yum update`. If updates are available, `yum` will list them and ask if it is OK to proceed.
+Now download and install any available updates by running `yum update`.
 
-`# yum update`
+`# yum -y update`
 
 ### Enable additional software repositories
 
@@ -877,9 +904,9 @@ $ su -
 
 If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
-Now download and install any available updates by running `yum update`. If updates are available, `yum` will list them and ask if it is OK to proceed.
+Now download and install any available updates by running `yum update`.
 
-`# yum update`
+`# yum -y update`
 
 ### Enable additional software repositories
 
@@ -895,7 +922,7 @@ In this step you will configure your system to obtain software from the _Optiona
 //
 // Once the installation is complete reboot the VM. To do this using the command line:
 
-Finally, reboot the VM.
+Finally, reboot the VM. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
 
 `# reboot`
 
@@ -982,9 +1009,9 @@ $ su -
 
 If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
-Now download and install any available updates by running `yum update`. If updates are available, `yum` will list them and ask if it is OK to proceed.
+Now download and install any available updates by running `yum update`.
 
-`# yum update`
+`# yum -y update`
 
 ### Enable additional software repositories
 
@@ -998,12 +1025,12 @@ In this step you will configure your system to obtain software from the _Optiona
 
 ### Install VirtualBox Guest Additions
 
-Enhanced VM integration is available by installing VirtualBox Guest Additions on the Red Hat Enterprise Linux VM. The enchancements include:
+Enhanced VM integration is available by installing VirtualBox Guest Additions on the Red Hat Enterprise Linux VM. The enhancements include:
 
 * Better mouse pointer integration that eliminates the need to capture the pointer within the VM.
 * Copy and paste between the VM and the host system.
 * Folders that are shared from the host system to the VM. This can be helpful for making your source code available on the VM.
-* Ability to dynamically resize the VM's window which will change the size of the graphic desktop inside the VM.
+* Ability to dynamically resize the VM's window which will change the size of the graphical desktop inside the VM.
 
 VirtualBox Guest Additions are packaged as an ISO file, which will be used on the VM as a virtual CD. VirtualBox will load the virtual CD when you select _Insert Guest Additions CD image_ from the menu. To install VirtualBox Guest Editions:
 
@@ -1021,7 +1048,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-01
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-02-rootpw.png')}[Screenshot VirtualBox Root Password Prompt]
 +
-. A _Terminal_ window will appear with the install proces running inside of it.  When the process it complete you will be prompted to hit _Return_ to close the window.
+. A _Terminal_ window will appear with the install process running inside of it.  When the process it complete you will be prompted to hit _Return_ to close the window.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-03-install-complete.png')}[Screenshot VirtualBox Guest Addition Install Complete]
 +
@@ -1126,9 +1153,9 @@ $ su -
 
 If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
-Now download and install any available updates by running `yum update`. If updates are available, `yum` will list them and ask if it is OK to proceed.
+Now download and install any available updates by running `yum update`.
 
-`# yum update`
+`# yum -y update`
 
 ### Enable additional software repositories
 
@@ -1139,6 +1166,11 @@ In this step you will configure your system to obtain software from the _Optiona
 # subscription-manager repos --enable rhel-server-rhscl-7-rpms
 # subscription-manager repos --enable rhel-7-server-optional-rpms
 ```
+
+Finally, reboot the VM. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
+
+`# reboot`
+
 
 ### VMware Networking
 
