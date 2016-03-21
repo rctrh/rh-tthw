@@ -382,6 +382,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-06-settings4.png')}[Screenshot Settings RHEL DVD]
 
+
 #### Create a shared folder between the host system and the VM (Optional)
 
 You may create a folder that is shared between your host system and the Red Hat Enterprise Linux VM. This makes it easy to share files such as source code between the two systems. The configuration for shared folders can be performed now or anytime later.
@@ -418,7 +419,7 @@ There are a few key steps to remember during the installation process:
 
 A few notes about working with VirtualBox:
 
-* When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the _Host Key_. The lower right corner of the VirtualBox window shows which key is the _Host Key_ for your OS. On Windows and Linux it is the right _Ctrl_ key. On Mac OS is it the left _Command_ key.
+* When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the _Host Key_. The lower right corner of the VirtualBox window shows which key is the _Host Key_ for your OS. On Windows and Linux it is the right _Ctrl_ key. On Mac OS is it the left _Command_ (&#8984;) key.
 * After you install <<Install VirtualBox Guest Addition,VirtualBox Guest Additions>>, the integration the of mouse pointer will be improved. You will no longer need to hit the _Host Key_ to move the focus outside of the VM window.
 * VirtualBox will display some pop-up messages in the VM window. You can dismiss those after to reading them. Note: you won't be able to click on the pop-up messages if your mouse pointer is captured by the VM. Hit the _Host Key_ to release the pointer, then click to dismiss the pop-up boxes.
 * For more information see https://www.virtualbox.org/manual/ch06.html[Chapter 1. First steps, window='_blank'] in the https://www.virtualbox.org/manual/[VirtualBox User Manual, window='_blank'].
@@ -763,6 +764,11 @@ Now download and install any available updates by running `yum update`.
 
 `# yum -y update`
 
+If yum updates the kernel package or installs a large number of updates, you should reboot your system. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
+
+`# reboot`
+
+
 ### Enable additional software repositories
 
 In this step you will configure your system to obtain software from the _Optional RPMs_ and _RHSCL_ software repositories. The _Optional RPMs_ repository includes a number of development packages. The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset).
@@ -961,6 +967,11 @@ Now download and install any available updates by running `yum update`.
 
 `# yum -y update`
 
+If yum updates the kernel package or installs a large number of updates, you should reboot your system. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
+
+`# reboot`
+
+
 ### Enable additional software repositories
 
 In this step you will configure your system to obtain software from the _Optional RPMs_ and _RHSCL_ software repositories. The _Optional RPMs_ repository includes a number of development packages. The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset).
@@ -1002,9 +1013,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-03
 +
 . Eject the virtual CD by right clicking on its icon on the desktop and selecting _Eject_.  
 
-Once the installation is complete reboot the VM. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
-
-`# reboot`
+Note: If you upgrade VirtualBox on your host system, you will need to repeat these steps.
 
 
 ### VirtualBox Networking
@@ -1103,6 +1112,11 @@ Now download and install any available updates by running `yum update`.
 
 `# yum -y update`
 
+If yum updates the kernel package or installs a large number of updates, you should reboot your system. You can do this from the VM's desktop by clicking the down arrow icon in the upper right corner, then clicking the power icon. Alternatively you can reboot the system from the command line:
+
+`# reboot`
+
+
 ### Enable additional software repositories
 
 In this step you will configure your system to obtain software from the _Optional RPMs_ and _RHSCL_ software repositories. The _Optional RPMs_ repository includes a number of development packages. The RHSCL repository includes the both the RHSCL software collections as well as DTS (the Red Hat Developer Toolset).
@@ -1152,7 +1166,7 @@ For VMware Player on Windows, select _Manage_ from the _Player_ menu. Then selec
 +
 For VMware Fusion on Mac OS, select _Install VMware Tools_ from the _Virtual Machine_ menu. Then click _Install_ on the pop-up.
 +
-. Dismiss the _Open with Files_ pop-up on the VM  by clicking on the _X_.
+. Dismiss the _Open with Files_ pop-up on the VM by clicking the _X_.
 . If VMware adds a message at the bottom of the VM window, dismiss it by clicking on the _X_. 
 . Open a _Terminal_ window in the VM from the _Applications_ menu.
 . Change to the root user with `su -`. You will need to enter the root password.
@@ -1413,7 +1427,7 @@ During installation, selecting the _Development tools_ software option installs 
 Registration fails with the message that _subscription.rhn.redhat.com is unreachable_, how do I resolve this?
 +
 If you did not configure a network connection during installation or the configuration was unsuccessful, see the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/index.html[Red Hat Enterprise Linux Networking Guide, window='_blank'] for information on configuring networking using either graphical or command-line tools.
-
++
 . How do I register my system after installation?
 +
 Use Red Hat Subscription Manager, which can be started from the system menu as a graphical tool, or from the command line using the following command:
