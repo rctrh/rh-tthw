@@ -25,7 +25,7 @@ Download the #{site.download_manager_base_url}/download-manager/file/cdk-2.0.0-b
 
 The CDK delivers the latest container tools in a Red Hat Enterprise Linux virtual machine (VM). To use the CDK you will need:
 
-. A virtualization platform: http://virtualbox.org/[VirtualBox, window='_blank'], VMware, or Linux KVM/libvirt
+. A virtualization platform: http://virtualbox.org/[VirtualBox, window='_blank'], https://www.vmware.com/products/desktop-virtualization.html[VMware, , window='_blank'], or Linux KVM/libvirt
 . http://www.vagrantup.com/[Vagrant, window='_blank'], an open source tool for creating and distributing portable development environments.
 . The CDK Red Hat Enterprise Linux Vagrant box that matches your virtualization platform.
 
