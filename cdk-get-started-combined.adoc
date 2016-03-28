@@ -116,7 +116,7 @@ Python is an interpreted, object-oriented, high-level programming language with 
 [.large-7.columns.tc-button]
 #{site.base_url}/products/cdk/get-started-cdk2-python/[Get Started]
 
-## Ruby Tub
+## Ruby Tab
 
 [.large-17.columns.recommended]
 *Ruby 2.2*
