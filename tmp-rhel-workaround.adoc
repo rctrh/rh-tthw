@@ -1,11 +1,15 @@
 
-Temporary work around for RHEL post install configuration failure.
+# Temporary work around for RHEL post-install license acceptance.
+
+image:images/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
+
+In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen shown above. If you see a text-based license acceptance prompt, follow these alternate instructions:
 
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
 
-. Enter 1 and hit return
-. Enter 2 and hit return
-. Enter c and hit return
+. Enter _1_ and hit return
+. Enter _2_ and hit return
+. Enter _c_ and hit return
 . Log in to the system with the username and password you created during installation.
 . Check that the network connection has been started:
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
