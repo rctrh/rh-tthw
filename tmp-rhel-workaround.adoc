@@ -1,23 +1,35 @@
 
 # Temporary work around for RHEL post-install license acceptance.
 
-image:images/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
+image:images/rhel7-install/rhel-72/rhel-13-firstboot-config.png[Screenshot Installation Complete]
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen shown above. If you see a text-based license acceptance prompt, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen shown above. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
 
-. Enter _1_ and hit return
-. Enter _2_ and hit return
-. Enter _c_ and hit return
-. Log in to the system with the username and password you created during installation.
+. To accept the license agreement:
+.. Enter _1_ and hit return to enter the _License information_ section.
+.. Enter _2_ and hit return to accept the license agreement.
+.. Enter _c_ and hit return to leave the _License information_ section.
+.. Enter _c_ and hit return to exit.
+. Log in to the system with the username and password you created during installation at the graphical login screen. If you didn't create a regular user, you will need to log in as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
+.. Select your preferred language for the GNOME desktop. Then click _Next_.
+.. Select your keyboard layout. Then click _Next_.
+.. Optionally follow the dialogs to connect your online accounts or click _Skip_.
+.. Click _Start using Red Hat Enterprise Linux_.
 . Check that the network connection has been started:
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
 .. Click the _Network_ icon under the _Hardware group of _All Settings_.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
++
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
 .. Check that the settings for IP address, DNS, and default route are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
-.. When your are finished with network settings close the window by clicking the _X_ in the upper right corner.
+.. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
++
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
 .. Click the _Register_ button in the upper right corner.
@@ -45,4 +57,6 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[S
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
 
+
+Return to the <<Install the latest updates>>.
 
