@@ -11,7 +11,7 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Enter _1_ and hit return to enter the _License information_ section.
 .. Enter _2_ and hit return to accept the license agreement.
 .. Enter _c_ and hit return to leave the _License information_ section.
-.. Enter _c_ and hit return to exit.
+.. Enter _c_ and hit return to complete the inital setup.
 . Log in to the system with the username and password you created during installation at the graphical login screen. If you didn't create a regular user, you will need to log in as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
 .. Select your preferred language for the GNOME desktop. Then click _Next_.
 .. Select your keyboard layout. Then click _Next_.
@@ -19,26 +19,26 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Click _Start using Red Hat Enterprise Linux_.
 . Check that the network connection has been started:
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
-.. Click the _Network_ icon under the _Hardware group of _All Settings_.
+.. Click the _Network_ icon under the _Hardware group_ of _All Settings_.
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
 +
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
-.. Check that the settings for IP address, DNS, and default route are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
+.. Check that the settings for IP address, default route, and DNS are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
 .. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
 +
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
-.. Click the _Register_ button in the upper right corner.
+.. Click the _Register_ button in the upper right corner of _Subscription Manager_.
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
 +
-.. Leave _I will register with_ set to the default.
+.. Leave _I will register with_ set to the default on the _System Registratin_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
-.. Click _Next_ to move the next screen.
+.. Click _Next_ to move the next dialog.
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
 +
@@ -48,7 +48,7 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screens
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
 +
-.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
+.. On the next dialog, you will be shown the list of subscriptions that are available to for your Red Hat username. If you have more than one subscription available, select the subscription to attach this system to.
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
 +
