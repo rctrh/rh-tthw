@@ -1,0 +1,44 @@
+
+Temporary work around for RHEL post install configuration failure.
+
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
+
+. Enter 1 and hit return
+. Enter 2 and hit return
+. Enter c and hit return
+. Log in to the system with the username and password you created during installation.
+. Check that the network connection has been started:
+.. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
+.. Click the _Network_ icon under the _Hardware group of _All Settings_.
+.. Select the _Wired_ network.
+.. Make sure the toggle switch in the upper right is switched on.
+.. Check that the settings for IP address, DNS, and default route are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
+.. When your are finished with network settings close the window by clicking the _X_ in the upper right corner.
+. Now register the system:
+.. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
+.. Click the _Register_ button in the upper right corner.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
++
+.. Leave _I will register with_ set to the default.
+.. if you need to configure an HTTP proxy server, click _Configure Proxy_
+.. Click _Next_ to move the next screen.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
++
+.. Enter your Red Hat username and password. This is the same login that you use the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
+.. Click _Register_.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
++
+.. On the next screen you will be shown the list of subscriptions that are available to your user Id. If you have more than one subscription available, select which subscription to attach this system to.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
++
+.. Click _Attach_.
+.. Click the _X_ in the upper right hand corner to close _Red Hat Subscription Manager_.
++
+image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
+
+
