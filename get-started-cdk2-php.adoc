@@ -1,5 +1,8 @@
-:awestruct-layout: product-get-started
+:awestruct-layout: product-get-started-multipath
 :awestruct-interpolate: true
+
+## Path Name
+PHP
 
 ## Path Intro section
 Get started building PHP applications in docker formatted containers using the Red Hat Container Development CDK (CDK) 2.0
@@ -215,10 +218,7 @@ Now build the container image using `docker build`.
 
 You can see the container image that was created using the following command:
 
-[.code-block]
-```
-$ docker images
-```
+`$ docker images`
 
 Now run the container using `docker run`. The PHP http server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
 
@@ -249,10 +249,7 @@ To view the logs from the running container use `docker logs _<container-name>_`
 
 When you are done, stop the running container:
 
-[.code-block]
-```
-$ docker stop helloweb
-```
+`$ docker stop helloweb`
 
 The `helloweb` container will be retained until you remove it with `docker rm`. You can restart the container with `docker start helloweb`. Note: A subsequent `docker run` will generate an error if a container with the same name already exists.
 

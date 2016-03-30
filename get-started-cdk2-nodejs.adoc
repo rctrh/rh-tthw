@@ -1,5 +1,8 @@
-:awestruct-layout: product-get-started
+:awestruct-layout: product-get-started-multipath
 :awestruct-interpolate: true
+
+## Path Name
+Node.js
 
 ## Path Intro section
 Get started building Node.js applications in docker formatted containers using the Red Hat Container Development CDK (CDK) 2.0
@@ -46,7 +49,7 @@ To start the vagrant box:
 . Change to the directory where you unpacked the CDK zip file.
 . Change to the sub-directory `components/rhel/rhel-ose`. Alternatively, copy the `Vagrantfile` in that directory to a working directory of your choosing.
 . Start the box by entering `vagrant up`. Note: the `Vagrantfile` needs to be in the current directory when entering vagrant commands without specifying a box name or a path to the `Vagrantfile`.
-. You will be prompted to register the Vagrant box with Red Hat Subscription Management during startup. This is required to allow the box to download software from Red Hat by attaching it to your Red Hat subscription. You will need to enter your Red Hat username and password. 
+. You will be prompted to register the Vagrant box with Red Hat Subscription Management during startup. This is required to allow the box to download software from Red Hat by attaching it to your Red Hat subscription. You will need to enter your Red Hat username and password.
 +
 The vagrant registration plugin will automatically attach the box to your Red Hat subscription when it starts up and release it when the box is shutdown using the `vagrant halt` command.
 
@@ -216,10 +219,7 @@ Now build the container image using `docker build`.
 
 You can see the container image that was created using the following command:
 
-[.code-block]
-```
-$ docker images
-```
+`$ docker images`
 
 Now run the container using `docker run`. The Node.js http server module will create a tiny web server that listens on port 8000 inside the container.  The `run` command will map port 8000 on the host machine to port 8000 inside the container.
 
@@ -250,10 +250,7 @@ To view the logs from the running container use `docker logs _<container-name>_`
 
 When you are done, stop the running container:
 
-[.code-block]
-```
-$ docker stop helloweb
-```
+`$ docker stop helloweb`
 
 The `helloweb` container will be retained until you remove it with `docker rm`. You can restart the container with `docker start helloweb`. Note: A subsequent `docker run` will generate an error if a container with the same name already exists.
 
