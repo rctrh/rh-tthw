@@ -11,7 +11,7 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Enter _1_ and hit return to enter the _License information_ section.
 .. Enter _2_ and hit return to accept the license agreement.
 .. Enter _c_ and hit return to leave the _License information_ section.
-.. Enter _c_ and hit return to complete the inital setup.
+.. Enter _c_ and hit return to complete the initial setup.
 . Log in to the system with the username and password you created during installation at the graphical login screen. If you didn't create a regular user, you will need to log in as root and create a user. See <<troubleshooting,Troubleshooting and FAQ>>.
 .. Select your preferred language for the GNOME desktop. Then click _Next_.
 .. Select your keyboard layout. Then click _Next_.
@@ -36,7 +36,7 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screensho
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
 +
-.. Leave _I will register with_ set to the default on the _System Registratin_ dialog.
+.. Leave _I will register with_ set to the default on the _System Registration_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next dialog.
 +
