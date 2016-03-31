@@ -42,7 +42,7 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screens
 +
 image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
 +
-.. Enter your Red Hat username and password. This is the same login that you use the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
+.. Enter your Red Hat username and password. This is the login that you use for Red Hat sites such as the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
 .. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
 .. Click _Register_.
 +
