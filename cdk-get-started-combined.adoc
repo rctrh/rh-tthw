@@ -1,6 +1,17 @@
-:awestruct-layout: product-get-started-rhel
+:awestruct-layout: product-get-started-cdk
 :awestruct-interpolate: true
-:linkattrs:
+//:linkattrs:
+
+// ## Path Intro Section
+// ## Path Intro section
+// *Intro content goes here (optional)*
+//
+// ## Prerequisites section title
+// Introduction and Prerequisites (optional section)
+//
+// ## Prerequisites section
+//
+// *Prerequisites content goes here (optional)*
 
 ## Step1 Title
 Download Container Development Kit
@@ -23,6 +34,7 @@ Download the #{site.download_manager_base_url}/download-manager/file/cdk-2.0.0-b
 
 Note: Later in this guide, you will need the Red Hat username and password you create during registration for accessing Red Hat sites.
 
+
 ## Step2 Content
 
 The CDK delivers the latest container tools in a Red Hat Enterprise Linux virtual machine (VM). To use the CDK you will need:
@@ -30,7 +42,7 @@ The CDK delivers the latest container tools in a Red Hat Enterprise Linux virtua
 . A virtualization platform: http://virtualbox.org/[VirtualBox, window='_blank'], https://www.vmware.com/products/desktop-virtualization.html[VMware, , window='_blank'], or Linux KVM/libvirt
 . http://www.vagrantup.com/[Vagrant, window='_blank'], an open source tool for creating and distributing portable development environments.
 . The CDK Red Hat Enterprise Linux Vagrant box that matches your virtualization platform.
-. https://www.cygwin.com/[Cgywin, window='_blank'] (Microsoft Windows only) to provide `ssh` and `rsync`.
+. https://www.cygwin.com/[Cygwin, window='_blank'] (Microsoft Windows only) to provide `ssh` and `rsync`.
 
 ### Install a virtualization platform (hypervisor)
 
@@ -59,6 +71,7 @@ If you are using:
 * Fedora 23, install the Vagrant packages included with Fedora using `dnf`. See the link:https://access.redhat.com/documentation/en/red-hat-enterprise-linux-atomic-host/version-7/container-development-kit-installation-guide/#installing_the_cdk_on_fedora_or_red_hat_enterprise_linux[CDK Installation Guide].
 
 For other Linux distributions, install Vagrant using the packages included with your distribution if it includes a recent version. Alternatively, download a `.deb` or `.rpm` package from link:https://vagrantup.com/downloads.html[vagrantup.com].
+
 
 ### Install Cygwin on Microsoft Windows
 
