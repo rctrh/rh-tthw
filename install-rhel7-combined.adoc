@@ -73,7 +73,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04
 . Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
 .. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
 .. Optionally, set a _Host name_ for the system.
-.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Click _Save_ to dismiss the network adapter configuration dialog.
 .. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
 .. Click _Done_.
 +
@@ -454,7 +454,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04
 . Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
 .. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
 .. Optionally, set a _Host name_ for the system.
-.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Click _Save_ to dismiss the network adapter configuration dialog.
 .. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
 .. Click _Done_.
 +
@@ -679,7 +679,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-04
 . Click _Network & host name_ to configure the network. If the system has more than one network adapter, select it from the list on the left. Then click the _On/Off_ button on the right to enable the network adapter.
 .. Click _Configure_ to review and/or change the default settings for the network adapter. The default settings should be fine for most networks that use DHCP.
 .. Optionally, set a _Host name_ for the system.
-.. Click _Save_ to dismess the network adapter configuration dialog.
+.. Click _Save_ to dismiss the network adapter configuration dialog.
 .. Before leaving the _Network & Host name_ screen, make sure there is at least one network adapter enabled with the switch in the _On_ position. A network connection will be required to register the system and download system updates.
 .. Click _Done_.
 +
@@ -715,7 +715,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 [.callout-light]
-*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<Complete installation and register the system (alternate)>> instead.
+*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<baremetal-alternate-license,Complete installation and register the system (alternate)>> instead.
 
 
 . Click _License information_ to go the license acceptance screen.
@@ -756,11 +756,12 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72
 Proceed to <<Install the latest updates>>
 
 
+[[baremetal-alternate-license]]
 ### Complete installation and register the system (alternate)
 
 In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
 . To accept the license agreement:
 .. Enter _1_ and hit return to enter the _License information_ section.
@@ -777,41 +778,41 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
 .. Click the _Network_ icon under the _Hardware group_ of _All Settings_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_settings.png')}[Screenshot alternate network]
 +
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
 .. Check that the settings for IP address, default route, and DNS are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
 .. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_network.png')}[Screenshot alternate network]
 +
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
 .. Click the _Register_ button in the upper right corner of _Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_03_register1.png')}[Screenshot alternate register]
 +
 .. Leave _I will register with_ set to the default on the _System Registration_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next dialog.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_04_register2.png')}[Screenshot alternate register 2]
 +
 .. Enter your Red Hat username and password. This is the login that you use for Red Hat sites such as the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
 .. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
 .. Click _Register_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_05_register_login.png')}[Screenshot alternate register login]
 +
 .. On the next dialog, you will be shown the list of subscriptions that are available to for your Red Hat username. If you have more than one subscription available, select the subscription to attach this system to.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_06_register_attach.png')}[Screenshot alternate register attach]
 +
 .. Click _Attach_.
 .. Click the _X_ in the upper right hand corner to close _Red Hat Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_07_register_done.png')}[Screenshot alternate register attach]
 
 You are now ready to start using Red Hat Enterprise Linux. Next, install the latest updates.
 
@@ -867,7 +868,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 [.callout-light]
-*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<Complete installation and register the system (alternate)>> instead.
+*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<hyperv-alternate-license,Complete installation and register the system (alternate)>> instead.
 
 
 . Click _License information_ to go the license acceptance screen.
@@ -905,12 +906,15 @@ You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of 
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
 
+Proceed to <<hyperv-lockscreen,Disable lock screen and screen power saving>>.
 
+
+[[hyperv-alternate-license]]
 ### Complete installation and register the system (alternate)
 
 In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
 . To accept the license agreement:
 .. Enter _1_ and hit return to enter the _License information_ section.
@@ -927,43 +931,44 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
 .. Click the _Network_ icon under the _Hardware group_ of _All Settings_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_settings.png')}[Screenshot alternate network]
 +
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
 .. Check that the settings for IP address, default route, and DNS are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
 .. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_network.png')}[Screenshot alternate network]
 +
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
 .. Click the _Register_ button in the upper right corner of _Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_03_register1.png')}[Screenshot alternate register]
 +
 .. Leave _I will register with_ set to the default on the _System Registration_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next dialog.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_04_register2.png')}[Screenshot alternate register 2]
 +
 .. Enter your Red Hat username and password. This is the login that you use for Red Hat sites such as the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
 .. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
 .. Click _Register_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_05_register_login.png')}[Screenshot alternate register login]
 +
 .. On the next dialog, you will be shown the list of subscriptions that are available to for your Red Hat username. If you have more than one subscription available, select the subscription to attach this system to.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_06_register_attach.png')}[Screenshot alternate register attach]
 +
 .. Click _Attach_.
 .. Click the _X_ in the upper right hand corner to close _Red Hat Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_07_register_done.png')}[Screenshot alternate register attach]
 
 
+[[hyperv-lockscreen]]
 ### Disable lock screen and screen power saving
 
 For security and to save energy, the default configuration of Red Hat Enterprise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
@@ -1016,6 +1021,7 @@ Finally, reboot the VM. You can do this from the VM's desktop by clicking the do
 
 `# reboot`
 
+
 ## Step3 Virtualbox Content
 
 This section has a number of post-installation steps that complete the installation of Red Hat Enterprise Linux and prepare it for software development. The steps are:
@@ -1032,7 +1038,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 [.callout-light]
-*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<Complete installation and register the system (alternate)>> instead.
+*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<virtualbox-alternate-license>>Complete installation and register the system (alternate)>> instead.
 
 
 . Click _License information_ to go the license acceptance screen.
@@ -1070,12 +1076,15 @@ You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of 
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
 
+Proceed to <<virtualbox-lockscreen,Disable lock screen and screen power saving>>.
 
+
+[[virtualbox-alternate-license]]
 ### Complete installation and register the system (alternate)
 
 In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
 . To accept the license agreement:
 .. Enter _1_ and hit return to enter the _License information_ section.
@@ -1092,43 +1101,44 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
 .. Click the _Network_ icon under the _Hardware group_ of _All Settings_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_settings.png')}[Screenshot alternate network]
 +
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
 .. Check that the settings for IP address, default route, and DNS are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
 .. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_network.png')}[Screenshot alternate network]
 +
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
 .. Click the _Register_ button in the upper right corner of _Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_03_register1.png')}[Screenshot alternate register]
 +
 .. Leave _I will register with_ set to the default on the _System Registration_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next dialog.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_04_register2.png')}[Screenshot alternate register 2]
 +
 .. Enter your Red Hat username and password. This is the login that you use for Red Hat sites such as the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
 .. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
 .. Click _Register_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_05_register_login.png')}[Screenshot alternate register login]
 +
 .. On the next dialog, you will be shown the list of subscriptions that are available to for your Red Hat username. If you have more than one subscription available, select the subscription to attach this system to.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_06_register_attach.png')}[Screenshot alternate register attach]
 +
 .. Click _Attach_.
 .. Click the _X_ in the upper right hand corner to close _Red Hat Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_07_register_done.png')}[Screenshot alternate register attach]
 
 
+[[virtualbox-lockscreen]]
 ### Disable lock screen and screen power saving
 
 For security and to save energy, the default configuration of Red Hat Enterprise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
@@ -1239,7 +1249,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 [.callout-light]
-*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<Complete installation and register the system (alternate)>> instead.
+*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<vmware-alternate-license,Complete installation and register the system (alternate)>> instead.
 
 . Click _License information_ to go the license acceptance screen.
 .. Click the check box to accept the license.
@@ -1276,12 +1286,15 @@ You are now logged into Red Hat Enterprise Linux. The _Getting Started_ page of 
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72-desktop.png')}[Screenshot Red Hat Enterprise desktop]
 
+Proceed to <<vmware-lockscreen,Disable lock screen and screen power saving>>.
 
+
+[[vmware-alternate-license]]
 ### Complete installation and register the system (alternate)
 
 In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Screenshot alternate post-install license]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
 . To accept the license agreement:
 .. Enter _1_ and hit return to enter the _License information_ section.
@@ -1298,43 +1311,44 @@ image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_01_text_license.png[Scre
 .. Run _Settings_ from the _System Tools_ group of the _Applications_ menu.
 .. Click the _Network_ icon under the _Hardware group_ of _All Settings_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_settings.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_settings.png')}[Screenshot alternate network]
 +
 .. Select the _Wired_ network.
 .. Make sure the toggle switch in the upper right is switched on.
 .. Check that the settings for IP address, default route, and DNS are appropriate for your network. If you need to change them, Click the settings button in the lower right corner.
 .. When you are finished with network settings close the window by clicking the _X_ in the upper right corner.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_02_network.png[Screenshot alternate network]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_02_network.png')}[Screenshot alternate network]
 +
 . Now register the system:
 .. Start _Red Hat Subscription Manager_ from the _System tools_ group of the _Applications_ menu.
 .. Click the _Register_ button in the upper right corner of _Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_03_register1.png[Screenshot alternate register]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_03_register1.png')}[Screenshot alternate register]
 +
 .. Leave _I will register with_ set to the default on the _System Registration_ dialog.
 .. if you need to configure an HTTP proxy server, click _Configure Proxy_
 .. Click _Next_ to move the next dialog.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_04_register2.png[Screenshot alternate register 2]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_04_register2.png')}[Screenshot alternate register 2]
 +
 .. Enter your Red Hat username and password. This is the login that you use for Red Hat sites such as the Red Hat Customer Portal, https://access.redhat.com/[access.redhat.com, window='_blank'].
 .. Optionally, enter a _System Name_ that will be used to identify this system on the Red Hat Customer Portal.
 .. Click _Register_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_05_register_login.png[Screenshot alternate register login]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_05_register_login.png')}[Screenshot alternate register login]
 +
 .. On the next dialog, you will be shown the list of subscriptions that are available to for your Red Hat username. If you have more than one subscription available, select the subscription to attach this system to.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_06_register_attach.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_06_register_attach.png')}[Screenshot alternate register attach]
 +
 .. Click _Attach_.
 .. Click the _X_ in the upper right hand corner to close _Red Hat Subscription Manager_.
 +
-image:images/rhel7-install/vm-alt-license/rhel_vbox_alt_07_register_done.png[Screenshot alternate register attach]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_07_register_done.png')}[Screenshot alternate register attach]
 
 
+[[vmware-lockscreen]]
 ### Disable lock screen and screen power saving
 
 For security and to save energy, the default configuration of Red Hat Enterprise Linux is to lock the screen and turn the screen off when idle. On a VM, it is best to disable these features since the host system will control screen locking and power saving.
