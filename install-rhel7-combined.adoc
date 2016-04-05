@@ -409,11 +409,17 @@ After creating the VM, `virt-install` will automatically start `virt-viewer` to 
 
 To create a VM using the `virt-manager` GUI, start _Virtual Machine Manager_ from the system menu or enter the command `virt-manager`. If you didn't enable non-root users to use KVM/libvirt, use `su -c virt-manager` or `sudo virt-manager`.
 
-. When `virt-manager` opens, it will show the available hypervisor connections. If you don't see _QEMU/KVM_ list, select _New Connection_ from the _File_ menu. Select _QEMU/KVM_ from the list of hypervisors. Then click _Connect_.
+. When `virt-manager` opens, it will show the available hypervisor connections. If you don't see _QEMU/KVM_ listed:
+.. Select _New Connection_ from the _File_ menu.
+.. Select _QEMU/KVM_ from the list of hypervisors.
+.. Click _Connect_.
++
+image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
++
 . Select _New Virtual Machine_ from the _File_ menu.
 . On the _Create a new virtual machine_ dialog:
 .. Make sure _Connection_ is set to _QEMU/KVM_.
-.. Select _Local install media_ (ISO image or CDROM)_ under _Choose how you would like to install the operating system_.
+.. Select _Local install media (ISO image or CDROM)_ under _Choose how you would like to install the operating system_.
 .. Click _Forward_.
 +
 image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
@@ -421,9 +427,9 @@ image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
 . Under _Locate your install media_ of the _Create a new virtual machine_ dialog:
 .. Select _Use ISO image_.
 .. Click _Browse..._
-... Click _Browse Local_ on the _Choose Storage Volume_ dialog.
+... Click _Browse Local_ on the bottom of the _Choose Storage Volume_ dialog.
 ... Navigate to the Red Hat Enterprise Linux Server DVD `.iso` file you downloaded in step 1 of this guide.
-.. Uncheck _Automatically detect operating system based on install media.
+.. Uncheck _Automatically detect operating system based on install media_.
 .. Set _OS Type_ to _Linux_.
 .. Set _Version_ to _Red hat Enterprise Linux 7_. If that choice is not available, you may select _Red Hat Enterprise Linux 6_.
 .. Click _Forward_.
@@ -472,7 +478,9 @@ A few notes about working with `virt-manager` or `virt-viewer`
 
 * When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the left _Ctrl_ and _Alt_ keys at the same time.
 * After the installation of Red Hat Enterprise Linux completes, the integration the of mouse pointer will be improved. You will no longer need to hit the left _Ctrl_ and _Alt_ keys to move the focus outside of the VM window.
-* Tools for libvirt such as `virt-manager` and `virt-viewer` can work with VMs running on the local machine as well as remote systems. You may need to specify which hypservisor to connect to, _QEMU/KVM_ in the `virt-manager` gui, or `-c qemu:///session' for command line line tools such as `virt-viewer`.
+* Tools for libvirt such as `virt-manager` and `virt-viewer` can work with VMs running on the local machine as well as remote systems. You may need to specify which hypservisor to connect to, _QEMU/KVM_ in the `virt-manager` gui, or `-c qemu:///session` for command line line tools such as `virt-viewer`.
+
+To install Red Hat Enterprise Linux:
 
 . When the VM boots, select _Install Red Hat Enterprise Linux_.
 +
@@ -1290,7 +1298,7 @@ After installation, during the first boot of the system, you will be asked to ac
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-13-firstboot-config.png')}[Screenshot Installation Complete]
 
 [.callout-light]
-*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<kvm-alternate-license>>Complete installation and register the system (alternate)>> instead.
+*Note:* In some cases, when booting the system for the first time, you may not see the graphical post-installation screen shown above. If you see a text-based license acceptance prompt follow the instructions in <<kvm-alternate-license,Complete installation and register the system (alternate)>> instead.
 
 
 . Click _License information_ to go the license acceptance screen.
