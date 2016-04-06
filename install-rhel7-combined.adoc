@@ -26,7 +26,7 @@ Note: Later in this guide, you will need the Red Hat username and password you c
 
 ## Step2 Baremetal Content
 
-This section provides an overview of the key steps for installing Red Hat Enterprise Linux so you can get started with software development. Note: This tutorial does not replace the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank'].  Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manual.
+This section provides an overview of the key steps for installing Red Hat Enterprise Linux so you can get started with software development. Note: This tutorial does not replace the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank']. Instead, this tutorial provides an overview of the key steps for software developers. For detailed instructions, see the respective manual.
 
 A few things to keep in mind:
 
@@ -98,8 +98,7 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step2 Hyperv Content
 
-This step provides an overview of the key steps for installing #{site.base_url}/products/rhel/overview/[Red Hat Enterprise Linux Server] in a https://technet.microsoft.com/en-us/library/hh857623.aspx[Hyper-V, window='_blank'] 
-Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows 10, 8.1, or 8.0.
+This step provides an overview of the key steps for installing #{site.base_url}/products/rhel/overview/[Red Hat Enterprise Linux Server] in a https://technet.microsoft.com/en-us/library/hh857623.aspx[Hyper-V, window='_blank'] Virtual Machine (VM) so you can get started with software development. The VM you create will give you a Red Hat Enterprise Linux development environment that you can use on your system running Microsoft Windows 10, 8.1, or 8.0.
 
 ### Overview of steps
 
@@ -130,7 +129,7 @@ If you encounter difficulties at any point in this tutorial, see <<troubleshooti
 
 ### Enable Hyper-V
 
-This guide shows the steps for Hyper-V on Windows 10 Professional. The steps Windows 8 and 8.1 are similar but may have small differences. Hyper-V is installed, but not enabled by default on most editions of Windows starting with Windows 8. 
+This guide shows the steps for Hyper-V on Windows 10 Professional. The steps Windows 8 and 8.1 are similar but may have small differences. Hyper-V is installed, but not enabled by default on most editions of Windows starting with Windows 8.
 
 To enable Hyper-V the Hyper-V role:
 
@@ -193,7 +192,7 @@ Create a VM by clicking _New_, then _Virtual Machine..._ in the _Actions_ pane o
 . Under _Configure Networking_:
 .. Select the virtual switch you created earlier from the _Connection_ list.
 .. Click _Next_.
-. Under _Connect Virtual Hard Disk_ you will configure the new VM's virtual hard disk (VHD). You will need at least 20 GB of free space to store the VM's VHD. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the VHD to be large enough for your software development activities. 
+. Under _Connect Virtual Hard Disk_ you will configure the new VM's virtual hard disk (VHD). You will need at least 20 GB of free space to store the VM's VHD. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the VHD to be large enough for your software development activities.
 .. Select _Create a virtual hard disk_ if it isn't already checked.
 .. Enter `rhel.vhdx` as the _Name_ of the virtual hard disk.
 .. Change the _Location_ if necessary. By default the VHD will be stored in `C:\Users\Public`.
@@ -203,7 +202,7 @@ Create a VM by clicking _New_, then _Virtual Machine..._ in the _Actions_ pane o
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/hyperv/hv-07-vhd.png')}[Screenshot Virtual Hard Disk Settings]
 +
 . Under _Installation Options_:
-.. Select _Install an operating system from a bootable CD/DVD-ROM_. 
+.. Select _Install an operating system from a bootable CD/DVD-ROM_.
 .. Select _Image fie (.iso)_.
 .. Click _Browse..._ to navigate to the Red Hat Enterprise Linux Server DVD `.iso` file you downloaded in step 1.
 +
@@ -372,7 +371,7 @@ $ sudo -i
 
 // *FIXME* Check that libvirtd is running
 
-Optionally, Add your user id to the `libvirtd` and `kvm` groups to enable running KVM virtualization as a non-root user.  If `$USER` doesn't contain your username, enter your username instead:
+Optionally, Add your user id to the `libvirtd` and `kvm` groups to enable running KVM virtualization as a non-root user. If `$USER` doesn't contain your username, enter your username instead:
 
 [.code-block]
 ```
@@ -414,7 +413,7 @@ To create a VM using the `virt-manager` GUI, start _Virtual Machine Manager_ fro
 .. Select _QEMU/KVM_ from the list of hypervisors.
 .. Click _Connect_.
 +
-image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/kvm/kvm-00-add-connection.png')}[Screenshot KVM Add connection]
 +
 . Select _New Virtual Machine_ from the _File_ menu.
 . On the _Create a new virtual machine_ dialog:
@@ -422,7 +421,7 @@ image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
 .. Select _Local install media (ISO image or CDROM)_ under _Choose how you would like to install the operating system_.
 .. Click _Forward_.
 +
-image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/kvm/kvm-01-create.png')}[Screenshot KVM VM Create]
 +
 . Under _Locate your install media_ of the _Create a new virtual machine_ dialog:
 .. Select _Use ISO image_.
@@ -434,14 +433,14 @@ image:images/rhel7-install/kvm/kvm-01-create.png[Screenshot KVM VM Create]
 .. Set _Version_ to _Red hat Enterprise Linux 7_. If that choice is not available, you may select _Red Hat Enterprise Linux 6_.
 .. Click _Forward_.
 +
-image:images/rhel7-install/kvm/kvm-02-create-iso-type.png[Screenshot KVM VM Create ISO]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/kvm/kvm-02-create-iso-type.png')}[Screenshot KVM VM Create Select ISO]
 +
 . Under _Choose memory and CPU settings_:
 .. Set the amount of memory available to the VM. The minimum is 2048 MB, however 4096 MB is suggested.
 .. Optionally, set the number of CPUs available to the VM.
 .. Click _Forward_.
 +
-image:images/rhel7-install/kvm/kvm-03-create-memory-cpu.png[Screenshot KVM VM Create Memory and CPU]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/kvm/kvm-03-create-memory-cpu.png')}[Screenshot KVM VM Create Memory and CPU]
 +
 . On the next dialog you will specify the virtual hard disk (VHD) size. The size of the VHD, should be a minimum of 20 GB. While this setting can be changed later, it is a multi-step process not covered by this guide. Therefore it is recommended that you size the VHD to be large enough for your software development activities.
 .. Check _Enable storage for this virtual machine_.
@@ -449,7 +448,7 @@ image:images/rhel7-install/kvm/kvm-03-create-memory-cpu.png[Screenshot KVM VM Cr
 .. Set the desired VHD size.
 .. Click _Forward_.
 +
-image:images/rhel7-install/kvm/kvm-04-create-vhd-size.png[Screenshot KVM VM Create VHD size]
+image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/kvm/kvm-04-create-vhd-size.png')}[Screenshot KVM VM Create VHD size]
 +
 . Under _Ready to begin the installation_:
 .. Set the _Name_ to _rhel_.
@@ -478,7 +477,7 @@ A few notes about working with `virt-manager` or `virt-viewer`
 
 * When you click inside the VM window, the mouse pointer and keyboard will be captured by the VM until you release them by hitting the left _Ctrl_ and _Alt_ keys at the same time.
 * After the installation of Red Hat Enterprise Linux completes, the integration the of mouse pointer will be improved. You will no longer need to hit the left _Ctrl_ and _Alt_ keys to move the focus outside of the VM window.
-* Tools for libvirt such as `virt-manager` and `virt-viewer` can work with VMs running on the local machine as well as remote systems. You may need to specify which hypservisor to connect to, _QEMU/KVM_ in the `virt-manager` gui, or `-c qemu:///session` for command line line tools such as `virt-viewer`.
+* Tools for libvirt such as `virt-manager` and `virt-viewer` can work with VMs running on the local machine as well as remote systems. You may need to specify which hypervisor to connect to, _QEMU/KVM_ in the `virt-manager` GUI, or `-c qemu:///session` for command line line tools such as `virt-viewer`.
 
 To install Red Hat Enterprise Linux:
 
@@ -636,7 +635,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vbox-0
 . Next, configure the VM to use the Red Hat Enterprise Linux Server binary DVD ISO file as a virtual CD/DVD:
 .. Select the _Storage_ section of the _VM Settings_ dialog.
 .. Under _Controller: IDE_, select the CD icon that says _Empty_ next to it.
-.. On the right side, under _Attributes_, click the CD icon on the far right. 
+.. On the right side, under _Attributes_, click the CD icon on the far right.
 .. Select _Choose Virtual Optical Disk File_.
 .. Navigate to the Red Hat Enterprise Linux Server binary DVD ISO file that you downloaded earlier.
 . Click _OK_ to close the VM settings dialog.
@@ -851,7 +850,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-02-create-os.png')}[Screenshot Create VM Choose OS]
 +
-. Click _Continue_ on the _Choose a Virtual Disk_ dialog. The option _Create a new virtual disk_ should be selected by default. The default virtual disk size is 20 GB. 
+. Click _Continue_ on the _Choose a Virtual Disk_ dialog. The option _Create a new virtual disk_ should be selected by default. The default virtual disk size is 20 GB.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-03-create-disk.png')}[Screenshot Create VM Create Disk]
 +
@@ -871,8 +870,8 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-
 .. Select _Choose a disk or disk image..._ from the CD/DVD dialog. By default it is set to _Autodetect_.
 .. In the file dialog, Navigate to the location of the `.iso` file you downloaded in step 1. Then click _Open_.
 .. Click the _Connect CD/DVD Drive_ check box.
-.. Click _Show All_  in the top left corner to return to _VM Settings_.
-. Optionally, you can tailor the configuration of the VM to suit your needs. 
+.. Click _Show All_ in the top left corner to return to _VM Settings_.
+. Optionally, you can tailor the configuration of the VM to suit your needs.
 .. You can adjust the amount of memory and number of CPUs available to the VM by clicking the _Processors & Memory_ icon. The minimum memory for the VM is 2048 MB, however 4096 is suggested. You can change the amount of memory later.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vmware-mac/vmf-06-settings-cpu-memory.png')}[Screenshot CPU and Memory Settings]
@@ -894,7 +893,7 @@ To start the VM and begin installation:
 
 The VM should now boot up from the Red Hat Enterprise Linux Server DVD `.iso` file.
 
-Note: When you click inside the VM window, the keyboard and mouse will be captured by the VM until you hit _Ctrl_ and _Alt_ on Windows or _Ctrl_ and the _Command_ key (&#8984;) on the Mac. When the system is fully installed this will no longer be necessary. See <<Open VM Tools replaces VMware Tools for Linux>>. 
+Note: When you click inside the VM window, the keyboard and mouse will be captured by the VM until you hit _Ctrl_ and _Alt_ on Windows or _Ctrl_ and the _Command_ key (&#8984;) on the Mac. When the system is fully installed this will no longer be necessary. See <<Open VM Tools replaces VMware Tools for Linux>>.
 
 This section provides a brief overview of the steps for installing Red Hat Enterprise Linux. Detailed instructions can be found in the https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide, window='_blank'].
 
@@ -1017,7 +1016,7 @@ Proceed to <<Install the latest updates>>
 [[baremetal-alternate-license]]
 ### Complete installation and register the system (alternate)
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
@@ -1081,7 +1080,7 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72/rhel-72
 
 In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
+First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories.
 
 [.code-block]
 ```
@@ -1172,7 +1171,7 @@ Proceed to <<hyperv-lockscreen,Disable lock screen and screen power saving>>.
 [[hyperv-alternate-license]]
 ### Complete installation and register the system (alternate)
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
@@ -1249,7 +1248,7 @@ To disable these features, from the desktop _Application_ menu, select the _Syst
 
 In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
+First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories.
 
 [.code-block]
 ```
@@ -1342,7 +1341,7 @@ Proceed to <<kvm-lockscreen,Disable lock screen and screen power saving>>.
 [[kvm-alternate-license]]
 ### Complete installation and register the system (alternate)
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
@@ -1419,7 +1418,7 @@ To disable these features, from the desktop _Application_ menu, select the _Syst
 
 In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
+First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories.
 
 [.code-block]
 ```
@@ -1458,7 +1457,7 @@ Alternatively, you can attach the VM to directly network by sharing the network 
 Networking, both physical and virtual, is a large topic beyond the scope of this guide. For more information see your system's documentation.
 
 * https://docs.fedoraproject.org/en-US/Fedora/23/html-single/Virtualization_Getting_Started_Guide/index.html[Fedora Virtualization Getting Started Guide, window='_blank'].
-* https://docs.fedoraproject.org/en-US/Fedora/23/html/Networking_Guide/index.html[Fedora Networing Guide, window='_blank'].
+* https://docs.fedoraproject.org/en-US/Fedora/23/html/Networking_Guide/index.html[Fedora Networking Guide, window='_blank'].
 * https://help.ubuntu.com/lts/serverguide/libvirt.html[Ubuntu Server Guide: Virtualization, window='_blank'].
 
 
@@ -1524,7 +1523,7 @@ Proceed to <<virtualbox-lockscreen,Disable lock screen and screen power saving>>
 [[virtualbox-alternate-license]]
 ### Complete installation and register the system (alternate)
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
@@ -1601,7 +1600,7 @@ To disable these features, from the desktop _Application_ menu, select the _Syst
 
 In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
+First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories.
 
 [.code-block]
 ```
@@ -1647,7 +1646,7 @@ VirtualBox Guest Additions are packaged as a `.iso` file, which will be used on 
 The steps to install VirtualBox Guest Additions are:
 
 . Select _Insert Guest Additions CD image_ from the _Devices_ menu of the VM window.
-. A dialog box will pop up asking you if you want to run the software on the virtual CD.  Click _Run_.
+. A dialog box will pop up asking you if you want to run the software on the virtual CD. Click _Run_.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-01-autorun.png')}[Screenshot VirtualBox Guest Additions Auto Run]
 +
@@ -1655,11 +1654,11 @@ image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-01
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-02-rootpw.png')}[Screenshot VirtualBox Root Password Prompt]
 +
-. A _Terminal_ window will appear with the install process running inside of it.  When the process it complete you will be prompted to hit _Return_ to close the window.
+. A _Terminal_ window will appear with the install process running inside of it. When the process it complete you will be prompted to hit _Return_ to close the window.
 +
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/vbox/win-vga-03-install-complete.png')}[Screenshot VirtualBox Guest Addition Install Complete]
 +
-. Eject the virtual CD by right clicking on its icon on the desktop and selecting _Eject_.  
+. Eject the virtual CD by right clicking on its icon on the desktop and selecting _Eject_.
 
 Note: If you upgrade VirtualBox on your host system, you will need to repeat these steps.
 
@@ -1734,7 +1733,7 @@ Proceed to <<vmware-lockscreen,Disable lock screen and screen power saving>>.
 [[vmware-alternate-license]]
 ### Complete installation and register the system (alternate)
 
-In some cases, when booting the system for the first time, you may not see the graphical post-installation  screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
+In some cases, when booting the system for the first time, you may not see the graphical post-installation screen. If you see a text-based license acceptance prompt as shown below, follow these alternate instructions:
 
 image:#{cdn(site.base_url + '/images/products/rhel/rhel7-install/rhel-72-alt-license/rhel_vbox_alt_01_text_license.png')}[Screenshot alternate post-install license]
 
@@ -1811,7 +1810,7 @@ To disable these features, from the desktop _Application_ menu, select the _Syst
 
 In this step, you will download and install the latest updates for your system from Red Hat. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories. 
+First, start a _Terminal_ window from the _Application_ menu. Then, after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat software repositories.
 
 [.code-block]
 ```
@@ -1858,7 +1857,7 @@ Networking, both physical and virtual, is a large topic beyond the scope of this
 
 Red Hat Enterprise Linux includes Open VM Tools which replaces the VMware's Operating System Specific Tools (OST), also known as VMware Tools for Linux. You do not need to install VMware Tools as the functionality is implemented in the open source packages that are included with Red Hat Enterprise Linux. These tools are services and drivers that are installed in the guest operating system under the VM to:
 
-* Enable copy-and-paste between the host system and the VM. 
+* Enable copy-and-paste between the host system and the VM.
 * Provide better mouse pointer integration.
 * Allow resizing of the VM window which will change the size of VM's graphical desktop.
 * Improve VM performance.
@@ -1880,7 +1879,7 @@ For VMware Player on Windows, select _Manage_ from the _Player_ menu. Then selec
 For VMware Fusion on Mac OS, select _Install VMware Tools_ from the _Virtual Machine_ menu. Then click _Install_ on the pop-up.
 +
 . Dismiss the _Open with Files_ pop-up on the VM by clicking the _X_.
-. If VMware adds a message at the bottom of the VM window, dismiss it by clicking on the _X_. 
+. If VMware adds a message at the bottom of the VM window, dismiss it by clicking on the _X_.
 . Open a _Terminal_ window in the VM from the _Applications_ menu.
 . Change to the root user with `su -`. You will need to enter the root password.
 . Enter the following commands:
@@ -1974,7 +1973,7 @@ Supported for the entire life of RHEL 7.
 
 [.large-17.columns.recommended]
 *Java on RHEL 7 with OpenJDK 8* +
-OpenJDK (Open Java Development Kit) is a free and open source implementation of the Java Platform, Standard Edition (Java SE). 
+OpenJDK (Open Java Development Kit) is a free and open source implementation of the Java Platform, Standard Edition (Java SE).
 [.large-7.columns.tc-button]
 #{site.base_url}/products/rhel/get-started-rhel7-java/[Get Started]
 
