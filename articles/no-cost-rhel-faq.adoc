@@ -179,9 +179,9 @@ You need to register your system in order to download software and updates from 
 +
 You can view information about your subscription including the registration number and expiration date using the link:https://access.redhat.com/management/[subscription link] on the Red Hat Customer Portal. You will need to use your Red Hat login. Your username will generally be the email address you registered under. The steps are:
 
-. Go to link:https://access.redhat.com/management/[access.redhat.com/management].
-. Under _My Subscriptions_, click _View All_.
-. In the middle of the following page, you will see the 16-digit number installation number that you need for registration and installation.
+.. Go to link:https://access.redhat.com/management/[access.redhat.com/management].
+.. Under _My Subscriptions_, click _View All_.
+.. In the middle of the following page, you will see the 16-digit number installation number that you need for registration and installation.
 
 Note: All current versions of Red Hat Enterprise Linux use Red Hat Subscription Management instead of the older Red Hat Network (RHN) management system. You will use your Red Hat username and password for subscription management in place of installation numbers used on RHN systems. For more information see link:https://access.redhat.com/rhn-to-rhsm[Transition of RHN Classic to Red Hat Subscription Management].
 +
