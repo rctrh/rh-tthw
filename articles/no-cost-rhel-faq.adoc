@@ -18,10 +18,10 @@ Developers can now get a no-cost subscription for Red Hat Enterprise Linux Devel
 +
 Red Hat Developer Suite includes:
 
-.. Red Hat Enterprise Linux Server.
-.. Red Hat Software Collections.
-.. Red Hat Developer Toolset.
-.. numerous Red Hat Enterprise Linux infrastructure add-ons.
+* Red Hat Enterprise Linux Server.
+* Red Hat Software Collections.
+* Red Hat Developer Toolset.
+* numerous Red Hat Enterprise Linux infrastructure add-ons.
 
 . *Is the Red Hat Enterprise Linux in this subscription the same as what enterprises use in production?*
 +
@@ -31,17 +31,17 @@ Yes, the bits are identical to enable you to develop and test your software on t
 +
 All of the software binaries that are available to a subscription are the same regardless of the support level. Subscriptions vary by the level and type of support offered. Enterprises purchase subscriptions that include service level agreements that meet their business' need for response times. The no-cost developer suite subscription is self-supported. Your subscription gives you access to the Red Hat Customer Portal, link:http://access.redhat.com[access.redhat.com]. Subscriber-only content on the portal includes a knowledgebase with thousands of articles that cover configuration, deployment, troubleshooting, and security.
 +
-Finally, the biggest difference is that the no-cost Developer Suite subscription is only for development purposes and may not be used in production. So, while the bits are the same, what is different is the terms of use and the support level. The no-cost Red Hat Enterprise Linux Developer Suite is for development purposes only and is self-supported. For production and other uses not covered by the developer agreement, Red Hat offers subscriptions with a choice of support coverage (typical business day only, 24 x 7, etc.) and response time agreements.
+Finally, the biggest difference is that the no-cost Developer Suite subscription is only for development purposes and may not be used in production. So, while the bits are the same, the differences are the terms of use and the support level. The no-cost Red Hat Enterprise Linux Developer Suite is for development purposes only and is self-supported. For production and other uses not covered by the developer agreement, Red Hat offers subscriptions with a choice of support coverage (typical business day only, 24 x 7, etc.) and response time agreements.
 
 . *What is self-support and what does this no-cost Red Hat Enterprise Linux Developer Suite subscription cover?*
 +
 The no-cost Red Hat Enterprise Linux Developer Suite subscription is for link:http://developers.redhat.com/terms-and-conditions/[development use only]. The support is self service through the Red Hat Customer Portal, link:http://access.redhat.com[access.redhat.com]. Your self-support subscription includes:
 
-.. An entitlement to register the system running Red Hat Enterprise Linux.
-.. Complete access to Red Hat Enterprise Linux updates and errata.
-.. Access to knowledgebase articles, portal discussion groups, and magazines on the link:http://access.redhat.com[Red Hat Customer Portal].
-.. Users can open a support ticket for issues related to Red Hat Network registration or issues related to `yum` updates.
-.. This subscription does not include support on any operating system related issue. Users may look for the resolution in our knowledgebase articles or can discuss it over portal groups with respective domain experts. Note: there is no service level agreement for discussing issues over portal groups.
+* An entitlement to register the system running Red Hat Enterprise Linux.
+* Complete access to Red Hat Enterprise Linux updates and errata.
+* Access to knowledgebase articles, portal discussion groups, and magazines on the link:http://access.redhat.com[Red Hat Customer Portal].
+* Users can open a support ticket for issues related to Red Hat Network registration or issues related to `yum` updates.
+* This subscription does not include support on any operating system related issue. Users may look for the resolution in our knowledgebase articles or can discuss it over portal groups with respective domain experts. Note: there is no service level agreement for discussing issues over portal groups.
 
 . *Is this no-cost subscription for individuals or businesses/enterprises*?
 +
