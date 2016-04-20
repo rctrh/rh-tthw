@@ -150,7 +150,7 @@ You can use virtualization to run Red Hat Enterprise Linux on your existing syst
 +
 We have a number of resources that can help:
 
-* First, our Getting Started Guide covers the key points on installing Red Hat Enterprise Linux for software development.
+* First, our link:http://developers.redhat.com/products/rhel/get-started/[Getting Started Guide] covers the key points on installing Red Hat Enterprise Linux for software development.
 * The link:https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Installation_Guide/[Red Hat Enterprise Linux Installation Guide] contains comprehensive installation and troubleshooting instructions.
 * An extensive collection of support resources are available in the https://access.redhat.com/search/#/knowledgebase[knowledgebase] on the Red Hat Customer Portal, link:http://access.redhat.com[access.redhat.com].
 
@@ -167,7 +167,7 @@ During the registration and download process at link:http://developers.redhat.co
 
 . *During system registration, when I click _Attach_, I get an error message: “No service level will cover all installed products”, or "User is not able to register with any orgs.” How do I resolve this?*
 +
-These errors indicate that the username you logged in as doesn't have a current subscription. The no-cost subscription is added to your account when you register and download through link:http://developers.redhat.com/[developers.redhat.com]. Check that your subscription got added to your account at link:http://access.redhat.com/management/[access.redhat.com/management]. You should see an active subscription for _Red Hat Enterprise Linux Developer Suite_. If a subscription was not added to your account, log in to link:http://developers.redhat.com/[developers.redhat.com] and try the link:http://developers.redhat.com/downloads[download] again. Note: You do not need to download the whole file again, you can cancel the download after it starts. Now, go back to link:http://access.redhat.com/management/[access.redhat.com/management] and see if the subscription was added to your account.
+These errors indicate that the Red Hat user you logged in as doesn't have a current subscription. The no-cost subscription is added to your account when you register and download through link:http://developers.redhat.com/[developers.redhat.com]. Check that your subscription got added to your account at link:http://access.redhat.com/management/[access.redhat.com/management]. You should see an active subscription for _Red Hat Enterprise Linux Developer Suite_. If a subscription was not added to your account, log in to link:http://developers.redhat.com/[developers.redhat.com] and try the link:http://developers.redhat.com/downloads[download] again. Note: You do not need to download the whole file again, you can cancel the download after it starts. Now, go back to link:http://access.redhat.com/management/[access.redhat.com/management] and see if the subscription was added to your account.
 +
 If you are still unable to get a subscription, see <<Contacting Red Hat for assistance>>.
 
