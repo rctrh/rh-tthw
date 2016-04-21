@@ -184,9 +184,7 @@ You can view information about your subscription including the registration numb
 .. In the middle of the following page, you will see the 16-digit number installation number that you need for registration and installation.
 
 +
-Note: All current versions of Red Hat Enterprise Linux use Red Hat Subscription Management instead of the older Red Hat Network (RHN) management system. You will use your Red Hat username and password for subscription management in place of installation numbers used on RHN systems. For more information see link:https://access.redhat.com/rhn-to-rhsm[Transition of RHN Classic to Red Hat Subscription Management].
-+
-Information about the older RHN and installation numbers are available at: link:https://www.redhat.com/support/resources/faqs/installation_numbers/index.html[Red Hat Network (RHN) Frequently Asked Questions].
+Note: All current versions of Red Hat Enterprise Linux use Red Hat Subscription Management instead of the older Red Hat Network (RHN) management system. You will use your Red Hat username and password for subscription management in place of installation numbers used on RHN systems. For more information see link:https://access.redhat.com/rhn-to-rhsm[Transition of RHN Classic to Red Hat Subscription Management]. Information about the older RHN and installation numbers are available at: link:https://www.redhat.com/support/resources/faqs/installation_numbers/index.html[Red Hat Network (RHN) Frequently Asked Questions].
 
 . *Where can I get help with registering my Red Hat Enterprise Linux system to attach it to my new no-cost subscription?*
 +
