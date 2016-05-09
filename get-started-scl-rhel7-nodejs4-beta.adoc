@@ -63,7 +63,7 @@ If you are using a workstation edition of Red Hat Enterprise Linux, change `-ser
 
 Next, configure `yum` to skip the RHSCL beta repository if it is unavailable. By default, `yum` will treat any unavailable repository as a fatal error.
 
-`yum-config-manager --save --setopt=rhel-server-rhscl-7-beta-rpms.skip_if_unavailable=true`
+`# yum-config-manager --save --setopt=rhel-server-rhscl-7-beta-rpms.skip_if_unavailable=true`
 
 ## Step2 Content
 
@@ -134,7 +134,7 @@ Save it and exit the editor. Run it with the `node` command:
 
 `$ node ./hello-http.js`
 
-Now use curl, or a browser such as Firefox to connect to the Node.js web server `http://localhost:8000/`:
+Now use curl, or a browser such as Firefox, to connect to the Node.js web server `http://localhost:8000/`:
 
 [.code-block]
 ```
@@ -200,11 +200,11 @@ link:http://nodejs.org/documentation/[]
 ## More Resources
 
 * link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)]
-* link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2-Beta/index.html[Red Hat Software Collection 2.0 Documentation]
+* link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2-Beta/index.html[Red Hat Software Collection 2.2 Beta Documentation]
 ** link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2-Beta/html-single/2.2_Release_Notes/index.html[Red Hat Software Collections 2.2 Beta Release Notes]
 ** link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2-Beta/html-single/Packaging_Guide/index.html[Red Hat Software Collections 2.2 Beta Packaging Guide] +
-_Developers should read this guide to get a more complete understanding of how software collections work, and how to deliver software that uses RHSCL._
-** 
+_Developers should read the packaging guide to get a more complete understanding of how software collections work, and how to deliver software that uses RHSCL._
+
 
 ### Become a Red Hat developer: developers.redhat.com
 
@@ -263,7 +263,7 @@ RHSCL does not alter the system path.  You need to use `scl enable` to change th
 +
 `$ scl enable rh-nodejs4 bash`
 +
-For more information see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/index.html[Red Hat Software Collection 2.0 Documentation].
+For more information see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/index.html[Red Hat Software Collection documentation].
 
 . *When I try to run `node`, I get an error about a missing shared library.*
 +
