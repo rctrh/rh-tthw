@@ -1,6 +1,10 @@
-var http = require('http');                                                                                                                  
-http.createServer(function (req, res) {                                                                                                      
-    res.writeHead(200, {'Content-Type': 'text/plain'});                                                                                      
-    res.end('Hello, Red Hat Developers World!\n');                                                                                           
-}).listen(8000, '0.0.0.0');                                                                                                                
-console.log('Server running at http://127.0.0.1:8000/');  
+var http = require('http');
+var port = 8000;
+var laddr = '127.0.0.1';
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello, Red Hat Developers World from ' +
+	    process.version + '!\n');
+    console.log('Processed request for '+ req.url);
+}).listen(port, laddr);                                                                                                                
+console.log('Server running at http://' + laddr + ':' + port + '/');  

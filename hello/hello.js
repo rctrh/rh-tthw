@@ -1,2 +1,2 @@
 
-console.log("Hello, Red Hat Developers World!")
+console.log("Hello, Red Hat Developers World from Node " + process.version)
