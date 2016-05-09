@@ -396,7 +396,7 @@ Use the following command to create a VM and start installing Red Hat Enterprise
 
 Fedora 23 and CentOS 7:
 
-Note: you need to run `virt-installa as the root user.
+Note: you need to run `virt-install` as the root user.
 
 [.code-block]
 ```
