@@ -1,0 +1,2497 @@
+Script started on Wed 11 May 2016 02:33:12 PM EDT
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[?1034h[rt@rhatvm rh-tthw]$ su
+Password: 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[?1034h[root@rhatvm rh-tthw]# docker search registry.access.redhat.com/rhscl_beta/
+INDEX        NAME                                                                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+redhat.com   registry.access.redhat.com/rhscl_beta/devtoolset-4-perftools-rhel7   Developer toolset perftools                     0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/devtoolset-4-toolchain-rhel7   Developer toolset toolchain                     0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/httpd-24-rhel7                 Apache HTTP 2.4 Server                          0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/mariadb-100-rhel7              MariaDB 10.0 SQL database server                0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/mariadb-101-rhel7              MariaDB server 10.1 for OpenShift and gene...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/mongodb-26-rhel7               MongoDB 2.6 NoSQL database server               0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/mongodb-32-rhel7               MongoDB server 3.2 for OpenShift and gener...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/mysql-56-rhel7                 MySQL 5.6 SQL database server                   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/nginx-16-rhel7                 Nginx 1.6 server and a reverse proxy server     0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/nginx-18-rhel7                 Nginx 1.8 server and a reverse proxy server     0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7                 Node.js 4 platform for building and runnin...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/passenger-40-rhel7             Phusion Passenger® 3.0 web server and app...    0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/perl-520-rhel7                 Perl 5.20 platform for building and runnin...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/php-56-rhel7                   PHP 5.6 platform for building and running ...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/postgresql-94-rhel7            PostgreSQL 9.4 SQL database server              0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/postgresql-95-rhel7            PostgreSQL server 9.5 for OpenShift and ge...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/python-27-rhel7                Python 2.7 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/python-34-rhel7                Python 3.4 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/python-35-rhel7                Python 3.5 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/ror-41-rhel7                   Platform for building and running Ruby on ...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/ror-42-rhel7                   Ruby on Rails 4.2 platform for building an...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/ruby-22-rhel7                  Ruby 2.2 platform for building and running...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/ruby-23-rhel7                  Ruby 2.3 platform for building and running...   0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/thermostat-1-agent-rhel7       Thermostat Agent                                0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/thermostat1-agent-rhel7        Thermostat Agent                                0                    
+redhat.com   registry.access.redhat.com/rhscl_beta/varnish-4-rhel7                Varnish 4 high-performance HTTP accelerator     0                    
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker pull rei[Kgistry.redh[K[K[K[Kaccess.redhat.com/rhscl_beta/nodejs-4-rhel7
+Using default tag: latest
+Trying to pull repository registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7 ... 
+[0A[2Kc3eacf0673bb: Pulling image (latest) from registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7 [0B[1A[2Kc3eacf0673bb: Pulling image (latest) from registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7, endpoint: https://registry.access.redhat.com/v1/ [1B[1A[2Kc3eacf0673bb: Pulling dependent layers [1B
+[0A[2K95612a3264fc: Download complete [0B
+[0A[2Kb6cd2fe58fd2: Pulling metadata [0B[1A[2Kb6cd2fe58fd2: Pulling fs layer [1B[1A[2Kb6cd2fe58fd2: Downloading 527.9 kB[1B[1A[2Kb6cd2fe58fd2: Downloading 1.057 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 1.583 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 2.112 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 2.637 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 3.167 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 3.692 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 4.221 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 4.747 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 5.276 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 5.801 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 6.331 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 6.856 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 7.385 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  7.91 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  8.44 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 8.965 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 9.495 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 10.02 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 10.55 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 11.07 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  11.6 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 12.13 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 12.66 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 13.18 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 13.71 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 14.24 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 14.77 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 15.29 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 15.82 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 16.35 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 16.88 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  17.4 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 17.93 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 18.46 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 18.99 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 19.51 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 20.04 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 20.57 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  21.1 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 21.62 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 22.15 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 22.68 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  23.2 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 23.73 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 24.26 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 24.78 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 25.31 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 25.84 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 26.37 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 26.89 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 27.42 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 27.95 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 28.48 MB[1B[1A[2Kb6cd2fe58fd2: Downloading    29 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 29.53 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 30.06 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 30.59 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 31.11 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 31.64 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 32.17 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  32.7 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 33.22 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 33.75 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 34.28 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 34.81 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 35.33 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 35.86 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 36.39 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 36.92 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 37.44 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 37.97 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  38.5 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 39.02 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 39.55 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 40.08 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  40.6 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 41.13 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 41.66 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 42.19 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 42.71 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 43.24 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 43.77 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  44.3 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 44.82 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 45.35 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 45.88 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 46.41 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 46.93 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 47.46 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 47.99 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 48.52 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 49.04 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 49.57 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  50.1 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 50.63 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 51.15 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 51.68 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 52.21 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 52.74 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 53.26 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 53.79 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 54.31 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 54.84 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 55.37 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  55.9 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 56.42 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 56.95 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 57.48 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 58.01 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 58.53 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 59.06 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 59.59 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 60.12 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 60.64 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 61.17 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  61.7 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 62.23 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 62.75 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 63.28 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 63.81 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 64.34 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 64.86 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 65.39 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 65.92 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 66.45 MB[1B[1A[2Kb6cd2fe58fd2: Downloading 66.97 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  67.5 MB[1B[1A[2Kb6cd2fe58fd2: Downloading  67.6 MB[1B[1A[2Kb6cd2fe58fd2: Download complete [1B[3A[2Kc3eacf0673bb: Pulling metadata [3B[3A[2Kc3eacf0673bb: Pulling fs layer [3B[3A[2Kc3eacf0673bb: Downloading 527.9 kB[3B[3A[2Kc3eacf0673bb: Downloading 1.057 MB[3B[3A[2Kc3eacf0673bb: Downloading 1.583 MB[3B[3A[2Kc3eacf0673bb: Downloading 2.112 MB[3B[3A[2Kc3eacf0673bb: Downloading 2.637 MB[3B[3A[2Kc3eacf0673bb: Downloading 3.167 MB[3B[3A[2Kc3eacf0673bb: Downloading 3.692 MB[3B[3A[2Kc3eacf0673bb: Downloading 4.221 MB[3B[3A[2Kc3eacf0673bb: Downloading 4.746 MB[3B[3A[2Kc3eacf0673bb: Downloading 5.276 MB[3B[3A[2Kc3eacf0673bb: Downloading 5.801 MB[3B[3A[2Kc3eacf0673bb: Downloading 6.331 MB[3B[3A[2Kc3eacf0673bb: Downloading 6.856 MB[3B[3A[2Kc3eacf0673bb: Downloading 7.385 MB[3B[3A[2Kc3eacf0673bb: Downloading  7.91 MB[3B[3A[2Kc3eacf0673bb: Downloading  8.44 MB[3B[3A[2Kc3eacf0673bb: Downloading 8.965 MB[3B[3A[2Kc3eacf0673bb: Downloading 9.495 MB[3B[3A[2Kc3eacf0673bb: Downloading 10.02 MB[3B[3A[2Kc3eacf0673bb: Downloading 10.55 MB[3B[3A[2Kc3eacf0673bb: Downloading 11.07 MB[3B[3A[2Kc3eacf0673bb: Downloading  11.6 MB[3B[3A[2Kc3eacf0673bb: Downloading 12.13 MB[3B[3A[2Kc3eacf0673bb: Downloading 12.66 MB[3B[3A[2Kc3eacf0673bb: Downloading 13.18 MB[3B[3A[2Kc3eacf0673bb: Downloading 13.71 MB[3B[3A[2Kc3eacf0673bb: Downloading 14.24 MB[3B[3A[2Kc3eacf0673bb: Downloading 14.77 MB[3B[3A[2Kc3eacf0673bb: Downloading 15.29 MB[3B[3A[2Kc3eacf0673bb: Downloading 15.82 MB[3B[3A[2Kc3eacf0673bb: Downloading 16.35 MB[3B[3A[2Kc3eacf0673bb: Downloading 16.88 MB[3B[3A[2Kc3eacf0673bb: Downloading  17.4 MB[3B[3A[2Kc3eacf0673bb: Downloading 17.93 MB[3B[3A[2Kc3eacf0673bb: Downloading 18.46 MB[3B[3A[2Kc3eacf0673bb: Downloading 18.99 MB[3B[3A[2Kc3eacf0673bb: Downloading 19.25 MB[3B[3A[2Kc3eacf0673bb: Download complete [3B[3A[2Kc3eacf0673bb: Download complete [3BStatus: Downloaded newer image for registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7:latest
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7: this image was pulled from a legacy registry.  Important: This registry version will not be supported in future versions of docker.
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker images
+REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<none>                                                 <none>              591ec621911c        2 weeks ago         669.1 MB
+docker_drupal                                          latest              0b9f72bfe229        2 weeks ago         623.7 MB
+docker_searchisko                                      latest              23b8d2179a3b        2 weeks ago         1.853 GB
+docker_mysql                                           latest              f3625b7e9673        2 weeks ago         895.2 MB
+developer.redhat.com/ruby                              latest              3bff148b5712        2 weeks ago         602.7 MB
+developer.redhat.com/java                              latest              5d50a259cce5        2 weeks ago         651.7 MB
+developer.redhat.com/base                              latest              ac107ee156a7        2 weeks ago         258.4 MB
+docker.io/drupal                                       8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                        5.6                 35012815a228        4 weeks ago         324.6 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago         203.3 MB
+docker.io/hello-world                                  latest              0a6ba66e537a        7 months ago        960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker images[C[C[C[C[C[C[Cpull registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pegistry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pgistry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pistry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pstry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ptry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pry.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Py.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.access.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Paccess.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pccess.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pess.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pess.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pss.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.redhat.com/rhscl_beta/nodejs-4-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Predhat.com/rhscl_beta/nodejs-4-rhel7[1Pedhat.com/rhscl_beta/nodejs-4-rhel7[1Pdhat.com/rhscl_beta/nodejs-4-rhel7[1Phat.com/rhscl_beta/nodejs-4-rhel7[1Pat.com/rhscl_beta/nodejs-4-rhel7[1Pt.com/rhscl_beta/nodejs-4-rhel7[1P.com/rhscl_beta/nodejs-4-rhel7[1Pcom/rhscl_beta/nodejs-4-rhel7[1Pom/rhscl_beta/nodejs-4-rhel7[1Pm/rhscl_beta/nodejs-4-rhel7[1P/rhscl_beta/nodejs-4-rhel7[1Prhscl_beta/nodejs-4-rhel7
+Using default tag: latest
+Trying to pull repository registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7 ... 
+[0A[2Kc3eacf0673bb: Pulling image (latest) from registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7 [0B[1A[2Kc3eacf0673bb: Pulling image (latest) from registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7, endpoint: https://registry.access.redhat.com/v1/ [1B[1A[2Kc3eacf0673bb: Pulling dependent layers [1B
+[0A[2K95612a3264fc: Download complete [0B
+[0A[2Kb6cd2fe58fd2: Download complete [0B[3A[2Kc3eacf0673bb: Download complete [3B[3A[2Kc3eacf0673bb: Download complete [3BStatus: Image is up to date for registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7:latest
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7: this image was pulled from a legacy registry.  Important: This registry version will not be supported in future versions of docker.
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker pull rhscl_beta/nodejs-4-rhel7images[K
+REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<none>                                                 <none>              591ec621911c        2 weeks ago         669.1 MB
+docker_drupal                                          latest              0b9f72bfe229        2 weeks ago         623.7 MB
+docker_searchisko                                      latest              23b8d2179a3b        2 weeks ago         1.853 GB
+docker_mysql                                           latest              f3625b7e9673        2 weeks ago         895.2 MB
+developer.redhat.com/ruby                              latest              3bff148b5712        2 weeks ago         602.7 MB
+developer.redhat.com/java                              latest              5d50a259cce5        2 weeks ago         651.7 MB
+developer.redhat.com/base                              latest              ac107ee156a7        2 weeks ago         258.4 MB
+docker.io/drupal                                       8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                        5.6                 35012815a228        4 weeks ago         324.6 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago         203.3 MB
+docker.io/hello-world                                  latest              0a6ba66e537a        7 months ago        960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker run -it rhscl_beta/nodejs-4-rhey[Kl7 /bin/bash
+WARNING: IPv4 forwarding is disabled. Networking will not work.
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[?1034hbash-4.2$ which node
+/opt/rh/rh-nodejs4/root/usr/bin/node
+bash-4.2$ node --version
+v4.4.2
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 14:35 ?        00:00:00 /bin/bash
+default     11     1  0 14:36 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker ps -a
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS                      PORTS               NAMES
+05e671c54922        rhscl_beta/nodejs-4-rhel7   "container-entrypoint"   34 seconds ago      Exited (0) 11 seconds ago                       ecstatic_babbage
+014ac17c2709        591ec621911c                "/bin/sh -c 'bundle i"   2 weeks ago         Exited (7) 2 weeks ago                          jovial_lumiere
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# dock [Ker rm jovial_lumiere 
+jovial_lumiere
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# st[K[Kdocker start ect[Kstatic_babbage 
+ecstatic_babbage
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# [1P(reverse-i-search)`':[C[31@d': docker start ecstatic_babbage[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[1@c[C[C[C[1@k[C[C[C[1@e[C[C[C[1@r[C[C[C[5P[root@rhatvm rh-tthw]#[C[C[C[C[C[C[C[C[1@a[1@t[1@t[1@a[1@c[1@h[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 14:36 ?        00:00:00 /bin/bash
+default      9     1  0 14:37 ?        00:00:00 ps -ef
+bash-4.2$ uptime
+ 14:37:19 up 1 day, 17:07,  0 users,  load average: 0.19, 0.28, 0.16
+bash-4.2$ exit
+exit
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker rm ecstatic_babbage 
+ecstatic_babbage
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# [1P(reverse-i-search)`':[C[28@r': docker rm ecstatic_babbageu': docker run -it rhscl_beta/nodejs-4-rhel7 /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm rh-tthw]#[C[C[C[C[C[C[C[C
+WARNING: IPv4 forwarding is disabled. Networking will not work.
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[?1034hbash-4.2$ which node
+/opt/rh/rh-nodejs4/root/usr/bin/node
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ exit
+exit
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker ps -a
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS                     PORTS               NAMES
+c54a9bd16fda        rhscl_beta/nodejs-4-rhel7   "container-entrypoint"   36 seconds ago      Exited (0) 2 seconds ago                       happy_tesla
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# docker rm happy_tesla 
+happy_tesla
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# pwd
+/home/rt/work/rctrh/rh-tthw
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[root@rhatvm rh-tthw]# cd hello/docker-rhel72-rhscl22beta/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta[root@rhatvm docker-rhel72-rhscl22beta]# 
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta[root@rhatvm docker-rhel72-rhscl22beta]# eh[K[Kdocker built -t[K[K[K[Kd -t myname/nodeweb .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat /home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/Dockerfile: no such file or directory
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta[root@rhatvm docker-rhel72-rhscl22beta]# cd nodejs/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cd nodejs/docker build -t myname/nodeweb .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat /home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs/Dockerfile: no such file or directory
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# ls
+[0m[38;5;27mnodejs[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# ls
+[0m[38;5;27mnodejs[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# pwd
+/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# pwd
+/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# ls
+Dockerfile  Dockerfile~  hello-http.js
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# (reverse-i-search)`':[Cb': docker build -t myname/nodeweb .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@u[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[5P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon 4.096 kBSending build context to Docker daemon 4.096 kB
+Step 1 : FROM rhscl_beta/nodejs-4-rhel7
+ ---> c3eacf0673bb
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> [Warning] IPv4 forwarding is disabled. Networking will not work.
+ ---> Running in 2735e3528363
+ ---> 15de9a482a38
+Removing intermediate container 2735e3528363
+Step 3 : EXPOSE 8000
+ ---> [Warning] IPv4 forwarding is disabled. Networking will not work.
+ ---> Running in 7dd99922e4df
+ ---> bb5193aa666c
+Removing intermediate container 7dd99922e4df
+Step 4 : COPY . /opt/app-root/src
+ ---> f5b24ed1b640
+Removing intermediate container 1a82a4a20785
+Step 5 : CMD /bin/bash -c 'node hello-http.js'
+ ---> [Warning] IPv4 forwarding is disabled. Networking will not work.
+ ---> Running in 74a1928f1240
+ ---> f0ae1ca3c091
+Removing intermediate container 74a1928f1240
+Successfully built f0ae1ca3c091
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker images
+REPOSITORY                                             TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
+myname/nodeweb                                         latest              f0ae1ca3c091        About a minute ago   449.7 MB
+<none>                                                 <none>              591ec621911c        2 weeks ago          669.1 MB
+docker_drupal                                          latest              0b9f72bfe229        2 weeks ago          623.7 MB
+docker_searchisko                                      latest              23b8d2179a3b        2 weeks ago          1.853 GB
+docker_mysql                                           latest              f3625b7e9673        2 weeks ago          895.2 MB
+developer.redhat.com/ruby                              latest              3bff148b5712        2 weeks ago          602.7 MB
+developer.redhat.com/java                              latest              5d50a259cce5        2 weeks ago          651.7 MB
+developer.redhat.com/base                              latest              ac107ee156a7        2 weeks ago          258.4 MB
+docker.io/drupal                                       8-apache            f92c7f6965bc        2 weeks ago          621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago          449.7 MB
+docker.io/mysql                                        5.6                 35012815a228        4 weeks ago          324.6 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago          228.9 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago          203.3 MB
+docker.io/hello-world                                  latest              0a6ba66e537a        7 months ago         960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker run -d -p 8000:8000 myname/nodeweb 
+WARNING: IPv4 forwarding is disabled. Networking will not work.
+2ec28a6a8798e635210261cbac11ae18138f5264db1dc81d1534b0c385956102
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker logs
+docker: "logs" requires 1 argument.
+See 'docker logs --help'.
+
+Usage:	docker logs [OPTIONS] CONTAINER
+
+Fetch the logs of a container
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker logs myname/nodeweb
+Error response from daemon: no such id: myname/nodeweb
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+2ec28a6a8798        myname/nodeweb      "container-entrypoint"   27 seconds ago      Up 25 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   angry_mayer
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker logs angry_mayer 
+Server running at http://127.0.0.1:8000/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker logs angry_mayer 
+Server running at http://127.0.0.1:8000/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# exit[Kdocker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                              NAMES
+2ec28a6a8798        myname/nodeweb      "container-entrypoint"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp, 8080/tcp   angry_mayer
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# doce[Kker stop angry_mayer 
+angry_mayer
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cat Dockerfile
+FROM rhscl_beta/nodejs-4-rhel7
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'node hello-http.js'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# netstat -tlp | egrep 8000
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# netstat -tlp | egrep 8000[1@n
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# netstat -an | egrep 80000[K
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cat Dockerfile
+FROM rhscl_beta/nodejs-4-rhel7
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'node hello-http.js'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cat Dockerfilenetstat -an | egrep 8000[2@tlp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pcat Dockerfiledocker stop angry_mayer ps[Klogs angry_mayer ps[Klogs myname/nodeweb[Krun -d -p 8000:8000 myname/nodeweb 
+WARNING: IPv4 forwarding is disabled. Networking will not work.
+c962834dca63c8049c5edef64bc1f938d681af37e5421c6f9473ab8473e04a78
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                              NAMES
+c962834dca63        myname/nodeweb      "container-entrypoint"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp, 8080/tcp   admiring_shaw
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl 
+
+Usage:
+ sysctl [options] [variable[=value] ...]
+
+Options:
+  -a, --all            display all variables
+  -A                   alias of -a
+  -X                   alias of -a
+      --deprecated     include deprecated parameters to listing
+  -b, --binary         print value without new line
+  -e, --ignore         ignore unknown variables errors
+  -N, --names          print variable names without values
+  -n, --values         print only values of a variables
+  -p, --load[=<file>]  read values from file
+  -f                   alias of -p
+      --system         read values from all system directories
+  -r, --pattern <expression>
+                       select setting that match expression
+  -q, --quiet          do not echo variable set
+  -w, --write          enable writing a value to variable
+  -o                   does nothing
+  -x                   does nothing
+  -d                   alias of -h
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see sysctl(8).
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl 
+
+Usage:
+ sysctl [options] [variable[=value] ...]
+
+Options:
+  -a, --all            display all variables
+  -A                   alias of -a
+  -X                   alias of -a
+      --deprecated     include deprecated parameters to listing
+  -b, --binary         print value without new line
+  -e, --ignore         ignore unknown variables errors
+  -N, --names          print variable names without values
+  -n, --values         print only values of a variables
+  -p, --load[=<file>]  read values from file
+  -f                   alias of -p
+      --system         read values from all system directories
+  -r, --pattern <expression>
+                       select setting that match expression
+  -q, --quiet          do not echo variable set
+  -w, --write          enable writing a value to variable
+  -o                   does nothing
+  -x                   does nothing
+  -d                   alias of -h
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see sysctl(8).
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl -a
+abi.vsyscall32 = 1
+crypto.fips_enabled = 0
+debug.exception-trace = 1
+debug.kprobes-optimization = 1
+dev.cdrom.autoclose = 1
+dev.cdrom.autoeject = 0
+dev.cdrom.check_media = 0
+dev.cdrom.debug = 0
+dev.cdrom.info = CD-ROM information, Id: cdrom.c 3.20 2003/12/17
+dev.cdrom.info = 
+dev.cdrom.info = drive name:		sr0
+dev.cdrom.info = drive speed:		32
+dev.cdrom.info = drive # of slots:	1
+dev.cdrom.info = Can close tray:		1
+dev.cdrom.info = Can open tray:		1
+dev.cdrom.info = Can lock tray:		1
+dev.cdrom.info = Can change speed:	1
+dev.cdrom.info = Can select disk:	0
+dev.cdrom.info = Can read multisession:	1
+dev.cdrom.info = Can read MCN:		1
+dev.cdrom.info = Reports media changed:	1
+dev.cdrom.info = Can play audio:		1
+dev.cdrom.info = Can write CD-R:		0
+dev.cdrom.info = Can write CD-RW:	0
+dev.cdrom.info = Can read DVD:		1
+dev.cdrom.info = Can write DVD-R:	0
+dev.cdrom.info = Can write DVD-RAM:	0
+dev.cdrom.info = Can read MRW:		1
+dev.cdrom.info = Can write MRW:		1
+dev.cdrom.info = Can write RAM:		1
+dev.cdrom.info = 
+dev.cdrom.info = 
+dev.cdrom.lock = 1
+dev.hpet.max-user-freq = 64
+dev.mac_hid.mouse_button2_keycode = 97
+dev.mac_hid.mouse_button3_keycode = 100
+dev.mac_hid.mouse_button_emulation = 0
+dev.parport.default.spintime = 500
+dev.parport.default.timeslice = 200
+dev.raid.speed_limit_max = 200000
+dev.raid.speed_limit_min = 1000
+dev.scsi.logging_level = 0
+fs.aio-max-nr = 1048576
+fs.aio-nr = 0
+fs.binfmt_misc.status = enabled
+fs.dentry-state = 174804	156708	45	0	0	0
+fs.dir-notify-enable = 1
+fs.epoll.max_user_watches = 413409
+fs.file-max = 200566
+fs.file-nr = 6432	0	200566
+fs.inode-nr = 77438	35290
+fs.inode-state = 77438	35290	0	0	0	0	0
+fs.inotify.max_queued_events = 16384
+fs.inotify.max_user_instances = 128
+fs.inotify.max_user_watches = 8192
+fs.lease-break-time = 45
+fs.leases-enable = 1
+fs.mqueue.msg_default = 10
+fs.mqueue.msg_max = 10
+fs.mqueue.msgsize_default = 8192
+fs.mqueue.msgsize_max = 8192
+fs.mqueue.queues_max = 256
+fs.nfs.nlm_grace_period = 0
+fs.nfs.nlm_tcpport = 0
+fs.nfs.nlm_timeout = 10
+fs.nfs.nlm_udpport = 0
+fs.nfs.nsm_local_state = 0
+fs.nfs.nsm_use_hostnames = 0
+fs.nr_open = 1048576
+fs.overflowgid = 65534
+fs.overflowuid = 65534
+fs.pipe-max-size = 1048576
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+fs.quota.allocated_dquots = 0
+fs.quota.cache_hits = 0
+fs.quota.drops = 0
+fs.quota.free_dquots = 0
+fs.quota.lookups = 0
+fs.quota.reads = 0
+fs.quota.syncs = 0
+fs.quota.warnings = 1
+fs.quota.writes = 0
+fs.suid_dumpable = 0
+fs.xfs.age_buffer_centisecs = 1500
+fs.xfs.error_level = 3
+fs.xfs.filestream_centisecs = 3000
+fs.xfs.inherit_noatime = 1
+fs.xfs.inherit_nodefrag = 1
+fs.xfs.inherit_nodump = 1
+fs.xfs.inherit_nosymlinks = 0
+fs.xfs.inherit_sync = 1
+fs.xfs.irix_sgid_inherit = 0
+fs.xfs.irix_symlink_mode = 0
+fs.xfs.panic_mask = 0
+fs.xfs.rotorstep = 1
+fs.xfs.speculative_prealloc_lifetime = 300
+fs.xfs.stats_clear = 0
+fs.xfs.xfsbufd_centisecs = 100
+fs.xfs.xfssyncd_centisecs = 3000
+kernel.acct = 4	2	30
+kernel.acpi_video_flags = 0
+kernel.auto_msgmni = 1
+kernel.blk_iopoll = 1
+kernel.bootloader_type = 114
+kernel.bootloader_version = 2
+kernel.cad_pid = 1
+kernel.cap_last_cap = 36
+kernel.compat-log = 1
+kernel.core_pattern = |/usr/libexec/abrt-hook-ccpp %s %c %p %u %g %t e %P %I
+kernel.core_pipe_limit = 4
+kernel.core_uses_pid = 1
+kernel.ctrl-alt-del = 0
+kernel.dmesg_restrict = 0
+kernel.domainname = (none)
+kernel.ftrace_dump_on_oops = 0
+kernel.ftrace_enabled = 1
+kernel.hostname = rhatvm.r-t.org
+kernel.hotplug = 
+kernel.hung_task_check_count = 4194304
+kernel.hung_task_panic = 0
+kernel.hung_task_timeout_secs = 120
+kernel.hung_task_warnings = 10
+kernel.io_delay_type = 0
+kernel.kexec_load_disabled = 0
+kernel.keys.gc_delay = 300
+kernel.keys.maxbytes = 20000
+kernel.keys.maxkeys = 200
+kernel.keys.persistent_keyring_expiry = 259200
+kernel.keys.root_maxbytes = 25000000
+kernel.keys.root_maxkeys = 1000000
+kernel.kptr_restrict = 0
+kernel.kstack_depth_to_print = 12
+kernel.max_lock_depth = 1024
+kernel.modprobe = /sbin/modprobe
+kernel.modules_disabled = 0
+kernel.msg_next_id = -1
+kernel.msgmax = 8192
+kernel.msgmnb = 16384
+kernel.msgmni = 2000
+kernel.ngroups_max = 65536
+kernel.nmi_watchdog = 1
+kernel.ns_last_pid = 10189
+kernel.numa_balancing = 0
+kernel.numa_balancing_scan_delay_ms = 1000
+kernel.numa_balancing_scan_period_max_ms = 60000
+kernel.numa_balancing_scan_period_min_ms = 1000
+kernel.numa_balancing_scan_size_mb = 256
+kernel.numa_balancing_settle_count = 4
+kernel.osrelease = 3.10.0-327.13.1.el7.x86_64
+kernel.ostype = Linux
+kernel.overflowgid = 65534
+kernel.overflowuid = 65534
+kernel.panic = 0
+kernel.panic_on_io_nmi = 0
+kernel.panic_on_oops = 1
+kernel.panic_on_stackoverflow = 0
+kernel.panic_on_unrecovered_nmi = 0
+kernel.panic_on_warn = 0
+kernel.perf_cpu_time_max_percent = 25
+kernel.perf_event_max_sample_rate = 100000
+kernel.perf_event_mlock_kb = 516
+kernel.perf_event_paranoid = 1
+kernel.pid_max = 32768
+kernel.poweroff_cmd = /sbin/poweroff
+kernel.print-fatal-signals = 0
+kernel.printk = 4	4	1	7
+kernel.printk_delay = 0
+kernel.printk_ratelimit = 5
+kernel.printk_ratelimit_burst = 10
+kernel.pty.max = 4096
+kernel.pty.nr = 6
+kernel.pty.reserve = 1024
+kernel.random.boot_id = f16e700a-f057-4080-a249-d65cfc690272
+kernel.random.entropy_avail = 3108
+kernel.random.poolsize = 4096
+kernel.random.read_wakeup_threshold = 64
+kernel.random.uuid = 7a2aafba-1b86-488c-b7b4-872f05f80b8c
+kernel.random.write_wakeup_threshold = 3072
+kernel.randomize_va_space = 2
+kernel.real-root-dev = 0
+kernel.sched_autogroup_enabled = 0
+kernel.sched_cfs_bandwidth_slice_us = 5000
+kernel.sched_child_runs_first = 0
+kernel.sched_domain.cpu0.domain0.busy_factor = 32
+kernel.sched_domain.cpu0.domain0.busy_idx = 2
+kernel.sched_domain.cpu0.domain0.cache_nice_tries = 1
+kernel.sched_domain.cpu0.domain0.flags = 4143
+kernel.sched_domain.cpu0.domain0.forkexec_idx = 0
+kernel.sched_domain.cpu0.domain0.idle_idx = 1
+kernel.sched_domain.cpu0.domain0.imbalance_pct = 125
+kernel.sched_domain.cpu0.domain0.max_interval = 4
+kernel.sched_domain.cpu0.domain0.min_interval = 2
+kernel.sched_domain.cpu0.domain0.name = DIE
+kernel.sched_domain.cpu0.domain0.newidle_idx = 0
+kernel.sched_domain.cpu0.domain0.wake_idx = 0
+kernel.sched_domain.cpu1.domain0.busy_factor = 32
+kernel.sched_domain.cpu1.domain0.busy_idx = 2
+kernel.sched_domain.cpu1.domain0.cache_nice_tries = 1
+kernel.sched_domain.cpu1.domain0.flags = 4143
+kernel.sched_domain.cpu1.domain0.forkexec_idx = 0
+kernel.sched_domain.cpu1.domain0.idle_idx = 1
+kernel.sched_domain.cpu1.domain0.imbalance_pct = 125
+kernel.sched_domain.cpu1.domain0.max_interval = 4
+kernel.sched_domain.cpu1.domain0.min_interval = 2
+kernel.sched_domain.cpu1.domain0.name = DIE
+kernel.sched_domain.cpu1.domain0.newidle_idx = 0
+kernel.sched_domain.cpu1.domain0.wake_idx = 0
+kernel.sched_latency_ns = 12000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 10000000
+kernel.sched_nr_migrate = 32
+kernel.sched_rr_timeslice_ms = 100
+kernel.sched_rt_period_us = 1000000
+kernel.sched_rt_runtime_us = 950000
+kernel.sched_shares_window_ns = 10000000
+kernel.sched_time_avg_ms = 1000
+kernel.sched_tunable_scaling = 1
+kernel.sched_wakeup_granularity_ns = 15000000
+kernel.sem = 250	32000	32	128
+kernel.sem_next_id = -1
+kernel.shm_next_id = -1
+kernel.shm_rmid_forced = 0
+kernel.shmall = 18446744073692774399
+kernel.shmmax = 18446744073692774399
+kernel.shmmni = 4096
+kernel.softlockup_all_cpu_backtrace = 0
+kernel.softlockup_panic = 0
+kernel.stack_tracer_enabled = 0
+kernel.sysrq = 16
+kernel.tainted = 12288
+kernel.threads-max = 15770
+kernel.timer_migration = 1
+kernel.traceoff_on_warning = 0
+kernel.unknown_nmi_panic = 0
+kernel.usermodehelper.bset = 4294967295	31
+kernel.usermodehelper.inheritable = 4294967295	31
+kernel.version = #1 SMP Mon Feb 29 13:22:02 EST 2016
+kernel.watchdog = 1
+kernel.watchdog_thresh = 10
+net.bridge.bridge-nf-call-arptables = 0
+net.bridge.bridge-nf-call-ip6tables = 0
+net.bridge.bridge-nf-call-iptables = 0
+net.bridge.bridge-nf-filter-pppoe-tagged = 0
+net.bridge.bridge-nf-filter-vlan-tagged = 0
+net.bridge.bridge-nf-pass-vlan-input-dev = 0
+net.core.bpf_jit_enable = 0
+net.core.busy_poll = 0
+net.core.busy_read = 0
+net.core.default_qdisc = pfifo_fast
+net.core.dev_weight = 64
+net.core.message_burst = 10
+net.core.message_cost = 5
+net.core.netdev_budget = 300
+net.core.netdev_max_backlog = 1000
+net.core.netdev_rss_key = 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+net.core.netdev_tstamp_prequeue = 1
+net.core.optmem_max = 20480
+net.core.rmem_default = 212992
+net.core.rmem_max = 212992
+net.core.rps_sock_flow_entries = 0
+net.core.somaxconn = 128
+net.core.warnings = 1
+net.core.wmem_default = 212992
+net.core.wmem_max = 212992
+net.core.xfrm_acq_expires = 30
+net.core.xfrm_aevent_etime = 10
+net.core.xfrm_aevent_rseqth = 2
+net.core.xfrm_larval_drop = 1
+net.ipv4.cipso_cache_bucket_size = 10
+net.ipv4.cipso_cache_enable = 1
+net.ipv4.cipso_rbm_optfmt = 0
+net.ipv4.cipso_rbm_strictvalid = 1
+net.ipv4.conf.all.accept_local = 0
+net.ipv4.conf.all.accept_redirects = 1
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.arp_accept = 0
+net.ipv4.conf.all.arp_announce = 0
+net.ipv4.conf.all.arp_filter = 0
+net.ipv4.conf.all.arp_ignore = 0
+net.ipv4.conf.all.arp_notify = 0
+net.ipv4.conf.all.bootp_relay = 0
+net.ipv4.conf.all.disable_policy = 0
+net.ipv4.conf.all.disable_xfrm = 0
+net.ipv4.conf.all.force_igmp_version = 0
+net.ipv4.conf.all.forwarding = 0
+net.ipv4.conf.all.log_martians = 0
+net.ipv4.conf.all.mc_forwarding = 0
+net.ipv4.conf.all.medium_id = 0
+net.ipv4.conf.all.promote_secondaries = 1
+net.ipv4.conf.all.proxy_arp = 0
+net.ipv4.conf.all.proxy_arp_pvlan = 0
+net.ipv4.conf.all.route_localnet = 0
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.all.secure_redirects = 1
+net.ipv4.conf.all.send_redirects = 1
+net.ipv4.conf.all.shared_media = 1
+net.ipv4.conf.all.src_valid_mark = 0
+net.ipv4.conf.all.tag = 0
+net.ipv4.conf.default.accept_local = 0
+net.ipv4.conf.default.accept_redirects = 1
+net.ipv4.conf.default.accept_source_route = 0
+net.ipv4.conf.default.arp_accept = 0
+net.ipv4.conf.default.arp_announce = 0
+net.ipv4.conf.default.arp_filter = 0
+net.ipv4.conf.default.arp_ignore = 0
+net.ipv4.conf.default.arp_notify = 0
+net.ipv4.conf.default.bootp_relay = 0
+net.ipv4.conf.default.disable_policy = 0
+net.ipv4.conf.default.disable_xfrm = 0
+net.ipv4.conf.default.force_igmp_version = 0
+net.ipv4.conf.default.forwarding = 0
+net.ipv4.conf.default.log_martians = 0
+net.ipv4.conf.default.mc_forwarding = 0
+net.ipv4.conf.default.medium_id = 0
+net.ipv4.conf.default.promote_secondaries = 1
+net.ipv4.conf.default.proxy_arp = 0
+net.ipv4.conf.default.proxy_arp_pvlan = 0
+net.ipv4.conf.default.route_localnet = 0
+net.ipv4.conf.default.rp_filter = 1
+net.ipv4.conf.default.secure_redirects = 1
+net.ipv4.conf.default.send_redirects = 1
+net.ipv4.conf.default.shared_media = 1
+net.ipv4.conf.default.src_valid_mark = 0
+net.ipv4.conf.default.tag = 0
+net.ipv4.conf.docker0.accept_local = 0
+net.ipv4.conf.docker0.accept_redirects = 1
+net.ipv4.conf.docker0.accept_source_route = 0
+net.ipv4.conf.docker0.arp_accept = 0
+net.ipv4.conf.docker0.arp_announce = 0
+net.ipv4.conf.docker0.arp_filter = 0
+net.ipv4.conf.docker0.arp_ignore = 0
+net.ipv4.conf.docker0.arp_notify = 0
+net.ipv4.conf.docker0.bootp_relay = 0
+net.ipv4.conf.docker0.disable_policy = 0
+net.ipv4.conf.docker0.disable_xfrm = 0
+net.ipv4.conf.docker0.force_igmp_version = 0
+net.ipv4.conf.docker0.forwarding = 0
+net.ipv4.conf.docker0.log_martians = 0
+net.ipv4.conf.docker0.mc_forwarding = 0
+net.ipv4.conf.docker0.medium_id = 0
+net.ipv4.conf.docker0.promote_secondaries = 1
+net.ipv4.conf.docker0.proxy_arp = 0
+net.ipv4.conf.docker0.proxy_arp_pvlan = 0
+net.ipv4.conf.docker0.route_localnet = 0
+net.ipv4.conf.docker0.rp_filter = 1
+net.ipv4.conf.docker0.secure_redirects = 1
+net.ipv4.conf.docker0.send_redirects = 1
+net.ipv4.conf.docker0.shared_media = 1
+net.ipv4.conf.docker0.src_valid_mark = 0
+net.ipv4.conf.docker0.tag = 0
+net.ipv4.conf.enp0s3.accept_local = 0
+net.ipv4.conf.enp0s3.accept_redirects = 1
+net.ipv4.conf.enp0s3.accept_source_route = 0
+net.ipv4.conf.enp0s3.arp_accept = 0
+net.ipv4.conf.enp0s3.arp_announce = 0
+net.ipv4.conf.enp0s3.arp_filter = 0
+net.ipv4.conf.enp0s3.arp_ignore = 0
+net.ipv4.conf.enp0s3.arp_notify = 0
+net.ipv4.conf.enp0s3.bootp_relay = 0
+net.ipv4.conf.enp0s3.disable_policy = 0
+net.ipv4.conf.enp0s3.disable_xfrm = 0
+net.ipv4.conf.enp0s3.force_igmp_version = 0
+net.ipv4.conf.enp0s3.forwarding = 0
+net.ipv4.conf.enp0s3.log_martians = 0
+net.ipv4.conf.enp0s3.mc_forwarding = 0
+net.ipv4.conf.enp0s3.medium_id = 0
+net.ipv4.conf.enp0s3.promote_secondaries = 1
+net.ipv4.conf.enp0s3.proxy_arp = 0
+net.ipv4.conf.enp0s3.proxy_arp_pvlan = 0
+net.ipv4.conf.enp0s3.route_localnet = 0
+net.ipv4.conf.enp0s3.rp_filter = 1
+net.ipv4.conf.enp0s3.secure_redirects = 1
+net.ipv4.conf.enp0s3.send_redirects = 1
+net.ipv4.conf.enp0s3.shared_media = 1
+net.ipv4.conf.enp0s3.src_valid_mark = 0
+net.ipv4.conf.enp0s3.tag = 0
+net.ipv4.conf.lo.accept_local = 0
+net.ipv4.conf.lo.accept_redirects = 1
+net.ipv4.conf.lo.accept_source_route = 1
+net.ipv4.conf.lo.arp_accept = 0
+net.ipv4.conf.lo.arp_announce = 0
+net.ipv4.conf.lo.arp_filter = 0
+net.ipv4.conf.lo.arp_ignore = 0
+net.ipv4.conf.lo.arp_notify = 0
+net.ipv4.conf.lo.bootp_relay = 0
+net.ipv4.conf.lo.disable_policy = 1
+net.ipv4.conf.lo.disable_xfrm = 1
+net.ipv4.conf.lo.force_igmp_version = 0
+net.ipv4.conf.lo.forwarding = 0
+net.ipv4.conf.lo.log_martians = 0
+net.ipv4.conf.lo.mc_forwarding = 0
+net.ipv4.conf.lo.medium_id = 0
+net.ipv4.conf.lo.promote_secondaries = 0
+net.ipv4.conf.lo.proxy_arp = 0
+net.ipv4.conf.lo.proxy_arp_pvlan = 0
+net.ipv4.conf.lo.route_localnet = 0
+net.ipv4.conf.lo.rp_filter = 0
+net.ipv4.conf.lo.secure_redirects = 1
+net.ipv4.conf.lo.send_redirects = 1
+net.ipv4.conf.lo.shared_media = 1
+net.ipv4.conf.lo.src_valid_mark = 0
+net.ipv4.conf.lo.tag = 0
+net.ipv4.conf.veth053b9d9.accept_local = 0
+net.ipv4.conf.veth053b9d9.accept_redirects = 1
+net.ipv4.conf.veth053b9d9.accept_source_route = 0
+net.ipv4.conf.veth053b9d9.arp_accept = 0
+net.ipv4.conf.veth053b9d9.arp_announce = 0
+net.ipv4.conf.veth053b9d9.arp_filter = 0
+net.ipv4.conf.veth053b9d9.arp_ignore = 0
+net.ipv4.conf.veth053b9d9.arp_notify = 0
+net.ipv4.conf.veth053b9d9.bootp_relay = 0
+net.ipv4.conf.veth053b9d9.disable_policy = 0
+net.ipv4.conf.veth053b9d9.disable_xfrm = 0
+net.ipv4.conf.veth053b9d9.force_igmp_version = 0
+net.ipv4.conf.veth053b9d9.forwarding = 0
+net.ipv4.conf.veth053b9d9.log_martians = 0
+net.ipv4.conf.veth053b9d9.mc_forwarding = 0
+net.ipv4.conf.veth053b9d9.medium_id = 0
+net.ipv4.conf.veth053b9d9.promote_secondaries = 1
+net.ipv4.conf.veth053b9d9.proxy_arp = 0
+net.ipv4.conf.veth053b9d9.proxy_arp_pvlan = 0
+net.ipv4.conf.veth053b9d9.route_localnet = 0
+net.ipv4.conf.veth053b9d9.rp_filter = 1
+net.ipv4.conf.veth053b9d9.secure_redirects = 1
+net.ipv4.conf.veth053b9d9.send_redirects = 1
+net.ipv4.conf.veth053b9d9.shared_media = 1
+net.ipv4.conf.veth053b9d9.src_valid_mark = 0
+net.ipv4.conf.veth053b9d9.tag = 0
+net.ipv4.conf.virbr0.accept_local = 0
+net.ipv4.conf.virbr0.accept_redirects = 1
+net.ipv4.conf.virbr0.accept_source_route = 0
+net.ipv4.conf.virbr0.arp_accept = 0
+net.ipv4.conf.virbr0.arp_announce = 0
+net.ipv4.conf.virbr0.arp_filter = 0
+net.ipv4.conf.virbr0.arp_ignore = 0
+net.ipv4.conf.virbr0.arp_notify = 0
+net.ipv4.conf.virbr0.bootp_relay = 0
+net.ipv4.conf.virbr0.disable_policy = 0
+net.ipv4.conf.virbr0.disable_xfrm = 0
+net.ipv4.conf.virbr0.force_igmp_version = 0
+net.ipv4.conf.virbr0.forwarding = 0
+net.ipv4.conf.virbr0.log_martians = 0
+net.ipv4.conf.virbr0.mc_forwarding = 0
+net.ipv4.conf.virbr0.medium_id = 0
+net.ipv4.conf.virbr0.promote_secondaries = 1
+net.ipv4.conf.virbr0.proxy_arp = 0
+net.ipv4.conf.virbr0.proxy_arp_pvlan = 0
+net.ipv4.conf.virbr0.route_localnet = 0
+net.ipv4.conf.virbr0.rp_filter = 1
+net.ipv4.conf.virbr0.secure_redirects = 1
+net.ipv4.conf.virbr0.send_redirects = 1
+net.ipv4.conf.virbr0.shared_media = 1
+net.ipv4.conf.virbr0.src_valid_mark = 0
+net.ipv4.conf.virbr0.tag = 0
+net.ipv4.conf.virbr0-nic.accept_local = 0
+net.ipv4.conf.virbr0-nic.accept_redirects = 1
+net.ipv4.conf.virbr0-nic.accept_source_route = 0
+net.ipv4.conf.virbr0-nic.arp_accept = 0
+net.ipv4.conf.virbr0-nic.arp_announce = 0
+net.ipv4.conf.virbr0-nic.arp_filter = 0
+net.ipv4.conf.virbr0-nic.arp_ignore = 0
+net.ipv4.conf.virbr0-nic.arp_notify = 0
+net.ipv4.conf.virbr0-nic.bootp_relay = 0
+net.ipv4.conf.virbr0-nic.disable_policy = 0
+net.ipv4.conf.virbr0-nic.disable_xfrm = 0
+net.ipv4.conf.virbr0-nic.force_igmp_version = 0
+net.ipv4.conf.virbr0-nic.forwarding = 0
+net.ipv4.conf.virbr0-nic.log_martians = 0
+net.ipv4.conf.virbr0-nic.mc_forwarding = 0
+net.ipv4.conf.virbr0-nic.medium_id = 0
+net.ipv4.conf.virbr0-nic.promote_secondaries = 1
+net.ipv4.conf.virbr0-nic.proxy_arp = 0
+net.ipv4.conf.virbr0-nic.proxy_arp_pvlan = 0
+net.ipv4.conf.virbr0-nic.route_localnet = 0
+net.ipv4.conf.virbr0-nic.rp_filter = 1
+net.ipv4.conf.virbr0-nic.secure_redirects = 1
+net.ipv4.conf.virbr0-nic.send_redirects = 1
+net.ipv4.conf.virbr0-nic.shared_media = 1
+net.ipv4.conf.virbr0-nic.src_valid_mark = 0
+net.ipv4.conf.virbr0-nic.tag = 0
+net.ipv4.icmp_echo_ignore_all = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_errors_use_inbound_ifaddr = 0
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.icmp_ratelimit = 1000
+net.ipv4.icmp_ratemask = 6168
+net.ipv4.igmp_max_memberships = 20
+net.ipv4.igmp_max_msf = 10
+net.ipv4.igmp_qrv = 2
+net.ipv4.inet_peer_maxttl = 600
+net.ipv4.inet_peer_minttl = 120
+net.ipv4.inet_peer_threshold = 65664
+net.ipv4.ip_default_ttl = 64
+net.ipv4.ip_dynaddr = 0
+net.ipv4.ip_early_demux = 1
+net.ipv4.ip_forward = 0
+net.ipv4.ip_forward_use_pmtu = 0
+net.ipv4.ip_local_port_range = 32768	61000
+net.ipv4.ip_local_reserved_ports = 
+net.ipv4.ip_no_pmtu_disc = 0
+net.ipv4.ip_nonlocal_bind = 0
+net.ipv4.ipfrag_high_thresh = 4194304
+net.ipv4.ipfrag_low_thresh = 3145728
+net.ipv4.ipfrag_max_dist = 64
+net.ipv4.ipfrag_secret_interval = 600
+net.ipv4.ipfrag_time = 30
+net.ipv4.neigh.default.anycast_delay = 100
+net.ipv4.neigh.default.app_solicit = 0
+net.ipv4.neigh.default.base_reachable_time_ms = 30000
+net.ipv4.neigh.default.delay_first_probe_time = 5
+net.ipv4.neigh.default.gc_interval = 30
+net.ipv4.neigh.default.gc_stale_time = 60
+net.ipv4.neigh.default.gc_thresh1 = 128
+net.ipv4.neigh.default.gc_thresh2 = 512
+net.ipv4.neigh.default.gc_thresh3 = 1024
+net.ipv4.neigh.default.locktime = 100
+net.ipv4.neigh.default.mcast_solicit = 3
+net.ipv4.neigh.default.proxy_delay = 80
+net.ipv4.neigh.default.proxy_qlen = 64
+net.ipv4.neigh.default.retrans_time_ms = 1000
+net.ipv4.neigh.default.ucast_solicit = 3
+net.ipv4.neigh.default.unres_qlen = 31
+net.ipv4.neigh.default.unres_qlen_bytes = 65536
+net.ipv4.neigh.docker0.anycast_delay = 100
+net.ipv4.neigh.docker0.app_solicit = 0
+net.ipv4.neigh.docker0.base_reachable_time_ms = 30000
+net.ipv4.neigh.docker0.delay_first_probe_time = 5
+net.ipv4.neigh.docker0.gc_stale_time = 60
+net.ipv4.neigh.docker0.locktime = 100
+net.ipv4.neigh.docker0.mcast_solicit = 3
+net.ipv4.neigh.docker0.proxy_delay = 80
+net.ipv4.neigh.docker0.proxy_qlen = 64
+net.ipv4.neigh.docker0.retrans_time_ms = 1000
+net.ipv4.neigh.docker0.ucast_solicit = 3
+net.ipv4.neigh.docker0.unres_qlen = 31
+net.ipv4.neigh.docker0.unres_qlen_bytes = 65536
+net.ipv4.neigh.enp0s3.anycast_delay = 100
+net.ipv4.neigh.enp0s3.app_solicit = 0
+net.ipv4.neigh.enp0s3.base_reachable_time_ms = 30000
+net.ipv4.neigh.enp0s3.delay_first_probe_time = 5
+net.ipv4.neigh.enp0s3.gc_stale_time = 60
+net.ipv4.neigh.enp0s3.locktime = 100
+net.ipv4.neigh.enp0s3.mcast_solicit = 3
+net.ipv4.neigh.enp0s3.proxy_delay = 80
+net.ipv4.neigh.enp0s3.proxy_qlen = 64
+net.ipv4.neigh.enp0s3.retrans_time_ms = 1000
+net.ipv4.neigh.enp0s3.ucast_solicit = 3
+net.ipv4.neigh.enp0s3.unres_qlen = 31
+net.ipv4.neigh.enp0s3.unres_qlen_bytes = 65536
+net.ipv4.neigh.lo.anycast_delay = 100
+net.ipv4.neigh.lo.app_solicit = 0
+net.ipv4.neigh.lo.base_reachable_time_ms = 30000
+net.ipv4.neigh.lo.delay_first_probe_time = 5
+net.ipv4.neigh.lo.gc_stale_time = 60
+net.ipv4.neigh.lo.locktime = 100
+net.ipv4.neigh.lo.mcast_solicit = 3
+net.ipv4.neigh.lo.proxy_delay = 80
+net.ipv4.neigh.lo.proxy_qlen = 64
+net.ipv4.neigh.lo.retrans_time_ms = 1000
+net.ipv4.neigh.lo.ucast_solicit = 3
+net.ipv4.neigh.lo.unres_qlen = 31
+net.ipv4.neigh.lo.unres_qlen_bytes = 65536
+net.ipv4.neigh.veth053b9d9.anycast_delay = 100
+net.ipv4.neigh.veth053b9d9.app_solicit = 0
+net.ipv4.neigh.veth053b9d9.base_reachable_time_ms = 30000
+net.ipv4.neigh.veth053b9d9.delay_first_probe_time = 5
+net.ipv4.neigh.veth053b9d9.gc_stale_time = 60
+net.ipv4.neigh.veth053b9d9.locktime = 100
+net.ipv4.neigh.veth053b9d9.mcast_solicit = 3
+net.ipv4.neigh.veth053b9d9.proxy_delay = 80
+net.ipv4.neigh.veth053b9d9.proxy_qlen = 64
+net.ipv4.neigh.veth053b9d9.retrans_time_ms = 1000
+net.ipv4.neigh.veth053b9d9.ucast_solicit = 3
+net.ipv4.neigh.veth053b9d9.unres_qlen = 31
+net.ipv4.neigh.veth053b9d9.unres_qlen_bytes = 65536
+net.ipv4.neigh.virbr0.anycast_delay = 100
+net.ipv4.neigh.virbr0.app_solicit = 0
+net.ipv4.neigh.virbr0.base_reachable_time_ms = 30000
+net.ipv4.neigh.virbr0.delay_first_probe_time = 5
+net.ipv4.neigh.virbr0.gc_stale_time = 60
+net.ipv4.neigh.virbr0.locktime = 100
+net.ipv4.neigh.virbr0.mcast_solicit = 3
+net.ipv4.neigh.virbr0.proxy_delay = 80
+net.ipv4.neigh.virbr0.proxy_qlen = 64
+net.ipv4.neigh.virbr0.retrans_time_ms = 1000
+net.ipv4.neigh.virbr0.ucast_solicit = 3
+net.ipv4.neigh.virbr0.unres_qlen = 31
+net.ipv4.neigh.virbr0.unres_qlen_bytes = 65536
+net.ipv4.neigh.virbr0-nic.anycast_delay = 100
+net.ipv4.neigh.virbr0-nic.app_solicit = 0
+net.ipv4.neigh.virbr0-nic.base_reachable_time_ms = 30000
+net.ipv4.neigh.virbr0-nic.delay_first_probe_time = 5
+net.ipv4.neigh.virbr0-nic.gc_stale_time = 60
+net.ipv4.neigh.virbr0-nic.locktime = 100
+net.ipv4.neigh.virbr0-nic.mcast_solicit = 3
+net.ipv4.neigh.virbr0-nic.proxy_delay = 80
+net.ipv4.neigh.virbr0-nic.proxy_qlen = 64
+net.ipv4.neigh.virbr0-nic.retrans_time_ms = 1000
+net.ipv4.neigh.virbr0-nic.ucast_solicit = 3
+net.ipv4.neigh.virbr0-nic.unres_qlen = 31
+net.ipv4.neigh.virbr0-nic.unres_qlen_bytes = 65536
+net.ipv4.ping_group_range = 1	0
+net.ipv4.route.error_burst = 5000
+net.ipv4.route.error_cost = 1000
+net.ipv4.route.gc_elasticity = 8
+net.ipv4.route.gc_interval = 60
+net.ipv4.route.gc_min_interval = 0
+net.ipv4.route.gc_min_interval_ms = 500
+net.ipv4.route.gc_thresh = -1
+net.ipv4.route.gc_timeout = 300
+net.ipv4.route.max_size = 2147483647
+net.ipv4.route.min_adv_mss = 256
+net.ipv4.route.min_pmtu = 552
+net.ipv4.route.mtu_expires = 600
+net.ipv4.route.redirect_load = 20
+net.ipv4.route.redirect_number = 9
+net.ipv4.route.redirect_silence = 20480
+net.ipv4.tcp_abort_on_overflow = 0
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_allowed_congestion_control = cubic reno
+net.ipv4.tcp_app_win = 31
+net.ipv4.tcp_autocorking = 1
+net.ipv4.tcp_available_congestion_control = cubic reno lp
+net.ipv4.tcp_base_mss = 512
+net.ipv4.tcp_challenge_ack_limit = 100
+net.ipv4.tcp_congestion_control = cubic
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_early_retrans = 3
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_fastopen = 0
+net.ipv4.tcp_fastopen_key = 00000000-00000000-00000000-00000000
+net.ipv4.tcp_fin_timeout = 60
+net.ipv4.tcp_frto = 2
+net.ipv4.tcp_invalid_ratelimit = 500
+net.ipv4.tcp_keepalive_intvl = 75
+net.ipv4.tcp_keepalive_probes = 9
+net.ipv4.tcp_keepalive_time = 7200
+net.ipv4.tcp_limit_output_bytes = 262144
+net.ipv4.tcp_low_latency = 0
+net.ipv4.tcp_max_orphans = 8192
+net.ipv4.tcp_max_ssthresh = 0
+net.ipv4.tcp_max_syn_backlog = 128
+net.ipv4.tcp_max_tw_buckets = 8192
+net.ipv4.tcp_mem = 46398	61866	92796
+net.ipv4.tcp_min_tso_segs = 2
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_mtu_probing = 0
+net.ipv4.tcp_no_metrics_save = 0
+net.ipv4.tcp_notsent_lowat = -1
+net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_retrans_collapse = 1
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+net.ipv4.tcp_rfc1337 = 0
+net.ipv4.tcp_rmem = 4096	87380	6291456
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_slow_start_after_idle = 1
+net.ipv4.tcp_stdurg = 0
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_thin_dupack = 0
+net.ipv4.tcp_thin_linear_timeouts = 0
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_tso_win_divisor = 3
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_tw_reuse = 0
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_wmem = 4096	16384	4194304
+net.ipv4.tcp_workaround_signed_windows = 0
+net.ipv4.udp_mem = 47310	63083	94620
+net.ipv4.udp_rmem_min = 4096
+net.ipv4.udp_wmem_min = 4096
+net.ipv4.xfrm4_gc_thresh = 1024
+net.ipv6.bindv6only = 0
+net.ipv6.conf.all.accept_dad = 1
+net.ipv6.conf.all.accept_ra = 1
+net.ipv6.conf.all.accept_ra_defrtr = 1
+net.ipv6.conf.all.accept_ra_pinfo = 1
+net.ipv6.conf.all.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.all.accept_ra_rtr_pref = 1
+net.ipv6.conf.all.accept_redirects = 1
+net.ipv6.conf.all.accept_source_route = 0
+net.ipv6.conf.all.autoconf = 1
+net.ipv6.conf.all.dad_transmits = 1
+net.ipv6.conf.all.disable_ipv6 = 0
+net.ipv6.conf.all.force_mld_version = 0
+net.ipv6.conf.all.force_tllao = 0
+net.ipv6.conf.all.forwarding = 0
+net.ipv6.conf.all.hop_limit = 64
+net.ipv6.conf.all.max_addresses = 16
+net.ipv6.conf.all.max_desync_factor = 600
+net.ipv6.conf.all.mc_forwarding = 0
+net.ipv6.conf.all.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.all.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.all.mtu = 1280
+net.ipv6.conf.all.ndisc_notify = 0
+net.ipv6.conf.all.optimistic_dad = 0
+net.ipv6.conf.all.proxy_ndp = 0
+net.ipv6.conf.all.regen_max_retry = 3
+net.ipv6.conf.all.router_probe_interval = 60
+net.ipv6.conf.all.router_solicitation_delay = 1
+net.ipv6.conf.all.router_solicitation_interval = 4
+net.ipv6.conf.all.router_solicitations = 3
+net.ipv6.conf.all.temp_prefered_lft = 86400
+net.ipv6.conf.all.temp_valid_lft = 604800
+net.ipv6.conf.all.use_tempaddr = 0
+net.ipv6.conf.default.accept_dad = 1
+net.ipv6.conf.default.accept_ra = 1
+net.ipv6.conf.default.accept_ra_defrtr = 1
+net.ipv6.conf.default.accept_ra_pinfo = 1
+net.ipv6.conf.default.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.default.accept_ra_rtr_pref = 1
+net.ipv6.conf.default.accept_redirects = 1
+net.ipv6.conf.default.accept_source_route = 0
+net.ipv6.conf.default.autoconf = 1
+net.ipv6.conf.default.dad_transmits = 1
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.default.force_mld_version = 0
+net.ipv6.conf.default.force_tllao = 0
+net.ipv6.conf.default.forwarding = 0
+net.ipv6.conf.default.hop_limit = 64
+net.ipv6.conf.default.max_addresses = 16
+net.ipv6.conf.default.max_desync_factor = 600
+net.ipv6.conf.default.mc_forwarding = 0
+net.ipv6.conf.default.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.default.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.default.mtu = 1280
+net.ipv6.conf.default.ndisc_notify = 0
+net.ipv6.conf.default.optimistic_dad = 0
+net.ipv6.conf.default.proxy_ndp = 0
+net.ipv6.conf.default.regen_max_retry = 3
+net.ipv6.conf.default.router_probe_interval = 60
+net.ipv6.conf.default.router_solicitation_delay = 1
+net.ipv6.conf.default.router_solicitation_interval = 4
+net.ipv6.conf.default.router_solicitations = 3
+net.ipv6.conf.default.temp_prefered_lft = 86400
+net.ipv6.conf.default.temp_valid_lft = 604800
+net.ipv6.conf.default.use_tempaddr = 0
+net.ipv6.conf.docker0.accept_dad = 1
+net.ipv6.conf.docker0.accept_ra = 1
+net.ipv6.conf.docker0.accept_ra_defrtr = 1
+net.ipv6.conf.docker0.accept_ra_pinfo = 1
+net.ipv6.conf.docker0.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.docker0.accept_ra_rtr_pref = 1
+net.ipv6.conf.docker0.accept_redirects = 1
+net.ipv6.conf.docker0.accept_source_route = 0
+net.ipv6.conf.docker0.autoconf = 1
+net.ipv6.conf.docker0.dad_transmits = 1
+net.ipv6.conf.docker0.disable_ipv6 = 0
+net.ipv6.conf.docker0.force_mld_version = 0
+net.ipv6.conf.docker0.force_tllao = 0
+net.ipv6.conf.docker0.forwarding = 0
+net.ipv6.conf.docker0.hop_limit = 64
+net.ipv6.conf.docker0.max_addresses = 16
+net.ipv6.conf.docker0.max_desync_factor = 600
+net.ipv6.conf.docker0.mc_forwarding = 0
+net.ipv6.conf.docker0.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.docker0.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.docker0.mtu = 1500
+net.ipv6.conf.docker0.ndisc_notify = 0
+net.ipv6.conf.docker0.optimistic_dad = 0
+net.ipv6.conf.docker0.proxy_ndp = 0
+net.ipv6.conf.docker0.regen_max_retry = 3
+net.ipv6.conf.docker0.router_probe_interval = 60
+net.ipv6.conf.docker0.router_solicitation_delay = 1
+net.ipv6.conf.docker0.router_solicitation_interval = 4
+net.ipv6.conf.docker0.router_solicitations = 3
+net.ipv6.conf.docker0.temp_prefered_lft = 86400
+net.ipv6.conf.docker0.temp_valid_lft = 604800
+net.ipv6.conf.docker0.use_tempaddr = 0
+net.ipv6.conf.enp0s3.accept_dad = 1
+net.ipv6.conf.enp0s3.accept_ra = 1
+net.ipv6.conf.enp0s3.accept_ra_defrtr = 0
+net.ipv6.conf.enp0s3.accept_ra_pinfo = 0
+net.ipv6.conf.enp0s3.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.enp0s3.accept_ra_rtr_pref = 0
+net.ipv6.conf.enp0s3.accept_redirects = 1
+net.ipv6.conf.enp0s3.accept_source_route = 0
+net.ipv6.conf.enp0s3.autoconf = 1
+net.ipv6.conf.enp0s3.dad_transmits = 1
+net.ipv6.conf.enp0s3.disable_ipv6 = 0
+net.ipv6.conf.enp0s3.force_mld_version = 0
+net.ipv6.conf.enp0s3.force_tllao = 0
+net.ipv6.conf.enp0s3.forwarding = 0
+net.ipv6.conf.enp0s3.hop_limit = 64
+net.ipv6.conf.enp0s3.max_addresses = 16
+net.ipv6.conf.enp0s3.max_desync_factor = 600
+net.ipv6.conf.enp0s3.mc_forwarding = 0
+net.ipv6.conf.enp0s3.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.enp0s3.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.enp0s3.mtu = 1500
+net.ipv6.conf.enp0s3.ndisc_notify = 0
+net.ipv6.conf.enp0s3.optimistic_dad = 0
+net.ipv6.conf.enp0s3.proxy_ndp = 0
+net.ipv6.conf.enp0s3.regen_max_retry = 3
+net.ipv6.conf.enp0s3.router_probe_interval = 60
+net.ipv6.conf.enp0s3.router_solicitation_delay = 1
+net.ipv6.conf.enp0s3.router_solicitation_interval = 4
+net.ipv6.conf.enp0s3.router_solicitations = 3
+net.ipv6.conf.enp0s3.temp_prefered_lft = 86400
+net.ipv6.conf.enp0s3.temp_valid_lft = 604800
+net.ipv6.conf.enp0s3.use_tempaddr = 0
+net.ipv6.conf.lo.accept_dad = -1
+net.ipv6.conf.lo.accept_ra = 1
+net.ipv6.conf.lo.accept_ra_defrtr = 1
+net.ipv6.conf.lo.accept_ra_pinfo = 1
+net.ipv6.conf.lo.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.lo.accept_ra_rtr_pref = 1
+net.ipv6.conf.lo.accept_redirects = 1
+net.ipv6.conf.lo.accept_source_route = 0
+net.ipv6.conf.lo.autoconf = 1
+net.ipv6.conf.lo.dad_transmits = 1
+net.ipv6.conf.lo.disable_ipv6 = 0
+net.ipv6.conf.lo.force_mld_version = 0
+net.ipv6.conf.lo.force_tllao = 0
+net.ipv6.conf.lo.forwarding = 0
+net.ipv6.conf.lo.hop_limit = 64
+net.ipv6.conf.lo.max_addresses = 16
+net.ipv6.conf.lo.max_desync_factor = 600
+net.ipv6.conf.lo.mc_forwarding = 0
+net.ipv6.conf.lo.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.lo.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.lo.mtu = 65536
+net.ipv6.conf.lo.ndisc_notify = 0
+net.ipv6.conf.lo.optimistic_dad = 0
+net.ipv6.conf.lo.proxy_ndp = 0
+net.ipv6.conf.lo.regen_max_retry = 3
+net.ipv6.conf.lo.router_probe_interval = 60
+net.ipv6.conf.lo.router_solicitation_delay = 1
+net.ipv6.conf.lo.router_solicitation_interval = 4
+net.ipv6.conf.lo.router_solicitations = 3
+net.ipv6.conf.lo.temp_prefered_lft = 86400
+net.ipv6.conf.lo.temp_valid_lft = 604800
+net.ipv6.conf.lo.use_tempaddr = -1
+net.ipv6.conf.veth053b9d9.accept_dad = 1
+net.ipv6.conf.veth053b9d9.accept_ra = 1
+net.ipv6.conf.veth053b9d9.accept_ra_defrtr = 1
+net.ipv6.conf.veth053b9d9.accept_ra_pinfo = 1
+net.ipv6.conf.veth053b9d9.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.veth053b9d9.accept_ra_rtr_pref = 1
+net.ipv6.conf.veth053b9d9.accept_redirects = 1
+net.ipv6.conf.veth053b9d9.accept_source_route = 0
+net.ipv6.conf.veth053b9d9.autoconf = 1
+net.ipv6.conf.veth053b9d9.dad_transmits = 1
+net.ipv6.conf.veth053b9d9.disable_ipv6 = 0
+net.ipv6.conf.veth053b9d9.force_mld_version = 0
+net.ipv6.conf.veth053b9d9.force_tllao = 0
+net.ipv6.conf.veth053b9d9.forwarding = 0
+net.ipv6.conf.veth053b9d9.hop_limit = 64
+net.ipv6.conf.veth053b9d9.max_addresses = 16
+net.ipv6.conf.veth053b9d9.max_desync_factor = 600
+net.ipv6.conf.veth053b9d9.mc_forwarding = 0
+net.ipv6.conf.veth053b9d9.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.veth053b9d9.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.veth053b9d9.mtu = 1500
+net.ipv6.conf.veth053b9d9.ndisc_notify = 0
+net.ipv6.conf.veth053b9d9.optimistic_dad = 0
+net.ipv6.conf.veth053b9d9.proxy_ndp = 0
+net.ipv6.conf.veth053b9d9.regen_max_retry = 3
+net.ipv6.conf.veth053b9d9.router_probe_interval = 60
+net.ipv6.conf.veth053b9d9.router_solicitation_delay = 1
+net.ipv6.conf.veth053b9d9.router_solicitation_interval = 4
+net.ipv6.conf.veth053b9d9.router_solicitations = 3
+net.ipv6.conf.veth053b9d9.temp_prefered_lft = 86400
+net.ipv6.conf.veth053b9d9.temp_valid_lft = 604800
+net.ipv6.conf.veth053b9d9.use_tempaddr = 0
+net.ipv6.conf.virbr0.accept_dad = 1
+net.ipv6.conf.virbr0.accept_ra = 1
+net.ipv6.conf.virbr0.accept_ra_defrtr = 1
+net.ipv6.conf.virbr0.accept_ra_pinfo = 1
+net.ipv6.conf.virbr0.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.virbr0.accept_ra_rtr_pref = 1
+net.ipv6.conf.virbr0.accept_redirects = 1
+net.ipv6.conf.virbr0.accept_source_route = 0
+net.ipv6.conf.virbr0.autoconf = 0
+net.ipv6.conf.virbr0.dad_transmits = 1
+net.ipv6.conf.virbr0.disable_ipv6 = 1
+net.ipv6.conf.virbr0.force_mld_version = 0
+net.ipv6.conf.virbr0.force_tllao = 0
+net.ipv6.conf.virbr0.forwarding = 0
+net.ipv6.conf.virbr0.hop_limit = 64
+net.ipv6.conf.virbr0.max_addresses = 16
+net.ipv6.conf.virbr0.max_desync_factor = 600
+net.ipv6.conf.virbr0.mc_forwarding = 0
+net.ipv6.conf.virbr0.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.virbr0.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.virbr0.mtu = 1500
+net.ipv6.conf.virbr0.ndisc_notify = 0
+net.ipv6.conf.virbr0.optimistic_dad = 0
+net.ipv6.conf.virbr0.proxy_ndp = 0
+net.ipv6.conf.virbr0.regen_max_retry = 3
+net.ipv6.conf.virbr0.router_probe_interval = 60
+net.ipv6.conf.virbr0.router_solicitation_delay = 1
+net.ipv6.conf.virbr0.router_solicitation_interval = 4
+net.ipv6.conf.virbr0.router_solicitations = 3
+net.ipv6.conf.virbr0.temp_prefered_lft = 86400
+net.ipv6.conf.virbr0.temp_valid_lft = 604800
+net.ipv6.conf.virbr0.use_tempaddr = 0
+net.ipv6.conf.virbr0-nic.accept_dad = 1
+net.ipv6.conf.virbr0-nic.accept_ra = 1
+net.ipv6.conf.virbr0-nic.accept_ra_defrtr = 1
+net.ipv6.conf.virbr0-nic.accept_ra_pinfo = 1
+net.ipv6.conf.virbr0-nic.accept_ra_rt_info_max_plen = 0
+net.ipv6.conf.virbr0-nic.accept_ra_rtr_pref = 1
+net.ipv6.conf.virbr0-nic.accept_redirects = 1
+net.ipv6.conf.virbr0-nic.accept_source_route = 0
+net.ipv6.conf.virbr0-nic.autoconf = 1
+net.ipv6.conf.virbr0-nic.dad_transmits = 1
+net.ipv6.conf.virbr0-nic.disable_ipv6 = 0
+net.ipv6.conf.virbr0-nic.force_mld_version = 0
+net.ipv6.conf.virbr0-nic.force_tllao = 0
+net.ipv6.conf.virbr0-nic.forwarding = 0
+net.ipv6.conf.virbr0-nic.hop_limit = 64
+net.ipv6.conf.virbr0-nic.max_addresses = 16
+net.ipv6.conf.virbr0-nic.max_desync_factor = 600
+net.ipv6.conf.virbr0-nic.mc_forwarding = 0
+net.ipv6.conf.virbr0-nic.mldv1_unsolicited_report_interval = 10000
+net.ipv6.conf.virbr0-nic.mldv2_unsolicited_report_interval = 1000
+net.ipv6.conf.virbr0-nic.mtu = 1500
+net.ipv6.conf.virbr0-nic.ndisc_notify = 0
+net.ipv6.conf.virbr0-nic.optimistic_dad = 0
+net.ipv6.conf.virbr0-nic.proxy_ndp = 0
+net.ipv6.conf.virbr0-nic.regen_max_retry = 3
+net.ipv6.conf.virbr0-nic.router_probe_interval = 60
+net.ipv6.conf.virbr0-nic.router_solicitation_delay = 1
+net.ipv6.conf.virbr0-nic.router_solicitation_interval = 4
+net.ipv6.conf.virbr0-nic.router_solicitations = 3
+net.ipv6.conf.virbr0-nic.temp_prefered_lft = 86400
+net.ipv6.conf.virbr0-nic.temp_valid_lft = 604800
+net.ipv6.conf.virbr0-nic.use_tempaddr = 0
+net.ipv6.icmp.ratelimit = 1000
+net.ipv6.ip6frag_high_thresh = 4194304
+net.ipv6.ip6frag_low_thresh = 3145728
+net.ipv6.ip6frag_secret_interval = 600
+net.ipv6.ip6frag_time = 60
+net.ipv6.mld_max_msf = 64
+net.ipv6.mld_qrv = 2
+net.ipv6.neigh.default.anycast_delay = 100
+net.ipv6.neigh.default.app_solicit = 0
+net.ipv6.neigh.default.base_reachable_time_ms = 30000
+net.ipv6.neigh.default.delay_first_probe_time = 5
+net.ipv6.neigh.default.gc_interval = 30
+net.ipv6.neigh.default.gc_stale_time = 60
+net.ipv6.neigh.default.gc_thresh1 = 128
+net.ipv6.neigh.default.gc_thresh2 = 512
+net.ipv6.neigh.default.gc_thresh3 = 1024
+net.ipv6.neigh.default.locktime = 0
+net.ipv6.neigh.default.mcast_solicit = 3
+net.ipv6.neigh.default.proxy_delay = 80
+net.ipv6.neigh.default.proxy_qlen = 64
+net.ipv6.neigh.default.retrans_time_ms = 1000
+net.ipv6.neigh.default.ucast_solicit = 3
+net.ipv6.neigh.default.unres_qlen = 31
+net.ipv6.neigh.default.unres_qlen_bytes = 65536
+net.ipv6.neigh.docker0.anycast_delay = 100
+net.ipv6.neigh.docker0.app_solicit = 0
+net.ipv6.neigh.docker0.base_reachable_time_ms = 30000
+net.ipv6.neigh.docker0.delay_first_probe_time = 5
+net.ipv6.neigh.docker0.gc_stale_time = 60
+net.ipv6.neigh.docker0.locktime = 0
+net.ipv6.neigh.docker0.mcast_solicit = 3
+net.ipv6.neigh.docker0.proxy_delay = 80
+net.ipv6.neigh.docker0.proxy_qlen = 64
+net.ipv6.neigh.docker0.retrans_time_ms = 1000
+net.ipv6.neigh.docker0.ucast_solicit = 3
+net.ipv6.neigh.docker0.unres_qlen = 31
+net.ipv6.neigh.docker0.unres_qlen_bytes = 65536
+net.ipv6.neigh.enp0s3.anycast_delay = 100
+net.ipv6.neigh.enp0s3.app_solicit = 0
+net.ipv6.neigh.enp0s3.base_reachable_time_ms = 30000
+net.ipv6.neigh.enp0s3.delay_first_probe_time = 5
+net.ipv6.neigh.enp0s3.gc_stale_time = 60
+net.ipv6.neigh.enp0s3.locktime = 0
+net.ipv6.neigh.enp0s3.mcast_solicit = 3
+net.ipv6.neigh.enp0s3.proxy_delay = 80
+net.ipv6.neigh.enp0s3.proxy_qlen = 64
+net.ipv6.neigh.enp0s3.retrans_time_ms = 1000
+net.ipv6.neigh.enp0s3.ucast_solicit = 3
+net.ipv6.neigh.enp0s3.unres_qlen = 31
+net.ipv6.neigh.enp0s3.unres_qlen_bytes = 65536
+net.ipv6.neigh.lo.anycast_delay = 100
+net.ipv6.neigh.lo.app_solicit = 0
+net.ipv6.neigh.lo.base_reachable_time_ms = 30000
+net.ipv6.neigh.lo.delay_first_probe_time = 5
+net.ipv6.neigh.lo.gc_stale_time = 60
+net.ipv6.neigh.lo.locktime = 0
+net.ipv6.neigh.lo.mcast_solicit = 3
+net.ipv6.neigh.lo.proxy_delay = 80
+net.ipv6.neigh.lo.proxy_qlen = 64
+net.ipv6.neigh.lo.retrans_time_ms = 1000
+net.ipv6.neigh.lo.ucast_solicit = 3
+net.ipv6.neigh.lo.unres_qlen = 31
+net.ipv6.neigh.lo.unres_qlen_bytes = 65536
+net.ipv6.neigh.veth053b9d9.anycast_delay = 100
+net.ipv6.neigh.veth053b9d9.app_solicit = 0
+net.ipv6.neigh.veth053b9d9.base_reachable_time_ms = 30000
+net.ipv6.neigh.veth053b9d9.delay_first_probe_time = 5
+net.ipv6.neigh.veth053b9d9.gc_stale_time = 60
+net.ipv6.neigh.veth053b9d9.locktime = 0
+net.ipv6.neigh.veth053b9d9.mcast_solicit = 3
+net.ipv6.neigh.veth053b9d9.proxy_delay = 80
+net.ipv6.neigh.veth053b9d9.proxy_qlen = 64
+net.ipv6.neigh.veth053b9d9.retrans_time_ms = 1000
+net.ipv6.neigh.veth053b9d9.ucast_solicit = 3
+net.ipv6.neigh.veth053b9d9.unres_qlen = 31
+net.ipv6.neigh.veth053b9d9.unres_qlen_bytes = 65536
+net.ipv6.neigh.virbr0.anycast_delay = 100
+net.ipv6.neigh.virbr0.app_solicit = 0
+net.ipv6.neigh.virbr0.base_reachable_time_ms = 30000
+net.ipv6.neigh.virbr0.delay_first_probe_time = 5
+net.ipv6.neigh.virbr0.gc_stale_time = 60
+net.ipv6.neigh.virbr0.locktime = 0
+net.ipv6.neigh.virbr0.mcast_solicit = 3
+net.ipv6.neigh.virbr0.proxy_delay = 80
+net.ipv6.neigh.virbr0.proxy_qlen = 64
+net.ipv6.neigh.virbr0.retrans_time_ms = 1000
+net.ipv6.neigh.virbr0.ucast_solicit = 3
+net.ipv6.neigh.virbr0.unres_qlen = 31
+net.ipv6.neigh.virbr0.unres_qlen_bytes = 65536
+net.ipv6.neigh.virbr0-nic.anycast_delay = 100
+net.ipv6.neigh.virbr0-nic.app_solicit = 0
+net.ipv6.neigh.virbr0-nic.base_reachable_time_ms = 30000
+net.ipv6.neigh.virbr0-nic.delay_first_probe_time = 5
+net.ipv6.neigh.virbr0-nic.gc_stale_time = 60
+net.ipv6.neigh.virbr0-nic.locktime = 0
+net.ipv6.neigh.virbr0-nic.mcast_solicit = 3
+net.ipv6.neigh.virbr0-nic.proxy_delay = 80
+net.ipv6.neigh.virbr0-nic.proxy_qlen = 64
+net.ipv6.neigh.virbr0-nic.retrans_time_ms = 1000
+net.ipv6.neigh.virbr0-nic.ucast_solicit = 3
+net.ipv6.neigh.virbr0-nic.unres_qlen = 31
+net.ipv6.neigh.virbr0-nic.unres_qlen_bytes = 65536
+net.ipv6.route.gc_elasticity = 9
+net.ipv6.route.gc_interval = 30
+net.ipv6.route.gc_min_interval = 0
+net.ipv6.route.gc_min_interval_ms = 500
+net.ipv6.route.gc_thresh = 1024
+net.ipv6.route.gc_timeout = 60
+net.ipv6.route.max_size = 16384
+net.ipv6.route.min_adv_mss = 1220
+net.ipv6.route.mtu_expires = 600
+net.ipv6.xfrm6_gc_thresh = 1024
+net.netfilter.nf_conntrack_acct = 0
+net.netfilter.nf_conntrack_buckets = 16384
+net.netfilter.nf_conntrack_checksum = 1
+net.netfilter.nf_conntrack_count = 0
+net.netfilter.nf_conntrack_events = 1
+net.netfilter.nf_conntrack_events_retry_timeout = 15
+net.netfilter.nf_conntrack_expect_max = 256
+net.netfilter.nf_conntrack_frag6_high_thresh = 4194304
+net.netfilter.nf_conntrack_frag6_low_thresh = 3145728
+net.netfilter.nf_conntrack_frag6_timeout = 60
+net.netfilter.nf_conntrack_generic_timeout = 600
+net.netfilter.nf_conntrack_helper = 1
+net.netfilter.nf_conntrack_icmp_timeout = 30
+net.netfilter.nf_conntrack_icmpv6_timeout = 30
+net.netfilter.nf_conntrack_log_invalid = 0
+net.netfilter.nf_conntrack_max = 65536
+net.netfilter.nf_conntrack_tcp_be_liberal = 0
+net.netfilter.nf_conntrack_tcp_loose = 1
+net.netfilter.nf_conntrack_tcp_max_retrans = 3
+net.netfilter.nf_conntrack_tcp_timeout_close = 10
+net.netfilter.nf_conntrack_tcp_timeout_close_wait = 60
+net.netfilter.nf_conntrack_tcp_timeout_established = 432000
+net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
+net.netfilter.nf_conntrack_tcp_timeout_last_ack = 30
+net.netfilter.nf_conntrack_tcp_timeout_max_retrans = 300
+net.netfilter.nf_conntrack_tcp_timeout_syn_recv = 60
+net.netfilter.nf_conntrack_tcp_timeout_syn_sent = 120
+net.netfilter.nf_conntrack_tcp_timeout_time_wait = 120
+net.netfilter.nf_conntrack_tcp_timeout_unacknowledged = 300
+net.netfilter.nf_conntrack_timestamp = 0
+net.netfilter.nf_conntrack_udp_timeout = 30
+net.netfilter.nf_conntrack_udp_timeout_stream = 180
+net.netfilter.nf_log.0 = NONE
+net.netfilter.nf_log.1 = NONE
+net.netfilter.nf_log.10 = NONE
+net.netfilter.nf_log.11 = NONE
+net.netfilter.nf_log.12 = NONE
+net.netfilter.nf_log.2 = nfnetlink_log
+net.netfilter.nf_log.3 = NONE
+net.netfilter.nf_log.4 = NONE
+net.netfilter.nf_log.5 = NONE
+net.netfilter.nf_log.6 = NONE
+net.netfilter.nf_log.7 = NONE
+net.netfilter.nf_log.8 = NONE
+net.netfilter.nf_log.9 = NONE
+net.nf_conntrack_max = 65536
+net.unix.max_dgram_qlen = 10
+sunrpc.max_resvport = 1023
+sunrpc.min_resvport = 665
+sunrpc.nfs_debug = 0
+sunrpc.nfsd_debug = 0
+sunrpc.nlm_debug = 0
+sunrpc.rpc_debug = 0
+sunrpc.tcp_fin_timeout = 15
+sunrpc.tcp_max_slot_table_entries = 65536
+sunrpc.tcp_slot_table_entries = 2
+sunrpc.transports = tcp 1048576
+sunrpc.transports = udp 32768
+sunrpc.transports = tcp-bc 1048576
+sunrpc.udp_slot_table_entries = 16
+vm.admin_reserve_kbytes = 8192
+vm.block_dump = 0
+vm.dirty_background_bytes = 0
+vm.dirty_background_ratio = 10
+vm.dirty_bytes = 0
+vm.dirty_expire_centisecs = 3000
+vm.dirty_ratio = 30
+vm.dirty_writeback_centisecs = 500
+vm.drop_caches = 0
+vm.extfrag_threshold = 500
+vm.hugepages_treat_as_movable = 0
+vm.hugetlb_shm_group = 0
+vm.laptop_mode = 0
+vm.legacy_va_layout = 0
+vm.lowmem_reserve_ratio = 256	256	32
+vm.max_map_count = 65530
+vm.memory_failure_early_kill = 0
+vm.memory_failure_recovery = 1
+vm.min_free_kbytes = 45056
+vm.min_slab_ratio = 5
+vm.min_unmapped_ratio = 1
+vm.mmap_min_addr = 4096
+vm.nr_hugepages = 0
+vm.nr_hugepages_mempolicy = 0
+vm.nr_overcommit_hugepages = 0
+vm.nr_pdflush_threads = 0
+vm.numa_zonelist_order = default
+vm.oom_dump_tasks = 1
+vm.oom_kill_allocating_task = 0
+vm.overcommit_kbytes = 0
+vm.overcommit_memory = 0
+vm.overcommit_ratio = 50
+vm.page-cluster = 3
+vm.panic_on_oom = 0
+vm.percpu_pagelist_fraction = 0
+vm.stat_interval = 1
+vm.swappiness = 30
+vm.user_reserve_kbytes = 61235
+vm.vfs_cache_pressure = 100
+vm.zone_reclaim_mode = 0
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl -a| erep ip4
+bash: erep: command not found...
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl -a| erep ip4[1@g
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl -a| egrep ip4[Knet.[K[K[K[Knet.ipv4.ip_forward
+[01;31m[Knet.ipv4.ip_forward[m[K = 0
+[01;31m[Knet.ipv4.ip_forward[m[K_use_pmtu = 0
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# sysctl -a| egrep net.ipv4.ip_forward[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@w[1P[1P[1P[1P[1P[1P[1P[1P net.ipv4.ip_forward[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C=1
+net.ipv4.ip_forward = 1
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+c962834dca63        myname/nodeweb      "container-entrypoint"   About an hour ago   Up About an hour    0.0.0.0:8000->8000/tcp, 8080/tcp   admiring_shaw
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# socker [1@d[1@o[Kck s[K[Ker stop
+docker: "stop" requires a minimum of 1 argument.
+See 'docker stop --help'.
+
+Usage:	docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop a running container.
+Sending SIGTERM and then SIGKILL after a grace period
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker stop admiring_shaw 
+admiring_shaw
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker stop admiring_shaw [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Krun[K(reverse-i-search)`':[Cr': docker psu': docker run -d -p 8000:8000 myname/nodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[3P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+bcbf7f50ec070b56a31782e9bee35937e52172c3a4016f2aa8fe51e81d10d06c
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker run -d -p 8000:8000 myname/nodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+bcbf7f50ec07        myname/nodeweb      "container-entrypoint"   34 seconds ago      Up 33 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   elegant_mclean
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# ls
+Dockerfile  Dockerfile~  hello-http.js
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cat hp[Kello-http.js 
+var http = require('http');
+var port = 8000;
+var laddr = '127.0.0.1';
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello, Red Hat Developers World from ' +
+	    process.version + '!\n');
+    console.log('Processed request for '+ req.url);
+}).listen(port, laddr);                                                                                                                
+console.log('Server running at http://' + laddr + ':' + port + '/');  
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# node
+bash: node: command not found...
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cat Dockerfile
+FROM rhscl_beta/nodejs-4-rhel7
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'node hello-http.js'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker lo
+load    login   logout  logs    
+[root@rhatvm nodejs]# docker lo
+load    login   logout  logs    
+[root@rhatvm nodejs]# docker logs admiring_shaw [K[K[K[K[Kno[K[Ks[K[K[K[K[K[K[K[K[K[Kelegant_mclean 
+Server running at http://127.0.0.1:8000/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# ps -ef | egrep node
+rt        5785  5681  0 14:33 pts/2    00:00:00 script logs/docker-rhel7srvr-[01;31m[Knode[m[Kjs4-beta.txt
+rt        5787  5785  0 14:33 pts/2    00:00:00 script logs/docker-rhel7srvr-[01;31m[Knode[m[Kjs4-beta.txt
+1001     10342  1426  0 16:29 ?        00:00:00 [01;31m[Knode[m[K hello-http.js
+root     10637  5827  0 16:31 pts/5    00:00:00 grep -E --color=auto [01;31m[Knode[m[K
+rt       13953 13859  0 01:50 pts/3    00:00:00 scl enable rh-[01;31m[Knode[m[Kjs4 bash
+rt       14062 14016  0 01:52 pts/4    00:00:00 scl enable [01;31m[Knode[m[Kjs010 bash
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# which node
+/usr/bin/which: no node in (/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/rt/.local/bin:/home/rt/bin)
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# lsof -p 10342
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+COMMAND   PID     USER   FD      TYPE DEVICE SIZE/OFF      NODE NAME
+lsof: no pwd entry for UID 1001
+node    10342     1001  cwd       DIR  253,4       72 469766674 /opt/app-root/src
+lsof: no pwd entry for UID 1001
+node    10342     1001  rtd       DIR  253,4     4096       259 /
+lsof: no pwd entry for UID 1001
+node    10342     1001  txt       REG  253,4 11784016 201373471 /opt/rh/rh-nodejs4/root/usr/bin/node
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                865 /usr/lib64/liblzma.so.5.0.99 (path dev=253,0, inode=67161343)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1056 /usr/lib64/libpcre.so.1.2.0 (path dev=253,0, inode=67416194)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1096 /usr/lib64/libselinux.so.1 (path dev=253,0, inode=67416206)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1082 /usr/lib64/libresolv-2.17.so (path dev=253,0, inode=67161268)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                848 /usr/lib64/libkeyutils.so.1.5 (path dev=253,0, inode=67464976)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                856 /usr/lib64/libkrb5support.so.0.1 (path dev=253,0, inode=67717146)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                840 /usr/lib64/libk5crypto.so.3.1 (path dev=253,0, inode=67416557)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                636 /usr/lib64/libcom_err.so.2.1 (path dev=253,0, inode=67416219)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                854 /usr/lib64/libkrb5.so.3.3 (path dev=253,0, inode=67717142)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                829 /usr/lib64/libgssapi_krb5.so.2.2 (path dev=253,0, inode=67416221)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                627 /usr/lib64/libc-2.17.so (path dev=253,0, inode=67161244)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                800 /usr/lib64/libgcc_s-4.8.5-20150702.so.1 (path dev=253,0, inode=67152137)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                866 /usr/lib64/libm-2.17.so (path dev=253,0, inode=67161338)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1114 /usr/lib64/libstdc++.so.6.0.19 (path dev=253,0, inode=67161293)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                769 /usr/lib64/libcrypto.so.1.0.1e (path dev=253,0, inode=72735304)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1110 /usr/lib64/libssl.so.1.0.1e (path dev=253,0, inode=72735306)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                782 /usr/lib64/libdl-2.17.so (path dev=253,0, inode=67161336)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                887 /usr/lib64/libnsl-2.17.so (path dev=253,0, inode=67161340)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1073 /usr/lib64/libpthread-2.17.so (path dev=253,0, inode=67161266)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1092 /usr/lib64/librt-2.17.so (path dev=253,0, inode=67161270)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4          436306721 /opt/rh/rh-nodejs4/root/usr/lib64/libuv.so.rh-nodejs4-1.7.5 (path dev=253,0, inode=1467703)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4          436306715 /opt/rh/rh-nodejs4/root/usr/lib64/libhttp_parser.so.rh-nodejs4-2.6.1 (path dev=253,0, inode=1467696)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4               1150 /usr/lib64/libz.so.1.2.7 (path dev=253,0, inode=67416208)
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                603 /usr/lib64/ld-2.17.so (path dev=253,0, inode=67161329)
+lsof: no pwd entry for UID 1001
+node    10342     1001    0u      CHR    1,3      0t0    707011 /dev/null
+lsof: no pwd entry for UID 1001
+node    10342     1001    1w     FIFO    0,8      0t0    708793 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    2w     FIFO    0,8      0t0    708794 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    3r     FIFO    0,8      0t0    708878 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    4w     FIFO    0,8      0t0    708878 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    5u  a_inode    0,9        0      4679 [eventpoll]
+lsof: no pwd entry for UID 1001
+node    10342     1001    6r     FIFO    0,8      0t0    708879 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    7w     FIFO    0,8      0t0    708879 pipe
+lsof: no pwd entry for UID 1001
+node    10342     1001    8u  a_inode    0,9        0      4679 [eventfd]
+lsof: no pwd entry for UID 1001
+node    10342     1001    9r      CHR    1,3      0t0    707011 /dev/null
+lsof: no pwd entry for UID 1001
+node    10342     1001   10u     sock    0,6      0t0    708881 protocol: TCP
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# lsof -p 10342 | egrep 800
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+node    10342     1001  mem       REG  253,4                [01;31m[K800[m[K /usr/lib64/libgcc_s-4.8.5-20150702.so.1 (path dev=253,0, inode=67152137)
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# lsof -p 10342 | egrep 800-800i800 800t800c800p800[K
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+lsof: no pwd entry for UID 1001
+node    10342     1001   10u     sock    0,6      0t0    708881 protocol: [01;31m[KTCP[m[K
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker stop elegant_mclean 
+elegant_mclean
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                           PORTS               NAMES
+bcbf7f50ec07        myname/nodeweb      "container-entrypoint"   4 minutes ago       Exited (137) 3 seconds ago                           elegant_mclean
+c962834dca63        myname/nodeweb      "container-entrypoint"   About an hour ago   Exited (137) 4 minutes ago                           admiring_shaw
+2ec28a6a8798        myname/nodeweb      "container-entrypoint"   About an hour ago   Exited (137) About an hour ago                       angry_mayer
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# dock [Ker rm ($[K[K$(o[Kdocker ps -q[Kaq_
+> ^C
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker rm $(docker ps -aq_[K)
+bcbf7f50ec07
+c962834dca63
+2ec28a6a8798
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker rm $(docker ps -aq)
+docker: "rm" requires a minimum of 1 argument.
+See 'docker rm --help'.
+
+Usage:	docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# (reverse-i-search)`':[Cr': docker rm $(docker ps -aq)u': docker run -d -p 8000:8000 myname/nodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[3P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+94f65fc8c0248340639579d59cd0fc1a6c9b42cecc79c45310ec37da28b72801
+Error response from daemon: Cannot start container 94f65fc8c0248340639579d59cd0fc1a6c9b42cecc79c45310ec37da28b72801: failed to create endpoint angry_mclean on network bridge: Error starting userland proxy: listen tcp 0.0.0.0:8000: bind: address already in use
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker psrun -d -p 8000:8000 myname/nodeweb 
+4a76eae32bd0e0011eb8cd035557d55917cfdb293f2d697f3ee8046b6da19c4b
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker run -d -p 8000:8000 myname/nodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[K
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+4a76eae32bd0        myname/nodeweb      "container-entrypoint"   40 seconds ago      Up 39 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   lonely_brown
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+4a76eae32bd0        myname/nodeweb      "container-entrypoint"   2 minutes ago       Up 2 minutes        0.0.0.0:8000->8000/tcp, 8080/tcp   lonely_brown
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker ps[Kdocker stop lonely_brown 
+lonely_brown
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# cd ../..
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# ls
+[0m[38;5;27mdocker[0m                 [38;5;27mdocker-rhel72-rhscl22beta[0m  hello_http.java  hello-http.rb  [38;5;34mhello.js[0m   [38;5;34mhello.pl[0m  [38;5;34mhello-py26.py[0m  [38;5;34mhello.rb[0m
+[38;5;27mdocker-rhel72-rhscl20[0m  hello.cpp                  hello-http.js    Hello.java     [38;5;34mhello.php[0m  [38;5;34mhello.py[0m  [38;5;34mhello-py2.py[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# cd docker/
+java-simple/ nodejs/      php/         python3/     ruby/        
+[root@rhatvm hello]# cd docker/python3/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ls
+Dockerfile  index.html  web.py
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[C[43@u': docker run -d -p 8000:8000 myname/nodeweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb': subscription-manager repos --enable rhel-server-rhscl-7-beta-rpms[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[root@rhatvm python3]#[C[Cyum-config-manager --save --setopt=rhel-server-rhscl-7-beta-rpms.skip_if_unavailable=true [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C install rh-nodejs4[K[K[1P(reverse-i-search)`':[C[26@b': docker stop lonely_brown[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu': docker build -t myname/nodeweb .[1@i[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[4P[root@rhatvm python3]#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@p[1@t[1@y[1@o[C[1@n[1P[1P[1P[1P[1@y[1@u[1P[1@t[1@h[1@o[C[1@n[Kweb .
+Sending build context to Docker daemon 4.096 kBSending build context to Docker daemon 4.096 kB
+Step 1 : FROM openshift3/python-33-rhel7:latest
+Trying to pull repository registry.access.redhat.com/openshift3/python-33-rhel7 ... 
+[0A[2Kb44e232f05bf: Pulling image (latest) from registry.access.redhat.com/openshift3/python-33-rhel7 [0B[1A[2Kb44e232f05bf: Pulling image (latest) from registry.access.redhat.com/openshift3/python-33-rhel7, endpoint: https://registry.access.redhat.com/v1/ [1B[1A[2Kb44e232f05bf: Pulling dependent layers [1B
+[0A[2K95612a3264fc: Download complete [0B
+[0A[2Ka36b9e8e95f0: Pulling metadata [0B[1A[2Ka36b9e8e95f0: Pulling fs layer [1B[1A[2Ka36b9e8e95f0: Downloading 527.5 kB[1B[1A[2Ka36b9e8e95f0: Downloading 1.057 MB[1B[1A[2Ka36b9e8e95f0: Downloading 1.582 MB[1B[1A[2Ka36b9e8e95f0: Downloading 2.112 MB[1B[1A[2Ka36b9e8e95f0: Downloading 2.637 MB[1B[1A[2Ka36b9e8e95f0: Downloading 3.166 MB[1B[1A[2Ka36b9e8e95f0: Downloading 3.691 MB[1B[1A[2Ka36b9e8e95f0: Downloading 4.221 MB[1B[1A[2Ka36b9e8e95f0: Downloading 4.746 MB[1B[1A[2Ka36b9e8e95f0: Downloading 5.275 MB[1B[1A[2Ka36b9e8e95f0: Downloading 5.801 MB[1B[1A[2Ka36b9e8e95f0: Downloading  6.33 MB[1B[1A[2Ka36b9e8e95f0: Downloading 6.855 MB[1B[1A[2Ka36b9e8e95f0: Downloading 7.385 MB[1B[1A[2Ka36b9e8e95f0: Downloading  7.91 MB[1B[1A[2Ka36b9e8e95f0: Downloading 8.439 MB[1B[1A[2Ka36b9e8e95f0: Downloading 8.965 MB[1B[1A[2Ka36b9e8e95f0: Downloading 9.494 MB[1B[1A[2Ka36b9e8e95f0: Downloading 10.02 MB[1B[1A[2Ka36b9e8e95f0: Downloading 10.55 MB[1B[1A[2Ka36b9e8e95f0: Downloading 11.07 MB[1B[1A[2Ka36b9e8e95f0: Downloading  11.6 MB[1B[1A[2Ka36b9e8e95f0: Downloading 12.13 MB[1B[1A[2Ka36b9e8e95f0: Downloading 12.66 MB[1B[1A[2Ka36b9e8e95f0: Downloading 13.18 MB[1B[1A[2Ka36b9e8e95f0: Downloading 13.71 MB[1B[1A[2Ka36b9e8e95f0: Downloading 14.24 MB[1B[1A[2Ka36b9e8e95f0: Downloading 14.77 MB[1B[1A[2Ka36b9e8e95f0: Downloading 15.29 MB[1B[1A[2Ka36b9e8e95f0: Downloading 15.82 MB[1B[1A[2Ka36b9e8e95f0: Downloading 16.35 MB[1B[1A[2Ka36b9e8e95f0: Downloading 16.88 MB[1B[1A[2Ka36b9e8e95f0: Downloading  17.4 MB[1B[1A[2Ka36b9e8e95f0: Downloading 17.93 MB[1B[1A[2Ka36b9e8e95f0: Downloading 18.46 MB[1B[1A[2Ka36b9e8e95f0: Downloading 18.99 MB[1B[1A[2Ka36b9e8e95f0: Downloading 19.51 MB[1B[1A[2Ka36b9e8e95f0: Downloading 20.04 MB[1B[1A[2Ka36b9e8e95f0: Downloading 20.57 MB[1B[1A[2Ka36b9e8e95f0: Downloading  21.1 MB[1B[1A[2Ka36b9e8e95f0: Downloading 21.62 MB[1B[1A[2Ka36b9e8e95f0: Downloading 22.15 MB[1B[1A[2Ka36b9e8e95f0: Downloading 22.68 MB[1B[1A[2Ka36b9e8e95f0: Downloading  23.2 MB[1B[1A[2Ka36b9e8e95f0: Downloading 23.73 MB[1B[1A[2Ka36b9e8e95f0: Downloading 24.26 MB[1B[1A[2Ka36b9e8e95f0: Downloading 24.78 MB[1B[1A[2Ka36b9e8e95f0: Downloading 25.31 MB[1B[1A[2Ka36b9e8e95f0: Downloading 25.84 MB[1B[1A[2Ka36b9e8e95f0: Downloading 26.37 MB[1B[1A[2Ka36b9e8e95f0: Downloading 26.89 MB[1B[1A[2Ka36b9e8e95f0: Downloading 27.42 MB[1B[1A[2Ka36b9e8e95f0: Downloading 27.95 MB[1B[1A[2Ka36b9e8e95f0: Downloading 28.48 MB[1B[1A[2Ka36b9e8e95f0: Downloading    29 MB[1B[1A[2Ka36b9e8e95f0: Downloading 29.53 MB[1B[1A[2Ka36b9e8e95f0: Downloading 30.06 MB[1B[1A[2Ka36b9e8e95f0: Downloading 30.59 MB[1B[1A[2Ka36b9e8e95f0: Downloading 31.11 MB[1B[1A[2Ka36b9e8e95f0: Downloading 31.64 MB[1B[1A[2Ka36b9e8e95f0: Downloading 32.17 MB[1B[1A[2Ka36b9e8e95f0: Downloading  32.7 MB[1B[1A[2Ka36b9e8e95f0: Downloading 33.22 MB[1B[1A[2Ka36b9e8e95f0: Downloading 33.75 MB[1B[1A[2Ka36b9e8e95f0: Downloading 34.28 MB[1B[1A[2Ka36b9e8e95f0: Downloading 34.81 MB[1B[1A[2Ka36b9e8e95f0: Downloading 35.33 MB[1B[1A[2Ka36b9e8e95f0: Downloading 35.86 MB[1B[1A[2Ka36b9e8e95f0: Downloading 36.39 MB[1B[1A[2Ka36b9e8e95f0: Downloading 36.91 MB[1B[1A[2Ka36b9e8e95f0: Downloading 37.44 MB[1B[1A[2Ka36b9e8e95f0: Downloading 37.97 MB[1B[1A[2Ka36b9e8e95f0: Downloading 38.49 MB[1B[1A[2Ka36b9e8e95f0: Downloading 39.02 MB[1B[1A[2Ka36b9e8e95f0: Downloading 39.55 MB[1B[1A[2Ka36b9e8e95f0: Downloading 40.08 MB[1B[1A[2Ka36b9e8e95f0: Downloading  40.6 MB[1B[1A[2Ka36b9e8e95f0: Downloading 41.13 MB[1B[1A[2Ka36b9e8e95f0: Downloading 41.66 MB[1B[1A[2Ka36b9e8e95f0: Downloading 42.19 MB[1B[1A[2Ka36b9e8e95f0: Downloading 42.71 MB[1B[1A[2Ka36b9e8e95f0: Downloading 43.24 MB[1B[1A[2Ka36b9e8e95f0: Downloading 43.77 MB[1B[1A[2Ka36b9e8e95f0: Downloading  44.3 MB[1B[1A[2Ka36b9e8e95f0: Downloading 44.82 MB[1B[1A[2Ka36b9e8e95f0: Downloading 45.35 MB[1B[1A[2Ka36b9e8e95f0: Downloading 45.88 MB[1B[1A[2Ka36b9e8e95f0: Downloading 46.41 MB[1B[1A[2Ka36b9e8e95f0: Downloading 46.93 MB[1B[1A[2Ka36b9e8e95f0: Downloading 47.46 MB[1B[1A[2Ka36b9e8e95f0: Downloading 47.99 MB[1B[1A[2Ka36b9e8e95f0: Downloading 48.52 MB[1B[1A[2Ka36b9e8e95f0: Downloading 49.04 MB[1B[1A[2Ka36b9e8e95f0: Downloading 49.57 MB[1B[1A[2Ka36b9e8e95f0: Downloading  50.1 MB[1B[1A[2Ka36b9e8e95f0: Downloading 50.63 MB[1B[1A[2Ka36b9e8e95f0: Downloading 51.15 MB[1B[1A[2Ka36b9e8e95f0: Downloading 51.68 MB[1B[1A[2Ka36b9e8e95f0: Downloading 52.21 MB[1B[1A[2Ka36b9e8e95f0: Downloading 52.73 MB[1B[1A[2Ka36b9e8e95f0: Downloading 53.26 MB[1B[1A[2Ka36b9e8e95f0: Downloading 53.79 MB[1B[1A[2Ka36b9e8e95f0: Downloading 54.31 MB[1B[1A[2Ka36b9e8e95f0: Downloading 54.84 MB[1B[1A[2Ka36b9e8e95f0: Downloading 55.37 MB[1B[1A[2Ka36b9e8e95f0: Downloading  55.9 MB[1B[1A[2Ka36b9e8e95f0: Downloading 56.42 MB[1B[1A[2Ka36b9e8e95f0: Downloading 56.95 MB[1B[1A[2Ka36b9e8e95f0: Downloading 57.48 MB[1B[1A[2Ka36b9e8e95f0: Downloading 58.01 MB[1B[1A[2Ka36b9e8e95f0: Downloading 58.53 MB[1B[1A[2Ka36b9e8e95f0: Downloading 59.06 MB[1B[1A[2Ka36b9e8e95f0: Downloading 59.59 MB[1B[1A[2Ka36b9e8e95f0: Downloading 60.12 MB[1B[1A[2Ka36b9e8e95f0: Downloading 60.64 MB[1B[1A[2Ka36b9e8e95f0: Downloading 61.17 MB[1B[1A[2Ka36b9e8e95f0: Downloading  61.7 MB[1B[1A[2Ka36b9e8e95f0: Downloading 62.23 MB[1B[1A[2Ka36b9e8e95f0: Downloading 62.75 MB[1B[1A[2Ka36b9e8e95f0: Downloading 63.28 MB[1B[1A[2Ka36b9e8e95f0: Downloading 63.81 MB[1B[1A[2Ka36b9e8e95f0: Downloading 64.34 MB[1B[1A[2Ka36b9e8e95f0: Downloading 64.86 MB[1B[1A[2Ka36b9e8e95f0: Downloading 65.39 MB[1B[1A[2Ka36b9e8e95f0: Downloading 65.92 MB[1B[1A[2Ka36b9e8e95f0: Downloading 66.45 MB[1B[1A[2Ka36b9e8e95f0: Downloading 66.97 MB[1B[1A[2Ka36b9e8e95f0: Downloading  67.5 MB[1B[1A[2Ka36b9e8e95f0: Downloading  67.6 MB[1B[1A[2Ka36b9e8e95f0: Download complete [1B[3A[2Kb44e232f05bf: Pulling metadata [3B[3A[2Kb44e232f05bf: Pulling fs layer [3B[3A[2Kb44e232f05bf: Downloading 526.8 kB[3B[3A[2Kb44e232f05bf: Downloading 1.056 MB[3B[3A[2Kb44e232f05bf: Downloading 1.581 MB[3B[3A[2Kb44e232f05bf: Downloading 2.111 MB[3B[3A[2Kb44e232f05bf: Downloading 2.636 MB[3B[3A[2Kb44e232f05bf: Downloading 3.166 MB[3B[3A[2Kb44e232f05bf: Downloading 3.691 MB[3B[3A[2Kb44e232f05bf: Downloading  4.22 MB[3B[3A[2Kb44e232f05bf: Downloading 4.745 MB[3B[3A[2Kb44e232f05bf: Downloading 5.275 MB[3B[3A[2Kb44e232f05bf: Downloading   5.8 MB[3B[3A[2Kb44e232f05bf: Downloading  6.33 MB[3B[3A[2Kb44e232f05bf: Downloading 6.855 MB[3B[3A[2Kb44e232f05bf: Downloading 7.384 MB[3B[3A[2Kb44e232f05bf: Downloading 7.909 MB[3B[3A[2Kb44e232f05bf: Downloading 8.439 MB[3B[3A[2Kb44e232f05bf: Downloading 8.964 MB[3B[3A[2Kb44e232f05bf: Downloading 9.493 MB[3B[3A[2Kb44e232f05bf: Downloading 10.02 MB[3B[3A[2Kb44e232f05bf: Downloading 10.55 MB[3B[3A[2Kb44e232f05bf: Downloading 11.07 MB[3B[3A[2Kb44e232f05bf: Downloading  11.6 MB[3B[3A[2Kb44e232f05bf: Downloading 12.13 MB[3B[3A[2Kb44e232f05bf: Downloading 12.66 MB[3B[3A[2Kb44e232f05bf: Downloading 13.18 MB[3B[3A[2Kb44e232f05bf: Downloading 13.71 MB[3B[3A[2Kb44e232f05bf: Downloading 14.24 MB[3B[3A[2Kb44e232f05bf: Downloading 14.77 MB[3B[3A[2Kb44e232f05bf: Downloading 15.29 MB[3B[3A[2Kb44e232f05bf: Downloading 15.82 MB[3B[3A[2Kb44e232f05bf: Downloading 16.35 MB[3B[3A[2Kb44e232f05bf: Downloading 16.88 MB[3B[3A[2Kb44e232f05bf: Downloading  17.4 MB[3B[3A[2Kb44e232f05bf: Downloading 17.93 MB[3B[3A[2Kb44e232f05bf: Downloading 18.46 MB[3B[3A[2Kb44e232f05bf: Downloading 18.99 MB[3B[3A[2Kb44e232f05bf: Downloading 19.51 MB[3B[3A[2Kb44e232f05bf: Downloading 20.04 MB[3B[3A[2Kb44e232f05bf: Downloading 20.57 MB[3B[3A[2Kb44e232f05bf: Downloading 21.09 MB[3B[3A[2Kb44e232f05bf: Downloading 21.62 MB[3B[3A[2Kb44e232f05bf: Downloading 22.15 MB[3B[3A[2Kb44e232f05bf: Downloading 22.67 MB[3B[3A[2Kb44e232f05bf: Downloading  23.2 MB[3B[3A[2Kb44e232f05bf: Downloading 23.73 MB[3B[3A[2Kb44e232f05bf: Downloading 24.26 MB[3B[3A[2Kb44e232f05bf: Downloading 24.78 MB[3B[3A[2Kb44e232f05bf: Downloading 25.31 MB[3B[3A[2Kb44e232f05bf: Downloading 25.84 MB[3B[3A[2Kb44e232f05bf: Downloading 26.37 MB[3B[3A[2Kb44e232f05bf: Downloading 26.89 MB[3B[3A[2Kb44e232f05bf: Downloading 27.42 MB[3B[3A[2Kb44e232f05bf: Downloading 27.95 MB[3B[3A[2Kb44e232f05bf: Downloading 28.48 MB[3B[3A[2Kb44e232f05bf: Downloading 28.68 MB[3B[3A[2Kb44e232f05bf: Download complete [3B[3A[2Kb44e232f05bf: Download complete [3BStatus: Downloaded newer image for registry.access.redhat.com/openshift3/python-33-rhel7:latest
+registry.access.redhat.com/openshift3/python-33-rhel7: this image was pulled from a legacy registry.  Important: This registry version will not be supported in future versions of docker.
+
+ ---> b44e232f05bf
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 2b81f952eebd
+ ---> 917cdb888a0b
+Removing intermediate container 2b81f952eebd
+Step 3 : EXPOSE 8000
+ ---> Running in 91c5e2cce360
+ ---> 103c4501ef7c
+Removing intermediate container 91c5e2cce360
+Step 4 : COPY . /opt/openshift/src
+ ---> 725e7934d4d3
+Removing intermediate container 9c9f21c34d5a
+Step 5 : CMD /bin/bash -c 'python3 web.py'
+ ---> Running in 10979ae6921e
+ ---> f8053c70eef7
+Removing intermediate container 10979ae6921e
+Successfully built f8053c70eef7
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[Cr': docker build -t myname/pythonweb .u': docker run -d -p 8000:8000 myname/nodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@p[1@y[1@t[1@h[1@o[C[1@n[Kweb
+a780250c9c8657230167f3e2af7e49416519213f9a839346d22fe49283e6bd1d
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker stop [K/et[K[K[Ksystemctl d[Kstop docker
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker ps
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ps -ef | egrep py
+root       686     1  0 May09 ?        00:00:02 /usr/bin/[01;31m[Kpy[m[Kthon -Es /usr/sbin/firewalld --nofork --nopid
+root      1417     1  0 May09 ?        00:00:18 /usr/bin/[01;31m[Kpy[m[Kthon -Es /usr/sbin/tuned -l -P
+root     12658  5827  0 17:02 pts/5    00:00:00 grep -E --color=auto [01;31m[Kpy[m[K
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ps -ef | egrep py[8Pdocker ps
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker psps -ef | egrep py[8Pdocker pssystemctl stop docker[C[C[C[C[C[C[C[C[C[C[C[C[1@a[1@r[1@t[1P[1P docker
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# doce[Kker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+a780250c9c86        myname/pythonweb    "container-entrypoint"   21 minutes ago      Exited (2) 21 minutes ago                         hopeful_swartz
+4a76eae32bd0        myname/nodeweb      "container-entrypoint"   27 minutes ago      Exited (137) 23 minutes ago                       lonely_brown
+94f65fc8c024        myname/nodeweb      "container-entrypoint"   27 minutes ago      Created                                           angry_mclean
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker [Krm[K[K[1P(reverse-i-search)`':[Cr': docker ps -am': docker rm $(docker ps -aq)[1P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+a780250c9c86
+4a76eae32bd0
+94f65fc8c024
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[Cr': docker psu': docker run -d -p 8000:8000 myname/pythonweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+9a64c9f65978d940a977f2bb00675f66a8ecd9a9043d233240f4cc3e2bba2a31
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ps[K[Kdocker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+9a64c9f65978        myname/pythonweb    "container-entrypoint"   42 seconds ago      Exited (2) 40 seconds ago                       ecstatic_kare
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker logs ecstatic_kare 
+python3: can't open file 'web.py': [Errno 2] No such file or directory
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ls
+Dockerfile  index.html  web.py
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# cat Dockerfile 
+FROM openshift3/python-33-rhel7:latest
+
+MAINTAINER Shadow Man "shadow-man@redhat.com"
+
+EXPOSE 8000
+
+COPY . /opt/openshift/src
+
+CMD /bin/bash -c 'python3 web.py'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ls
+Dockerfile  index.html  web.py
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[C[16@r': cat Dockerfileu': docker run -d -p 8000:8000 myname/pythonweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pnodeweb [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cit rhscl_beta/nodejs-4-rhel7 /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C[Kdocker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              f8053c70eef7        30 minutes ago      487.5 MB
+myname/nodeweb                                          latest              f0ae1ca3c091        2 hours ago         449.7 MB
+<none>                                                  <none>              591ec621911c        2 weeks ago         669.1 MB
+docker_drupal                                           latest              0b9f72bfe229        2 weeks ago         623.7 MB
+docker_searchisko                                       latest              23b8d2179a3b        2 weeks ago         1.853 GB
+docker_mysql                                            latest              f3625b7e9673        2 weeks ago         895.2 MB
+developer.redhat.com/ruby                               latest              3bff148b5712        2 weeks ago         602.7 MB
+developer.redhat.com/java                               latest              5d50a259cce5        2 weeks ago         651.7 MB
+developer.redhat.com/base                               latest              ac107ee156a7        2 weeks ago         258.4 MB
+docker.io/drupal                                        8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7    latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              b44e232f05bf        4 weeks ago         487.5 MB
+docker.io/centos                                        6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                         latest              95612a3264fc        7 weeks ago         203.3 MB
+docker.io/hello-world                                   latest              0a6ba66e537a        7 months ago        960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker stop
+docker: "stop" requires a minimum of 1 argument.
+See 'docker stop --help'.
+
+Usage:	docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop a running container.
+Sending SIGTERM and then SIGKILL after a grace period
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+9a64c9f65978        myname/pythonweb    "container-entrypoint"   5 minutes ago       Exited (2) 5 minutes ago                       ecstatic_kare
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rm ecstatic_kare 
+ecstatic_kare
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# ls -ltr
+total 12
+-rw-rw-r--. 1 rt rt 248 Apr  2 17:23 web.py
+-rw-rw-r--. 1 rt rt  41 Apr  2 17:23 index.html
+-rw-rw-r--. 1 rt rt 163 Apr  2 17:23 Dockerfile
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker [Kdocker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              f8053c70eef7        31 minutes ago      487.5 MB
+myname/nodeweb                                          latest              f0ae1ca3c091        2 hours ago         449.7 MB
+<none>                                                  <none>              591ec621911c        2 weeks ago         669.1 MB
+docker_drupal                                           latest              0b9f72bfe229        2 weeks ago         623.7 MB
+docker_searchisko                                       latest              23b8d2179a3b        2 weeks ago         1.853 GB
+docker_mysql                                            latest              f3625b7e9673        2 weeks ago         895.2 MB
+developer.redhat.com/ruby                               latest              3bff148b5712        2 weeks ago         602.7 MB
+developer.redhat.com/java                               latest              5d50a259cce5        2 weeks ago         651.7 MB
+developer.redhat.com/base                               latest              ac107ee156a7        2 weeks ago         258.4 MB
+docker.io/drupal                                        8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7    latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              b44e232f05bf        4 weeks ago         487.5 MB
+docker.io/centos                                        6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                         latest              95612a3264fc        7 weeks ago         203.3 MB
+docker.io/hello-world                                   latest              0a6ba66e537a        7 months ago        960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# dok[Kck rmi docker.io[Kdocker rmi docker_drupal docker_searchisko docker_mysql myname/my[K[Kptyh[K[K[Ku[Kythonweb developer.redhat.com/ruby developer.redhat.com/java developeer.redhat.com/base 
+Untagged: docker_drupal:latest
+Deleted: 0b9f72bfe229a8e247bc39283b06af068ebf13559dbd8998ea2dcc3e3b3ebb4e
+Deleted: 55a219bb876f058386ce0eb413594a2fd64ee24e574056902f583bdf241abc12
+Deleted: a8995baf1a395dbdb95d92a1e012a2d4cee3b3f8cd7845681d507013a3d4b3b2
+Deleted: 408bc95274088b4faee171eef06b460d9659e58ea108078241f974a07918686c
+Deleted: 5f27220f64b294f6b5f5e6dc93dc7854c80aa14c220ba1275047395d928822a7
+Deleted: 1d6b028fa440dc8843e0a153d63b0d049346c54d837a818a8413d08cd23682a9
+Deleted: ba920d22836a5d73141b8121500ce80a97299d537651b5885debcd3c8c043440
+Deleted: dd4d69c5422a0d9cf2f1de6352fe95a48fc7ec43d1b9a70e9c13645ddf49e563
+Deleted: e4f5c40a3ede79932362848629ffcb97b539f2e388774e1fb5a04c71608b9b0a
+Untagged: docker_searchisko:latest
+Deleted: 23b8d2179a3b29286e975353a636aef25a043d8372ebb724ecc8fc3c7a1e7269
+Deleted: e69965b8f83f1a1f176e3a74ae741571ca8247ffcad2b829a50a57aca594062b
+Deleted: 47876e34522b8e555598b964183aa91682b760fa2680c2e7ebb40020c9f56c67
+Deleted: e9f6451e167063654b62b28fa356010aa0e2cd1c4c13c04de9b604ea75c8a25a
+Deleted: 211c8bd6ac6ec601e0e98d45f17b0ec709af04520966cd02776f92fcf9a37653
+Deleted: 5e128586499ee3de52e281716de87d7d51ecf35d8eaf3a6ce32efeb6322d7037
+Deleted: 3eba411a16f57549d68b48504e27e76c342c2b6fc716bee5ede7bbadcaca2b58
+Deleted: 5938ef8a6f9fe9fbd1152ccaf099da1c5ad3e1433c2ecb6267c83cc8624459d0
+Untagged: docker_mysql:latest
+Deleted: f3625b7e9673978d84065787234a9c63b1ddc5d3227d2b138ecdf764418cf38f
+Untagged: myname/pythonweb:latest
+Deleted: f8053c70eef76e65d8e2fff682c349adf469c20572dd23e6235449310d447d88
+Deleted: 725e7934d4d3129c569fb34a0f0ccb27b7455af4afaec3ec6ca13ac3ccdfebdf
+Deleted: 103c4501ef7c00799233ff2c107914f006127b19d8e7290ed6b73098508298a8
+Deleted: 917cdb888a0b282cc338b4248170bc0a3895504a65eb857e9fad4d3898e7cc1e
+Untagged: developer.redhat.com/ruby:latest
+Untagged: developer.redhat.com/java:latest
+Deleted: 5d50a259cce55f71901d249c4ff2be3bbbf50865f99da94009d00a1d40db1c1c
+Deleted: 1a05eff4613935e9e85a438520e46afb7c47edb88baa4c76faf48ccb972a84ff
+Deleted: 1b21cd5ba02260adb037efd2b09db70a834221e12e1c744e0339d95c3397ca94
+Deleted: 5140d3eaf652f0597af87c11c7a19afd3a038a9c823797b8a26b64d668548fc9
+Untagged: developer.redhat.com/base:latest
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rmi docker_drupal docker_searchisko docker_mysql myname/pythonweb developer.redhat.com/ruby developer.redhat.com/java developeer.redhat.com/base p[A[C[C[C[C[C[C[C[C[C[Cimages[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/nodeweb                                          latest              f0ae1ca3c091        2 hours ago         449.7 MB
+<none>                                                  <none>              591ec621911c        2 weeks ago         669.1 MB
+docker.io/drupal                                        8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7    latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              b44e232f05bf        4 weeks ago         487.5 MB
+docker.io/centos                                        6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                         latest              95612a3264fc        7 weeks ago         203.3 MB
+docker.io/hello-world                                   latest              0a6ba66e537a        7 months ago        960 B
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rm [Ki 591ec621911c docker.io/drupaldoc[K[K[K docker.io/mysql docker.io/hello-world
+Deleted: 591ec621911c2956758c91e42a27dff91db0ec07def2e2eae3003bc6dad2a3b3
+Deleted: 904d7dd1e73c21f2525527bb9dff030c3612542adc356d299619ea16d99061b6
+Deleted: e0102e98fb4dfebb3e977011e2471ef3fc2872bb5bf57d0a58a634f71cb350d8
+Deleted: 1670341cc7ab2dcb16fe64846e7b1abe20c8da487b0b551252717100f41e375c
+Deleted: 19af94af0ec4ef69de17b0e2929230c42e9ff803ce00ac549e513903ea54fc99
+Deleted: 28cc2400fab70437e837a9d5bb9392556e7801871b082e0874ead855793caddd
+Deleted: 17db882cb60a0ec15ab79e3d23fa8b070497ad37d6095dfa0f47848df4254579
+Deleted: 13e12bb4476c8a161e81bdc03c4b7cda113dbe85a3ec4d7685fdd2818a6f348f
+Deleted: 398b81cd520aa1f1d17740e9bed9ae7d8b7d56072dad7d2058b4c2f89bad0759
+Deleted: d3e1db71567f74fed7f2750c969acab08787bc868c6d88bfc7cd76a4cadfc3b4
+Deleted: d72813ac7d0c35ce5f63922b9c4213a02e937373e00fe0015806e9b22e8231ff
+Deleted: 27546e74c9a5ef5f0e04d9b64fb337b34fdf587032724df4d4eccd88fce21e27
+Deleted: 8f63087031d52e9e1590701450291b4238ca8e239c302b858f98d0d844ae1231
+Deleted: 45c543aba5c35a93485aad650833bc56466f8e11c117dc16e40cf9bbf7a62951
+Deleted: 6fa7da34b63063c48b3a07bdad8318b9689c2ea22d65414824b6898978f65d81
+Deleted: 41b0e801d2bde5b067165c1392edeb19c5203694f5916cc5e8336d5845a343d3
+Deleted: 3bff148b5712917c4e42acc754e567a8f673f1ca52f5e4e58b4cfa952224cf9e
+Deleted: 0e006b53eac6c05ccff120876e671c2d4e241ca737e1930637655619bc0c862b
+Deleted: 8f61c91889c7b5646eaf5250ce06a4db0fb9c784d1badadafa273dc5411f7c0d
+Deleted: d88ba327e201bbe7895f2432c459cd1f70e1a0bb761673598cbb2a253deb3c1f
+Deleted: a5fd689e8a582f5d40d0b165341536c41529e0ebf123a504c963caf82333d307
+Deleted: 067a511e1ac68c9399234cc5f486e89bdf62276e5b963bd7783b19f14274b3bc
+Deleted: ac107ee156a722a329d46891d4eccb3eff7f4d5200ffcd1389f66b0bdbe1c2cd
+Deleted: 28068eacb9d727bdd43e2b69fa1f4243852bee2e0bf52eb4a544128c5025673e
+Deleted: 316231e112173805d03772ab86acb6f8595dc1e09bdcb6148f3d70eb52b992eb
+Error response from daemon: could not find image: no such id: docker.io/drupal
+Error response from daemon: could not find image: no such id: docker.io/mysql
+Untagged: docker.io/hello-world:latest
+Deleted: 0a6ba66e537a53a5ea94f7c6a99c534c6adb12e3ed09326d4bf3b38f7c3ba4e7
+Deleted: b901d36b6f2fd759c362819c595301ca981622654e7ea8a1aac893fbd2740b4c
+Error: failed to remove images: [docker.io/drupal docker.io/mysql]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rmi 591ec621911c docker.io/drupal docker.io/mysql docker.io/hello-world[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[K
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/nodeweb                                          latest              f0ae1ca3c091        2 hours ago         449.7 MB
+docker.io/drupal                                        8-apache            f92c7f6965bc        2 weeks ago         621.4 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7    latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              b44e232f05bf        4 weeks ago         487.5 MB
+docker.io/centos                                        6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                         latest              95612a3264fc        7 weeks ago         203.3 MB
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rm docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6  MB
+Error response from daemon: no such id: docker.io/mysql
+Error response from daemon: no such id: 5.6
+Error response from daemon: no such id: 35012815a228
+Error response from daemon: no such id: 4
+Error response from daemon: no such id: weeks
+Error response from daemon: no such id: ago
+Error response from daemon: no such id: 324.6
+Error response from daemon: no such id: MB
+Error: failed to remove containers: [docker.io/mysql 5.6 35012815a228 4 weeks ago 324.6 MB]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rm docker.io/mysql                                         5.6                 35012815a228        4 weeks ago         324.6 MMB[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:5.6 docker.io/drupal:8-apache  registry.ace[Kcess.redhat.com/openshift3/python-33-rhel7
+Error response from daemon: no such id: docker.io/mysql:5.6
+Error response from daemon: no such id: docker.io/drupal:8-apache
+Error response from daemon: no such id: registry.access.redhat.com/openshift3/python-33-rhel7
+Error: failed to remove containers: [docker.io/mysql:5.6 docker.io/drupal:8-apache registry.access.redhat.com/openshift3/python-33-rhel7]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rm docker.io/mysql:5.6 docker.io/drupal:8-apache  registry.access.redhat.com/openshift3/python-33-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i
+Untagged: docker.io/mysql:5.6
+Deleted: 35012815a228bcaae9ffa924d33fb65f7714efdec48bb8e78775b23ed0ab9bfe
+Deleted: bbddb5a632470ea88573bb4ec5fc9338332899ffb34258a35043e1532083cb33
+Deleted: 1fdc3b5cbeb1bc60d09721cfa32a626e85936456bf56649c8f7cd78647bf24df
+Deleted: f4124b810a158ba022e15821e744298a61d780896731e47fab806cac818af2e6
+Deleted: 10e8b39c10a77b1b7c00b3f82a5967e0e432ce90bb14c0d9c01f0013ee90a87c
+Deleted: 96fca216dc70e7eb59054852348a946013e6f36e25ed34228bde4d357d0f1059
+Deleted: 6838fb102689e7470991f64b0cb6d84b13336a0cfda9c093ad32bf8050514c0c
+Deleted: 0fe8f1c4d31bc584b0ff7fcc6f1dbe5cfd611a4800bd77713acd1272ad90efdf
+Deleted: b038b22110e51ebde68fed2b0a62ce45e0e2b22b979299541a814e62729b00bd
+Deleted: cfa53346a24852e0621d0d5ba3f9fc975856f6c7adce98ae1c62f9bed1302fd2
+Deleted: d9a22faac05c8f8693117c4bc5fecce3aa7e9fb04dd353a2ff3713f0c1df3965
+Deleted: 7148ec0a1b6a7fd920fd414ba0a9a357c837fdb12e36fd08c835f4619acfd888
+Deleted: 7c88fa8d073b2b80287a9198bc51fccd7010f545a83bd717890a6bc7ea0c4e1d
+Deleted: 9d1d3901c20a069558092f83f9d268ca6b3c4144874648121dbf52e9484a5a92
+Deleted: 941b42725941606c968764b7a090046b7805b185b0130aa9c9aec7deb48caa34
+Untagged: docker.io/drupal:8-apache
+Deleted: f92c7f6965bceb9cb9baad69e2c71c60b245205f1d81c229aca832ff70fbfa3f
+Deleted: 12039347a2022fcd0dddcdfc93f85af797538eea8d5bc0531bccd5689f69b4ae
+Deleted: eb0d35ddf8277a259ae2689e4b31fafb21aeebb9dad42df60e97d6ff44cd90b5
+Deleted: fd4afbee6ceca027c8f1126756404847512e9da276fd2484833065ea62218dd0
+Deleted: 0d801fd1948f1af349427485e4c079865555c065920d5513de2cff3027077b80
+Deleted: 03be040fd00dd2214e6c20b2bbbc8100e6146c98c57f51a637014e2444f7e89e
+Deleted: e655579de4cf0b463c460d9e2c7af5d551e8c3dbbc8b0a950581e9473991153d
+Deleted: 3d65d1e466020ca14cf8ce3538296270f739522592c4b5e1eb9ed35e175ac39b
+Deleted: 2d24c3ce2770ce858b08e15513dc0a080c2c4cfb40e9780c634714b552c7e8ce
+Deleted: c0c10443c13249ac6fcb4eef7242ef2de1c4cef3dfbd93083ae7529c087dee42
+Deleted: 6477eeb8c6cd233c0fc8e575cade3962827a9048fece40bef84745d56b7402f5
+Deleted: e97f918f1cada809ce6f831b1179c23a5cf280fa26be4fa232fa67c842821b17
+Deleted: df14f2e1cac064917148a8211724be0b942330c2971cbfd81367fb1fd0a89cea
+Deleted: 76fff3c777093dce33b77943e4514e2065fc7682a9b30d1da764e6d937df3df7
+Deleted: c749b37d3309d95727b8f6e03f2bc02239fabf22e1433d3a536973ce7ade8c75
+Deleted: 0b3e708b2b948c9894a6668a000b1f983ccde071a7f780452dbff4566691f4c4
+Deleted: 3c7c03a8904eeb45cc1aeced5fe6f266ebdcf585d31e78ef316579979cb9d327
+Deleted: e04937e5becf7dd1202a4bbdbbfdd638e5e9436614d75048b9915de585df9d6c
+Deleted: c4278b91fc89ecfc9c4a02570a6fee1cd81929a2479365d6b5f4417656ce2ce2
+Deleted: df25c1c703ad217f60aa46596554a0294ccc33800b7e5bfa487ea59cbe343c7b
+Deleted: e8e612f0b2279bd2c8f4c03980c30357b89537a1c62c413bece8f7fd37084aba
+Deleted: 18a6616fda839436fb199b0e9de6cff433f9f83817569c470afdea78267a1ffe
+Deleted: 1dd0c98174387a58281d58233effa49fe37de734227eb23227e4eee9c6ec67bd
+Deleted: 5284d15fff926f06dedb55f74a704082df74d6bbb8fd11edb1132d9b1f15fe7a
+Deleted: 5421a981b22e8e589b655832a6d947780fc0ca55c1eb407a6deb60b9345b88bc
+Deleted: e79ec2836877e413100d783228fc5c12a2a8194b1e6f04ee19d868104ea4e606
+Deleted: f64e3ee84a275c72a9a0d8d8416e836c6f1919577f7918166b53bfd348537473
+Deleted: 5826c5a2b1b43737d15c43f135f362a206bcb753395aed596a7cfb25d79ea5e9
+Deleted: 32f2a4cccab87ff519e17c9cf46ee69324cfcbb3365985b2dfd04611eeadc27c
+Deleted: 70e9a6907f1068b3e08a9e635781261f496d3293945cf9949541f94ae4fc3f39
+Untagged: registry.access.redhat.com/openshift3/python-33-rhel7:latest
+Deleted: b44e232f05bf4aaa9fecbe744a310d8e05402eae27458255b34a1a3ddbcb79fa
+Deleted: a36b9e8e95f062ea7129918fc720bd7d9a62e6c49bda7e180a25fc9c941fdcab
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker rmi docker.io/mysql:5.6 docker.io/drupal:8-apache  registry.access.redhat.com/openshift3/python-33-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C                                         5.6                 35012815a228        4 weeks ago         324.6 MMB[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/nodeweb                                         latest              f0ae1ca3c091        2 hours ago         449.7 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago         203.3 MB
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker/python3[root@rhatvm python3]# docker pull [Kcd ../..
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# ls
+[0m[38;5;27mdocker[0m                 [38;5;27mdocker-rhel72-rhscl22beta[0m  hello_http.java  hello-http.rb  [38;5;34mhello.js[0m   [38;5;34mhello.pl[0m  [38;5;34mhello-py26.py[0m  [38;5;34mhello.rb[0m
+[38;5;27mdocker-rhel72-rhscl20[0m  hello.cpp                  hello-http.js    Hello.java     [38;5;34mhello.php[0m  [38;5;34mhello.py[0m  [38;5;34mhello-py2.py[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# cd dcok[K[K[Kocker-rhel72-rhscl2[K20
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20[root@rhatvm docker-rhel72-rhscl20]# ls
+[0m[38;5;27mphp[0m  [38;5;27mpython3[0m  [38;5;27mruby[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20[root@rhatvm docker-rhel72-rhscl20]# cd python3/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# ls
+Dockerfile  index.html  web.py
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# cat Dockerfile 
+FROM rhscl/python-34-rhel7:latest
+
+MAINTAINER Your Name "your-email@example.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'python3 -u web.py'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[Cp': cd python3/u': docker pull rhscl_beta/nodejs-4-rhel7[38P[root@rhatvm python3]# [1P(reverse-i-search)`':[Cb': docker rmi docker_drupal docker_searchisko docker_mysql myname/pythonweb developer.redhat.com/ruby developer.redhat.com/java developeer.redhat.com/base p[A[C[C[C[C[C[Cu': docker build -t myname/pythonweb .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[4P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon 4.096 kBSending build context to Docker daemon 4.096 kB
+Step 1 : FROM rhscl/python-34-rhel7:latest
+Trying to pull repository registry.access.redhat.com/rhscl/python-34-rhel7 ... 
+[0A[2Kfb8ad03b7944: Pulling image (latest) from registry.access.redhat.com/rhscl/python-34-rhel7 [0B[1A[2Kfb8ad03b7944: Pulling image (latest) from registry.access.redhat.com/rhscl/python-34-rhel7, endpoint: https://registry.access.redhat.com/v1/ [1B[1A[2Kfb8ad03b7944: Pulling dependent layers [1B
+[0A[2K95612a3264fc: Download complete [0B
+[0A[2Kb6cd2fe58fd2: Download complete [0B[3A[2Kfb8ad03b7944: Pulling metadata [3B[3A[2Kfb8ad03b7944: Pulling fs layer [3B[3A[2Kfb8ad03b7944: Downloading 528.3 kB[3B[3A[2Kfb8ad03b7944: Downloading 1.058 MB[3B[3A[2Kfb8ad03b7944: Downloading 1.583 MB[3B[3A[2Kfb8ad03b7944: Downloading 2.112 MB[3B[3A[2Kfb8ad03b7944: Downloading 2.638 MB[3B[3A[2Kfb8ad03b7944: Downloading 3.167 MB[3B[3A[2Kfb8ad03b7944: Downloading 3.692 MB[3B[3A[2Kfb8ad03b7944: Downloading 4.222 MB[3B[3A[2Kfb8ad03b7944: Downloading 4.747 MB[3B[3A[2Kfb8ad03b7944: Downloading 5.276 MB[3B[3A[2Kfb8ad03b7944: Downloading 5.802 MB[3B[3A[2Kfb8ad03b7944: Downloading 6.331 MB[3B[3A[2Kfb8ad03b7944: Downloading 6.856 MB[3B[3A[2Kfb8ad03b7944: Downloading 7.386 MB[3B[3A[2Kfb8ad03b7944: Downloading 7.911 MB[3B[3A[2Kfb8ad03b7944: Downloading  8.44 MB[3B[3A[2Kfb8ad03b7944: Downloading 8.965 MB[3B[3A[2Kfb8ad03b7944: Downloading 9.495 MB[3B[3A[2Kfb8ad03b7944: Downloading 10.02 MB[3B[3A[2Kfb8ad03b7944: Downloading 10.55 MB[3B[3A[2Kfb8ad03b7944: Downloading 11.07 MB[3B[3A[2Kfb8ad03b7944: Downloading  11.6 MB[3B[3A[2Kfb8ad03b7944: Downloading 12.13 MB[3B[3A[2Kfb8ad03b7944: Downloading 12.66 MB[3B[3A[2Kfb8ad03b7944: Downloading 13.18 MB[3B[3A[2Kfb8ad03b7944: Downloading 13.71 MB[3B[3A[2Kfb8ad03b7944: Downloading 14.24 MB[3B[3A[2Kfb8ad03b7944: Downloading 14.77 MB[3B[3A[2Kfb8ad03b7944: Downloading 15.29 MB[3B[3A[2Kfb8ad03b7944: Downloading 15.82 MB[3B[3A[2Kfb8ad03b7944: Downloading 16.35 MB[3B[3A[2Kfb8ad03b7944: Downloading 16.88 MB[3B[3A[2Kfb8ad03b7944: Downloading  17.4 MB[3B[3A[2Kfb8ad03b7944: Downloading 17.93 MB[3B[3A[2Kfb8ad03b7944: Downloading 18.46 MB[3B[3A[2Kfb8ad03b7944: Downloading 18.99 MB[3B[3A[2Kfb8ad03b7944: Downloading 19.51 MB[3B[3A[2Kfb8ad03b7944: Downloading 20.04 MB[3B[3A[2Kfb8ad03b7944: Downloading 20.57 MB[3B[3A[2Kfb8ad03b7944: Downloading  21.1 MB[3B[3A[2Kfb8ad03b7944: Downloading 21.62 MB[3B[3A[2Kfb8ad03b7944: Downloading 22.15 MB[3B[3A[2Kfb8ad03b7944: Downloading 22.68 MB[3B[3A[2Kfb8ad03b7944: Downloading 23.21 MB[3B[3A[2Kfb8ad03b7944: Downloading 23.73 MB[3B[3A[2Kfb8ad03b7944: Downloading 24.26 MB[3B[3A[2Kfb8ad03b7944: Downloading 24.79 MB[3B[3A[2Kfb8ad03b7944: Downloading 25.31 MB[3B[3A[2Kfb8ad03b7944: Downloading 25.84 MB[3B[3A[2Kfb8ad03b7944: Downloading 26.37 MB[3B[3A[2Kfb8ad03b7944: Downloading 26.89 MB[3B[3A[2Kfb8ad03b7944: Downloading 27.42 MB[3B[3A[2Kfb8ad03b7944: Downloading 27.95 MB[3B[3A[2Kfb8ad03b7944: Downloading 28.48 MB[3B[3A[2Kfb8ad03b7944: Downloading    29 MB[3B[3A[2Kfb8ad03b7944: Downloading 29.53 MB[3B[3A[2Kfb8ad03b7944: Downloading 30.06 MB[3B[3A[2Kfb8ad03b7944: Downloading 30.59 MB[3B[3A[2Kfb8ad03b7944: Downloading 31.11 MB[3B[3A[2Kfb8ad03b7944: Downloading 31.46 MB[3B[3A[2Kfb8ad03b7944: Download complete [3B[3A[2Kfb8ad03b7944: Download complete [3BStatus: Downloaded newer image for registry.access.redhat.com/rhscl/python-34-rhel7:latest
+registry.access.redhat.com/rhscl/python-34-rhel7: this image was pulled from a legacy registry.  Important: This registry version will not be supported in future versions of docker.
+
+ ---> fb8ad03b7944
+Step 2 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in d71763454a4d
+ ---> b115ebcbc6d8
+Removing intermediate container d71763454a4d
+Step 3 : EXPOSE 8000
+ ---> Running in 20f6ea1312e6
+ ---> eb4371356ca6
+Removing intermediate container 20f6ea1312e6
+Step 4 : COPY . /opt/app-root/src
+ ---> f5971af63fa8
+Removing intermediate container 03271096d8e5
+Step 5 : CMD /bin/bash -c 'python3 -u web.py'
+ ---> Running in 6302fbdfdcdd
+ ---> d72ef5bc4948
+Removing intermediate container 6302fbdfdcdd
+Successfully built d72ef5bc4948
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[Cr': docker build -t myname/pythonweb .u': docker rmi docker.io/mysql:5.6 docker.io/drupal:8-apache  registry.access.redhat.com/openshift3/python-33-rhel7[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[67Pn': docker run -d -p 8000:8000 myname/pythonweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+fc6a68a706f7a47420cffc8e3ad8a7785bcd22d72e801a1001de3e3c489fe51c
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+fc6a68a706f7        myname/pythonweb    "container-entrypoint"   3 seconds ago       Up 3 seconds        0.0.0.0:8000->8000/tcp, 8080/tcp   silly_boyd
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs silly_boyd 
+serving at port 8000
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker stop !$
+docker stop silly_boyd
+silly_boyd
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker stop silly_boyd[C[C[C[C[C[C[C[1@r[1@m[1P[1P[1P[1P silly_boyd
+silly_boyd
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker images
+REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                       latest              d72ef5bc4948        6 minutes ago       490.6 MB
+myname/nodeweb                                         latest              f0ae1ca3c091        2 hours ago         449.7 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhscl/python-34-rhel7       latest              fb8ad03b7944        7 weeks ago         490.6 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago         203.3 MB
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker [Kcd [K[1P(reverse-i-search)`':[Cr': docker imagesu': docker run -d -p 8000:8000 myname/pythonweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnpythonwebopythonwebdpythonwebepythonweb[1Pythonweb[1Pthonweb[1Phonweb[1Ponweb[1Pnweb[1Pweb[C[C[C
+44f9cdfe80c828304592f788bdd4740faaee122ca2d1253b0c06a760a723514e
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+44f9cdfe80c8        myname/nodeweb      "container-entrypoint"   16 seconds ago      Up 15 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker log mads mad[C[C[C[C_blackwell 
+Server running at http://127.0.0.1:8000/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[C[27@e': docker logs mad_blackwell[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': exit[Ke': bundle exec ./control.rb --run-the-stack[1@c[C[C[C[C[C[C[C[C[C[C[1@ [C[C[C[C[C[C[C[3P[root@rhatvm python3]#[C[C[C[C[C[C[C[C[C[Kdocker de[K[Kxex[K[K[Kexec
+docker: "exec" requires a minimum of 2 arguments.
+See 'docker exec --help'.
+
+Usage:	docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker exec mad_blackwell /bin/bash
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker exec mad_blackwell /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-/bin/bashi/bin/bash /bin/bash-/bin/basht/bin/bash /bin/bash
+exec: "-i": executable file not found in $PATH
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker exec mad_blackwell -i -t /bin/bash[C[1@-[1@u[1@ [1P[1P[1@i[1@ [1@-[1@t[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P /bin/bash[1P/bin/bash
+bash-4.2$ ps
+  PID TTY          TIME CMD
+   24 ?        00:00:00 bash
+   31 ?        00:00:00 ps
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 17:26 ?        00:00:00 node hello-http.js
+default     24     0  1 17:28 ?        00:00:00 /bin/bash
+default     32    24  0 17:28 ?        00:00:00 ps -ef
+bash-4.2$ curl
+curl: try 'curl --help' or 'curl --manual' for more information
+bash-4.2$ crul lo       curl localhosbash-4.2$ curl         http://localhost:8000/
+Hello, Red Hat Developers World from v4.4.2!
+bash-4.2$ strace
+bash: strace: command not found
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 17:26 ?        00:00:00 node hello-http.js
+default     24     0  0 17:28 ?        00:00:00 /bin/bash
+default     37    24  0 17:28 ?        00:00:00 ps -ef
+bash-4.2$ teln    ifconfig
+bash: ifconfig: command not found
+bash-4.2$ /sbin/i
+iconvconfig         iconvconfig.x86_64  init                insmod              install-info        
+bash-4.2$ /sbin/i       ipc
+ipcmk  ipcrm  ipcs   
+bash-4.2$ ipc
+ipcmk  ipcrm  ipcs   
+bash-4.2$ ipc 
+bash: ip: command not found
+bash-4.2$ dmesg
+dmesg: read kernel buffer failed: Permission denied
+bash-4.2$ df
+Filesystem                                                                                          1K-blocks    Used Available Use% Mounted on
+/dev/mapper/docker-253:0-101273304-44f9cdfe80c828304592f788bdd4740faaee122ca2d1253b0c06a760a723514e 104805376  502812 104302564   1% /
+tmpfs                                                                                                 1024464       0   1024464   0% /dev
+tmpfs                                                                                                 1024464       0   1024464   0% /sys/fs/cgroup
+tmpfs                                                                                                 1024464     284   1024180   1% /run/secrets
+/dev/mapper/rhel_rhatvm-root                                                                         22078944 7986272  14092672  37% /etc/hosts
+shm                                                                                                     65536       0     65536   0% /dev/shm
+bash-4.2$ df
+Filesystem                                                                                          1K-blocks    Used Available Use% Mounted on
+/dev/mapper/docker-253:0-101273304-44f9cdfe80c828304592f788bdd4740faaee122ca2d1253b0c06a760a723514e 104805376  502812 104302564   1% /
+tmpfs                                                                                                 1024464       0   1024464   0% /dev
+tmpfs                                                                                                 1024464       0   1024464   0% /sys/fs/cgroup
+tmpfs                                                                                                 1024464     284   1024180   1% /run/secrets
+/dev/mapper/rhel_rhatvm-root                                                                         22078944 7986296  14092648  37% /etc/hosts
+shm                                                                                                     65536       0     65536   0% /dev/shm
+bash-4.2$ ls /    cat /etc/hosts
+172.17.0.2	44f9cdfe80c8
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+bash-4.2$ cat /etc/hosts
+172.17.0.2	44f9cdfe80c8
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+bash-4.2$ curl 172.17.0.2 bash-4.2$ curl h172.17.0.2 t172.17.0.2 t172.17.0.2 p172.17.0.2 :172.17.0.2 /172.17.0.2 /172.17.0.2 172.17.0.2 /  :8000/
+curl: (7) Failed connect to 172.17.0.2:8000; Connection refused
+bash-4.2$ netstat
+bash: netstat: command not found
+bash-4.2$ nes   
+bash-4.2$ exit
+exit
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker exec -i -t mad_blackwell /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+44f9cdfe80c8        myname/nodeweb      "container-entrypoint"   3 minutes ago       Up 3 minutes        0.0.0.0:8000->8000/tcp, 8080/tcp   mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# [1P(reverse-i-search)`':[Cl': docker exec -i -t mad_blackwell /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Po': docker logs mad_blackwell [1@g[C[C[C[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[C[C[C[3P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+Server running at http://127.0.0.1:8000/
+Processed request for /
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# cat DOck[K[K[Kockerfile 
+FROM rhscl/python-34-rhel7:latest
+
+MAINTAINER Your Name "your-email@example.com"
+
+EXPOSE 8000
+
+COPY . /opt/app-root/src
+
+CMD /bin/bash -c 'python3 -u web.py'
+
+
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# cat Dockerfile [11@docker logs mad_blackwell[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@-[1@a[1@ 
+flag provided but not defined: -a
+See 'docker logs --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs -a mad_blackwell [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@-[C[C[1@a[1P[1@l[1@l[C[1@ 
+flag provided but not defined: --all
+See 'docker logs --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs --all  mad_blackwell [1P[C[1P[1P[1P[C[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-all[K[K
+docker: "logs" requires 1 argument.
+See 'docker logs --help'.
+
+Usage:	docker logs [OPTIONS] CONTAINER
+
+Fetch the logs of a container
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs  mad_blackwell -a-ahaealapa[K
+docker: "logs" requires 1 argument.
+See 'docker logs --help'.
+
+Usage:	docker logs [OPTIONS] CONTAINER
+
+Fetch the logs of a container
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs  mad_blackwell --help[K[1@-[1@-[1@a[1@l[1@l[C[1@ 
+flag provided but not defined: --all
+See 'docker logs --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker logs --all  mad_blackwell [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[C[1P[1P[1@a
+flag provided but not defined: -a
+See 'docker logs --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+44f9cdfe80c8        myname/nodeweb      "container-entrypoint"   8 minutes ago       Up 8 minutes        0.0.0.0:8000->8000/tcp, 8080/tcp   mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker rm mad+[K_back[K[K[Klackwell
+Error response from daemon: Conflict, You cannot remove a running container. Stop the container before attempting removal or use -f
+Error: failed to remove containers: [mad_blackwell]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker rm mad_blackwell[C[C[C[C[C[C[C[1@s[1@t[1@o[1@p[1P[1P mad_blackwell
+mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker images
+REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                       latest              d72ef5bc4948        20 minutes ago      490.6 MB
+myname/nodeweb                                         latest              f0ae1ca3c091        2 hours ago         449.7 MB
+registry.access.redhat.com/rhscl_beta/nodejs-4-rhel7   latest              c3eacf0673bb        2 weeks ago         449.7 MB
+docker.io/centos                                       6                   2f96ee8baf17        5 weeks ago         228.9 MB
+registry.access.redhat.com/rhscl/python-34-rhel7       latest              fb8ad03b7944        7 weeks ago         490.6 MB
+registry.access.redhat.com/rhel                        latest              95612a3264fc        7 weeks ago         203.3 MB
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker rmi myname/nodeweb
+Error response from daemon: conflict: unable to remove repository reference "myname/nodeweb" (must force) - container 44f9cdfe80c8 is using its referenced image f0ae1ca3c091
+Error: failed to remove images: [myname/nodeweb]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker rmi myname/nodeweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Error response from daemon: conflict: unable to remove repository reference "myname/nodeweb" (must force) - container 44f9cdfe80c8 is using its referenced image f0ae1ca3c091
+Error: failed to remove images: [myname/nodeweb]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker stop[Kdocker s[Kps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps-a
+docker: 'ps-a' is not a docker command.
+See 'docker --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps-a -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+44f9cdfe80c8        myname/nodeweb      "container-entrypoint"   13 minutes ago      Exited (137) 4 minutes ago                       mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# dcoker rmi[Kdocker rmi mad_bl[K[K[K[C[C[C[C[C[C[C[C[C[1P mad[C[C[C[C_blackwell 
+mad_blackwell
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# docker rm[K[1P(reverse-i-search)`':[Cr': docker psm': docker rm mad_blackwell i': docker rmi myname/nodeweb[2P[root@rhatvm python3]#[C[C[C[C[C[C[C[C
+Untagged: myname/nodeweb:latest
+Deleted: f0ae1ca3c0916506515683bfce203a3edd588e3a90475b52b9f537d73d0138bb
+Deleted: f5b24ed1b640abf9177d26062d0af4351c47459914a1755786df9aed5be41aa8
+Deleted: bb5193aa666c07a29b423f65a8c08bec5d35c6b8a76074d4fb120c24aca43b2e
+Deleted: 15de9a482a3844043ef579eb32d0cae6104e72acc7e37f944fe68e39e2c1cc8d
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl20/python3[root@rhatvm python3]# cd ../..
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# pwd
+/home/rt/work/rctrh/rh-tthw/hello
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello[root@rhatvm hello]# cd ddo[K[Kocker
+docker/                    docker-rhel72-rhscl20/     docker-rhel72-rhscl22beta/ 
+[root@rhatvm hello]# cd docker-rhel72-rhscl22beta/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta[root@rhatvm docker-rhel72-rhscl22beta]# ls
+[0m[38;5;27mnodejs[0m
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta[root@rhatvm docker-rhel72-rhscl22beta]# ls [Kcd nodejs/
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# (reverse-i-search)`':[Cb': cd docker-rhel72-rhscl22beta/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu': docker build -t myname/pythonweb .[1@i[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pnode[5P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+Sending build context to Docker daemon  5.12 kBSending build context to Docker daemon  5.12 kB
+Step 1 : FROM rhscl_beta/nodejs-4-rhel7
+ ---> c3eacf0673bb
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in f28d544cc044
+ ---> 84440e670c3b
+Removing intermediate container f28d544cc044
+Step 3 : EXPOSE 8000
+ ---> Running in d732a4ac899e
+ ---> a6f0388c6a35
+Removing intermediate container d732a4ac899e
+Step 4 : COPY . /opt/app-root/src
+ ---> be8daa35f798
+Removing intermediate container 1ac49e344edd
+Step 5 : CMD /bin/bash -c 'node hello-http.js'
+ ---> Running in 5eccd929a9a0
+ ---> aa9c5a6fd1f4
+Removing intermediate container 5eccd929a9a0
+Successfully built aa9c5a6fd1f4
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker build -t myname/nodeweb .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Krun[K(reverse-i-search)`':[Cr': cd docker-rhel72-rhscl22beta/u': docker run -d -p 8000:8000 myname/nodeweb[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@n[C[C[C[C[C[C[C[C[C[C[3P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+218a329cfa23e7443201eabcd8371e63e346e36f8eaf29348ed221add8d33415
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# (reverse-i-search)`':[Cl': lso': docker logs -a  mad_blackwell [2P[root@rhatvm nodejs]#[C[C[C[C[C[C[C[C
+flag provided but not defined: -a
+See 'docker logs --help'.
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker logs -a  mad_blackwell [K
+218a329cfa23e7443201eabcd8371e63e346e36f8eaf29348ed221add8d33415  berserk_curie
+[root@rhatvm nodejs]# docker logs berserk_curie 
+Server running at http://0.0.0.0:8000/
+Processed request for /
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker stop berserk_curie 
+berserk_curie
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker stop berserk_curie [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@r[1@m[1@i[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Error response from daemon: could not find image: no such id: berserk_curie
+Error: failed to remove images: [berserk_curie]
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# docker rmi berserk_curie [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+berserk_curie
+]0;rt@rhatvm:/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/hello/docker-rhel72-rhscl22beta/nodejs[root@rhatvm nodejs]# exit
+exit
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ ls -ltr
+total 1912
+-rw-rw-r--. 1 rt rt    1103 Apr  2 17:23 README.md
+-rw-rw-r--. 1 rt rt    1542 Apr  2 17:23 Makefile
+-rw-rw-r--. 1 rt rt   16724 Apr  2 17:23 get-started-dcr7-php.adoc
+-rw-rw-r--. 1 rt rt   16948 Apr  2 17:23 get-started-dcr7-nodejs.adoc
+-rw-rw-r--. 1 rt rt   17532 Apr  2 17:23 get-started-cdk2-ruby.adoc
+-rw-rw-r--. 1 rt rt   17543 Apr  2 17:23 get-started-cdk2-python.adoc
+-rw-rw-r--. 1 rt rt   17112 Apr  2 17:23 get-started-cdk2-php.adoc
+-rw-rw-r--. 1 rt rt   17289 Apr  2 17:23 get-started-cdk2-nodejs.adoc
+-rw-rw-r--. 1 rt rt   20373 Apr  2 17:23 get-started-atomic-ruby.adoc
+-rw-rw-r--. 1 rt rt   20241 Apr  2 17:23 get-started-atomic-python.adoc
+-rw-rw-r--. 1 rt rt   20084 Apr  2 17:23 get-started-atomic-nodejs.adoc
+-rw-rw-r--. 1 rt rt   19602 Apr  2 17:23 get-started-atomic-jboss-eap.adoc
+-rw-rw-r--. 1 rt rt   24399 Apr  2 17:23 get-started-atomic-install.adoc
+-rw-rw-r--. 1 rt rt 1048123 Apr  2 17:23 app.css
+-rw-rw-r--. 1 rt rt   18014 Apr  2 17:23 get-started-dts-rhel7-eclipse-cpp.adoc
+-rw-rw-r--. 1 rt rt   18299 Apr  2 17:23 get-started-dts-rhel6-eclipse-cpp.adoc
+-rw-rw-r--. 1 rt rt   17162 Apr  2 17:23 get-started-dcr7-ruby.adoc
+-rw-rw-r--. 1 rt rt   17115 Apr  2 17:23 get-started-dcr7-python.adoc
+-rw-rw-r--. 1 rt rt   10210 Apr  2 17:23 get-started-scl-rhel7-ruby.adoc
+-rw-rw-r--. 1 rt rt   12024 Apr  2 17:23 get-started-scl-rhel7-python.adoc
+-rw-rw-r--. 1 rt rt   10227 Apr  2 17:23 get-started-scl-rhel7-php.adoc
+-rw-rw-r--. 1 rt rt   10079 Apr  2 17:23 get-started-scl-rhel7-perl.adoc
+-rw-rw-r--. 1 rt rt   10901 Apr  2 17:23 get-started-scl-rhel6-ruby.adoc
+-rw-rw-r--. 1 rt rt   12717 Apr  2 17:23 get-started-scl-rhel6-python.adoc
+-rw-rw-r--. 1 rt rt   10918 Apr  2 17:23 get-started-scl-rhel6-php.adoc
+-rw-rw-r--. 1 rt rt   10770 Apr  2 17:23 get-started-scl-rhel6-perl.adoc
+-rw-rw-r--. 1 rt rt   12334 Apr  2 17:23 get-started-scl-rhel6-nodejs.adoc
+-rw-rw-r--. 1 rt rt    6887 Apr  2 17:23 get-started-rhel7-ruby.adoc
+-rw-rw-r--. 1 rt rt    8094 Apr  2 17:23 get-started-rhel7-python.adoc
+-rw-rw-r--. 1 rt rt    6845 Apr  2 17:23 get-started-rhel7-php.adoc
+-rw-rw-r--. 1 rt rt    6921 Apr  2 17:23 get-started-rhel7-perl.adoc
+-rw-rw-r--. 1 rt rt   17306 Apr  2 17:23 get-started-rhel7-java.adoc
+-rw-rw-r--. 1 rt rt   36514 Apr  2 17:23 get-started-rhel7-install-vbox.adoc
+-rw-rw-r--. 1 rt rt   22825 Apr  2 17:23 get-started-rhel7-install.adoc
+-rw-rw-r--. 1 rt rt    7169 Apr  2 17:23 get-started-rhel7-cpp.adoc
+-rw-rw-r--. 1 rt rt    7261 Apr  2 17:23 get-started-rhel6-ruby.adoc
+-rw-rw-r--. 1 rt rt    8085 Apr  2 17:23 get-started-rhel6-python.adoc
+-rw-rw-r--. 1 rt rt    6846 Apr  2 17:23 get-started-rhel6-php.adoc
+-rw-rw-r--. 1 rt rt    6938 Apr  2 17:23 get-started-rhel6-perl.adoc
+-rw-rw-r--. 1 rt rt    7411 Apr  2 17:23 get-started-rhel6-cpp.adoc
+drwxrwxr-x. 7 rt rt    4096 Apr  2 17:23 [0m[38;5;27mimages[0m
+-rw-rw-r--. 1 rt rt   20061 Apr  2 17:23 install-rhel7-hyperv.adoc
+-rw-rw-r--. 1 rt rt   27158 Apr  2 17:23 install-rhel7-vmware.adoc
+-rw-rw-r--. 1 rt rt   25458 Apr  2 17:23 install-rhel7-vbox.adoc
+-rw-rw-r--. 1 rt rt   16020 Apr  2 17:23 install-rhel7.adoc
+-rw-rw-r--. 1 rt rt    3821 Apr  2 17:23 tmp-rhel-workaround.adoc
+-rwxrwxr-x. 1 rt rt     664 Apr  2 17:23 [38;5;34mrun-diff.sh[0m
+-rw-rw-r--. 1 rt rt   12110 Apr  2 17:23 rhel6-notes-log.txt
+-rw-rw-r--. 1 rt rt    7896 May  9 14:28 cdk-get-started-combined.adoc
+drwxrwxr-x. 2 rt rt      34 May  9 14:28 [38;5;27marticles[0m
+-rwxrwxr-x. 1 rt rt  145726 May  9 14:29 [38;5;34minstall-rhel7-combined.adoc[0m
+-rw-rw-r--. 1 rt rt   11282 May  9 14:29 get-started-scl-rhel7-nodejs.adoc
+-rw-rw-r--. 1 rt rt   12202 May 11 14:31 get-started-scl-rhel7-nodejs4-beta.adoc
+drwxrwxr-x. 6 rt rt    4096 May 11 14:33 [38;5;27mlogs[0m
+drwxrwxr-x. 5 rt rt    4096 May 11 17:38 [38;5;27mhello[0m
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ exit
+exit
+
+Script done on Wed 11 May 2016 05:44:35 PM EDT
