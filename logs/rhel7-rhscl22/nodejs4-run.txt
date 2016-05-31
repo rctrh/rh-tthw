@@ -1,0 +1,6 @@
+
+
+[rt@rhatvm nodejs]$ curl http://localhost:8000/
+Hello, Red Hat Developers World from Node v4.4.2!
+
+
