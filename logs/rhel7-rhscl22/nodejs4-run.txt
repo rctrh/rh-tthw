@@ -7738,4 +7738,194 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git add logs/rhel7-versions.txt 
 ]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git add logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt
 ]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git add logs/rhel7-rhscl22/scls-runtimes.txt
-]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	[32mmodified:   hello/hello-py26.py[m
+#	[32mnew file:   logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt[m
+#	[32mnew file:   logs/rhel7-rhscl22/scls-runtimes.txt[m
+#	[32mnew file:   logs/rhel7-versions.txt[m
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   logs/rhel7-rhscl22/nodejs4-run.txt[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.d8_history[m
+#	[31mhello/get-versions.sh[m
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git add logs/rhel7-rhscl22/nodejs4-run.txt
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ gi[K[Kgit add hello/get-versions.sh
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	[32mnew file:   hello/get-versions.sh[m
+#	[32mmodified:   hello/hello-py26.py[m
+#	[32mmodified:   logs/rhel7-rhscl22/nodejs4-run.txt[m
+#	[32mnew file:   logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt[m
+#	[32mnew file:   logs/rhel7-rhscl22/scls-runtimes.txt[m
+#	[32mnew file:   logs/rhel7-versions.txt[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31m.d8_history[m
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ git commit
+[?1049h[?1h=[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H".git/COMMIT_EDITMSG" 21L, 708C[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#[7Cnew file:   hello/get-versions.sh
+#[7Cmodified:   hello/hello-py26.py
+#[7Cmodified:   logs/rhel7-rhscl22/nodejs4-run.txt
+#[7Cnew file:   logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt
+#[7Cnew file:   logs/rhel7-rhscl22/scls-runtimes.txt
+#[7Cnew file:   logs/rhel7-versions.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#[7C.d8_history
+[94m~                                                                                                                                                          [23;1H~                                                                                                                                                          [24;1H~                                                                                                                                                          [25;1H~                                                                                                                                                          [26;1H~                                                                                                                                                          [27;1H~                                                                                                                                                          [28;1H~                                                                                                                                                          [29;1H~                                                                                                                                                          [30;1H~                                                                                                                                                          [31;1H~                                                                                                                                                          [32;1H~                                                                                                                                                          [33;1H~                                                                                                                                                          [34;1H~                                                                                                                                                          [35;1H~                                                                                                                                                          [36;1H~                                                                                                                                                          [37;1H~                                                                                                                                                          [38;1H~                                                                                                                                                          [39;1H~                                                                                                                                                          [40;1H~                                                                                                                                                          [41;1H~                                                                                                                                                          [1;1H[?12l[?25h[?25l[m[42;1H[1m-- INSERT --[m[42;13H[K[1;1H[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25lo[?12l[?25h[?25lg[?12l[?25h[?25ls[?12l[?25h[?25l/[?12l[?25h[?25lv[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25ls[?12l[?25h[?25li[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lm[?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25l7[?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25lh[?12l[?25h[?25ls[?12l[?25h[?25lc[?12l[?25h[?25ll[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l.[?12l[?25h[?25l2[?12l[?25h[?25l [?12l[?25h[?25lu[?12l[?25h[?25lp[?12l[?25h[?25ld[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25ls[?12l[?25h[42;1H[K[1;48H[?25l[?12l[?25h[?25l[42;1H:[?12l[?25hwq[?25l".git/COMMIT_EDITMSG" 21L, 756C written
+[?1l>[?12l[?25h[?1049l[master 6cd528e] added logs/versions from rhel7 rhscl 2.2 updates
+ 6 files changed, 13077 insertions(+), 3 deletions(-)
+ create mode 100755 hello/get-versions.sh
+ create mode 100644 logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt
+ create mode 100644 logs/rhel7-rhscl22/scls-runtimes.txt
+ create mode 100644 logs/rhel7-versions.txt
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ [1@(reverse-i-search)`':[Cp': git add logs/rhel7-rhscl22/rhel7-rhscl22-rpms.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pu': git push -u origin master[1@s[C[C[C[C[C[C[C[1@h[C[C[C[C[C[C[C[5P[rt@rhatvm rh-tthw]$[C[C[C[C[C
+Password for 'https://rctrh@github.com': 
+Counting objects: 25, done.
+Delta compression using up to 2 threads.
+Compressing objects:   5% (1/19)   Compressing objects:  10% (2/19)   Compressing objects:  15% (3/19)   Compressing objects:  21% (4/19)   Compressing objects:  26% (5/19)   Compressing objects:  31% (6/19)   Compressing objects:  36% (7/19)   Compressing objects:  42% (8/19)   Compressing objects:  47% (9/19)   Compressing objects:  52% (10/19)   Compressing objects:  57% (11/19)   Compressing objects:  63% (12/19)   Compressing objects:  68% (13/19)   Compressing objects:  73% (14/19)   Compressing objects:  78% (15/19)   Compressing objects:  84% (16/19)   Compressing objects:  89% (17/19)   Compressing objects:  94% (18/19)   Compressing objects: 100% (19/19)   Compressing objects: 100% (19/19), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 137.51 KiB | 0 bytes/s, done.
+Total 19 (delta 7), reused 0 (delta 0)
+To https://rctrh@github.com/rctrh/rh-tthw
+   d72c6ad..6cd528e  master -> master
+Branch master set up to track remote branch master from origin.
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ yum list available rh-python\*
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Repo rhel-7-server-extras-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-lb-for-rhel-7-server-htb-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-htb-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-ha-for-rhel-7-server-eus-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-thirdparty-oracle-java-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-server-rhscl-7-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-eus-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-rs-for-rhel-7-server-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-ha-for-rhel-7-server-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-ha-for-rhel-7-server-htb-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-aus-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-supplementary-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-7-server-optional-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-sap-for-rhel-7-server-eus-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Repo rhel-sap-hana-for-rhel-7-server-eus-rpms forced skip_if_unavailable=True due to: /etc/pki/entitlement/5533046786627482635-key.pem
+Available Packages
+rh-python34.x86_64                                                            2.0-5.el7                                            rhel-server-rhscl-7-rpms
+rh-python34-babel.noarch                                                      1.3-1.el7                                            rhel-server-rhscl-7-rpms
+rh-python34-mod_wsgi.x86_64                                                   4.4.3-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-numpy.x86_64                                                      1:1.8.2-1.el7                                        rhel-server-rhscl-7-rpms
+rh-python34-numpy-f2py.x86_64                                                 1:1.8.2-1.el7                                        rhel-server-rhscl-7-rpms
+rh-python34-python.x86_64                                                     3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-babel.noarch                                               1.3-1.el7                                            rhel-server-rhscl-7-rpms
+rh-python34-python-bson.x86_64                                                2.7.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-coverage.x86_64                                            3.7.1-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-debug.x86_64                                               3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-devel.x86_64                                               3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-docutils.noarch                                            0.12-1.el7                                           rhel-server-rhscl-7-rpms
+rh-python34-python-jinja2.noarch                                              2.7.3-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-libs.x86_64                                                3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-markupsafe.x86_64                                          0.23-1.el7                                           rhel-server-rhscl-7-rpms
+rh-python34-python-nose.noarch                                                1.3.4-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-nose-docs.noarch                                           1.3.4-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-pip.noarch                                                 1.5.6-4.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-psycopg2.x86_64                                            2.5.4-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-psycopg2-doc.x86_64                                        2.5.4-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-pygments.noarch                                            1.6-1.el7                                            rhel-server-rhscl-7-rpms
+rh-python34-python-pymongo.x86_64                                             2.7.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-pymongo-gridfs.x86_64                                      2.7.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-setuptools.noarch                                          11.3.1-2.el7                                         rhel-server-rhscl-7-rpms
+rh-python34-python-simplejson.x86_64                                          3.6.5-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-six.noarch                                                 1.8.0-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-sphinx.noarch                                              1.2.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-sphinx-doc.noarch                                          1.2.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-sqlalchemy.x86_64                                          0.9.8-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-test.x86_64                                                3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-tkinter.x86_64                                             3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-tools.x86_64                                               3.4.2-9.el7                                          rhel-server-rhscl-7-rpms
+rh-python34-python-virtualenv.noarch                                          1.11.6-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python34-python-wheel.noarch                                               0.24.0-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python34-runtime.x86_64                                                    2.0-5.el7                                            rhel-server-rhscl-7-rpms
+rh-python34-scipy.x86_64                                                      0.13.3-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python34-scldevel.x86_64                                                   2.0-5.el7                                            rhel-server-rhscl-7-rpms
+rh-python35.x86_64                                                            2.0-2.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-PyYAML.x86_64                                                     3.10-14.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-babel.noarch                                                      1.3-2.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-mod_wsgi.x86_64                                                   4.4.21-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-numpy.x86_64                                                      1:1.10.4-4.el7                                       rhel-server-rhscl-7-rpms
+rh-python35-numpy-f2py.x86_64                                                 1:1.10.4-4.el7                                       rhel-server-rhscl-7-rpms
+rh-python35-python.x86_64                                                     3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-babel.noarch                                               1.3-2.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-python-bson.x86_64                                                3.2.1-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-coverage.x86_64                                            4.0.3-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-debug.x86_64                                               3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-devel.x86_64                                               3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-docutils.noarch                                            0.12-1.el7                                           rhel-server-rhscl-7-rpms
+rh-python35-python-jinja2.noarch                                              2.8-2.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-python-libs.x86_64                                                3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-markupsafe.x86_64                                          0.23-1.el7                                           rhel-server-rhscl-7-rpms
+rh-python35-python-nose.noarch                                                1.3.7-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-nose-docs.noarch                                           1.3.7-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-pip.noarch                                                 7.1.0-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-psycopg2.x86_64                                            2.6.1-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-psycopg2-doc.x86_64                                        2.6.1-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-pygments.noarch                                            2.1-1.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-python-pymongo.x86_64                                             3.2.1-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-pymongo-doc.x86_64                                         3.2.1-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-pymongo-gridfs.x86_64                                      3.2.1-2.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-setuptools.noarch                                          18.0.1-2.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-python-simplejson.x86_64                                          3.6.5-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-six.noarch                                                 1.10.0-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-python-sphinx.noarch                                              1.2.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-sphinx-doc.noarch                                          1.2.2-1.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-sqlalchemy.x86_64                                          1.0.11-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-python-test.x86_64                                                3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-tkinter.x86_64                                             3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-tools.x86_64                                               3.5.1-6.el7                                          rhel-server-rhscl-7-rpms
+rh-python35-python-virtualenv.noarch                                          13.1.2-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-python-wheel.noarch                                               0.24.0-1.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-runtime.x86_64                                                    2.0-2.el7                                            rhel-server-rhscl-7-rpms
+rh-python35-scipy.x86_64                                                      0.17.0-2.el7                                         rhel-server-rhscl-7-rpms
+rh-python35-scldevel.x86_64                                                   2.0-2.el7                                            rhel-server-rhscl-7-rpms
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$  [Kls /tpop[K[K[K[Kopt/rh
+[0m[38;5;27mrh-nodejs4[0m
+]0;rt@rhatvm:~/work/rctrh/rh-tthw]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw[rt@rhatvm rh-tthw]$ sudo yum install rh-python35
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for rt: 
+rt is not in the sudoers file.  This incident will b
