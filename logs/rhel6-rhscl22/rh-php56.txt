@@ -1,0 +1,97 @@
+PHP 5.6, RHSCL 2.2, RHEL 6.8
+-----------------------------
+
+
+# yum install rh-php56
+
+
+$ scl enable rh-php56 bash
+
+$ which php
+/opt/rh/rh-php56/root/usr/bin/php
+
+$ php --version
+PHP 5.6.5 (cli) (built: Feb 16 2016 05:48:25) 
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
+
+$ php -a
+Interactive shell
+
+php > quit
+
+$ ./hello/hello.php 
+Hello, Red Hat Developers World from PHP 5.6.5
+
+
+
+
+
+# yum -y install rh-php56
+Loaded plugins: product-id, refresh-packagekit, search-disabled-repos, security, subscription-manager
+Setting up Install Process
+https://cdn.redhat.com/content/beta/rhel/server/6/6Server/x86_64/rhscl/1/os/repodata/repomd.xml: [Errno 14] PYCURL ERROR 22 - "The requested URL returned error: 404 Not Found"
+Trying other mirror.
+To address this issue please refer to the below knowledge base article 
+
+https://access.redhat.com/articles/1320623
+
+If above article doesn't help to resolve this issue please open a ticket with Red Hat Support.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-php56.x86_64 0:2.0-6.el6 will be installed
+--> Processing Dependency: rh-php56-runtime(x86-64) = 2.0-6.el6 for package: rh-php56-2.0-6.el6.x86_64
+--> Processing Dependency: rh-php56-php-cli(x86-64) for package: rh-php56-2.0-6.el6.x86_64
+--> Processing Dependency: rh-php56-php-common(x86-64) for package: rh-php56-2.0-6.el6.x86_64
+--> Processing Dependency: rh-php56-php-pear for package: rh-php56-2.0-6.el6.x86_64
+--> Processing Dependency: rh-php56-runtime for package: rh-php56-2.0-6.el6.x86_64
+--> Running transaction check
+---> Package rh-php56-php-cli.x86_64 0:5.6.5-8.el6 will be installed
+---> Package rh-php56-php-common.x86_64 0:5.6.5-8.el6 will be installed
+--> Processing Dependency: rh-php56-php-pecl-jsonc(x86-64) for package: rh-php56-php-common-5.6.5-8.el6.x86_64
+---> Package rh-php56-php-pear.noarch 1:1.9.5-3.el6 will be installed
+--> Processing Dependency: rh-php56-php-posix for package: 1:rh-php56-php-pear-1.9.5-3.el6.noarch
+--> Processing Dependency: rh-php56-php-xml for package: 1:rh-php56-php-pear-1.9.5-3.el6.noarch
+---> Package rh-php56-runtime.x86_64 0:2.0-6.el6 will be installed
+--> Processing Dependency: policycoreutils-python for package: rh-php56-runtime-2.0-6.el6.x86_64
+--> Running transaction check
+---> Package policycoreutils-python.x86_64 0:2.0.83-29.el6 will be installed
+--> Processing Dependency: libsemanage-python >= 2.0.43-4 for package: policycoreutils-python-2.0.83-29.el6.x86_64
+--> Processing Dependency: audit-libs-python >= 1.4.2-1 for package: policycoreutils-python-2.0.83-29.el6.x86_64
+--> Processing Dependency: setools-libs-python for package: policycoreutils-python-2.0.83-29.el6.x86_64
+---> Package rh-php56-php-pecl-jsonc.x86_64 0:1.3.6-3.el6 will be installed
+---> Package rh-php56-php-process.x86_64 0:5.6.5-8.el6 will be installed
+---> Package rh-php56-php-xml.x86_64 0:5.6.5-8.el6 will be installed
+--> Running transaction check
+---> Package audit-libs-python.x86_64 0:2.4.5-3.el6 will be installed
+---> Package libsemanage-python.x86_64 0:2.0.43-5.1.el6 will be installed
+---> Package setools-libs-python.x86_64 0:3.3.7-4.el6 will be installed
+--> Processing Dependency: setools-libs = 3.3.7-4.el6 for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libsefs.so.4(VERS_4.0)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libseaudit.so.4(VERS_4.2)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libseaudit.so.4(VERS_4.1)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libqpol.so.1(VERS_1.3)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libpoldiff.so.1(VERS_1.3)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libpoldiff.so.1(VERS_1.2)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libapol.so.4(VERS_4.1)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libsefs.so.4()(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libseaudit.so.4()(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libqpol.so.1()(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libpoldiff.so.1()(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Processing Dependency: libapol.so.4()(64bit) for package: setools-libs-python-3.3.7-4.el6.x86_64
+--> Runnix86_64.rpm                                                                                         8/13 
+  Installing : rh-php56-php-cli-5.6.5-8.el6.x86_6_64 0:5.6.5-8.el6       rh-php56-runtime.x86_64 0:2.0-6.el6           setools-libs.x86_64 0:3.3.7-4.el6                setools-libs-python.x86_64 0:3.3.7-4.el6    
+
+Complete!
+
+
+$ uname -a
+Linux localhost.localdomain 2.6.32-642.1.1.el6.x86_64 #1 SMP Fri May 6 14:54:05 EDT 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+$ cat /etc/redhat-release 
+Red Hat Enterprise Linux Server release 6.8 (Santiago)
+
