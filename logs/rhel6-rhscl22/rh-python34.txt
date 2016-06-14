@@ -1,0 +1,106 @@
+
+rh-python34 from rhscl2.2 on RHEL 6.8
+(Python 3.5 not available yet.)
+---------------------------------------------------------
+
+
+# yum install rh-python34
+$ scl enable rh-python34 bash
+
+$ which python3
+/opt/rh/rh-python34/root/usr/bin/python3
+
+$ python3 --version
+Python 3.4.2
+
+$ ./hello/hello.py
+Hello, Red Hat Developers World from Python 3.4
+
+$ python
+Python 3.4.2 (default, Mar 25 2015, 02:43:36) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-4)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> quit()
+
+
+
+
+
+
+$ egrep -i python scl-runtimes.txt 
+python27-runtime.x86_64                 1.1-25.el6   rhel-server-rhscl-6-rpms   
+python33-runtime.x86_64                 1.1-12.el6   rhel-server-rhscl-6-rpms   
+rh-python34-runtime.x86_64              2.0-5.el6    rhel-server-rhscl-6-rpms   
+
+
+
+# yum install rh-python34
+Loaded plugins: product-id, refresh-packagekit, search-disabled-repos, security, subscription-manager
+Setting up Install Process
+https://cdn.redhat.com/content/beta/rhel/server/6/6Server/x86_64/rhscl/1/os/repodata/repomd.xml: [Errno 14] PYCURL ERROR 22 - "The requested URL returned error: 404 Not Found"
+Trying other mirror.
+To address this issue please refer to the below knowledge base article 
+
+https://access.redhat.com/articles/1320623
+
+If above article doesn't help to resolve this issue please open a ticket with Red Hat Support.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-python34.x86_64 0:2.0-5.el6 will be installed
+--> Processing Dependency: rh-python34-python for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-jinja2 for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-nose for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-setuptools for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-simplejson for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-sphinx for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-sqlalchemy for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-python-virtualenv for package: rh-python34-2.0-5.el6.x86_64
+--> Processing Dependency: rh-python34-runtime for package: rh-python34-2.0-5.el6.x86_64
+--> Running transaction check
+---> Package rh-python34-python.x86_64 0:3.4.2-9.el6 will be installed
+--> Processing Dependency: rh-python34-python-libs(x86-64) = 3.4.2-9.el6 for package: rh-python34-python-3.4.2-9.el6.x86_64
+--> Processing Dependency: rh-python34-python-pip for package: rh-python34-python-3.4.2-9.el6.x86_64
+--> Processing Dependency: libpython3.4m.so.rh-python34-1.0()(64bit) for package: rh-python34-python-3.4.2-9.el6.x86_64
+---> Package rh-python34-python-jinja2.noarch 0:2.7.3-2.el6 will be installed
+--> Processing Dependency: rh-python34-python-markupsafe for package: rh-python34-python-jinja2-2.7.3-2.el6.noarch
+---> Package rh-python34-python-nose.noarch 0:1.3.4-2.el6 will be installed
+---> Package rh-python34-python-setuptools.noarch 0:11.3.1-2.el6 will be installed
+---> Package rh-python34-python-simplejson.x86_64 0:3.6.5-1.el6 will be installed
+---> Package rh-python34-python-sphinx.noarch 0:1.2.2-2.el6 will be installed
+--> Processing Dependency: rh-python34-python-docutils for package: rh-python34-python-sphinx-1.2.2-2.el6.noarch
+--> Processing Dependency: rh-python34-python-pygments for package: rh-python34-python-sphinx-1.2.2-2.el6.noarch
+---> Package rh-python34-python-sqlalchemy.x86_64 0:0.9.8-1.el6 will be installed
+---> Package rh-python34-python-virtualenv.noarch 0:1.11.6-1.el6 will be installed
+--> Processing Dependency: rh-python34-python-devel for package: rh-python34-python-virtualenv-1.11.6-1.el6.noarch
+---> Package rh-python34-runtime.x86_64 0:2.0-5.el6 will be installed
+--> Processing Dependency: scl-utils for package: rh-python34-runtime-2.0-5.el6.x86_64
+--> Running transaction check
+---> Package rh-python34-python-devel.x86_64 0:3.4.2-9.el6 will be installed
+--> Processing Dependency: scl-utils-build for package: rh-python34-python-devel-3.4.2-9.el6.x86_64
+---> Package rh-python34-python-docutils.noarch 0:0.12-1.el6 will be installed
+---> Package rh-python34-python-libs.x86_64 0:3.4.2-9.el6 will be installed
+---> Package rh-python34-python-markupsafe.x86_64 0:0.23-1.el6 will be installed
+---> Package rh-python34-python-pip.noarch 0:1.5.6-4.el6 will be installed
+---> Package rh-python34-python-pygments.noarch 0:1.6-1.el6 will be installed
+---> Package scl-utils.x86_64 0:20120927-27.el6_6 will be installed
+--> Running transaction check
+---> Package scl-utils-build.x86_64 0:20120927-27.el6_6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================
+Total download size: 20 M
+Installed size: 75 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/18): rh-python34-2.0-5.el6.x86_64.rpm                                                                                                                                                    5/18 
+  Verifying  : rh-python34-python-nose-1.3.4-2.el6.noarch                                                               
+
+$ uname -a
+Linux localhost.localdomain 2.6.32-642.1.1.el6.x86_64 #1 SMP Fri May 6 14:54:05 EDT 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+$ cat /etc/redhat-release 
+Red Hat Enterprise Linux Server release 6.8 (Santiago)
+

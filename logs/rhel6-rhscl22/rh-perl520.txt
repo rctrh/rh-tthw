@@ -1,0 +1,112 @@
+Perl 5.20 on RHSCL 2.2 on RHEL 6.8
+----------------------------------
+
+
+# yum -y install rh-perl520
+
+$ scl enable rh-perl520 bash
+
+$ which perl
+/opt/rh/rh-perl520/root/usr/bin/perl
+
+
+$ perl -v
+
+This is perl 5, version 20, subversion 1 (v5.20.1) built for x86_64-linux-thread-multi
+(with 16 registered patches, see perl -V for more detail)
+
+Copyright 1987-2014, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+$ ./hello/hello.pl
+Hello, Red Hat Developers World from Perl v5.20.1
+
+
+
+# yum -y install rh-perl520
+Loaded plugins: product-id, refresh-packagekit, search-disabled-repos, security, subscription-manager
+Setting up Install Process
+https://cdn.redhat.com/content/beta/rhel/server/6/6Server/x86_64/rhscl/1/os/repodata/repomd.xml: [Errno 14] PYCURL ERROR 22 - "The requested URL returned error: 404 Not Found"
+Trying other mirror.
+To address this issue please refer to the below knowledge base article 
+
+https://access.redhat.com/articles/1320623
+
+If above article doesn't help to resolve this issue please open a ticket with Red Hat Support.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-perl520.x86_64 0:2.0-7.el6 will be installed
+--> Processing Dependency: rh-perl520-perl for package: rh-perl520-2.0-7.el6.x86_64
+--> Processing Dependency: rh-perl520-runtime for package: rh-perl520-2.0-7.el6.x86_64
+--> Running transaction check
+---> Package rh-perl520-perl.x86_64 4:5.20.1-324.el6 will be installed
+--> Processing Dependency: rh-perl520-perl-libs = 4:5.20.1-324.el6 for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Scalar::Util) >= 1.10 for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Socket) >= 1.3 for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Carp) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Cwd) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Exporter) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(File::Path) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(File::Spec) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(File::Spec::Functions) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(File::Spec::Unix) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(File::Temp) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Getopt::Long) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Pod::Simple::Search) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Pod::Simple::XHTML) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Scalar::Util) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Socket) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Storable) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Time::HiRes) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(Time::Local) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(constant) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(parent) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(threads) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl(threads::shared) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl-libs for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: rh-perl520-perl-macros for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+--> Processing Dependency: libperl.so.rh-perl520-5.20()(64bit) for package: 4:rh-perl520-perl-5.20.1-324.el6.x86_64
+---> Package rh-perl520-runtime.x86_64 0:2.0-7.el6 will be installed
+--> Running transaction check
+---> Package rh-perl520-perl-Carp.noarch 0:1.33.01-310.el6 will be installed
+---> Package rh-perl520-perl-Exporter.noarch 0:5.70-313.el6 will be installed
+---> Package rh-perl520-perl-File-Path.noarch 0:2.09-313.el6 will be installed
+---> Package rh-perl520-perl-File-Temp.noarch 0:0.23.04-310.el6 will be installed
+---> Package rh-perl520-perl-Getopt-Long.noarch 0:2.42-310.el6 will be installed
+--> Processing Dependency: rh-perl520-perl(Pod::Usage) >= 1.14 for package: rh-perl520-perl-Getopt-Long-2.42-310.el6.noarch
+--> Processing Dependency: rh                          24 k
+ rh-perl520-perl-Encode                                    x86_64              server-rhscl-6-rpms                          14 k
+ rh-perl520-perl-poB     00:00     
+(17/29): rh-perl520-perl-Storable-2.51-4.el6.x86_64.rpm                                                                                                             |  77 kBt-ParseWords-3.29-310.el6.noarch                                                                    28/29 
+  Installing : rh-perl520-2                                         21/29 
+  Verifying  : rh-perl520-perl-File-Temp-0.23.04-3
+
+
+
+
+
+
+
+
+
+
+
+
+$ uname -a
+Linux localhost.localdomain 2.6.32-642.1.1.el6.x86_64 #1 SMP Fri May 6 14:54:05 EDT 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+$ cat /etc/redhat-release 
+Red Hat Enterprise Linux Server release 6.8 (Santiago)
+
+[rt@localhost rh-tthw]$ /usr/bin/perl -v
+
+This is perl, v5.10.1 (*) built for x86_64-linux-thread-multi
+
+
