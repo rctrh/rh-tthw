@@ -1,0 +1,115 @@
+
+
+
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+[root@rhdsrvr python-tmp]# docker images -a
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+<none>                                                  <none>              d0a516b529ab        7 weeks ago         158.2 MB
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+[root@rhdsrvr python-tmp]# docker images -a
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+<none>                                                  <none>              d0a516b529ab        7 weeks ago         158.2 MB
+[root@rhdsrvr python-tmp]# docker ps -a 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@rhdsrvr python-tmp]# docker build -t myname/pythonweb .
+Sending build context to Docker daemon 6.144 kB
+Sending build context to Docker daemon 
+Step 0 : FROM openshift3/python-33-rhel7:latest
+ ---> 18a614c1ed41
+Step 1 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 711ffc3e5ab0
+ ---> 9bed9b4b77c5
+Removing intermediate container 711ffc3e5ab0
+Step 2 : EXPOSE 8000
+ ---> Running in 75500815b872
+ ---> 2285d81511a4
+Removing intermediate container 75500815b872
+Step 3 : COPY . /opt/openshift/src
+ ---> d50d0d076b97
+Removing intermediate container 00f67e749531
+Step 4 : CMD /bin/bash -c 'python3 web.py'
+ ---> Running in 8f434438c179
+ ---> 100a31f550eb
+Removing intermediate container 8f434438c179
+Successfully built 100a31f550eb
+[root@rhdsrvr python-tmp]# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              100a31f550eb        7 seconds ago       408.8 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+[root@rhdsrvr python-tmp]# docker images -a
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              100a31f550eb        12 seconds ago      408.8 MB
+<none>                                                  <none>              d50d0d076b97        16 seconds ago      408.8 MB
+<none>                                                  <none>              2285d81511a4        20 seconds ago      408.8 MB
+<none>                                                  <none>              9bed9b4b77c5        24 seconds ago      408.8 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+<none>                                                  <none>              d0a516b529ab        7 weeks ago         158.2 MB
+[root@rhdsrvr python-tmp]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@rhdsrvr python-tmp]# docker run -it -p 8000:8000 myname/pythonweb 
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+serving at port 8000
+172.17.42.1 - - [19/Sep/2015 14:46:39] "GET / HTTP/1.1" 200 -
+
+
+[root@rhdsrvr httpd-project]# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+
+
+[root@rhdsrvr python-tmp]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS                     PORTS               NAMES
+f2299a290a0d        myname/pythonweb    "/bin/sh -c '/bin/ba   3 minutes ago       Exited (1) 4 seconds ago                       sad_kirch           
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# docker rm sad_kirch
+sad_kirch
+[root@rhdsrvr python-tmp]# 
+[root@rhdsrvr python-tmp]# docker run -d -p 8000:8000 myname/pythonweb
+1850f77e89f2206422d6befb9f7667a02e6d23e70aff30d81c5b046c977d589f
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+[root@rhdsrvr python-tmp]# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+[root@rhdsrvr python-tmp]# docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
+1850f77e89f2        myname/pythonweb    "/bin/sh -c '/bin/ba   18 seconds ago      Up 17 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   agitated_engelbart   
+[root@rhdsrvr python-tmp]# docker logs agitated_engelbart
+[root@rhdsrvr python-tmp]# docker kill agitated_engelbart
+agitated_engelbart
+[root@rhdsrvr python-tmp]# docker rm agitated_engelbart
+agitated_engelbart
+[root@rhdsrvr python-tmp]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+
+[root@rhdsrvr python-tmp]# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              100a31f550eb        5 minutes ago       408.8 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+[root@rhdsrvr python-tmp]# docker rmi myname/pythonweb
+Untagged: myname/pythonweb:latest
+Deleted: 100a31f550eb51e5d4477c47598bc586fded87d86b55fb0ff124af2c57977b78
+Deleted: d50d0d076b97486802e86c5fa530ade20fc2a5d52c052ccd6c98f651f40e97a5
+Deleted: 2285d81511a410e0ac17d02a9d1740f7f797cadba0388f3b77508bd74e5c5d4f
+Deleted: 9bed9b4b77c5a2a2b26cb145a116e017e095307ce2b0ba592de96b35bc4a39a9
+[root@rhdsrvr python-tmp]# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/rhel                         latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              18a614c1ed41        7 weeks ago         408.8 MB
+
+

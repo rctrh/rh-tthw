@@ -1,0 +1,56 @@
+Node.js RHSCL docker container RHEL 7.2 logs
+============================================
+
+*no RHSCL 2.0 node.js container ????*
+
+
+# docker search registry.access.redhat.com/rhscl
+INDEX        NAME                                                            DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+redhat.com   registry.access.redhat.com/rhscl/devtoolset-4-toolchain-rhel7   Developer toolset toolchain                     0                    
+redhat.com   registry.access.redhat.com/rhscl/httpd-24-rhel7                 Apache HTTP 2.4 Server                          0                    
+redhat.com   registry.access.redhat.com/rhscl/mariadb-100-rhel7              MariaDB 10.0 SQL database server                0                    
+redhat.com   registry.access.redhat.com/rhscl/mongodb-26-rhel7               MongoDB 2.6 NoSQL database server               0                    
+redhat.com   registry.access.redhat.com/rhscl/mysql-56-rhel7                 MySQL 5.6 SQL database server                   0                    
+redhat.com   registry.access.redhat.com/rhscl/nginx-16-rhel7                 Nginx 1.6 server and a reverse proxy server     0                    
+redhat.com   registry.access.redhat.com/rhscl/passenger-40-rhel7             Phusion Passenger® 3.0 web server and app...    0                    
+redhat.com   registry.access.redhat.com/rhscl/perl-520-rhel7                 Perl 5.20 platform for building and runnin...   0                    
+redhat.com   registry.access.redhat.com/rhscl/php-56-rhel7                   PHP 5.6 platform for building and running ...   0                    
+redhat.com   registry.access.redhat.com/rhscl/postgresql-94-rhel7            PostgreSQL 9.4 SQL database server              0                    
+redhat.com   registry.access.redhat.com/rhscl/python-27-rhel7                Python 2.7 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl/python-34-rhel7                Python 3.4 platform for building and runni...   0                    
+redhat.com   registry.access.redhat.com/rhscl/ror-41-rhel7                   Platform for building and running Ruby on ...   0                    
+redhat.com   registry.access.redhat.com/rhscl/ruby-22-rhel7                  Ruby 2.2 platform for building and running...   0                    
+redhat.com   registry.access.redhat.com/rhscl/s2i-base-rhel7                 Base image delivers all the essential libr...   0                    
+[root@rhdsrvr python3]# docker search registry.access.redhat.com/openshift3
+INDEX        NAME                                                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+redhat.com   registry.access.redhat.com/openshift3/jenkins-1-rhel7             OpenShift Enterprise Jenkins                    0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-auth-proxy          No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-deployment          No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-elasticsearch       No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-fluentd             No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/logging-kibana              No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-cassandra           No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-deployer            No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-hawkular-metrics    No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/metrics-heapster            No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/mongodb-24-rhel7            OpenShift Enterprise MongoDB 2.4                0                    
+redhat.com   registry.access.redhat.com/openshift3/mysql-55-rhel7              OpenShift Enterprise Mysql 5.5                  0                    
+redhat.com   registry.access.redhat.com/openshift3/node                        No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/nodejs-010-rhel7            OpenShift Enterprise Nodejs 0.10 Builder I...   0                    
+redhat.com   registry.access.redhat.com/openshift3/openvswitch                 No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/ose                         No description                                  0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-deployer                OpenShift Enterprise Deployer                   0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-docker-builder          OpenShift Enterprise Docker Builder             0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-docker-registry         OpenShift Enterprise Docker Registry            0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-f5-router               OpenShift F5 Router Plugin                      0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-haproxy-router          OpenShift Enterprise Router                     0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-keepalived-ipfailover   OpenShift Enterprise Pod High Availability...   0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-pod                     OpenShift Enterprise Infrastructure Pod         0                    
+redhat.com   registry.access.redhat.com/openshift3/ose-sti-builder             OpenShift Enterprise Source-To-Image Builder    0                    
+redhat.com   registry.access.redhat.com/openshift3/perl-516-rhel7              OpenShift Enterprise Perl 5.16 Builder Image    0                    
+redhat.com   registry.access.redhat.com/openshift3/php-55-rhel7                OpenShift Enterprise PHP 5.5 Builder Image      0                    
+redhat.com   registry.access.redhat.com/openshift3/postgresql-92-rhel7         OpenShift Enterprise Postgresql 9.2             0                    
+redhat.com   registry.access.redhat.com/openshift3/python-33-rhel7             OpenShift Enterprise Python 3.3 Builder Image   0                    
+redhat.com   registry.access.redhat.com/openshift3/ruby-20-rhel7               OpenShift Enterprise Ruby 2.0 Builder Image     0    
+
+

@@ -1,0 +1,229 @@
+
+docker python 34, rhscl 2.0, rhel 7 server logs
+-----------------------------------------------
+
+# docker pull registry.access.redhat.com/rhscl/python-34-rhel7
+Using default tag: latest
+5be94041c916: Download complete 
+c4f590bbcbe3: Download complete 
+93f5d18e18d9: Download complete 
+Status: Image is up to date for registry.access.redhat.com/rhscl/python-34-rhel7:latest
+
+
+# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              f50d07ce98c3        13 days ago         459.9 MB
+registry.access.redhat.com/openshift3/php-55-rhel7      latest              355eabcfbaf9        13 days ago         488.1 MB
+registry.access.redhat.com/rhscl/python-34-rhel7        latest              5be94041c916        2 weeks ago         428.9 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        3 months ago        158.3 MB
+<none>                                                  <none>              18a614c1ed41        3 months ago        408.8 MB
+
+
+# docker inspect rhscl/python-34-rhel7 
+
+
+# docker run -it rhscl/python-34-rhel7 /bin/bash
+bash-4.2$ which python3
+/opt/rh/rh-python34/root/usr/bin/python3
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 17:58 ?        00:00:00 /bin/bash
+default     10     1  0 17:58 ?        00:00:00 ps -ef
+bash-4.2$ exit
+
+# docker ps -a
+CONTAINER ID        IMAGE                        COMMAND                  CREATED              STATUS                          PORTS               NAMES
+d949277c36e9        rhscl/python-34-rhel7        "container-entrypoint"   About a minute ago   Exited (0) About a minute ago                       determined_mayer
+
+# docker start determined_mayer
+determined_mayer
+# docker attach determined_mayer
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 18:01 ?        00:00:00 /bin/bash
+default      9     1  0 18:01 ?        00:00:00 ps -ef
+bash-4.2$ uptime
+ 18:01:11 up  4:07,  0 users,  load average: 0.53, 0.31, 0.17
+
+
+# docker rm determined_mayer
+determined_mayer
+
+# docker build -t myname/pythonweb .
+Sending build context to Docker daemon  5.12 kB
+Step 0 : FROM rhscl/python-34-rhel7:latest
+ ---> 5be94041c916
+Step 1 : MAINTAINER Your Name "shadow-man@redhat.com"
+ ---> Running in bedf83ff4f4b
+ ---> 121f8428c377
+Removing intermediate container bedf83ff4f4b
+Step 2 : EXPOSE 8000
+ ---> Running in a6a7958a50aa
+ ---> 1e42193cbf94
+Removing intermediate container a6a7958a50aa
+Step 3 : COPY . /opt/app-root/src
+ ---> a3bd7a0cb6b3
+Removing intermediate container 74a90150b21d
+Step 4 : CMD /bin/bash -c 'python3 web.py'
+ ---> Running in a636d52ec9e1
+ ---> fb3f7c8940f7
+Removing intermediate container a636d52ec9e1
+Successfully built fb3f7c8940f7
+
+# docker images
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+myname/pythonweb                                        latest              fb3f7c8940f7        33 seconds ago      428.9 MB
+registry.access.redhat.com/openshift3/python-33-rhel7   latest              f50d07ce98c3        13 days ago         459.9 MB
+registry.access.redhat.com/openshift3/php-55-rhel7      latest              355eabcfbaf9        13 days ago         488.1 MB
+registry.access.redhat.com/rhscl/python-34-rhel7        latest              5be94041c916        2 weeks ago         428.9 MB
+registry.access.redhat.com/rhel                         latest              275be1d3d070        3 months ago        158.3 MB
+
+
+# docker run -d -p 8000:8000 myname/pythonweb
+2021f06731c25c059852ea912d81ed360e56560c3d8b45b07db01508f6d52290
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs drunk_engelbart
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                              NAMES
+2021f06731c2        myname/pythonweb    "container-entrypoint"   About a minute ago   Up About a minute   0.0.0.0:8000->8000/tcp, 8080/tcp   drunk_engelbart
+
+# docker kill drunk_engelbart
+drunk_engelbart
+
+
+-----------------------
+
+# docker build -t myname/pythonweb .
+Sending build context to Docker daemon  5.12 kB
+Step 0 : FROM rhscl/python-34-rhel7:latest
+ ---> 5be94041c916
+Step 1 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in 8fe79daa6707
+ ---> 641a929079f2
+Removing intermediate container 8fe79daa6707
+Step 2 : EXPOSE 8000
+ ---> Running in 3e94dcd8d98f
+ ---> dd19efc994bd
+Removing intermediate container 3e94dcd8d98f
+Step 3 : COPY . /opt/app-root/src
+ ---> 6f29fffe1f4a
+Removing intermediate container 910e08ebe309
+Step 4 : CMD /bin/bash -c 'python3 -u web.py'
+ ---> Running in 45b585a50e70
+ ---> 7fac5a2d196d
+Removing intermediate container 45b585a50e70
+Successfully built 7fac5a2d196d
+
+
+# docker run -d -p 8000:8000 myname/pythonweb
+c7885aa23773216a94531a33838daac2cd65fdc5c58e52481edab3fed79d69a6
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+c7885aa23773        myname/pythonweb    "container-entrypoint"   6 seconds ago       Up 4 seconds        0.0.0.0:8000->8000/tcp, 8080/tcp   furious_varahamihira
+
+# docker logs furious_varahamihira
+serving at port 8000
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs furious_varahamihira
+serving at port 8000
+172.17.42.1 - - [25/Nov/2015 18:33:52] "GET / HTTP/1.1" 200 -
+
+# docker kill furious_varahamihira
+furious_varahamihira
+
+
+----------------------------------------------------------------------
+Updated Step 3 content using --name, etc.
+----------------------------------------------------------------------
+
+
+# docker build -t myname/pythonweb .
+Sending build context to Docker daemon 4.096 kB
+Step 0 : FROM rhscl/python-34-rhel7:latest
+ ---> 5be94041c916
+Step 1 : MAINTAINER Your Name "your-email@example.com"
+ ---> Running in f2076ca281fe
+ ---> 32ec3cfd24b0
+Removing intermediate container f2076ca281fe
+Step 2 : EXPOSE 8000
+ ---> Running in 2d5fd12f348a
+ ---> f3af17e525e4
+Removing intermediate container 2d5fd12f348a
+Step 3 : COPY . /opt/app-root/src
+ ---> 5f20ab322fc6
+Removing intermediate container d35ca2c23454
+Step 4 : CMD /bin/bash -c 'python3 -u web.py'
+ ---> Running in 168fcb0b8187
+ ---> 8d983f039b32
+Removing intermediate container 168fcb0b8187
+Successfully built 8d983f039b32
+
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+a721d0738b4f70672c667b220ad85d2dfc8597b69826200d318fccbf08391152
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+a721d0738b4f        myname/pythonweb    "container-entrypoint"   35 seconds ago      Up 34 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   helloweb
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:40:24] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+# docker rm helloweb
+helloweb
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+bc5e4f59874445291f901de61c82c54b17cd2d925b958b0744ac2cb1f88a7aad
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+bc5e4f598744        myname/pythonweb    "container-entrypoint"   14 seconds ago      Up 12 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   helloweb
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:42:41] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+Error response from daemon: Conflict. The name "helloweb" is already in use by container bc5e4f598744. You have to delete (or rename) that container to be able to reuse that name.
+
+# docker start helloweb
+helloweb
+
+# curl http://localhost:8000/
+<h1>Hello Red Hat Developers World!</h1>
+
+# docker logs helloweb
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:42:41] "GET / HTTP/1.1" 200 -
+serving at port 8000
+172.17.42.1 - - [03/Dec/2015 17:43:36] "GET / HTTP/1.1" 200 -
+
+# docker stop helloweb
+helloweb
+
+
+

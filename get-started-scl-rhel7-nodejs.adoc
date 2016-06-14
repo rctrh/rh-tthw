@@ -1,5 +1,15 @@
-:awestruct-layout: product-get-started
+:awestruct-layout: product-get-started-multipath
 :awestruct-interpolate: true
+
+## Path Name
+Node.js
+
+## Path Intro section
+[.large-6.columns]
+image:#{cdn(site.base_url + '/images/products/multipath/nodejs-logo.png')}[Node.js Logo]
+
+[.large-18.columns#PathIntroSection]
+Get started developing with Node.js from Red Hat Software Collections in under 10 minutes.
 
 ## Prerequisites section title
 Introduction and Prerequisites
@@ -7,10 +17,7 @@ Introduction and Prerequisites
 ## Prerequisites section
 In this tutorial, you will set your system up to install software from Red Hat Software Collections (RHSCL), which provides the latest development technologies for Red Hat Enterprise Linux. Then, you will install Node.js and run a simple “Hello, World” application. The whole tutorial should take less than 10 minutes to complete.
 
-You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. Access to the Red Hat Software Collections (RHSCL) is included with many Red Hat Enterprise Linux (RHEL) subscriptions. For more information about which subscriptions include RHSCL, see link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS]
-
-If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].
-Select the _Red Hat Enterprise Linux Developer Workstation_ option to ensure your evaluation will include both RHSCL and DTS.
+Before you begin, you will need a current Red Hat Enterprise Linux 7 workstation or server subscription that allows you to download software and get updates from Red Hat. If you don’t have an active subscription, register and obtain the RHEL Developer Suite (includes RHEL server) from here.
 
 If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
@@ -41,10 +48,9 @@ In this step you will configure your system to obtain software, including the la
 Red Hat Subscription Manager can be started from the _System Tools_ group of the _Applications_ menu. Alternatively, you can start it from the command prompt by typing `subscription-manager-gui`. +
 
 Select _Repositories_ from the _System_ menu of the subscription manager. In the list of repositories, check the _Enabled_ column for _rhel-server-rhscl-7-rpms_ and _rhel-7-server-optional-rpms_. If you are using a desktop version of Red Hat Enterprise Linux, the repositories will be named _rhel-desktop-rhscl-7-rpms_ and _rhel-7-desktop-optional-rpms_. +
- 
-If you don’t see any RHSCL repositories in the list, your subscription might not include it.
-[.content-img]
-image:#{cdn(site.base_url + '/images/products/softwarecollections/softwarecollections_install_1.png')}[Manage Repositories]
+
+If you don’t see any RHSCL repositories in the list, your subscription might not include it. +
+image:#{cdn(site.base_url + '/images/products/softwarecollections/rhel7/manage-repositories.png')}[Manage Repositories]
 
 See <<troubleshooting,Troubleshooting and FAQ>> for more information. +
 
@@ -86,7 +92,7 @@ If you need help, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step3 Content
 
-Under your normal user ID, start a terminal session. First, use `scl enable` to add Node.js to your environment, then start  `node` to check the version.
+Under your normal user ID, start a _Terminal_ window. First, use `scl enable` to add Node.js to your environment, then start  `node` to check the version.
 
 [.code-block]
 ```
@@ -161,16 +167,16 @@ When you deliver an application that uses RHSCL packages, a best practice is to 
 
 *Learn Node.js and JavaScript using NodeSchool.io tutorials* +
 
-Now that you have Node.js installed, use the tutorials from link:http://nodeschool.io/#workshopper-list[nodeschool.io] to learn Node.js and JavaScript. You need to have already run `scl enable nodejs010 bash` or have added Node.js permanently to development environment.  
+Now that you have Node.js installed, use the tutorials from link:http://nodeschool.io/#workshopper-list[nodeschool.io] to learn Node.js and JavaScript. You need to have already run `scl enable nodejs010 bash` or have added Node.js permanently to your development environment.
 
 Install the JavaScript and Node.js tutorials into your current directory:
 [.code-block]
 ```
 $ npm install javascripting
-$ npm install learnyounode`
+$ npm install learnyounode
 ```
 
-Temporarily add node_modules/.bin to your PATH:
+Temporarily add `node_modules/.bin` to your PATH:
 
 `$ export PATH=$PATH:$PWD/node_modules/.bin`
 
@@ -186,7 +192,7 @@ Run the Node.js tutorial:
 *View documentation on the Nodejs.org web site* +
 link:http://nodejs.org/documentation/[]
 
-*Find additional RHSCL Node modules* +
+*Find additional RHSCL Node.js modules* +
 `$ yum list available nodejs\*`
 
 *View the list of software available in RHSCL* +
@@ -202,7 +208,7 @@ _Developers should read this guide to get a more complete understanding of how s
 
 ### Become a Red Hat developer: developers.redhat.com
 
-Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:http://developers.redhat.com/[developers.redhat.com].
+Red Hat delivers the resources and ecosystem of experts to help you be more productive and build great solutions.  Register for free at link:#{site.base_url}/[developers.redhat.com].
 
 ## Faq section title
 [[troubleshooting]]Troubleshooting and FAQ
@@ -211,7 +217,7 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 
 1. The RHSCL repository is not available or is not found on my system.
 +
-The name of the repo depends on whether you have a server or desktop version of Red Hat Enterprise Linux installed.
+The name of the repository depends on whether you have a server or desktop version of Red Hat Enterprise Linux installed.
 +
 Some Red Hat Enterprise Linux subscriptions do not include access to RHSCL. See link:https://access.redhat.com/solutions/472793[How to use Red Hat Software Collections (RHSCL) or Red Hat Developer Toolset (DTS)].
 +
@@ -219,16 +225,16 @@ You can use `subscription --list` to view the available software repositories an
 +
 [.code-block]
 ```
-$ su -<
+$ su -
 # subscription-manager repos --list | egrep rhscl
 ```
 
-2. yum install fails due to a missing dependency such as scl-utils-build or texlive-*.
+2. yum install fails due to a missing dependency.
 +
 These packages are in the optional RPMs repository, which is not enabled by default. See <<Enable Red Hat Software Collections>> for how to enable both the optional RPMs and RHSCL repositories.
 3. How can I find out what RHSCL packages are installed?
 +
-`scl --list` will show the list of RHSCL packages that have been installed whether they are enabled or not.
+`scl --list` will show the list of RHSCL packages that have been installed, whether they are enabled or not.
 +
 [.code-block]
 ```
@@ -254,6 +260,6 @@ RHSCL does not alter the system path.  You need to use `scl enable` to change th
 `$ scl enable nodejs010 bash`
 +
 For more information see the link:https://access.redhat.com/documentation/en-US/Red_Hat_Software_Collections/2/index.html[Red Hat Software Collection 2.0 Documentation].
-6. When I try to run node, I get an error about a missing shared library.
+6. When I try to run `node`, I get an error about a missing shared library.
 +
 This is due to not having run `scl enable` first. When `scl enable` runs, in addition to setting up the command search PATH, it also sets up the search path for shared libraries, LD_LIBRARY_PATH.

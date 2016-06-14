@@ -1,0 +1,43 @@
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-rs-for-rhel-7-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 7 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/7/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-7-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 7 Server) - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/7/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-7-server-eus-rpms
+Repo Name: Red Hat Enterprise Linux 7 Server - Extended Update Support (RPMs)
+Repo URL:  https://cdn.redhat.com/content/eus/rhel/server/7/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-server-rhscl-7-rpms
+Repo Name: Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/7/$releasever/$basearch/rhscl/1/os
+Enabled:   1
+
+Repo ID:   rhel-rs-for-rhel-7-server-rpms
+Repo Name: Red Hat Enterprise Linux Resilient Storage (for RHEL 7 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/7/$releasever/$basearch/resilientstorage/os
+Enabled:   1
+
+Repo ID:   rhel-7-server-rpms
+Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/7/$releasever/$basearch/os
+Enabled:   1
+
+Repo ID:   rhel-ha-for-rhel-7-server-rpms
+Repo Name: Red Hat Enterprise Linux High Availability (for RHEL 7 Server) (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/7/$releasever/$basearch/highavailability/os
+Enabled:   1
+
+Repo ID:   rhel-7-server-optional-rpms
+Repo Name: Red Hat Enterprise Linux 7 Server - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/server/7/$releasever/$basearch/optional/os
+Enabled:   1
+

@@ -1,0 +1,111 @@
+Logs for working with Nodejs 010 docker image
+---------------------------------------------
+
+
+[root@rhdsrvr rt]# docker pull registry.access.redhat.com/openshift3/nodejs-010-rhel7
+Trying to pull repository registry.access.redhat.com/openshift3/nodejs-010-rhel7 ...
+38ce0de2eb32: Download complete 
+ae668be43329: Download complete 
+43f3626eec1c: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/openshift3/nodejs-010-rhel7:latest
+[root@rhdsrvr rt]# docker images
+REPOSITORY                                               TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/openshift3/nodejs-010-rhel7   latest              38ce0de2eb32        2 weeks ago         450.9 MB
+registry.access.redhat.com/rhel                          latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7    latest              18a614c1ed41        7 weeks ago         408.8 MB
+
+
+
+# docker images -a
+REPOSITORY                                               TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/openshift3/nodejs-010-rhel7   latest              38ce0de2eb32        2 weeks ago         450.9 MB
+<none>                                                   <none>              43f3626eec1c        2 weeks ago         413.5 MB
+<none>                                                   <none>              ae668be43329        4 weeks ago         158.3 MB
+registry.access.redhat.com/rhel                          latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7    latest              18a614c1ed41        7 weeks ago         408.8 MB
+<none>                                                   <none>              d0a516b529ab        7 weeks ago         158.2 MB
+[root@rhdsrvr rt]# 
+
+
+# docker -it openshift3/nodejs-010-rhel7 /bin/bash
+flag provided but not defined: -it
+See 'docker --help'.
+[root@rhdsrvr rt]# docker run -it openshift3/nodejs-010-rhel7 /bin/bash
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+bash-4.2$ which node
+/opt/rh/nodejs010/root/usr/bin/node
+bash-4.2$ node --version
+v0.10.35
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 14:42 ?        00:00:00 /bin/bash
+default     14     1  0 14:42 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+
+
+
+# docker ps -a
+CONTAINER ID        IMAGE                         COMMAND                CREATED              STATUS                          PORTS               NAMES
+84458ca538fb        openshift3/nodejs-010-rhel7   "container-entrypoin   About a minute ago   Exited (0) About a minute ago                       nostalgic_ritchie   
+
+
+# docker start nostalgic_ritchie
+nostalgic_ritchie
+# docker attach nostalgic_ritchie
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 14:44 ?        00:00:00 /bin/bash
+default     11     1  0 14:45 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+
+
+
+# docker build -t myname/nodeweb .
+Sending build context to Docker daemon 4.608 kB
+Sending build context to Docker daemon 
+Step 0 : FROM openshift3/nodejs-010-rhel7
+ ---> 38ce0de2eb32
+Step 1 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 4e9eff40bd39
+ ---> 28e7207515e8
+Removing intermediate container 4e9eff40bd39
+Step 2 : EXPOSE 8000
+ ---> Running in 871fcf43f687
+ ---> 6b8fae7f29df
+Removing intermediate container 871fcf43f687
+Step 3 : COPY . /opt/app-root/src
+ ---> d00781c1e372
+Removing intermediate container 1dacc31a94bc
+Step 4 : CMD /bin/bash -c 'node hello-http.js'
+ ---> Running in b5d04a2acba7
+ ---> 1feff5f852b3
+Removing intermediate container b5d04a2acba7
+Successfully built 1feff5f852b3
+
+
+# docker run -d -p 8000:8000 myname/nodeweb
+0ae92428bf7c2e969435a75deca6b92373e74e03309ac1a1c319a695d09ac901
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+
+
+# netstat -tlpn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1166/sshd           
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      3163/cupsd          
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1553/master         
+tcp6       0      0 :::22                   :::*                    LISTEN      1166/sshd           
+tcp6       0      0 ::1:631                 :::*                    LISTEN      3163/cupsd          
+tcp6       0      0 ::1:25                  :::*                    LISTEN      1553/master         
+tcp6       0      0 :::8000                 :::*                    LISTEN      9012/docker-proxy   
+
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
+4edf44433b27        myname/nodeweb      "container-entrypoin   30 seconds ago      Up 29 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   modest_cori       
+

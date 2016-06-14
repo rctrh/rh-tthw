@@ -1,0 +1,76 @@
+running on rhatvm.r-t.org on Wed Jun 1 23:53:03 EDT 2016
+ 
+ 
+NAME="Red Hat Enterprise Linux Server"
+VERSION="7.2 (Maipo)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="7.2"
+PRETTY_NAME="Employee SKU"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:7.2:GA:server"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 7"
+REDHAT_BUGZILLA_PRODUCT_VERSION=7.2
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="7.2"
+Linux rhatvm.r-t.org 3.10.0-327.13.1.el7.x86_64 #1 SMP Mon Feb 29 13:22:02 EST 2016 x86_64 x86_64 x86_64 GNU/Linux
+===============================================
+ 
+ 
+gcc
+/usr/bin/gcc
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+ 
+ 
+===============================================
+/usr/bin/g++
+g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+ 
+ 
+===============================================
+/usr/bin/perl
+
+This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread-multi
+(with 29 registered patches, see perl -V for more detail)
+
+Copyright 1987-2012, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+ 
+ 
+===============================================
+/usr/bin/python
+Python 2.7.5
+ 
+ 
+===============================================
+/usr/bin/php
+PHP 5.4.16 (cli) (built: Apr  4 2016 07:13:18) 
+Copyright (c) 1997-2013 The PHP Group
+Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies
+ 
+ 
+===============================================
+/usr/bin/ruby
+ruby 2.0.0p598 (2014-11-13) [x86_64-linux]
+ 
+ 
+===============================================
+which: no node in (/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/rt/.local/bin:/home/rt/bin)

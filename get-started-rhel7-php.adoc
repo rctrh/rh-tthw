@@ -1,21 +1,24 @@
 :awestruct-layout: product-get-started
 :awestruct-interpolate: true
 
+## Path Intro section
+Get started developing with PHP on Red Hat Enterprise Linux in under 10 minutes.
+
 ## Prerequisites section title
 Introduction and Prerequisites
 
 ## Prerequisites section
-In this tutorial, you will see how to get started with PHP development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial should take five to ten minutes to complete.
+In this tutorial, you will see how to get started with PHP development on Red Hat Enterprise Linux by creating a simple Hello World application. The tutorial should take 5 to 10 minutes to complete.
 
 You will need a Red Hat Enterprise Linux 7 system with a current Red Hat subscription that allows you to download software and updates from Red Hat. If you don’t have a Red Hat Enterprise Linux subscription, you can try it for free. Get started with an evaluation at link:https://access.redhat.com/products/red-hat-enterprise-linux/evaluation[].  Developers should select the Red Hat Enterprise Linux Developer Workstation option to ensure your evaluation includes Red Hat Software Collections and the Red Hat Developer Toolset.
 
-If you have problems at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
+If you encounter difficulties at any point, see <<troubleshooting,Troubleshooting and FAQ>>.
 
 ## Step1 Duration
 2 minutes
 
 ## Step1 Title
-Prepare Your System
+Prepare your system
 
 ## Step2 Duration
 2 minutes
@@ -33,7 +36,7 @@ Hello World and your first application
 
 In this step, you will download and install the latest updates from Red Hat for your system. In the process, you will verify that your system has a current Red Hat subscription and is able to receive updates.
 
-First, start a Terminal session from the Application Menu.  Then after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
+First, start a _Terminal_ window from the _Application_ menu.  Then after using `su` to change to the root user ID, use `subscription-manager` to verify that you have access to Red Hat Software Repositories. 
 
 [.code-block]
 ```
@@ -41,16 +44,16 @@ $ su -
 # subscription-manager repos --list-enabled
 ```
 
-If you don’t see any enabled repositories, your system may not be registered with Red Hat or may not have a valid subscription. Ssee <<troubleshooting,Troubleshooting and FAQ>> for more information.
+If you don’t see any enabled repositories, your system might not be registered with Red Hat or might not have a valid subscription. See <<troubleshooting,Troubleshooting and FAQ>> for more information.
 
-Now download and install any available updates by running `yum update`.  If updates are available, yum will list them and ask if it is OK to proceed.
+Now download and install any available updates by running `yum update`.  If updates are available, `yum` will list them and ask if it is OK to proceed.
 
 `# yum update`
 
 
 ## Step2 Content
 
-In this step you will download and install PHP with a single command. If you don't already have a Terminal window open, start one from the _Applications_ Menu. You will need to use `su` to run with root priviledges.
+In this step you will download and install PHP with a single command. If you don't already have a Terminal window open, start one from the _Applications_ menu. You will need to use `su` to run with root priviledges.
 
 [.code-block]
 ```
@@ -127,15 +130,15 @@ Red Hat delivers the resources and ecosystem of experts to help you be more prod
 *Follow the Red Hat Developer Blog* +
 link:http://developerblog.redhat.com/[]
 
-*Learn About Red Hat Software Collections*
+*Learn about Red Hat Software Collections*
 
 link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=5[Red Hat Software Collections] deliver the latest stable versions of dynamic languages, open source databases, and web development tools that can be deployed alongside those included in Red Hat Enterprise Linux. Red Hat Software Collections is available with select Red Hat Enterprise Linux subscriptions and has a three-year life cycle to allow rapid innovation without sacrificing stability.
 
-*Learn About the Red Hat Developer Toolset*
+*Learn about the Red Hat Developer Toolset*
 
-Red Hat Developer Toolset provides the latest, stable open source C and C++ compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
+Red Hat Developer Toolset provides the latest, stable, open source C and C++ compilers and complementary development tools including Eclipse. DTS enables developers to compile applications once and deploy across multiple versions of Red Hat Enterprise Linux.
 
-* link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset Product page]
+* link:https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/#dev-page=6[Red Hat Developer Toolset product page]
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/3.1_Release_Notes/index.html[Red Hat Developer Toolset 3.1 Release Notes]
 * link:https://access.redhat.com/documentation/en-US/Red_Hat_Developer_Toolset/3/html/User_Guide/index.html[Red Hat Developer Toolset 3.1 User Guide]
 

@@ -1,0 +1,27 @@
++----------------------------------------------------------+
+    Available Repositories in /etc/yum.repos.d/redhat.repo
++----------------------------------------------------------+
+Repo ID:   rhel-7-desktop-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-optional-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Optional (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/optional/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-supplementary-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Supplementary (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/$releasever/$basear
+           ch/supplementary/os
+Enabled:   1
+
+Repo ID:   rhel-7-desktop-extras-rpms
+Repo Name: Red Hat Enterprise Linux 7 Desktop - Extras (RPMs)
+Repo URL:  https://cdn.redhat.com/content/dist/rhel/client/7/7Client/$basearch/e
+           xtras/os
+Enabled:   1
+

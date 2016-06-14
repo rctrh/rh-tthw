@@ -1,0 +1,126 @@
+Log From atomic/docker/ruby ruby-20-rhel7
+=========================================
+
+
+# docker pull registry.access.redhat.com/openshift3/ruby-20-rhel7
+Trying to pull repository registry.access.redhat.com/openshift3/ruby-20-rhel7 ...
+ea16bfe08293: Download complete 
+ae668be43329: Download complete 
+43f3626eec1c: Download complete 
+Status: Downloaded newer image for registry.access.redhat.com/openshift3/ruby-20-rhel7:latest
+
+
+# docker images
+REPOSITORY                                               TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.access.redhat.com/openshift3/ruby-20-rhel7      latest              ea16bfe08293        2 weeks ago         478.5 MB
+registry.access.redhat.com/openshift3/nodejs-010-rhel7   latest              38ce0de2eb32        2 weeks ago         450.9 MB
+registry.access.redhat.com/rhel                          latest              275be1d3d070        7 weeks ago         158.3 MB
+registry.access.redhat.com/openshift3/python-33-rhel7    latest              18a614c1ed41        7 weeks ago         408.8 MB
+
+
+# docker run -it openshift3/ruby-20-rhel7:latest bash
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+bash-4.2$ which ruby
+/opt/rh/ruby200/root/usr/bin/ruby
+bash-4.2$ pwd
+/opt/app-root/src
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 16:27 ?        00:00:00 bash
+default     29     1  0 16:28 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+
+# docker ps -a
+CONTAINER ID        IMAGE                             COMMAND                CREATED             STATUS                     PORTS               NAMES
+a07bdee57770        openshift3/ruby-20-rhel7:latest   "container-entrypoin   2 minutes ago       Exited (0) 2 minutes ago                       pensive_payne       
+
+
+
+# docker start pensive_payne
+pensive_payne
+[root@rhdsrvr node-web]# docker attach pensive_payne
+
+bash-4.2$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+default      1     0  0 16:32 ?        00:00:00 bash
+default     28     1  0 16:33 ?        00:00:00 ps -ef
+bash-4.2$ exit
+exit
+
+
+# docker rm pensive_payne
+pensive_payne
+
+
+# docker build -t myname/rubyweb .
+Sending build context to Docker daemon 4.096 kB
+Sending build context to Docker daemon 
+Step 0 : FROM openshift3/ruby-20-rhel7
+ ---> ea16bfe08293
+Step 1 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 0eb27a7f0d4e
+ ---> b6e1becca1f6
+Removing intermediate container 0eb27a7f0d4e
+Step 2 : EXPOSE 8000
+ ---> Running in 94783de822d9
+ ---> 99689fa54d4f
+Removing intermediate container 94783de822d9
+Step 3 : COPY . /opt/app-root/src
+ ---> 3ac99a70afc3
+Removing intermediate container a65b62d0193e
+Step 4 : CMD /bin/bash -c 'ruby hello-http.rb'
+ ---> Running in 19273fe03868
+ ---> a87a3740fa5b
+Removing intermediate container 19273fe03868
+Successfully built a87a3740fa5b
+
+
+
+# docker run -it -p 8000:8000 myname/rubyweb
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+Listening on port 8000
+GET / HTTP/1.1
+
+
+$ curl http://localhost:8000/
+Hello, Red Hat Developers World!
+
+
+]# docker run -d -p 8000:8000 myname/rubyweb
+c76ab943373787ea32a1e8aa5c2544929a3006e10b55b0948d0324a579edf734
+Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+
+
+$ curl http://localhost:8000/
+Hello, Red Hat Developers World!
+[rt@rhdsrvr rh-tthw]$ curl http://localhost:8000/
+Hello, Red Hat Developers World!
+
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS                              NAMES
+c76ab9433737        myname/rubyweb      "container-entrypoin   40 seconds ago      Up 38 seconds       0.0.0.0:8000->8000/tcp, 8080/tcp   serene_pare         
+[root@rhdsrvr ruby]# docker logs serene_pare
+Listening on port 8000
+GET / HTTP/1.1
+GET / HTTP/1.1
+
+
+# docker kill serene_pare
+serene_pare
+
+# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+
+# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                CREATED              STATUS                        PORTS               NAMES
+c76ab9433737        myname/rubyweb      "container-entrypoin   About a minute ago   Exited (137) 10 seconds ago                       serene_pare         
+
+
+
+# docker rm serene_pare
+serene_pare
+
