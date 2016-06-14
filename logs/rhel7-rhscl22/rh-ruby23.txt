@@ -1,0 +1,73 @@
+
+
+# yum install rh-ruby23
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-ruby23.x86_64 0:2.2-4.el7 will be installed
+--> Processing Dependency: rh-ruby23-ruby for package: rh-ruby23-2.2-4.el7.x86_64
+--> Processing Dependency: rh-ruby23-runtime for package: rh-ruby23-2.2-4.el7.x86_64
+--> Running transaction check
+---> Package rh-ruby23-ruby.x86_64 0:2.3.0-60.el7 will be installed
+--> Processing Dependency: rh-ruby23-ruby-libs(x86-64) = 2.3.0-60.el7 for package: rh-ruby23-ruby-2.3.0-60.el7.x86_64
+--> Processing Dependency: rh-ruby23-ruby(rubygems) >= 2.5.1 for package: rh-ruby23-ruby-2.3.0-60.el7.x86_64
+--> Processing Dependency: rh-ruby23-rubygem(bigdecimal) >= 1.2.8 for package: rh-ruby23-ruby-2.3.0-60.el7.x86_64
+--> Processing Dependency: libruby.so.2.3()(64bit) for package: rh-ruby23-ruby-2.3.0-60.el7.x86_64
+---> Package rh-ruby23-runtime.x86_64 0:2.2-4.el7 will be installed
+--> Running transaction check
+---> Package rh-ruby23-ruby-libs.x86_64 0:2.3.0-60.el7 will be installed
+---> Package rh-ruby23-rubygem-bigdecimal.x86_64 0:1.2.8-60.el7 will be installed
+---> Package rh-ruby23-rubygems.noarch 0:2.5.1-60.el7 will be installed
+--> Processing Dependency: rh-ruby23-rubygem(io-console) >= 0.4.5 for package: rh-ruby23-rubygems-2.5.1-60.el7.noarch
+--> Processing Dependency: rh-ruby23-rubygem(psych) >= 2.0.17 for package: rh-ruby23-rubygems-2.5.1-60.el7.noarch
+--> Processing Dependency: rh-ruby23-rubygem(rdoc) >= 4.2.1 for package: rh-ruby23-rubygems-2.5.1-60.el7.noarch
+--> Running transaction check
+---> Package rh-ruby23-rubygem-io-console.x86_64 0:0.4.5-60.el7 will be installed
+---> Package rh-ruby23-rubygem-psych.x86_64 0:2.0.17-60.el7 will be installed
+---> Package rh-ruby23-rubygem-rdoc.noarch 0:4.2.1-60.el7 will be installed
+--> Processing Dependency: rh-ruby23-ruby(irb) = 2.3.0 for package: rh-ruby23-rubygem-rdoc-4.2.1-60.el7.noarch
+--> Processing Dependency: rh-ruby23-rubygem(json) >= 1.8.3 for package: rh-ruby23-rubygem-rdoc-4.2.1-60.el7.noarch
+--> Running transaction check
+---> Package rh-ruby23-ruby-irb.noarch 0:2.3.0-60.el7 will be installed
+---> Package rh-ruby23-rubygem-json.x86_64 0:1.8.3-60.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+====================================================================================================================================================================
+ Package                                          Arch                       Version                             Repository                                    Size
+====================================================================================================================================================================
+Installing:
+ rh-ruby23                                        x86_64                     2.2-4.el7                           rhel-server-rhscl-7-rpms                     3.1 k
+Installing for dependencies:
+ rh-ruby23-ruby                                   x86_64                     2.3.0-60.el7                        rhel-server-rhscl-7-rpms                      73 k
+ rh-ruby23-ruby-irb                               noarch                     2.3.0-60.el7                        rhel-server-rhscl-7-rpms                      92 k
+ rh-ruby23-ruby-libs                              x86_64                     2.3.0-60.el7                        rhel-server-rhscl-7-rpms                     2.9 M
+ rh-ruby23-rubygem-bigdecimal                     x86_64                     1.2.8-60.el7                        rhel-server-rhscl-7-rpms                      85 k
+ rh-ruby23-rubygem-io-console                     x86_64                     0.4.5-60.el7                        rhel-server-rhscl-7-rpms                      55 k
+ rh-ruby23-rubygem-json                           x86_64                     1.8.3-60.el7                        rhel-server-rhscl-7-rpms                      80 k
+ rh-ruby23-rubygem-psych                          x86_64                     2.0.17-60.el7                       rhel-server-rhscl-7-rpms                      85 k
+ rh-ruby23-rubygem-rdoc                           noarch                     4.2.1-60.el7                        rhel-server-rhscl-7-rpms                     482 k
+ rh-ruby23-rubygems                               noarch                     2.5.1-60.el7                        rhel-server-rhscl-7-rpms                     279 k
+ rh-ruby23-runtime                                x86_64                     2.2-4.el7                           rhel-server-rhscl-7-rpms                      25 k
+
+Transaction Summary
+====================================================================================================================================================================
+Install  1 Package (+10 Dependent packages)
+
+Total download size: 4.1 M
+Installed size: 13 M
+
+
+
+$ scl enable rh-ruby23 bash
+
+
+$ which ruby
+/opt/rh/rh-ruby23/root/usr/bin/ruby
+
+$ ruby -v
+ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+
+$ ruby hello.rb
+Hello, Red Hat Developers World from Ruby 2.3.0

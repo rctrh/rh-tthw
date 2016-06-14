@@ -1,4 +1,22 @@
+
+
+$ which node
+/opt/rh/rh-nodejs4/root/usr/bin/node
+
+$ node -v
+v4.4.2
+
+
+[rt@rhatvm ~]$ scl --list
+rh-nodejs4
+
+
+
+
+
+
 Script started on Tue 31 May 2016 04:45:39 PM EDT
+
 ]0;rt@rhatvm:~/work/rctrh/rh-tthw/logs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/logs[?1034h[rt@rhatvm logs]$ which nod3[Ke
 /usr/bin/which: no node in (/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/rt/.local/bin:/home/rt/bin)
 ]0;rt@rhatvm:~/work/rctrh/rh-tthw/logs]7;file://rhatvm.r-t.org/home/rt/work/rctrh/rh-tthw/logs[rt@rhatvm logs]$ scl enable rh-nodejs4 bash

@@ -152,6 +152,10 @@ rh-python35-scldevel.x86_64                                                   2.
 
 
 $ scl enable rh-python35 bash
+
+$ which python3
+/opt/rh/rh-python35/root/usr/bin/python3
+
 $ python --version
 Python 3.5.1
 
