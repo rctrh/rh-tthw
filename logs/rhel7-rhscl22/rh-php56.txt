@@ -1,0 +1,63 @@
+
+# yum -y install rh-php56
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-php56.x86_64 0:2.0-6.el7 will be installed
+--> Processing Dependency: rh-php56-runtime(x86-64) = 2.0-6.el7 for package: rh-php56-2.0-6.el7.x86_64
+--> Processing Dependency: rh-php56-php-cli(x86-64) for package: rh-php56-2.0-6.el7.x86_64
+--> Processing Dependency: rh-php56-php-common(x86-64) for package: rh-php56-2.0-6.el7.x86_64
+--> Processing Dependency: rh-php56-php-pear for package: rh-php56-2.0-6.el7.x86_64
+--> Processing Dependency: rh-php56-runtime for package: rh-php56-2.0-6.el7.x86_64
+--> Running transaction check
+---> Package rh-php56-php-cli.x86_64 0:5.6.5-8.el7 will be installed
+---> Package rh-php56-php-common.x86_64 0:5.6.5-8.el7 will be installed
+--> Processing Dependency: rh-php56-php-pecl-jsonc(x86-64) for package: rh-php56-php-common-5.6.5-8.el7.x86_64
+---> Package rh-php56-php-pear.noarch 1:1.9.5-3.el7 will be installed
+--> Processing Dependency: rh-php56-php-posix for package: 1:rh-php56-php-pear-1.9.5-3.el7.noarch
+--> Processing Dependency: rh-php56-php-xml for package: 1:rh-php56-php-pear-1.9.5-3.el7.noarch
+---> Package rh-php56-runtime.x86_64 0:2.0-6.el7 will be installed
+--> Running transaction check
+---> Package rh-php56-php-pecl-jsonc.x86_64 0:1.3.6-3.el7 will be installed
+---> Package rh-php56-php-process.x86_64 0:5.6.5-8.el7 will be installed
+---> Package rh-php56-php-xml.x86_64 0:5.6.5-8.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+====================================================================================================================================================================
+ Package                                      Arch                        Version                               Repository                                     Size
+====================================================================================================================================================================
+Installing:
+ rh-php56                                     x86_64                      2.0-6.el7                             rhel-server-rhscl-7-rpms                      4.5 k
+Installing for dependencies:
+ rh-php56-php-cli                             x86_64                      5.6.5-8.el7                           rhel-server-rhscl-7-rpms                      2.6 M
+ rh-php56-php-common                          x86_64                      5.6.5-8.el7                           rhel-server-rhscl-7-rpms                      730 k
+ rh-php56-php-pear                            noarch                      1:1.9.5-3.el7                         rhel-server-rhscl-7-rpms                      369 k
+ rh-php56-php-pecl-jsonc                      x86_64                      1.3.6-3.el7                           rhel-server-rhscl-7-rpms                       44 k
+ rh-php56-php-process                         x86_64                      5.6.5-8.el7                           rhel-server-rhscl-7-rpms                       61 k
+ rh-php56-php-xml                             x86_64                      5.6.5-8.el7                           rhel-server-rhscl-7-rpms                      161 k
+ rh-php56-runtime                             x86_64                      2.0-6.el7                             rhel-server-rhscl-7-rpms                      1.1 M
+
+Transaction Summary
+====================================================================================================================================================================
+Install  1 Package (+7 Dependent packages)
+
+
+
+
+$ scl enable rh-php56 bash
+[rt@rhatvm ~]$ php -v
+PHP 5.6.5 (cli) (built: Feb 16 2016 05:49:30) 
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
+
+
+
+$ which php
+/opt/rh/rh-php56/root/usr/bin/php
+
+
+$ php hello.php
+Hello, Red Hat Developers World from PHP 5.6.5
+
