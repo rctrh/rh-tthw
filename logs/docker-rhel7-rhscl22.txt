@@ -80,6 +80,149 @@ bash-4.2$ pwd
 /opt/app-root/src
 
 
+----------------------------------------------
+Step 3
+
+
+# docker build -t myname/nodeweb .
+Sending build context to Docker daemon 5.632 kB
+Step 1 : FROM rhscl/nodejs-4-rhel7
+ ---> 75b9f629e307
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 9878b97dbaac
+ ---> d18f367b5e8f
+Removing intermediate container 9878b97dbaac
+Step 3 : EXPOSE 8000
+ ---> Running in d1cd8a38f326
+ ---> 2081b84a4bb1
+Removing intermediate container d1cd8a38f326
+Step 4 : COPY . /opt/app-root/src
+ ---> 9c7605b9902d
+Removing intermediate container 95826bf239f3
+Step 5 : CMD /bin/bash -c 'node hello-http.js'
+ ---> Running in de7072c60105
+ ---> edc483ebfb58
+Removing intermediate container de7072c60105
+Successfully built edc483ebfb58
+[root@rhatvm nodejs]# docker run -d -p 8000:8000 myname/nodeweb
+b472b0b05f0dbb1007e904625c77513185fa3f69a75bc755ff81811af8270d06
+
+
+
+
+$ curl http://localhost:8000/
+Hello, Red Hat Developers World from Node v4.4.2!
+
+
+
+
+-------------------------------------------
+
+
+# docker build -t myname/pythonweb .
+Sending build context to Docker daemon  5.12 kB
+Step 1 : FROM rhscl/python-35-rhel7:latest
+ ---> 47cdd4a916e8
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 4be3c49eac55
+ ---> b189b8426d3c
+Removing intermediate container 4be3c49eac55
+Step 3 : EXPOSE 8000
+ ---> Running in 366398e88796
+ ---> 8ea15412ab0c
+Removing intermediate container 366398e88796
+Step 4 : COPY . /opt/app-root/src
+ ---> caaf7a059f36
+Removing intermediate container f8e46913ae0b
+Step 5 : CMD /bin/bash -c 'python3 web.py'
+ ---> Running in 735bd770c142
+ ---> 52ab0bd8ac2f
+Removing intermediate container 735bd770c142
+Successfully built 52ab0bd8ac2f
+
+
+# docker run -d -p 8000:8000 --name helloweb myname/pythonweb
+d48d09e3f64aa80fe4c2f30f2761c228e0e2bf2ea2329a726bdbeec4e7518c35
+
+
+$ curl http://localhost:8000/
+<h1>Hello Red Hat Developers World from Python!</h1>
+
+
+
+------------------------------------------------------------
+
+
+# docker build -t myname/phpweb .
+Sending build context to Docker daemon 4.096 kB
+Step 1 : FROM rhscl/php-56-rhel7
+ ---> bbfc4eb8005b
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 528053f701ae
+ ---> 9703d8c9b0f8
+Removing intermediate container 528053f701ae
+Step 3 : EXPOSE 8000
+ ---> Running in 0ec98f3c2d3d
+ ---> 4bb26ac86704
+Removing intermediate container 0ec98f3c2d3d
+Step 4 : COPY . /opt/app-root/src
+ ---> 414b675a9ead
+Removing intermediate container 098e7a071cb4
+Step 5 : CMD /bin/bash -c 'php -S 0.0.0.0:8000'
+ ---> Running in a0dc19db1158
+ ---> 65456fe64c8a
+Removing intermediate container a0dc19db1158
+Successfully built 65456fe64c8a
+
+
+# docker run -d -p 8000:8000 --name helloweb myname/phpweb
+4ecde7d14dfdc0087a1876467227e77ce0b9646a74ab390c54875af5050e9f14
+
+$ curl http://localhost:8000/
+Hello, Red Hat Developers World from PHP 5.6.5
+
+
+
+--------------------------------------------------------------------------------
+
+
+# docker build -t myname/rubyweb .
+Sending build context to Docker daemon 4.096 kB
+Step 1 : FROM rhscl/ruby-23-rhel7
+ ---> c1be9cb0a537
+Step 2 : MAINTAINER Shadow Man "shadow-man@redhat.com"
+ ---> Running in 0b5e0cf7cd5a
+ ---> 327b3f451be9
+Removing intermediate container 0b5e0cf7cd5a
+Step 3 : EXPOSE 8000
+ ---> Running in ce521f6bea48
+ ---> 2158c47ba212
+Removing intermediate container ce521f6bea48
+Step 4 : COPY . /opt/app-root/src
+ ---> 77cb3c66203b
+Removing intermediate container 0e39ba483e53
+Step 5 : CMD /bin/bash -c 'ruby hello-http.rb'
+ ---> Running in f9b7c5d657f4
+ ---> 9e5cd1b3b73e
+Removing intermediate container f9b7c5d657f4
+Successfully built 9e5cd1b3b73e
+[root@rhatvm ruby]# docker run -d -p 8000:8000 --name helloweb myname/rubyweb
+c1e2ff3ba00fbc09472eada7bd29415b0679c1fa94a0f81c5ad4d120033aad5c
+
+
+$ curl http://localhost:8000/
+Hello, Red Hat Developers World from 2.3.0!
+
+
+
+
+
+
+
+
+
+
+
 
 # docker search registry.access.redhat.com/rhscl/
 INDEX        NAME                                                                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
